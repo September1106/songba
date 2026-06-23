@@ -1,0 +1,6548 @@
+{
+  "foods": {
+    "usdaff_321358": {
+      "thiamin_mg": 0.15,
+      "riboflavin_mg": 0.115,
+      "folate_ug": 36.0,
+      "protein_g": 7.35,
+      "iron_mg": 2.41,
+      "magnesium_mg": 71.1,
+      "phosphorus_mg": 166,
+      "sodium_mg": 438,
+      "copper_mg": 0.348,
+      "vitaminA_ug": 1.0,
+      "niacin_mg": 0.948,
+      "vitaminB6_mg": 0.143,
+      "fat_g": 17.1,
+      "carbohydrate_g": 14.9,
+      "calcium_mg": 41.0,
+      "potassium_mg": 289,
+      "zinc_mg": 1.38,
+      "selenium_ug": 16.2
+    },
+    "usdaff_321360": {
+      "vitaminC_mg": 27.2,
+      "fat_g": 0.63,
+      "calcium_mg": 11.0,
+      "copper_mg": 0.058,
+      "iron_mg": 0.33,
+      "magnesium_mg": 11.9,
+      "phosphorus_mg": 28.0,
+      "potassium_mg": 260,
+      "sodium_mg": 6.0,
+      "zinc_mg": 0.2,
+      "riboflavin_mg": 0.065,
+      "thiamin_mg": 0.075,
+      "vitaminB6_mg": 0.06,
+      "folate_ug": 10.0,
+      "niacin_mg": 0.805,
+      "protein_g": 0.83,
+      "carbohydrate_g": 5.51
+    },
+    "usdaff_321611": {
+      "zinc_mg": 0.19,
+      "calcium_mg": 36.0,
+      "fat_g": 0.39,
+      "carbohydrate_g": 4.11,
+      "phosphorus_mg": 23.0,
+      "sodium_mg": 282,
+      "copper_mg": 0.041,
+      "iron_mg": 0.78,
+      "protein_g": 1.04,
+      "magnesium_mg": 12.7,
+      "potassium_mg": 97.0
+    },
+    "usdaff_323294": {
+      "calcium_mg": 273,
+      "potassium_mg": 684,
+      "zinc_mg": 2.8,
+      "fat_g": 57.8,
+      "carbohydrate_g": 16.2,
+      "niacin_mg": 3.1,
+      "vitaminB6_mg": 0.075,
+      "copper_mg": 0.87,
+      "iron_mg": 3.17,
+      "magnesium_mg": 258,
+      "phosphorus_mg": 456,
+      "protein_g": 20.4,
+      "thiamin_mg": 0.079,
+      "riboflavin_mg": 1.57,
+      "folate_ug": 35.0,
+      "vitaminA_ug": 2.0,
+      "sodium_mg": 256
+    },
+    "usdaff_323505": {
+      "vitaminA_ug": 241,
+      "protein_g": 2.92,
+      "vitaminC_mg": 93.4,
+      "thiamin_mg": 0.113,
+      "riboflavin_mg": 0.347,
+      "folate_ug": 62.0,
+      "iron_mg": 1.6,
+      "magnesium_mg": 32.7,
+      "phosphorus_mg": 55.0,
+      "sodium_mg": 53.0,
+      "copper_mg": 0.053,
+      "fat_g": 1.49,
+      "carbohydrate_g": 4.42,
+      "calcium_mg": 254,
+      "potassium_mg": 348,
+      "zinc_mg": 0.39,
+      "niacin_mg": 1.18,
+      "vitaminB6_mg": 0.147
+    },
+    "usdaff_323604": {
+      "magnesium_mg": 11.2,
+      "phosphorus_mg": 189,
+      "potassium_mg": 117,
+      "zinc_mg": 1.2,
+      "sodium_mg": 121,
+      "iron_mg": 1.77,
+      "protein_g": 12.3,
+      "calcium_mg": 55.0,
+      "fat_g": 10.3,
+      "carbohydrate_g": 0.91,
+      "vitaminD_ug": 2.3
+    },
+    "usdaff_323697": {
+      "potassium_mg": 130,
+      "zinc_mg": 0.02,
+      "sodium_mg": 144,
+      "magnesium_mg": 10.6,
+      "calcium_mg": 9.0,
+      "fat_g": 0.16,
+      "carbohydrate_g": 0.74,
+      "protein_g": 10.1,
+      "iron_mg": 0.18
+    },
+    "usdaff_323793": {
+      "protein_g": 79.9,
+      "magnesium_mg": 87.6,
+      "phosphorus_mg": 107,
+      "sodium_mg": 1250.0,
+      "calcium_mg": 104,
+      "potassium_mg": 959,
+      "zinc_mg": 0.43,
+      "fat_g": 0.65,
+      "carbohydrate_g": 6.02
+    },
+    "usdaff_324317": {
+      "potassium_mg": 135,
+      "selenium_ug": 5.6,
+      "fat_g": 14.4,
+      "carbohydrate_g": 36.3,
+      "niacin_mg": 1.57,
+      "vitaminB6_mg": 0.127,
+      "vitaminC_mg": 1.6,
+      "thiamin_mg": 0.196,
+      "riboflavin_mg": 0.116,
+      "folate_ug": 31.0,
+      "magnesium_mg": 20.4,
+      "phosphorus_mg": 75.0,
+      "sodium_mg": 374,
+      "copper_mg": 0.081,
+      "iron_mg": 1.14,
+      "protein_g": 4.52,
+      "calcium_mg": 28.0,
+      "zinc_mg": 0.59
+    },
+    "usdaff_324653": {
+      "folate_ug": 8.0,
+      "sodium_mg": 808,
+      "vitaminA_ug": 4.0,
+      "calcium_mg": 54.0,
+      "potassium_mg": 112,
+      "zinc_mg": 0.11,
+      "niacin_mg": 0.109,
+      "vitaminB6_mg": 0.034,
+      "fat_g": 0.43,
+      "carbohydrate_g": 1.99,
+      "protein_g": 0.48,
+      "iron_mg": 0.23,
+      "magnesium_mg": 7.1,
+      "phosphorus_mg": 16.0,
+      "vitaminC_mg": 2.1,
+      "copper_mg": 0.026,
+      "thiamin_mg": 0.047,
+      "riboflavin_mg": 0.057
+    },
+    "usdaff_325036": {
+      "fat_g": 28.0,
+      "carbohydrate_g": 12.4,
+      "calcium_mg": 884,
+      "potassium_mg": 184,
+      "zinc_mg": 4.33,
+      "selenium_ug": 35.0,
+      "niacin_mg": 0.078,
+      "vitaminB6_mg": 0.081,
+      "protein_g": 29.6,
+      "iron_mg": 0.45,
+      "magnesium_mg": 34.9,
+      "phosphorus_mg": 634,
+      "sodium_mg": 1750.0,
+      "copper_mg": 0.04,
+      "vitaminA_ug": 228,
+      "thiamin_mg": 0.027,
+      "riboflavin_mg": 0.345,
+      "folate_ug": 6.0,
+      "vitaminB12_ug": 1.35
+    },
+    "usdaff_325198": {
+      "selenium_ug": 20.4,
+      "calcium_mg": 866,
+      "potassium_mg": 149,
+      "zinc_mg": 2.42,
+      "niacin_mg": 0.095,
+      "vitaminB6_mg": 0.056,
+      "protein_g": 18.0,
+      "vitaminB12_ug": 1.45,
+      "thiamin_mg": 0.015,
+      "riboflavin_mg": 0.247,
+      "iron_mg": 0.48,
+      "magnesium_mg": 25.1,
+      "phosphorus_mg": 540,
+      "sodium_mg": 1660.0,
+      "copper_mg": 0.046,
+      "vitaminD_ug": 7.5,
+      "vitaminA_ug": 300,
+      "fat_g": 30.6,
+      "carbohydrate_g": 5.27
+    },
+    "usdaff_325287": {
+      "riboflavin_mg": 0.02,
+      "folate_ug": 12.0,
+      "vitaminC_mg": 39.4,
+      "thiamin_mg": 0.062,
+      "protein_g": 0.55,
+      "iron_mg": 0.07,
+      "magnesium_mg": 9.6,
+      "phosphorus_mg": 17.0,
+      "sodium_mg": 1.0,
+      "copper_mg": 0.032,
+      "niacin_mg": 0.253,
+      "fat_g": 0.7,
+      "carbohydrate_g": 7.59,
+      "calcium_mg": 16.0,
+      "potassium_mg": 141,
+      "zinc_mg": 0.04
+    },
+    "usdaff_325430": {
+      "carbohydrate_g": 10.1,
+      "potassium_mg": 122,
+      "sodium_mg": 13.0,
+      "vitaminC_mg": 4.1,
+      "thiamin_mg": 0.024,
+      "riboflavin_mg": 0.031,
+      "folate_ug": 6.0,
+      "copper_mg": 0.078,
+      "iron_mg": 0.34,
+      "magnesium_mg": 8.0,
+      "phosphorus_mg": 22.0,
+      "vitaminA_ug": 24.0,
+      "protein_g": 0.91,
+      "fat_g": 0.27,
+      "calcium_mg": 4.0,
+      "niacin_mg": 0.806,
+      "vitaminB6_mg": 0.025,
+      "zinc_mg": 0.23,
+      "selenium_ug": 2.1
+    },
+    "usdaff_325524": {
+      "vitaminA_ug": 1.0,
+      "sodium_mg": 532,
+      "niacin_mg": 6.96,
+      "vitaminB6_mg": 0.76,
+      "fat_g": 56.1,
+      "carbohydrate_g": 17.1,
+      "calcium_mg": 78.0,
+      "potassium_mg": 689,
+      "zinc_mg": 6.0,
+      "riboflavin_mg": 0.507,
+      "folate_ug": 169,
+      "copper_mg": 1.83,
+      "thiamin_mg": 0.473,
+      "iron_mg": 5.21,
+      "magnesium_mg": 358,
+      "phosphorus_mg": 750,
+      "protein_g": 21.0,
+      "selenium_ug": 80.4
+    },
+    "usdaff_326196": {
+      "fat_g": 1.21,
+      "carbohydrate_g": 5.3,
+      "calcium_mg": 150,
+      "potassium_mg": 144,
+      "zinc_mg": 0.27,
+      "niacin_mg": 0.457,
+      "vitaminB6_mg": 0.063,
+      "protein_g": 2.94,
+      "iron_mg": 0.84,
+      "magnesium_mg": 25.0,
+      "phosphorus_mg": 42.0,
+      "sodium_mg": 16.0,
+      "copper_mg": 0.067,
+      "vitaminA_ug": 146,
+      "vitaminC_mg": 17.8,
+      "thiamin_mg": 0.063,
+      "riboflavin_mg": 0.14,
+      "folate_ug": 65.0
+    },
+    "usdaff_326698": {
+      "zinc_mg": 0.64,
+      "folate_ug": 7.0,
+      "protein_g": 4.25,
+      "vitaminC_mg": 0.4,
+      "thiamin_mg": 0.189,
+      "riboflavin_mg": 0.066,
+      "vitaminA_ug": 4.0,
+      "iron_mg": 1.59,
+      "magnesium_mg": 47.7,
+      "phosphorus_mg": 108,
+      "sodium_mg": 1100.0,
+      "copper_mg": 0.074,
+      "fat_g": 3.38,
+      "carbohydrate_g": 5.3,
+      "selenium_ug": 34.0,
+      "calcium_mg": 63.0,
+      "potassium_mg": 150,
+      "niacin_mg": 0.561,
+      "vitaminB6_mg": 0.069
+    },
+    "usdaff_327046": {
+      "fat_g": 0.44,
+      "calcium_mg": 35.0,
+      "copper_mg": 0.134,
+      "iron_mg": 0.24,
+      "magnesium_mg": 15.7,
+      "phosphorus_mg": 34.0,
+      "potassium_mg": 198,
+      "sodium_mg": 5.0,
+      "zinc_mg": 0.14,
+      "vitaminC_mg": 74.7,
+      "thiamin_mg": 0.027,
+      "riboflavin_mg": 0.025,
+      "niacin_mg": 0.37,
+      "vitaminB6_mg": 0.061,
+      "folate_ug": 26.0,
+      "selenium_ug": 0.2,
+      "protein_g": 1.06,
+      "carbohydrate_g": 14.0,
+      "vitaminA_ug": 4.0
+    },
+    "usdaff_327357": {
+      "potassium_mg": 131,
+      "sodium_mg": 13.0,
+      "vitaminC_mg": 2.9,
+      "carbohydrate_g": 9.18,
+      "fat_g": 0.28,
+      "calcium_mg": 2.0,
+      "niacin_mg": 1.12,
+      "vitaminB6_mg": 0.025,
+      "zinc_mg": 0.21,
+      "vitaminA_ug": 21.0,
+      "iron_mg": 0.3,
+      "magnesium_mg": 8.8,
+      "phosphorus_mg": 26.0,
+      "copper_mg": 0.082,
+      "protein_g": 1.06,
+      "thiamin_mg": 0.034,
+      "riboflavin_mg": 0.027,
+      "folate_ug": 6.0
+    },
+    "usdaff_328637": {
+      "calcium_mg": 707,
+      "potassium_mg": 77.0,
+      "zinc_mg": 3.67,
+      "carbohydrate_g": 2.44,
+      "protein_g": 23.3,
+      "phosphorus_mg": 458,
+      "copper_mg": 0.033,
+      "vitaminA_ug": 316,
+      "niacin_mg": 0.052,
+      "vitaminB6_mg": 0.069,
+      "fat_g": 34.0,
+      "selenium_ug": 28.3,
+      "thiamin_mg": 0.029,
+      "riboflavin_mg": 0.441,
+      "folate_ug": 21.0,
+      "vitaminB12_ug": 1.06,
+      "sodium_mg": 654,
+      "iron_mg": 0.16,
+      "magnesium_mg": 26.8
+    },
+    "usdaff_328841": {
+      "vitaminA_ug": 69.0,
+      "fat_g": 2.3,
+      "carbohydrate_g": 4.31,
+      "niacin_mg": 0.09,
+      "vitaminB6_mg": 0.057,
+      "calcium_mg": 103,
+      "potassium_mg": 120,
+      "zinc_mg": 0.61,
+      "selenium_ug": 14.6,
+      "protein_g": 11.0,
+      "thiamin_mg": 0.02,
+      "riboflavin_mg": 0.234,
+      "folate_ug": 10.0,
+      "vitaminB12_ug": 0.42,
+      "iron_mg": 0.13,
+      "magnesium_mg": 8.9,
+      "phosphorus_mg": 148,
+      "sodium_mg": 321,
+      "copper_mg": 0.03
+    },
+    "usdaff_329370": {
+      "vitaminA_ug": 203,
+      "magnesium_mg": 27.2,
+      "vitaminB12_ug": 1.65,
+      "thiamin_mg": 0.023,
+      "riboflavin_mg": 0.36,
+      "phosphorus_mg": 533,
+      "sodium_mg": 699,
+      "copper_mg": 0.035,
+      "iron_mg": 0.2,
+      "protein_g": 23.7,
+      "fat_g": 20.4,
+      "carbohydrate_g": 4.44,
+      "calcium_mg": 693,
+      "potassium_mg": 116,
+      "zinc_mg": 3.62,
+      "selenium_ug": 26.7,
+      "niacin_mg": 0.101,
+      "vitaminB6_mg": 0.09,
+      "folate_ug": 26.0
+    },
+    "usdaff_329490": {
+      "potassium_mg": 468,
+      "zinc_mg": 5.02,
+      "phosphorus_mg": 770,
+      "iron_mg": 6.97,
+      "protein_g": 48.1,
+      "sodium_mg": 485,
+      "fat_g": 39.8,
+      "carbohydrate_g": 1.87,
+      "calcium_mg": 220,
+      "vitaminD_ug": 9.7,
+      "magnesium_mg": 44.6
+    },
+    "usdaff_329596": {
+      "potassium_mg": 102,
+      "zinc_mg": 2.93,
+      "magnesium_mg": 11.2,
+      "phosphorus_mg": 443,
+      "fat_g": 25.1,
+      "carbohydrate_g": 0.59,
+      "calcium_mg": 119,
+      "protein_g": 15.6,
+      "sodium_mg": 66.0,
+      "iron_mg": 4.13,
+      "vitaminD_ug": 5.8
+    },
+    "usdaff_329716": {
+      "magnesium_mg": 26.0,
+      "phosphorus_mg": 982,
+      "potassium_mg": 231,
+      "zinc_mg": 7.11,
+      "calcium_mg": 270,
+      "fat_g": 55.5,
+      "carbohydrate_g": 1.07,
+      "protein_g": 34.2,
+      "sodium_mg": 149,
+      "iron_mg": 9.28,
+      "vitaminD_ug": 15.7
+    },
+    "usdaff_330137": {
+      "magnesium_mg": 10.7,
+      "vitaminB12_ug": 0.7,
+      "thiamin_mg": 0.022,
+      "riboflavin_mg": 0.281,
+      "iron_mg": 0.07,
+      "protein_g": 10.3,
+      "phosphorus_mg": 136,
+      "sodium_mg": 36.0,
+      "copper_mg": 0.017,
+      "vitaminA_ug": 1.0,
+      "fat_g": 0.37,
+      "carbohydrate_g": 3.64,
+      "calcium_mg": 111,
+      "potassium_mg": 141,
+      "zinc_mg": 0.53,
+      "selenium_ug": 9.9,
+      "niacin_mg": 0.211,
+      "vitaminB6_mg": 0.064
+    },
+    "usdaff_330415": {
+      "fat_g": 0.15,
+      "carbohydrate_g": 12.2,
+      "calcium_mg": 97.0,
+      "potassium_mg": 133,
+      "zinc_mg": 0.46,
+      "selenium_ug": 9.8,
+      "niacin_mg": 0.208,
+      "vitaminB6_mg": 0.05,
+      "protein_g": 8.06,
+      "iron_mg": 0.09,
+      "magnesium_mg": 10.4,
+      "phosphorus_mg": 113,
+      "sodium_mg": 32.0,
+      "copper_mg": 0.02,
+      "vitaminD_ug": 1.0,
+      "vitaminC_mg": 0.2,
+      "riboflavin_mg": 0.25,
+      "folate_ug": 20.0,
+      "vitaminB12_ug": 0.45
+    },
+    "usdaff_331897": {
+      "protein_g": 23.9,
+      "iron_mg": 0.94,
+      "magnesium_mg": 22.4,
+      "phosphorus_mg": 184,
+      "sodium_mg": 117,
+      "copper_mg": 0.063,
+      "vitaminA_ug": 7.0,
+      "vitaminD_ug": 0.1,
+      "thiamin_mg": 0.088,
+      "riboflavin_mg": 0.18,
+      "vitaminB12_ug": 0.41,
+      "fat_g": 5.95,
+      "calcium_mg": 12.0,
+      "potassium_mg": 239,
+      "zinc_mg": 2.54,
+      "selenium_ug": 27.9,
+      "niacin_mg": 5.05,
+      "vitaminB6_mg": 0.372
+    },
+    "usdaff_331960": {
+      "vitaminB6_mg": 0.921,
+      "fat_g": 3.24,
+      "calcium_mg": 6.0,
+      "potassium_mg": 343,
+      "zinc_mg": 0.96,
+      "selenium_ug": 31.9,
+      "niacin_mg": 9.45,
+      "vitaminB12_ug": 0.2,
+      "protein_g": 32.1,
+      "iron_mg": 0.49,
+      "magnesium_mg": 32.0,
+      "phosphorus_mg": 241,
+      "sodium_mg": 47.0,
+      "copper_mg": 0.044,
+      "thiamin_mg": 0.098,
+      "riboflavin_mg": 0.187
+    },
+    "usdaff_332791": {
+      "phosphorus_mg": 7.0,
+      "potassium_mg": 43.0,
+      "sodium_mg": 1620.0,
+      "zinc_mg": 0.09,
+      "calcium_mg": 121,
+      "copper_mg": 0.107,
+      "iron_mg": 0.31,
+      "magnesium_mg": 12.4,
+      "fat_g": 12.9,
+      "niacin_mg": 0.103,
+      "thiamin_mg": 0.041,
+      "protein_g": 1.15,
+      "carbohydrate_g": 4.96,
+      "vitaminA_ug": 25.0
+    },
+    "usdaff_333281": {
+      "calcium_mg": 30.0,
+      "copper_mg": 0.052,
+      "iron_mg": 0.57,
+      "magnesium_mg": 9.8,
+      "phosphorus_mg": 18.0,
+      "potassium_mg": 198,
+      "sodium_mg": 125,
+      "zinc_mg": 0.12,
+      "fat_g": 0.5,
+      "protein_g": 0.84,
+      "carbohydrate_g": 3.32
+    },
+    "usdaff_333374": {
+      "niacin_mg": 3.36,
+      "vitaminB6_mg": 0.281,
+      "calcium_mg": 11.0,
+      "potassium_mg": 286,
+      "zinc_mg": 0.32,
+      "selenium_ug": 25.9,
+      "fat_g": 0.45,
+      "vitaminD_ug": 0.5,
+      "vitaminB12_ug": 1.83,
+      "thiamin_mg": 0.02,
+      "riboflavin_mg": 0.057,
+      "protein_g": 16.3,
+      "iron_mg": 0.17,
+      "magnesium_mg": 21.1,
+      "phosphorus_mg": 227,
+      "sodium_mg": 213,
+      "copper_mg": 0.021
+    },
+    "usdaff_333476": {
+      "fat_g": 0.41,
+      "niacin_mg": 0.653,
+      "vitaminB6_mg": 0.069,
+      "calcium_mg": 15.0,
+      "potassium_mg": 160,
+      "zinc_mg": 0.31,
+      "selenium_ug": 15.9,
+      "vitaminB12_ug": 1.63,
+      "thiamin_mg": 0.03,
+      "riboflavin_mg": 0.08,
+      "vitaminD_ug": 0.2,
+      "protein_g": 12.3,
+      "iron_mg": 0.22,
+      "magnesium_mg": 16.1,
+      "phosphorus_mg": 284,
+      "sodium_mg": 333,
+      "copper_mg": 0.031,
+      "vitaminA_ug": 3.0
+    },
+    "usdaff_334194": {
+      "niacin_mg": 9.92,
+      "vitaminB6_mg": 0.32,
+      "selenium_ug": 67.8,
+      "calcium_mg": 18.0,
+      "potassium_mg": 176,
+      "zinc_mg": 0.66,
+      "fat_g": 0.94,
+      "vitaminD_ug": 1.2,
+      "vitaminB12_ug": 2.57,
+      "thiamin_mg": 0.03,
+      "riboflavin_mg": 0.082,
+      "protein_g": 19.0,
+      "iron_mg": 1.67,
+      "magnesium_mg": 22.7,
+      "phosphorus_mg": 137,
+      "sodium_mg": 219,
+      "copper_mg": 0.048,
+      "carbohydrate_g": 0.08
+    },
+    "usdaff_746758": {
+      "fat_g": 6.36,
+      "calcium_mg": 13.0,
+      "potassium_mg": 352,
+      "zinc_mg": 3.7,
+      "selenium_ug": 25.4,
+      "niacin_mg": 5.76,
+      "vitaminB6_mg": 0.67,
+      "protein_g": 27.7,
+      "iron_mg": 3.04,
+      "magnesium_mg": 13.7,
+      "phosphorus_mg": 259,
+      "sodium_mg": 54.0,
+      "copper_mg": 0.097,
+      "riboflavin_mg": 0.4,
+      "vitaminB12_ug": 4.21
+    },
+    "usdaff_746759": {
+      "niacin_mg": 6.88,
+      "vitaminB6_mg": 0.575,
+      "fat_g": 6.39,
+      "calcium_mg": 15.0,
+      "potassium_mg": 282,
+      "zinc_mg": 3.76,
+      "selenium_ug": 21.3,
+      "protein_g": 22.8,
+      "iron_mg": 1.9,
+      "magnesium_mg": 11.3,
+      "phosphorus_mg": 206,
+      "sodium_mg": 45.0,
+      "copper_mg": 0.043,
+      "thiamin_mg": 0.053,
+      "riboflavin_mg": 0.202,
+      "vitaminB12_ug": 1.72
+    },
+    "usdaff_746760": {
+      "protein_g": 23.4,
+      "iron_mg": 1.37,
+      "magnesium_mg": 11.4,
+      "phosphorus_mg": 222,
+      "sodium_mg": 50.0,
+      "copper_mg": 0.035,
+      "riboflavin_mg": 0.185,
+      "vitaminB12_ug": 2.06,
+      "fat_g": 2.48,
+      "calcium_mg": 13.0,
+      "potassium_mg": 312,
+      "zinc_mg": 3.38,
+      "selenium_ug": 22.2,
+      "niacin_mg": 6.58,
+      "vitaminB6_mg": 0.638
+    },
+    "usdaff_746761": {
+      "fat_g": 2.41,
+      "calcium_mg": 13.0,
+      "potassium_mg": 316,
+      "zinc_mg": 3.54,
+      "selenium_ug": 22.7,
+      "niacin_mg": 6.16,
+      "vitaminB6_mg": 0.626,
+      "protein_g": 23.7,
+      "iron_mg": 2.34,
+      "magnesium_mg": 11.9,
+      "phosphorus_mg": 220,
+      "sodium_mg": 55.0,
+      "copper_mg": 0.047,
+      "thiamin_mg": 0.064,
+      "riboflavin_mg": 0.25,
+      "vitaminB12_ug": 1.62
+    },
+    "usdaff_746762": {
+      "fat_g": 5.32,
+      "niacin_mg": 5.32,
+      "vitaminB6_mg": 0.751,
+      "calcium_mg": 19.0,
+      "potassium_mg": 266,
+      "zinc_mg": 3.52,
+      "selenium_ug": 21.4,
+      "protein_g": 22.7,
+      "iron_mg": 2.26,
+      "magnesium_mg": 10.7,
+      "phosphorus_mg": 200,
+      "sodium_mg": 43.0,
+      "copper_mg": 0.075,
+      "riboflavin_mg": 0.23,
+      "vitaminB12_ug": 1.98
+    },
+    "usdaff_746763": {
+      "protein_g": 27.3,
+      "iron_mg": 3.53,
+      "magnesium_mg": 20.0,
+      "phosphorus_mg": 211,
+      "sodium_mg": 67.0,
+      "copper_mg": 0.078,
+      "riboflavin_mg": 0.27,
+      "vitaminB12_ug": 1.88,
+      "calcium_mg": 19.0,
+      "potassium_mg": 283,
+      "zinc_mg": 4.69,
+      "selenium_ug": 29.7,
+      "niacin_mg": 6.37,
+      "vitaminB6_mg": 0.753,
+      "fat_g": 11.4
+    },
+    "usdaff_746764": {
+      "niacin_mg": 0.465,
+      "vitaminB6_mg": 0.088,
+      "calcium_mg": 33.0,
+      "potassium_mg": 210,
+      "zinc_mg": 0.28,
+      "fat_g": 0.47,
+      "iron_mg": 0.43,
+      "magnesium_mg": 10.8,
+      "phosphorus_mg": 31.0,
+      "sodium_mg": 66.0,
+      "copper_mg": 0.08,
+      "protein_g": 0.81,
+      "vitaminC_mg": 2.2,
+      "thiamin_mg": 0.039,
+      "riboflavin_mg": 0.047,
+      "folate_ug": 7.0,
+      "carbohydrate_g": 7.92
+    },
+    "usdaff_746765": {
+      "protein_g": 24.5,
+      "iron_mg": 0.18,
+      "magnesium_mg": 26.7,
+      "phosphorus_mg": 475,
+      "sodium_mg": 1810.0,
+      "copper_mg": 0.027,
+      "vitaminA_ug": 226,
+      "vitaminD_ug": 1.83,
+      "thiamin_mg": 0.038,
+      "riboflavin_mg": 0.23,
+      "vitaminB12_ug": 1.7,
+      "fat_g": 24.3,
+      "carbohydrate_g": 2.07,
+      "calcium_mg": 661,
+      "potassium_mg": 116,
+      "zinc_mg": 3.28,
+      "selenium_ug": 22.4,
+      "niacin_mg": 0.083,
+      "vitaminB6_mg": 0.091
+    },
+    "usdaff_746766": {
+      "riboflavin_mg": 0.327,
+      "folate_ug": 4.0,
+      "vitaminB12_ug": 0.78,
+      "protein_g": 7.81,
+      "iron_mg": 0.1,
+      "magnesium_mg": 19.7,
+      "phosphorus_mg": 162,
+      "sodium_mg": 105,
+      "calcium_mg": 224,
+      "potassium_mg": 230,
+      "zinc_mg": 0.56,
+      "selenium_ug": 5.5,
+      "niacin_mg": 0.168,
+      "vitaminB6_mg": 0.099,
+      "fat_g": 11.0,
+      "carbohydrate_g": 6.86,
+      "thiamin_mg": 0.043,
+      "vitaminA_ug": 127
+    },
+    "usdaff_746767": {
+      "fat_g": 31.0,
+      "carbohydrate_g": 1.44,
+      "calcium_mg": 890,
+      "potassium_mg": 71.0,
+      "zinc_mg": 4.37,
+      "selenium_ug": 30.1,
+      "niacin_mg": 0.06,
+      "vitaminB6_mg": 0.07,
+      "iron_mg": 0.13,
+      "magnesium_mg": 33.4,
+      "phosphorus_mg": 574,
+      "sodium_mg": 185,
+      "copper_mg": 0.047,
+      "vitaminA_ug": 292,
+      "thiamin_mg": 0.011,
+      "riboflavin_mg": 0.303,
+      "folate_ug": 9.0,
+      "vitaminB12_ug": 3.02,
+      "protein_g": 27.0
+    },
+    "usdaff_746768": {
+      "carbohydrate_g": 63.9,
+      "protein_g": 3.3,
+      "vitaminC_mg": 1.2,
+      "thiamin_mg": 0.085,
+      "riboflavin_mg": 0.082,
+      "folate_ug": 9.0,
+      "iron_mg": 2.03,
+      "magnesium_mg": 67.6,
+      "phosphorus_mg": 67.0,
+      "sodium_mg": 10.0,
+      "copper_mg": 0.287,
+      "fat_g": 0.92,
+      "calcium_mg": 162,
+      "potassium_mg": 680,
+      "zinc_mg": 0.66,
+      "selenium_ug": 0.6,
+      "niacin_mg": 0.619,
+      "vitaminB6_mg": 0.106
+    },
+    "usdaff_746769": {
+      "vitaminA_ug": 436,
+      "carbohydrate_g": 3.24,
+      "vitaminC_mg": 4.6,
+      "folate_ug": 50.0,
+      "fat_g": 0.26,
+      "niacin_mg": 0.323,
+      "vitaminB6_mg": 0.078,
+      "calcium_mg": 35.0,
+      "potassium_mg": 253,
+      "zinc_mg": 0.25,
+      "selenium_ug": 0.4,
+      "copper_mg": 0.048,
+      "thiamin_mg": 0.079,
+      "riboflavin_mg": 0.072,
+      "iron_mg": 0.95,
+      "magnesium_mg": 13.7,
+      "phosphorus_mg": 30.0,
+      "protein_g": 1.24
+    },
+    "usdaff_746770": {
+      "sodium_mg": 30.0,
+      "potassium_mg": 157,
+      "carbohydrate_g": 8.16,
+      "vitaminC_mg": 10.9,
+      "thiamin_mg": 0.049,
+      "riboflavin_mg": 0.027,
+      "folate_ug": 14.0,
+      "iron_mg": 0.38,
+      "magnesium_mg": 13.0,
+      "phosphorus_mg": 17.0,
+      "copper_mg": 0.085,
+      "vitaminA_ug": 232,
+      "protein_g": 0.82,
+      "calcium_mg": 9.0,
+      "selenium_ug": 1.7,
+      "zinc_mg": 0.44,
+      "niacin_mg": 0.694,
+      "vitaminB6_mg": 0.04,
+      "fat_g": 0.18
+    },
+    "usdaff_746771": {
+      "iron_mg": 0.33,
+      "magnesium_mg": 10.7,
+      "phosphorus_mg": 23.0,
+      "sodium_mg": 9.0,
+      "copper_mg": 0.064,
+      "protein_g": 0.91,
+      "vitaminC_mg": 59.1,
+      "thiamin_mg": 0.068,
+      "riboflavin_mg": 0.051,
+      "folate_ug": 25.0,
+      "fat_g": 0.15,
+      "calcium_mg": 43.0,
+      "potassium_mg": 166,
+      "zinc_mg": 0.11,
+      "niacin_mg": 0.425,
+      "vitaminB6_mg": 0.079,
+      "carbohydrate_g": 11.8
+    },
+    "usdaff_746772": {
+      "potassium_mg": 159,
+      "zinc_mg": 0.43,
+      "magnesium_mg": 12.0,
+      "phosphorus_mg": 103,
+      "sodium_mg": 39.0,
+      "copper_mg": 0.001,
+      "protein_g": 3.38,
+      "thiamin_mg": 0.057,
+      "riboflavin_mg": 0.14,
+      "fat_g": 0.95,
+      "vitaminB6_mg": 0.06,
+      "selenium_ug": 2.1,
+      "niacin_mg": 0.113,
+      "vitaminA_ug": 58.0,
+      "vitaminD_ug": 1.06,
+      "carbohydrate_g": 5.18,
+      "folate_ug": 2.0,
+      "vitaminB12_ug": 0.61,
+      "calcium_mg": 126
+    },
+    "usdaff_746773": {
+      "protein_g": 0.38,
+      "iron_mg": 0.17,
+      "magnesium_mg": 5.7,
+      "phosphorus_mg": 10.0,
+      "sodium_mg": 7.0,
+      "copper_mg": 0.07,
+      "vitaminA_ug": 1.0,
+      "vitaminC_mg": 4.4,
+      "thiamin_mg": 0.012,
+      "riboflavin_mg": 0.026,
+      "folate_ug": 6.0,
+      "fat_g": 0.16,
+      "carbohydrate_g": 15.1,
+      "calcium_mg": 8.0,
+      "potassium_mg": 87.0,
+      "zinc_mg": 0.07,
+      "selenium_ug": 0.2,
+      "niacin_mg": 0.164,
+      "vitaminB6_mg": 0.026
+    },
+    "usdaff_746775": {
+      "sodium_mg": 38700.0,
+      "calcium_mg": 50.0,
+      "potassium_mg": 2.0
+    },
+    "usdaff_746776": {
+      "magnesium_mg": 12.5,
+      "phosphorus_mg": 107,
+      "sodium_mg": 41.0,
+      "copper_mg": 0.002,
+      "potassium_mg": 167,
+      "zinc_mg": 0.45,
+      "vitaminB6_mg": 0.058,
+      "selenium_ug": 2.0,
+      "niacin_mg": 0.118,
+      "fat_g": 0.08,
+      "thiamin_mg": 0.056,
+      "riboflavin_mg": 0.131,
+      "protein_g": 3.43,
+      "carbohydrate_g": 4.92,
+      "vitaminD_ug": 1.1,
+      "vitaminA_ug": 64.0,
+      "folate_ug": 2.0,
+      "calcium_mg": 132,
+      "vitaminB12_ug": 0.58
+    },
+    "usdaff_746778": {
+      "selenium_ug": 1.8,
+      "niacin_mg": 0.112,
+      "vitaminB6_mg": 0.061,
+      "protein_g": 3.36,
+      "riboflavin_mg": 0.137,
+      "vitaminA_ug": 83.0,
+      "vitaminD_ug": 1.13,
+      "carbohydrate_g": 4.9,
+      "folate_ug": 2.0,
+      "thiamin_mg": 0.059,
+      "calcium_mg": 126,
+      "potassium_mg": 159,
+      "zinc_mg": 0.43,
+      "fat_g": 1.9,
+      "magnesium_mg": 12.0,
+      "phosphorus_mg": 103,
+      "sodium_mg": 39.0,
+      "copper_mg": 0.001,
+      "vitaminB12_ug": 0.55
+    },
+    "usdaff_746782": {
+      "vitaminA_ug": 32.0,
+      "selenium_ug": 1.9,
+      "fat_g": 3.2,
+      "carbohydrate_g": 4.63,
+      "vitaminD_ug": 0.96,
+      "magnesium_mg": 11.9,
+      "phosphorus_mg": 101,
+      "sodium_mg": 38.0,
+      "copper_mg": 0.001,
+      "protein_g": 3.27,
+      "thiamin_mg": 0.056,
+      "riboflavin_mg": 0.138,
+      "vitaminB12_ug": 0.54,
+      "niacin_mg": 0.105,
+      "vitaminB6_mg": 0.061,
+      "calcium_mg": 123,
+      "potassium_mg": 150,
+      "zinc_mg": 0.42
+    },
+    "usdaff_746785": {
+      "niacin_mg": 8.09,
+      "vitaminB6_mg": 0.497,
+      "calcium_mg": 31.0,
+      "potassium_mg": 304,
+      "zinc_mg": 3.77,
+      "selenium_ug": 28.4,
+      "fat_g": 11.6,
+      "iron_mg": 1.56,
+      "magnesium_mg": 29.1,
+      "phosphorus_mg": 259,
+      "sodium_mg": 90.0,
+      "copper_mg": 0.166,
+      "vitaminA_ug": 30.0,
+      "thiamin_mg": 0.088,
+      "riboflavin_mg": 0.262,
+      "vitaminB12_ug": 1.9,
+      "protein_g": 27.1
+    },
+    "usdaff_746952": {
+      "calcium_mg": 6.0,
+      "copper_mg": 0.041,
+      "iron_mg": 0.86,
+      "magnesium_mg": 20.3,
+      "phosphorus_mg": 246,
+      "potassium_mg": 484,
+      "sodium_mg": 1030.0,
+      "zinc_mg": 1.76,
+      "fat_g": 3.68,
+      "protein_g": 19.6,
+      "carbohydrate_g": 2.36
+    },
+    "usdaff_747429": {
+      "calcium_mg": 508,
+      "copper_mg": 0.042,
+      "iron_mg": 0.24,
+      "magnesium_mg": 25.0,
+      "phosphorus_mg": 380,
+      "potassium_mg": 173,
+      "sodium_mg": 1600.0,
+      "zinc_mg": 2.45,
+      "fat_g": 31.1,
+      "protein_g": 17.5,
+      "carbohydrate_g": 6.35
+    },
+    "usdaff_747430": {
+      "protein_g": 25.5,
+      "fat_g": 1.04,
+      "calcium_mg": 193,
+      "copper_mg": 1.04,
+      "iron_mg": 6.27,
+      "potassium_mg": 1490.0,
+      "magnesium_mg": 178,
+      "phosphorus_mg": 548,
+      "zinc_mg": 3.82
+    },
+    "usdaff_747431": {
+      "protein_g": 21.3,
+      "fat_g": 1.16,
+      "calcium_mg": 148,
+      "copper_mg": 0.959,
+      "iron_mg": 5.05,
+      "potassium_mg": 1540.0,
+      "magnesium_mg": 152,
+      "phosphorus_mg": 380,
+      "zinc_mg": 2.84
+    },
+    "usdaff_747432": {
+      "protein_g": 23.3,
+      "fat_g": 0.86,
+      "calcium_mg": 180,
+      "copper_mg": 0.864,
+      "iron_mg": 4.47,
+      "potassium_mg": 1490.0,
+      "magnesium_mg": 182,
+      "phosphorus_mg": 439,
+      "zinc_mg": 3.42
+    },
+    "usdaff_747433": {
+      "protein_g": 25.6,
+      "fat_g": 1.12,
+      "calcium_mg": 158,
+      "copper_mg": 1.03,
+      "iron_mg": 4.7,
+      "potassium_mg": 1580.0,
+      "magnesium_mg": 158,
+      "phosphorus_mg": 543,
+      "zinc_mg": 3.71
+    },
+    "usdaff_747434": {
+      "protein_g": 26.8,
+      "fat_g": 1.14,
+      "calcium_mg": 178,
+      "copper_mg": 1.1,
+      "iron_mg": 5.85,
+      "potassium_mg": 1620.0,
+      "magnesium_mg": 198,
+      "phosphorus_mg": 555,
+      "zinc_mg": 3.5
+    },
+    "usdaff_747435": {
+      "protein_g": 24.6,
+      "fat_g": 1.28,
+      "calcium_mg": 98.0,
+      "copper_mg": 0.932,
+      "iron_mg": 7.29,
+      "potassium_mg": 1230.0,
+      "magnesium_mg": 178,
+      "phosphorus_mg": 571,
+      "zinc_mg": 3.23
+    },
+    "usdaff_747436": {
+      "protein_g": 25.2,
+      "fat_g": 1.44,
+      "calcium_mg": 194,
+      "copper_mg": 1.04,
+      "potassium_mg": 1390.0,
+      "magnesium_mg": 179,
+      "phosphorus_mg": 535,
+      "zinc_mg": 3.36,
+      "iron_mg": 5.87
+    },
+    "usdaff_747437": {
+      "protein_g": 24.4,
+      "fat_g": 1.23,
+      "calcium_mg": 152,
+      "copper_mg": 0.757,
+      "iron_mg": 5.26,
+      "potassium_mg": 1340.0,
+      "magnesium_mg": 166,
+      "phosphorus_mg": 487,
+      "zinc_mg": 3.03
+    },
+    "usdaff_747438": {
+      "protein_g": 25.0,
+      "fat_g": 1.03,
+      "calcium_mg": 103,
+      "copper_mg": 0.786,
+      "iron_mg": 6.95,
+      "potassium_mg": 1540.0,
+      "magnesium_mg": 158,
+      "phosphorus_mg": 549,
+      "zinc_mg": 3.5
+    },
+    "usdaff_747439": {
+      "protein_g": 23.4,
+      "fat_g": 1.2,
+      "calcium_mg": 137,
+      "copper_mg": 0.947,
+      "iron_mg": 5.46,
+      "potassium_mg": 1490.0,
+      "magnesium_mg": 164,
+      "phosphorus_mg": 491,
+      "zinc_mg": 3.26
+    },
+    "usdaff_747440": {
+      "protein_g": 25.9,
+      "fat_g": 1.31,
+      "calcium_mg": 98.0,
+      "copper_mg": 0.865,
+      "iron_mg": 6.58,
+      "potassium_mg": 1490.0,
+      "magnesium_mg": 164,
+      "phosphorus_mg": 612,
+      "zinc_mg": 3.29
+    },
+    "usdaff_747441": {
+      "protein_g": 24.1,
+      "fat_g": 1.51,
+      "calcium_mg": 229,
+      "copper_mg": 1.14,
+      "iron_mg": 5.29,
+      "potassium_mg": 1470.0,
+      "magnesium_mg": 180,
+      "phosphorus_mg": 523,
+      "zinc_mg": 3.31
+    },
+    "usdaff_747442": {
+      "protein_g": 24.5,
+      "fat_g": 1.32,
+      "calcium_mg": 236,
+      "copper_mg": 1.05,
+      "iron_mg": 4.93,
+      "potassium_mg": 1540.0,
+      "magnesium_mg": 182,
+      "phosphorus_mg": 533,
+      "zinc_mg": 3.54
+    },
+    "usdaff_747443": {
+      "protein_g": 23.5,
+      "fat_g": 1.28,
+      "calcium_mg": 149,
+      "copper_mg": 0.968,
+      "iron_mg": 4.95,
+      "potassium_mg": 1520.0,
+      "magnesium_mg": 167,
+      "phosphorus_mg": 493,
+      "zinc_mg": 3.23
+    },
+    "usdaff_747444": {
+      "protein_g": 24.4,
+      "fat_g": 1.45,
+      "calcium_mg": 191,
+      "copper_mg": 1.12,
+      "iron_mg": 5.34,
+      "potassium_mg": 1540.0,
+      "magnesium_mg": 180,
+      "phosphorus_mg": 522,
+      "zinc_mg": 3.37
+    },
+    "usdaff_747445": {
+      "protein_g": 23.7,
+      "fat_g": 1.24,
+      "calcium_mg": 161,
+      "copper_mg": 0.978,
+      "iron_mg": 5.4,
+      "potassium_mg": 1510.0,
+      "magnesium_mg": 170,
+      "phosphorus_mg": 507,
+      "zinc_mg": 3.43
+    },
+    "usdaff_747446": {
+      "protein_g": 24.7,
+      "fat_g": 1.24,
+      "calcium_mg": 192,
+      "copper_mg": 1.08,
+      "iron_mg": 5.48,
+      "potassium_mg": 1520.0,
+      "magnesium_mg": 176,
+      "phosphorus_mg": 519,
+      "zinc_mg": 3.45
+    },
+    "usdaff_747447": {
+      "carbohydrate_g": 6.27,
+      "fat_g": 0.34,
+      "calcium_mg": 46.0,
+      "potassium_mg": 303,
+      "zinc_mg": 0.42,
+      "selenium_ug": 1.6,
+      "niacin_mg": 0.639,
+      "vitaminB6_mg": 0.191,
+      "protein_g": 2.57,
+      "iron_mg": 0.69,
+      "magnesium_mg": 21.0,
+      "phosphorus_mg": 67.0,
+      "sodium_mg": 36.0,
+      "copper_mg": 0.059,
+      "vitaminC_mg": 91.3,
+      "thiamin_mg": 0.077,
+      "riboflavin_mg": 0.114,
+      "folate_ug": 65.0,
+      "vitaminA_ug": 8.0
+    },
+    "usdaff_747693": {
+      "fat_g": 0.55,
+      "calcium_mg": 14.0,
+      "copper_mg": 0.066,
+      "iron_mg": 0.43,
+      "magnesium_mg": 13.5,
+      "phosphorus_mg": 25.0,
+      "potassium_mg": 249,
+      "sodium_mg": 949,
+      "zinc_mg": 0.16,
+      "protein_g": 1.11,
+      "carbohydrate_g": 26.8
+    },
+    "usdaff_747997": {
+      "riboflavin_mg": 0.391,
+      "protein_g": 10.7,
+      "selenium_ug": 17.9,
+      "carbohydrate_g": 2.36
+    },
+    "usdaff_748236": {
+      "selenium_ug": 55.8,
+      "fat_g": 28.8,
+      "protein_g": 16.2,
+      "riboflavin_mg": 0.467,
+      "carbohydrate_g": 1.02
+    },
+    "usdaff_748967": {
+      "thiamin_mg": 0.077,
+      "riboflavin_mg": 0.419,
+      "vitaminB12_ug": 1.02,
+      "protein_g": 12.4,
+      "iron_mg": 1.67,
+      "magnesium_mg": 11.4,
+      "phosphorus_mg": 184,
+      "sodium_mg": 129,
+      "vitaminA_ug": 180,
+      "selenium_ug": 31.1,
+      "calcium_mg": 48.0,
+      "potassium_mg": 132,
+      "zinc_mg": 1.24,
+      "fat_g": 9.96,
+      "vitaminB6_mg": 0.063,
+      "carbohydrate_g": 0.96,
+      "vitaminD_ug": 2.46,
+      "folate_ug": 71.0
+    },
+    "usdaff_749420": {
+      "fat_g": 36.5,
+      "calcium_mg": 13.0,
+      "copper_mg": 0.13,
+      "iron_mg": 1.28,
+      "magnesium_mg": 36.5,
+      "phosphorus_mg": 415,
+      "potassium_mg": 557,
+      "sodium_mg": 1830.0,
+      "zinc_mg": 3.56,
+      "protein_g": 40.9,
+      "carbohydrate_g": 2.1
+    },
+    "usdaff_789828": {
+      "calcium_mg": 14.0,
+      "magnesium_mg": 1.6,
+      "iron_mg": 0.03,
+      "phosphorus_mg": 19.0,
+      "potassium_mg": 19.0,
+      "zinc_mg": 0.07,
+      "fat_g": 81.5,
+      "sodium_mg": 10.0,
+      "copper_mg": 0.001
+    },
+    "usdaff_789890": {
+      "iron_mg": 5.62,
+      "magnesium_mg": 26.7,
+      "phosphorus_mg": 108,
+      "sodium_mg": 2.0,
+      "copper_mg": 0.155,
+      "protein_g": 10.9,
+      "thiamin_mg": 0.939,
+      "riboflavin_mg": 0.443,
+      "fat_g": 1.48,
+      "carbohydrate_g": 77.3,
+      "calcium_mg": 19.0,
+      "potassium_mg": 136,
+      "zinc_mg": 0.72,
+      "niacin_mg": 6.74,
+      "vitaminB6_mg": 0.066,
+      "folate_ug": 160,
+      "selenium_ug": 15.7
+    },
+    "usdaff_789951": {
+      "fat_g": 1.48,
+      "carbohydrate_g": 73.2,
+      "niacin_mg": 7.07,
+      "vitaminB6_mg": 0.079,
+      "calcium_mg": 21.0,
+      "potassium_mg": 135,
+      "zinc_mg": 0.9,
+      "protein_g": 13.1,
+      "iron_mg": 5.41,
+      "magnesium_mg": 33.3,
+      "phosphorus_mg": 115,
+      "sodium_mg": 4.0,
+      "copper_mg": 0.172,
+      "thiamin_mg": 1.05,
+      "riboflavin_mg": 0.467,
+      "folate_ug": 159,
+      "selenium_ug": 14.2
+    },
+    "usdaff_790018": {
+      "fat_g": 1.7,
+      "carbohydrate_g": 74.6,
+      "calcium_mg": 22.0,
+      "potassium_mg": 150,
+      "zinc_mg": 1.15,
+      "niacin_mg": 1.59,
+      "vitaminB6_mg": 0.085,
+      "iron_mg": 1.18,
+      "magnesium_mg": 36.1,
+      "phosphorus_mg": 134,
+      "sodium_mg": 2.0,
+      "copper_mg": 0.212,
+      "thiamin_mg": 0.298,
+      "folate_ug": 23.0,
+      "protein_g": 12.0,
+      "selenium_ug": 20.1
+    },
+    "usdaff_790085": {
+      "fat_g": 2.73,
+      "carbohydrate_g": 71.2,
+      "calcium_mg": 38.0,
+      "potassium_mg": 376,
+      "zinc_mg": 3.24,
+      "selenium_ug": 23.6,
+      "niacin_mg": 5.55,
+      "vitaminB6_mg": 0.268,
+      "protein_g": 15.1,
+      "iron_mg": 3.86,
+      "magnesium_mg": 136,
+      "phosphorus_mg": 352,
+      "sodium_mg": 3.0,
+      "copper_mg": 0.452,
+      "thiamin_mg": 0.504,
+      "riboflavin_mg": 0.128,
+      "folate_ug": 39.0
+    },
+    "usdaff_790146": {
+      "folate_ug": 145,
+      "protein_g": 14.3,
+      "iron_mg": 5.55,
+      "magnesium_mg": 35.9,
+      "phosphorus_mg": 124,
+      "sodium_mg": 3.0,
+      "copper_mg": 0.194,
+      "thiamin_mg": 0.953,
+      "riboflavin_mg": 0.436,
+      "calcium_mg": 19.0,
+      "potassium_mg": 127,
+      "zinc_mg": 1.06,
+      "niacin_mg": 6.56,
+      "vitaminB6_mg": 0.079,
+      "fat_g": 1.65,
+      "carbohydrate_g": 72.8,
+      "selenium_ug": 33.3
+    },
+    "usdaff_790214": {
+      "niacin_mg": 1.25,
+      "vitaminB6_mg": 0.052,
+      "calcium_mg": 6.0,
+      "potassium_mg": 75.0,
+      "zinc_mg": 1.19,
+      "fat_g": 1.3,
+      "carbohydrate_g": 79.8,
+      "protein_g": 6.94,
+      "thiamin_mg": 0.09,
+      "folate_ug": 16.0,
+      "iron_mg": 0.22,
+      "magnesium_mg": 22.9,
+      "phosphorus_mg": 94.0,
+      "sodium_mg": 5.0,
+      "copper_mg": 0.209,
+      "selenium_ug": 5.3
+    },
+    "usdaff_790276": {
+      "fat_g": 1.74,
+      "copper_mg": 0.082,
+      "iron_mg": 4.44,
+      "magnesium_mg": 30.1,
+      "phosphorus_mg": 92.0,
+      "potassium_mg": 144,
+      "zinc_mg": 0.62,
+      "niacin_mg": 5.75,
+      "selenium_ug": 8.3,
+      "folate_ug": 155,
+      "thiamin_mg": 0.662,
+      "vitaminB6_mg": 0.13,
+      "riboflavin_mg": 0.354,
+      "protein_g": 6.2,
+      "carbohydrate_g": 80.8
+    },
+    "usdaff_790508": {
+      "iron_mg": 0.06,
+      "magnesium_mg": 1.6,
+      "phosphorus_mg": 22.0,
+      "copper_mg": 0.006,
+      "potassium_mg": 23.0,
+      "zinc_mg": 0.07,
+      "sodium_mg": 524,
+      "folate_ug": 5.0,
+      "vitaminA_ug": 758,
+      "vitaminD_ug": 0.4,
+      "fat_g": 82.2,
+      "calcium_mg": 21.0
+    },
+    "usdaff_790577": {
+      "phosphorus_mg": 41.0,
+      "potassium_mg": 197,
+      "zinc_mg": 0.17,
+      "calcium_mg": 17.0,
+      "copper_mg": 0.058,
+      "iron_mg": 0.24,
+      "magnesium_mg": 11.4,
+      "sodium_mg": 1.0,
+      "selenium_ug": 0.5,
+      "protein_g": 0.94,
+      "fat_g": 0.1,
+      "vitaminC_mg": 8.1,
+      "carbohydrate_g": 9.93
+    },
+    "usdaff_790646": {
+      "phosphorus_mg": 34.0,
+      "potassium_mg": 182,
+      "zinc_mg": 0.2,
+      "calcium_mg": 15.0,
+      "copper_mg": 0.035,
+      "iron_mg": 0.28,
+      "magnesium_mg": 9.0,
+      "sodium_mg": 1.0,
+      "protein_g": 0.83,
+      "fat_g": 0.05,
+      "vitaminC_mg": 8.2,
+      "carbohydrate_g": 8.61
+    },
+    "usdaff_1104647": {
+      "selenium_ug": 9.8,
+      "fat_g": 0.38,
+      "vitaminC_mg": 10.0,
+      "protein_g": 6.62,
+      "carbohydrate_g": 28.2
+    },
+    "usdaff_1104705": {
+      "riboflavin_mg": 0.298,
+      "vitaminB6_mg": 0.618,
+      "fat_g": 3.33,
+      "carbohydrate_g": 32.9,
+      "protein_g": 51.1,
+      "calcium_mg": 338,
+      "copper_mg": 1.51,
+      "iron_mg": 7.34,
+      "magnesium_mg": 313,
+      "phosphorus_mg": 726,
+      "potassium_mg": 2480.0,
+      "sodium_mg": 2.0,
+      "zinc_mg": 4.44,
+      "niacin_mg": 3.43,
+      "selenium_ug": 45.8,
+      "thiamin_mg": 0.542
+    },
+    "usdaff_1104766": {
+      "carbohydrate_g": 27.9,
+      "protein_g": 38.6,
+      "fat_g": 20.7,
+      "niacin_mg": 2.74,
+      "vitaminB6_mg": 0.34,
+      "calcium_mg": 258,
+      "potassium_mg": 1860.0,
+      "zinc_mg": 3.75,
+      "thiamin_mg": 0.362,
+      "riboflavin_mg": 0.363,
+      "iron_mg": 9.51,
+      "magnesium_mg": 254,
+      "phosphorus_mg": 607,
+      "sodium_mg": 2.0,
+      "copper_mg": 1.09,
+      "selenium_ug": 14.3
+    },
+    "usdaff_1104812": {
+      "iron_mg": 1.5,
+      "magnesium_mg": 124,
+      "phosphorus_mg": 319,
+      "sodium_mg": 1.0,
+      "copper_mg": 0.286,
+      "protein_g": 7.19,
+      "thiamin_mg": 0.322,
+      "riboflavin_mg": 0.008,
+      "fat_g": 3.85,
+      "carbohydrate_g": 75.5,
+      "calcium_mg": 10.0,
+      "potassium_mg": 265,
+      "zinc_mg": 1.91,
+      "niacin_mg": 5.99,
+      "vitaminB6_mg": 0.132,
+      "selenium_ug": 9.68
+    },
+    "usdaff_1104867": {
+      "fat_g": 1.16,
+      "vitaminB6_mg": 0.044,
+      "calcium_mg": 10.0,
+      "copper_mg": 0.17,
+      "iron_mg": 0.34,
+      "magnesium_mg": 21.2,
+      "phosphorus_mg": 63.0,
+      "potassium_mg": 80.0,
+      "sodium_mg": 6.0,
+      "zinc_mg": 1.34,
+      "niacin_mg": 1.12,
+      "selenium_ug": 2.0,
+      "thiamin_mg": 0.053,
+      "protein_g": 6.69,
+      "carbohydrate_g": 80.1
+    },
+    "usdaff_1104913": {
+      "fat_g": 1.64,
+      "vitaminB6_mg": 0.065,
+      "calcium_mg": 17.0,
+      "copper_mg": 0.159,
+      "iron_mg": 0.87,
+      "magnesium_mg": 22.4,
+      "phosphorus_mg": 102,
+      "potassium_mg": 142,
+      "sodium_mg": 1.0,
+      "zinc_mg": 0.74,
+      "niacin_mg": 0.988,
+      "selenium_ug": 5.0,
+      "thiamin_mg": 0.146,
+      "protein_g": 8.75,
+      "carbohydrate_g": 77.2
+    },
+    "usdaff_1104962": {
+      "fat_g": 0.13,
+      "calcium_mg": 21.0,
+      "copper_mg": 0.047,
+      "iron_mg": 0.15,
+      "magnesium_mg": 9.3,
+      "phosphorus_mg": 29.0,
+      "potassium_mg": 141,
+      "sodium_mg": 2.0,
+      "zinc_mg": 0.12,
+      "protein_g": 0.89,
+      "carbohydrate_g": 7.68
+    },
+    "usdaff_1105073": {
+      "fat_g": 0.22,
+      "niacin_mg": 0.57,
+      "thiamin_mg": 0.04,
+      "folate_ug": 25.0,
+      "vitaminB6_mg": 0.234,
+      "vitaminC_mg": 9.7,
+      "protein_g": 0.73,
+      "carbohydrate_g": 20.1,
+      "vitaminA_ug": 1.0
+    },
+    "usdaff_1105314": {
+      "vitaminA_ug": 1.0,
+      "carbohydrate_g": 23.0,
+      "vitaminC_mg": 12.3,
+      "thiamin_mg": 0.056,
+      "folate_ug": 14.0,
+      "magnesium_mg": 28.0,
+      "phosphorus_mg": 22.0,
+      "copper_mg": 0.101,
+      "protein_g": 0.74,
+      "calcium_mg": 5.0,
+      "potassium_mg": 326,
+      "zinc_mg": 0.16,
+      "fat_g": 0.29,
+      "niacin_mg": 0.662,
+      "vitaminB6_mg": 0.209
+    },
+    "usdaff_1750339": {
+      "magnesium_mg": 4.7,
+      "phosphorus_mg": 9.18,
+      "potassium_mg": 95.3,
+      "zinc_mg": 0.02,
+      "copper_mg": 0.024,
+      "thiamin_mg": 0.009,
+      "riboflavin_mg": 0.066,
+      "niacin_mg": 0.09,
+      "vitaminB6_mg": 0.021,
+      "fat_g": 0.212,
+      "calcium_mg": 4.66,
+      "protein_g": 0.188,
+      "carbohydrate_g": 14.8
+    },
+    "usdaff_1750340": {
+      "iron_mg": 0.015,
+      "magnesium_mg": 4.67,
+      "phosphorus_mg": 9.78,
+      "potassium_mg": 104,
+      "sodium_mg": 1.01,
+      "zinc_mg": 0.017,
+      "copper_mg": 0.033,
+      "thiamin_mg": 0.006,
+      "riboflavin_mg": 0.068,
+      "niacin_mg": 0.091,
+      "vitaminB6_mg": 0.035,
+      "fat_g": 0.162,
+      "calcium_mg": 5.98,
+      "protein_g": 0.148,
+      "carbohydrate_g": 15.7
+    },
+    "usdaff_1750341": {
+      "iron_mg": 0.06,
+      "magnesium_mg": 4.95,
+      "phosphorus_mg": 8.44,
+      "potassium_mg": 106,
+      "sodium_mg": 0.279,
+      "zinc_mg": 0.024,
+      "copper_mg": 0.034,
+      "thiamin_mg": 0.011,
+      "riboflavin_mg": 0.069,
+      "niacin_mg": 0.089,
+      "vitaminB6_mg": 0.032,
+      "folate_ug": 0.812,
+      "fat_g": 0.15,
+      "calcium_mg": 6.64,
+      "protein_g": 0.133,
+      "carbohydrate_g": 14.8
+    },
+    "usdaff_1750342": {
+      "iron_mg": 0.07,
+      "magnesium_mg": 5.06,
+      "phosphorus_mg": 9.86,
+      "potassium_mg": 116,
+      "zinc_mg": 0.023,
+      "copper_mg": 0.035,
+      "thiamin_mg": 0.017,
+      "riboflavin_mg": 0.075,
+      "niacin_mg": 0.11,
+      "vitaminB6_mg": 0.028,
+      "fat_g": 0.138,
+      "calcium_mg": 5.48,
+      "protein_g": 0.266,
+      "carbohydrate_g": 14.1
+    },
+    "usdaff_1750343": {
+      "magnesium_mg": 4.15,
+      "phosphorus_mg": 7.85,
+      "potassium_mg": 98.0,
+      "sodium_mg": 0.138,
+      "zinc_mg": 0.018,
+      "copper_mg": 0.023,
+      "thiamin_mg": 0.009,
+      "riboflavin_mg": 0.074,
+      "niacin_mg": 0.074,
+      "vitaminB6_mg": 0.033,
+      "fat_g": 0.1,
+      "calcium_mg": 3.87,
+      "protein_g": 0.102,
+      "carbohydrate_g": 14.7
+    },
+    "usdaff_1999626": {
+      "iron_mg": 0.688,
+      "magnesium_mg": 11.7,
+      "phosphorus_mg": 94.0,
+      "potassium_mg": 443,
+      "sodium_mg": 0.336,
+      "zinc_mg": 0.745,
+      "copper_mg": 0.177,
+      "thiamin_mg": 0.146,
+      "riboflavin_mg": 0.363,
+      "niacin_mg": 1.63,
+      "selenium_ug": 1.77,
+      "vitaminB6_mg": 0.066,
+      "folate_ug": 29.6,
+      "fat_g": 0.256,
+      "protein_g": 2.5,
+      "carbohydrate_g": 7.59,
+      "vitaminD_ug": 0.021
+    },
+    "usdaff_1999627": {
+      "iron_mg": 0.698,
+      "magnesium_mg": 13.9,
+      "phosphorus_mg": 86.2,
+      "potassium_mg": 282,
+      "sodium_mg": 1.13,
+      "zinc_mg": 0.684,
+      "copper_mg": 0.106,
+      "thiamin_mg": 0.07,
+      "riboflavin_mg": 0.244,
+      "selenium_ug": 1.38,
+      "niacin_mg": 5.75,
+      "vitaminB6_mg": 0.099,
+      "folate_ug": 63.1,
+      "fat_g": 0.188,
+      "protein_g": 2.9,
+      "carbohydrate_g": 6.94,
+      "vitaminD_ug": 0.041
+    },
+    "usdaff_1999628": {
+      "iron_mg": 0.144,
+      "magnesium_mg": 14.1,
+      "phosphorus_mg": 75.8,
+      "potassium_mg": 243,
+      "sodium_mg": 0.936,
+      "zinc_mg": 0.764,
+      "copper_mg": 0.05,
+      "thiamin_mg": 0.001,
+      "riboflavin_mg": 0.216,
+      "niacin_mg": 2.74,
+      "selenium_ug": 1.24,
+      "vitaminB6_mg": 0.159,
+      "folate_ug": 32.1,
+      "fat_g": 0.195,
+      "calcium_mg": 0.766,
+      "protein_g": 2.41,
+      "carbohydrate_g": 8.17,
+      "vitaminD_ug": 0.056
+    },
+    "usdaff_1999629": {
+      "iron_mg": 0.227,
+      "magnesium_mg": 10.2,
+      "phosphorus_mg": 93.0,
+      "potassium_mg": 373,
+      "sodium_mg": 6.44,
+      "zinc_mg": 0.511,
+      "copper_mg": 0.389,
+      "thiamin_mg": 0.065,
+      "riboflavin_mg": 0.444,
+      "niacin_mg": 3.88,
+      "selenium_ug": 20.0,
+      "vitaminB6_mg": 0.077,
+      "folate_ug": 34.8,
+      "fat_g": 0.371,
+      "calcium_mg": 5.46,
+      "protein_g": 2.89,
+      "carbohydrate_g": 4.08,
+      "vitaminD_ug": 0.022
+    },
+    "usdaff_1999630": {
+      "calcium_mg": 101,
+      "iron_mg": 0.542,
+      "magnesium_mg": 21.5,
+      "phosphorus_mg": 68.6,
+      "potassium_mg": 158,
+      "sodium_mg": 34.3,
+      "zinc_mg": 0.312,
+      "copper_mg": 0.108,
+      "selenium_ug": 1.94,
+      "thiamin_mg": 0.063,
+      "riboflavin_mg": 0.084,
+      "niacin_mg": 0.236,
+      "vitaminB6_mg": 0.055,
+      "folate_ug": 19.7,
+      "vitaminB12_ug": 0.393,
+      "fat_g": 2.12,
+      "protein_g": 3.55,
+      "carbohydrate_g": 1.29,
+      "vitaminA_ug": 58.2,
+      "vitaminD_ug": 0.681
+    },
+    "usdaff_1999632": {
+      "iron_mg": 1.26,
+      "magnesium_mg": 92.9,
+      "phosphorus_mg": 39.0,
+      "potassium_mg": 582,
+      "sodium_mg": 111,
+      "zinc_mg": 0.447,
+      "copper_mg": 0.082,
+      "vitaminC_mg": 26.5,
+      "thiamin_mg": 0.077,
+      "riboflavin_mg": 0.194,
+      "niacin_mg": 0.551,
+      "vitaminB6_mg": 0.195,
+      "folate_ug": 116,
+      "fat_g": 0.619,
+      "calcium_mg": 68.4,
+      "protein_g": 2.85,
+      "carbohydrate_g": 2.41,
+      "vitaminA_ug": 283
+    },
+    "usdaff_1999633": {
+      "iron_mg": 1.05,
+      "magnesium_mg": 93.0,
+      "phosphorus_mg": 40.6,
+      "potassium_mg": 460,
+      "sodium_mg": 107,
+      "zinc_mg": 0.423,
+      "vitaminC_mg": 30.3,
+      "copper_mg": 0.079,
+      "thiamin_mg": 0.076,
+      "riboflavin_mg": 0.192,
+      "niacin_mg": 0.51,
+      "vitaminB6_mg": 0.214,
+      "folate_ug": 113,
+      "fat_g": 0.604,
+      "calcium_mg": 66.6,
+      "protein_g": 2.91,
+      "carbohydrate_g": 2.64,
+      "vitaminA_ug": 306
+    },
+    "usdaff_1999634": {
+      "iron_mg": 0.103,
+      "magnesium_mg": 8.09,
+      "phosphorus_mg": 19.1,
+      "potassium_mg": 193,
+      "zinc_mg": 0.082,
+      "copper_mg": 0.032,
+      "vitaminC_mg": 17.8,
+      "thiamin_mg": 0.056,
+      "niacin_mg": 0.533,
+      "vitaminB6_mg": 0.079,
+      "folate_ug": 9.99,
+      "fat_g": 0.425,
+      "calcium_mg": 9.96,
+      "protein_g": 0.696,
+      "carbohydrate_g": 3.84,
+      "vitaminA_ug": 23.9
+    },
+    "usdaff_2003586": {
+      "iron_mg": 0.986,
+      "magnesium_mg": 25.8,
+      "phosphorus_mg": 106,
+      "potassium_mg": 136,
+      "zinc_mg": 0.791,
+      "copper_mg": 0.168,
+      "fat_g": 1.52,
+      "thiamin_mg": 0.125,
+      "riboflavin_mg": 0.091,
+      "niacin_mg": 1.36,
+      "selenium_ug": 10.3,
+      "vitaminB6_mg": 0.055,
+      "folate_ug": 13.5,
+      "calcium_mg": 18.7,
+      "protein_g": 11.4,
+      "carbohydrate_g": 74.4
+    },
+    "usdaff_2003587": {
+      "iron_mg": 3.77,
+      "magnesium_mg": 124,
+      "phosphorus_mg": 362,
+      "potassium_mg": 350,
+      "zinc_mg": 3.59,
+      "copper_mg": 0.531,
+      "fat_g": 2.54,
+      "thiamin_mg": 0.298,
+      "riboflavin_mg": 0.143,
+      "niacin_mg": 5.47,
+      "selenium_ug": 9.48,
+      "vitaminB6_mg": 0.236,
+      "folate_ug": 38.4,
+      "calcium_mg": 30.0,
+      "protein_g": 14.5,
+      "carbohydrate_g": 70.7
+    },
+    "usdaff_2003588": {
+      "iron_mg": 1.55,
+      "magnesium_mg": 35.2,
+      "phosphorus_mg": 130,
+      "potassium_mg": 174,
+      "zinc_mg": 0.947,
+      "copper_mg": 0.227,
+      "fat_g": 1.6,
+      "thiamin_mg": 0.405,
+      "riboflavin_mg": 0.247,
+      "niacin_mg": 3.63,
+      "selenium_ug": 29.8,
+      "vitaminB6_mg": 0.083,
+      "folate_ug": 168,
+      "calcium_mg": 17.2,
+      "protein_g": 11.7,
+      "carbohydrate_g": 73.8
+    },
+    "usdaff_2003589": {
+      "iron_mg": 2.43,
+      "magnesium_mg": 46.3,
+      "phosphorus_mg": 163,
+      "potassium_mg": 208,
+      "sodium_mg": 0.426,
+      "zinc_mg": 1.24,
+      "copper_mg": 0.286,
+      "fat_g": 1.84,
+      "thiamin_mg": 0.695,
+      "riboflavin_mg": 0.34,
+      "niacin_mg": 5.6,
+      "selenium_ug": 44.1,
+      "vitaminB6_mg": 0.108,
+      "folate_ug": 164,
+      "calcium_mg": 19.8,
+      "protein_g": 13.3,
+      "carbohydrate_g": 72.0
+    },
+    "usdaff_2003590": {
+      "iron_mg": 0.04,
+      "magnesium_mg": 4.86,
+      "phosphorus_mg": 5.99,
+      "potassium_mg": 95.9,
+      "sodium_mg": 4.87,
+      "zinc_mg": 0.002,
+      "copper_mg": 0.003,
+      "vitaminC_mg": 51.2,
+      "niacin_mg": 0.01,
+      "vitaminB6_mg": 0.014,
+      "folate_ug": 3.09,
+      "fat_g": 0.286,
+      "calcium_mg": 7.1,
+      "protein_g": 0.086,
+      "carbohydrate_g": 11.4
+    },
+    "usdaff_2003591": {
+      "iron_mg": 0.065,
+      "magnesium_mg": 10.6,
+      "phosphorus_mg": 18.2,
+      "potassium_mg": 180,
+      "sodium_mg": 5.23,
+      "zinc_mg": 0.032,
+      "copper_mg": 0.032,
+      "vitaminC_mg": 26.9,
+      "thiamin_mg": 0.07,
+      "niacin_mg": 0.04,
+      "vitaminB6_mg": 0.043,
+      "folate_ug": 29.8,
+      "fat_g": 0.325,
+      "calcium_mg": 12.8,
+      "protein_g": 0.734,
+      "carbohydrate_g": 10.3
+    },
+    "usdaff_2003592": {
+      "iron_mg": 0.041,
+      "magnesium_mg": 7.87,
+      "phosphorus_mg": 12.0,
+      "potassium_mg": 49.8,
+      "sodium_mg": 4.02,
+      "zinc_mg": 0.057,
+      "copper_mg": 0.015,
+      "vitaminC_mg": 45.6,
+      "thiamin_mg": 0.026,
+      "niacin_mg": 0.016,
+      "vitaminB6_mg": 0.039,
+      "folate_ug": 0.664,
+      "fat_g": 0.288,
+      "calcium_mg": 9.74,
+      "protein_g": 0.258,
+      "carbohydrate_g": 15.6
+    },
+    "usdaff_2003593": {
+      "iron_mg": 0.119,
+      "magnesium_mg": 4.27,
+      "phosphorus_mg": 12.6,
+      "potassium_mg": 49.0,
+      "sodium_mg": 7.19,
+      "zinc_mg": 0.018,
+      "copper_mg": 0.004,
+      "vitaminC_mg": 55.2,
+      "niacin_mg": 0.006,
+      "vitaminB6_mg": 0.014,
+      "folate_ug": 1.73,
+      "fat_g": 0.265,
+      "calcium_mg": 7.32,
+      "protein_g": 0.094,
+      "carbohydrate_g": 15.8
+    },
+    "usdaff_2003594": {
+      "iron_mg": 0.126,
+      "magnesium_mg": 4.38,
+      "phosphorus_mg": 3.3,
+      "potassium_mg": 70.6,
+      "sodium_mg": 6.34,
+      "zinc_mg": 0.041,
+      "copper_mg": 0.013,
+      "thiamin_mg": 0.018,
+      "niacin_mg": 0.009,
+      "vitaminB6_mg": 0.009,
+      "folate_ug": 8.97,
+      "fat_g": 0.338,
+      "calcium_mg": 6.64,
+      "carbohydrate_g": 7.26
+    },
+    "usdaff_2003595": {
+      "iron_mg": 0.015,
+      "magnesium_mg": 7.75,
+      "phosphorus_mg": 14.6,
+      "potassium_mg": 128,
+      "sodium_mg": 1.03,
+      "zinc_mg": 0.027,
+      "copper_mg": 0.024,
+      "vitaminC_mg": 24.1,
+      "thiamin_mg": 0.033,
+      "niacin_mg": 0.019,
+      "vitaminB6_mg": 0.022,
+      "folate_ug": 19.0,
+      "fat_g": 0.267,
+      "calcium_mg": 8.88,
+      "protein_g": 0.57,
+      "carbohydrate_g": 9.1
+    },
+    "usdaff_2003596": {
+      "iron_mg": 0.299,
+      "magnesium_mg": 10.4,
+      "phosphorus_mg": 18.5,
+      "potassium_mg": 198,
+      "sodium_mg": 236,
+      "zinc_mg": 0.104,
+      "copper_mg": 0.057,
+      "vitaminC_mg": 49.8,
+      "thiamin_mg": 0.042,
+      "niacin_mg": 0.086,
+      "vitaminB6_mg": 0.076,
+      "folate_ug": 18.9,
+      "fat_g": 0.288,
+      "calcium_mg": 9.74,
+      "protein_g": 0.859,
+      "carbohydrate_g": 4.32
+    },
+    "usdaff_2003597": {
+      "iron_mg": 0.071,
+      "magnesium_mg": 10.3,
+      "phosphorus_mg": 19.0,
+      "potassium_mg": 183,
+      "sodium_mg": 0.075,
+      "zinc_mg": 0.032,
+      "copper_mg": 0.035,
+      "vitaminC_mg": 30.5,
+      "thiamin_mg": 0.075,
+      "niacin_mg": 0.029,
+      "vitaminB6_mg": 0.041,
+      "folate_ug": 29.0,
+      "fat_g": 0.356,
+      "calcium_mg": 9.29,
+      "protein_g": 0.812,
+      "carbohydrate_g": 10.0
+    },
+    "usdaff_2003598": {
+      "iron_mg": 0.139,
+      "magnesium_mg": 9.04,
+      "phosphorus_mg": 87.5,
+      "potassium_mg": 349,
+      "sodium_mg": 5.31,
+      "zinc_mg": 0.389,
+      "copper_mg": 0.203,
+      "fat_g": 0.312,
+      "thiamin_mg": 0.005,
+      "riboflavin_mg": 0.465,
+      "selenium_ug": 14.7,
+      "niacin_mg": 3.9,
+      "vitaminB6_mg": 0.097,
+      "calcium_mg": 3.24,
+      "protein_g": 2.75,
+      "carbohydrate_g": 4.66
+    },
+    "usdaff_2003599": {
+      "iron_mg": 0.338,
+      "magnesium_mg": 13.5,
+      "phosphorus_mg": 89.9,
+      "potassium_mg": 294,
+      "sodium_mg": 0.771,
+      "zinc_mg": 0.625,
+      "copper_mg": 0.047,
+      "fat_g": 0.308,
+      "thiamin_mg": 0.006,
+      "riboflavin_mg": 0.244,
+      "selenium_ug": 1.2,
+      "niacin_mg": 6.45,
+      "vitaminB6_mg": 0.119,
+      "protein_g": 2.41,
+      "carbohydrate_g": 8.5,
+      "vitaminD_ug": 0.07
+    },
+    "usdaff_2003600": {
+      "iron_mg": 1.28,
+      "magnesium_mg": 12.8,
+      "phosphorus_mg": 84.1,
+      "potassium_mg": 402,
+      "sodium_mg": 0.417,
+      "zinc_mg": 0.482,
+      "copper_mg": 0.093,
+      "fat_g": 0.245,
+      "thiamin_mg": 0.012,
+      "riboflavin_mg": 0.24,
+      "niacin_mg": 6.99,
+      "vitaminB6_mg": 0.119,
+      "calcium_mg": 1.43,
+      "protein_g": 2.42,
+      "carbohydrate_g": 8.14
+    },
+    "usdaff_2003601": {
+      "iron_mg": 0.312,
+      "magnesium_mg": 10.2,
+      "phosphorus_mg": 100,
+      "potassium_mg": 380,
+      "sodium_mg": 4.57,
+      "zinc_mg": 0.512,
+      "copper_mg": 0.321,
+      "fat_g": 0.197,
+      "thiamin_mg": 0.004,
+      "riboflavin_mg": 0.517,
+      "selenium_ug": 15.3,
+      "niacin_mg": 4.17,
+      "vitaminB6_mg": 0.112,
+      "calcium_mg": 4.1,
+      "protein_g": 3.09,
+      "carbohydrate_g": 4.01
+    },
+    "usdaff_2003602": {
+      "iron_mg": 0.209,
+      "magnesium_mg": 11.0,
+      "phosphorus_mg": 72.4,
+      "potassium_mg": 260,
+      "sodium_mg": 0.345,
+      "zinc_mg": 0.763,
+      "copper_mg": 0.272,
+      "fat_g": 0.265,
+      "thiamin_mg": 0.01,
+      "riboflavin_mg": 0.269,
+      "selenium_ug": 3.27,
+      "niacin_mg": 6.76,
+      "vitaminB6_mg": 0.071,
+      "protein_g": 2.2,
+      "carbohydrate_g": 6.6,
+      "vitaminD_ug": 1.6
+    },
+    "usdaff_2003603": {
+      "iron_mg": 0.739,
+      "magnesium_mg": 10.5,
+      "phosphorus_mg": 85.9,
+      "potassium_mg": 376,
+      "sodium_mg": 0.891,
+      "zinc_mg": 0.498,
+      "copper_mg": 0.073,
+      "fat_g": 0.449,
+      "thiamin_mg": 0.008,
+      "riboflavin_mg": 0.208,
+      "selenium_ug": 0.38,
+      "niacin_mg": 6.4,
+      "vitaminB6_mg": 0.105,
+      "calcium_mg": 0.432,
+      "protein_g": 2.18,
+      "carbohydrate_g": 6.76,
+      "vitaminD_ug": 0.37
+    },
+    "usdaff_2003604": {
+      "iron_mg": 0.486,
+      "magnesium_mg": 16.0,
+      "phosphorus_mg": 121,
+      "potassium_mg": 392,
+      "zinc_mg": 0.857,
+      "copper_mg": 0.276,
+      "fat_g": 0.24,
+      "thiamin_mg": 0.012,
+      "riboflavin_mg": 0.426,
+      "selenium_ug": 4.12,
+      "niacin_mg": 6.22,
+      "vitaminB6_mg": 0.102,
+      "protein_g": 3.5,
+      "carbohydrate_g": 5.76
+    },
+    "usdaff_2257044": {
+      "thiamin_mg": 0.044,
+      "riboflavin_mg": 0.331,
+      "niacin_mg": 0.133,
+      "vitaminB6_mg": 0.036,
+      "folate_ug": 15.8,
+      "vitaminB12_ug": 1.33,
+      "calcium_mg": 155,
+      "iron_mg": 0.367,
+      "magnesium_mg": 17.5,
+      "phosphorus_mg": 46.0,
+      "potassium_mg": 118,
+      "sodium_mg": 39.4,
+      "zinc_mg": 0.264,
+      "copper_mg": 0.096,
+      "fat_g": 1.96,
+      "protein_g": 2.78,
+      "carbohydrate_g": 3.0,
+      "vitaminD_ug": 4.63
+    },
+    "usdaff_2258586": {
+      "iron_mg": 0.15,
+      "magnesium_mg": 12.4,
+      "phosphorus_mg": 39.8,
+      "potassium_mg": 280,
+      "sodium_mg": 86.6,
+      "zinc_mg": 0.236,
+      "copper_mg": 0.061,
+      "fat_g": 0.351,
+      "thiamin_mg": 0.065,
+      "riboflavin_mg": 0.095,
+      "niacin_mg": 1.41,
+      "vitaminB6_mg": 0.146,
+      "folate_ug": 37.1,
+      "calcium_mg": 30.5,
+      "protein_g": 0.941,
+      "carbohydrate_g": 10.3
+    },
+    "usdaff_2258587": {
+      "iron_mg": 0.088,
+      "magnesium_mg": 11.1,
+      "phosphorus_mg": 29.6,
+      "potassium_mg": 237,
+      "sodium_mg": 62.7,
+      "zinc_mg": 0.16,
+      "copper_mg": 0.041,
+      "fat_g": 0.138,
+      "thiamin_mg": 0.044,
+      "riboflavin_mg": 0.116,
+      "niacin_mg": 0.741,
+      "vitaminB6_mg": 0.115,
+      "folate_ug": 43.6,
+      "calcium_mg": 42.2,
+      "protein_g": 0.805,
+      "carbohydrate_g": 9.08
+    },
+    "usdaff_2258588": {
+      "iron_mg": 0.186,
+      "magnesium_mg": 9.0,
+      "phosphorus_mg": 16.8,
+      "potassium_mg": 163,
+      "zinc_mg": 0.126,
+      "copper_mg": 0.058,
+      "vitaminC_mg": 99.5,
+      "fat_g": 0.106,
+      "thiamin_mg": 0.039,
+      "riboflavin_mg": 0.089,
+      "niacin_mg": 0.636,
+      "vitaminB6_mg": 0.247,
+      "folate_ug": 22.2,
+      "calcium_mg": 7.5,
+      "protein_g": 0.715,
+      "carbohydrate_g": 4.78
+    },
+    "usdaff_2258589": {
+      "iron_mg": 0.36,
+      "magnesium_mg": 10.3,
+      "phosphorus_mg": 24.8,
+      "potassium_mg": 197,
+      "zinc_mg": 0.193,
+      "copper_mg": 0.045,
+      "vitaminC_mg": 139,
+      "fat_g": 0.121,
+      "thiamin_mg": 0.049,
+      "riboflavin_mg": 0.098,
+      "niacin_mg": 0.91,
+      "vitaminB6_mg": 0.292,
+      "folate_ug": 41.6,
+      "calcium_mg": 6.69,
+      "carbohydrate_g": 6.6,
+      "protein_g": 0.819
+    },
+    "usdaff_2258590": {
+      "iron_mg": 0.353,
+      "magnesium_mg": 11.0,
+      "phosphorus_mg": 26.6,
+      "potassium_mg": 213,
+      "zinc_mg": 0.202,
+      "copper_mg": 0.04,
+      "vitaminC_mg": 142,
+      "fat_g": 0.126,
+      "thiamin_mg": 0.055,
+      "riboflavin_mg": 0.142,
+      "niacin_mg": 1.02,
+      "vitaminB6_mg": 0.303,
+      "folate_ug": 47.3,
+      "calcium_mg": 6.36,
+      "carbohydrate_g": 6.65,
+      "protein_g": 0.896
+    },
+    "usdaff_2258591": {
+      "iron_mg": 0.365,
+      "magnesium_mg": 10.4,
+      "phosphorus_mg": 26.6,
+      "potassium_mg": 201,
+      "zinc_mg": 0.242,
+      "copper_mg": 0.035,
+      "vitaminC_mg": 158,
+      "fat_g": 0.156,
+      "thiamin_mg": 0.055,
+      "riboflavin_mg": 0.102,
+      "niacin_mg": 1.08,
+      "selenium_ug": 0.3,
+      "vitaminB6_mg": 0.332,
+      "calcium_mg": 4.9,
+      "protein_g": 0.882,
+      "carbohydrate_g": 6.7
+    },
+    "usdaff_2259792": {
+      "iron_mg": 0.013,
+      "magnesium_mg": 11.0,
+      "phosphorus_mg": 92.2,
+      "potassium_mg": 158,
+      "sodium_mg": 92.5,
+      "zinc_mg": 0.426,
+      "copper_mg": 0.001,
+      "thiamin_mg": 0.049,
+      "riboflavin_mg": 0.196,
+      "niacin_mg": 0.128,
+      "vitaminB6_mg": 0.039,
+      "fat_g": 1.08,
+      "calcium_mg": 120,
+      "protein_g": 3.46,
+      "carbohydrate_g": 4.81,
+      "vitaminD_ug": 0.543
+    },
+    "usdaff_2259793": {
+      "magnesium_mg": 11.4,
+      "phosphorus_mg": 101,
+      "potassium_mg": 164,
+      "sodium_mg": 41.8,
+      "zinc_mg": 0.428,
+      "copper_mg": 0.003,
+      "thiamin_mg": 0.055,
+      "riboflavin_mg": 0.243,
+      "niacin_mg": 0.135,
+      "vitaminB6_mg": 0.045,
+      "fat_g": 4.48,
+      "calcium_mg": 127,
+      "carbohydrate_g": 5.57,
+      "protein_g": 3.82,
+      "vitaminD_ug": 0.778
+    },
+    "usdaff_2259794": {
+      "magnesium_mg": 10.7,
+      "phosphorus_mg": 126,
+      "potassium_mg": 147,
+      "sodium_mg": 33.8,
+      "zinc_mg": 0.473,
+      "copper_mg": 0.01,
+      "thiamin_mg": 0.055,
+      "riboflavin_mg": 0.244,
+      "niacin_mg": 0.227,
+      "vitaminB6_mg": 0.044,
+      "fat_g": 4.39,
+      "calcium_mg": 111,
+      "carbohydrate_g": 4.75,
+      "protein_g": 8.78
+    },
+    "usdaff_2259795": {
+      "iron_mg": 0.14,
+      "magnesium_mg": 35.4,
+      "phosphorus_mg": 625,
+      "potassium_mg": 74.0,
+      "sodium_mg": 1050.0,
+      "zinc_mg": 4.62,
+      "copper_mg": 0.042,
+      "thiamin_mg": 0.035,
+      "riboflavin_mg": 0.409,
+      "niacin_mg": 0.141,
+      "vitaminB6_mg": 0.023,
+      "fat_g": 29.5,
+      "calcium_mg": 950,
+      "carbohydrate_g": 4.33,
+      "protein_g": 30.1
+    },
+    "usdaff_2259796": {
+      "iron_mg": 0.068,
+      "magnesium_mg": 17.7,
+      "phosphorus_mg": 328,
+      "potassium_mg": 105,
+      "sodium_mg": 1030.0,
+      "zinc_mg": 2.35,
+      "copper_mg": 0.032,
+      "thiamin_mg": 0.056,
+      "riboflavin_mg": 0.444,
+      "niacin_mg": 0.264,
+      "vitaminB6_mg": 0.038,
+      "fat_g": 19.1,
+      "calcium_mg": 371,
+      "carbohydrate_g": 5.58,
+      "protein_g": 19.7
+    },
+    "usdaff_2261420": {
+      "iron_mg": 3.22,
+      "magnesium_mg": 251,
+      "phosphorus_mg": 512,
+      "potassium_mg": 667,
+      "sodium_mg": 0.894,
+      "zinc_mg": 2.8,
+      "copper_mg": 0.975,
+      "fat_g": 50.2,
+      "thiamin_mg": 0.112,
+      "riboflavin_mg": 0.748,
+      "niacin_mg": 4.0,
+      "selenium_ug": 0.742,
+      "vitaminB6_mg": 0.1,
+      "folate_ug": 37.8,
+      "calcium_mg": 232,
+      "protein_g": 26.2,
+      "carbohydrate_g": 16.2
+    },
+    "usdaff_2261421": {
+      "iron_mg": 4.0,
+      "magnesium_mg": 125,
+      "phosphorus_mg": 372,
+      "potassium_mg": 373,
+      "sodium_mg": 3.62,
+      "zinc_mg": 2.75,
+      "copper_mg": 0.443,
+      "thiamin_mg": 0.39,
+      "riboflavin_mg": 0.161,
+      "niacin_mg": 1.94,
+      "selenium_ug": 38.2,
+      "vitaminB6_mg": 0.148,
+      "folate_ug": 34.7,
+      "fat_g": 6.31,
+      "calcium_mg": 42.8,
+      "carbohydrate_g": 69.9,
+      "protein_g": 13.2
+    },
+    "usdaff_2261422": {
+      "iron_mg": 12.0,
+      "magnesium_mg": 73.6,
+      "phosphorus_mg": 197,
+      "potassium_mg": 1270.0,
+      "sodium_mg": 47.7,
+      "zinc_mg": 0.9,
+      "copper_mg": 0.231,
+      "thiamin_mg": 0.198,
+      "riboflavin_mg": 0.115,
+      "niacin_mg": 5.63,
+      "selenium_ug": 1.42,
+      "vitaminB6_mg": 0.582,
+      "folate_ug": 41.2,
+      "fat_g": 0.951,
+      "calcium_mg": 44.1,
+      "carbohydrate_g": 79.9,
+      "protein_g": 8.11
+    },
+    "usdaff_2262072": {
+      "thiamin_mg": 0.121,
+      "niacin_mg": 17.2,
+      "vitaminB6_mg": 0.38,
+      "folate_ug": 97.3,
+      "calcium_mg": 49.8,
+      "iron_mg": 1.85,
+      "magnesium_mg": 193,
+      "phosphorus_mg": 393,
+      "potassium_mg": 654,
+      "sodium_mg": 221,
+      "zinc_mg": 3.06,
+      "copper_mg": 0.54,
+      "selenium_ug": 20.2,
+      "fat_g": 49.4,
+      "protein_g": 24.0,
+      "carbohydrate_g": 22.7
+    },
+    "usdaff_2262073": {
+      "thiamin_mg": 0.993,
+      "niacin_mg": 5.81,
+      "vitaminB6_mg": 0.595,
+      "folate_ug": 108,
+      "calcium_mg": 116,
+      "iron_mg": 7.0,
+      "magnesium_mg": 357,
+      "phosphorus_mg": 719,
+      "potassium_mg": 408,
+      "sodium_mg": 63.6,
+      "zinc_mg": 6.04,
+      "copper_mg": 1.65,
+      "selenium_ug": 46.5,
+      "fat_g": 62.4,
+      "carbohydrate_g": 14.2,
+      "protein_g": 19.7
+    },
+    "usdaff_2262074": {
+      "thiamin_mg": 0.095,
+      "niacin_mg": 3.91,
+      "vitaminB6_mg": 0.084,
+      "folate_ug": 42.5,
+      "calcium_mg": 264,
+      "iron_mg": 4.11,
+      "magnesium_mg": 268,
+      "phosphorus_mg": 507,
+      "potassium_mg": 745,
+      "sodium_mg": 0.996,
+      "zinc_mg": 3.18,
+      "copper_mg": 0.975,
+      "selenium_ug": 0.794,
+      "fat_g": 53.0,
+      "carbohydrate_g": 21.2,
+      "protein_g": 20.8
+    },
+    "usdaff_2262075": {
+      "thiamin_mg": 0.537,
+      "niacin_mg": 3.76,
+      "vitaminB6_mg": 0.393,
+      "folate_ug": 41.4,
+      "calcium_mg": 230,
+      "iron_mg": 5.78,
+      "magnesium_mg": 372,
+      "phosphorus_mg": 556,
+      "potassium_mg": 793,
+      "sodium_mg": 36.7,
+      "zinc_mg": 4.74,
+      "copper_mg": 1.34,
+      "selenium_ug": 136,
+      "fat_g": 37.3,
+      "carbohydrate_g": 34.4,
+      "protein_g": 18.0
+    },
+    "usdaff_2346384": {
+      "magnesium_mg": 9.19,
+      "phosphorus_mg": 154,
+      "potassium_mg": 124,
+      "sodium_mg": 350,
+      "zinc_mg": 0.454,
+      "thiamin_mg": 0.052,
+      "niacin_mg": 0.138,
+      "vitaminB6_mg": 0.047,
+      "vitaminB12_ug": 0.662,
+      "fat_g": 4.22,
+      "calcium_mg": 88.3,
+      "protein_g": 11.6,
+      "carbohydrate_g": 4.6
+    },
+    "usdaff_2346385": {
+      "magnesium_mg": 8.91,
+      "phosphorus_mg": 108,
+      "potassium_mg": 125,
+      "sodium_mg": 368,
+      "zinc_mg": 0.589,
+      "thiamin_mg": 0.038,
+      "niacin_mg": 0.092,
+      "vitaminB6_mg": 0.039,
+      "fat_g": 33.5,
+      "calcium_mg": 97.1,
+      "carbohydrate_g": 4.56,
+      "protein_g": 5.79
+    },
+    "usdaff_2346386": {
+      "magnesium_mg": 5.97,
+      "phosphorus_mg": 57.0,
+      "potassium_mg": 96.9,
+      "sodium_mg": 20.6,
+      "zinc_mg": 0.223,
+      "thiamin_mg": 0.032,
+      "niacin_mg": 0.061,
+      "vitaminB6_mg": 0.031,
+      "fat_g": 35.6,
+      "calcium_mg": 61.2,
+      "protein_g": 2.02,
+      "carbohydrate_g": 3.8
+    },
+    "usdaff_2346387": {
+      "magnesium_mg": 10.1,
+      "phosphorus_mg": 102,
+      "potassium_mg": 154,
+      "sodium_mg": 50.0,
+      "zinc_mg": 0.392,
+      "thiamin_mg": 0.043,
+      "niacin_mg": 0.1,
+      "vitaminB6_mg": 0.038,
+      "vitaminB12_ug": 0.062,
+      "fat_g": 18.0,
+      "calcium_mg": 107,
+      "protein_g": 3.07,
+      "carbohydrate_g": 5.56
+    },
+    "usdaff_2346388": {
+      "iron_mg": 0.033,
+      "magnesium_mg": 6.31,
+      "phosphorus_mg": 19.2,
+      "potassium_mg": 139,
+      "sodium_mg": 16.1,
+      "zinc_mg": 0.173,
+      "copper_mg": 0.033,
+      "fat_g": 0.074,
+      "thiamin_mg": 0.056,
+      "niacin_mg": 0.218,
+      "vitaminB6_mg": 0.04,
+      "calcium_mg": 14.2,
+      "protein_g": 0.742,
+      "carbohydrate_g": 3.37
+    },
+    "usdaff_2346389": {
+      "iron_mg": 0.267,
+      "magnesium_mg": 12.0,
+      "phosphorus_mg": 23.4,
+      "potassium_mg": 260,
+      "sodium_mg": 23.0,
+      "zinc_mg": 0.252,
+      "copper_mg": 0.049,
+      "fat_g": 0.071,
+      "thiamin_mg": 0.063,
+      "niacin_mg": 0.371,
+      "vitaminB6_mg": 0.063,
+      "calcium_mg": 27.6,
+      "protein_g": 0.977,
+      "carbohydrate_g": 4.06
+    },
+    "usdaff_2346390": {
+      "iron_mg": 0.402,
+      "magnesium_mg": 12.4,
+      "phosphorus_mg": 24.4,
+      "potassium_mg": 321,
+      "sodium_mg": 24.9,
+      "zinc_mg": 0.303,
+      "copper_mg": 0.038,
+      "vitaminC_mg": 9.34,
+      "fat_g": 0.106,
+      "thiamin_mg": 0.061,
+      "niacin_mg": 0.329,
+      "vitaminB6_mg": 0.074,
+      "calcium_mg": 42.6,
+      "protein_g": 0.883,
+      "carbohydrate_g": 3.26
+    },
+    "usdaff_2346391": {
+      "iron_mg": 0.32,
+      "magnesium_mg": 12.8,
+      "phosphorus_mg": 26.6,
+      "potassium_mg": 277,
+      "sodium_mg": 28.9,
+      "zinc_mg": 0.31,
+      "copper_mg": 0.04,
+      "vitaminC_mg": 15.2,
+      "fat_g": 0.156,
+      "thiamin_mg": 0.082,
+      "niacin_mg": 0.375,
+      "vitaminB6_mg": 0.071,
+      "calcium_mg": 39.8,
+      "carbohydrate_g": 4.07,
+      "protein_g": 1.09
+    },
+    "usdaff_2346392": {
+      "iron_mg": 5.36,
+      "magnesium_mg": 206,
+      "phosphorus_mg": 540,
+      "potassium_mg": 655,
+      "zinc_mg": 5.71,
+      "copper_mg": 1.12,
+      "thiamin_mg": 0.625,
+      "niacin_mg": 4.47,
+      "vitaminB6_mg": 0.255,
+      "fat_g": 61.3,
+      "calcium_mg": 8.74,
+      "carbohydrate_g": 18.6,
+      "protein_g": 15.7
+    },
+    "usdaff_2346393": {
+      "iron_mg": 3.74,
+      "magnesium_mg": 258,
+      "phosphorus_mg": 503,
+      "potassium_mg": 733,
+      "zinc_mg": 2.86,
+      "copper_mg": 0.91,
+      "thiamin_mg": 0.16,
+      "niacin_mg": 3.77,
+      "vitaminB6_mg": 0.101,
+      "fat_g": 51.1,
+      "calcium_mg": 254,
+      "carbohydrate_g": 20.0,
+      "protein_g": 21.5
+    },
+    "usdaff_2346394": {
+      "iron_mg": 2.24,
+      "magnesium_mg": 142,
+      "phosphorus_mg": 365,
+      "potassium_mg": 424,
+      "zinc_mg": 2.76,
+      "copper_mg": 1.21,
+      "thiamin_mg": 0.23,
+      "niacin_mg": 1.22,
+      "vitaminB6_mg": 0.66,
+      "fat_g": 69.7,
+      "calcium_mg": 88.3,
+      "carbohydrate_g": 10.9,
+      "protein_g": 14.6
+    },
+    "usdaff_2346395": {
+      "iron_mg": 2.37,
+      "magnesium_mg": 103,
+      "phosphorus_mg": 253,
+      "potassium_mg": 360,
+      "zinc_mg": 3.93,
+      "copper_mg": 0.906,
+      "thiamin_mg": 0.548,
+      "niacin_mg": 0.946,
+      "vitaminB6_mg": 0.171,
+      "fat_g": 73.3,
+      "calcium_mg": 54.8,
+      "carbohydrate_g": 12.7,
+      "protein_g": 9.96
+    },
+    "usdaff_2346396": {
+      "iron_mg": 4.34,
+      "magnesium_mg": 126,
+      "phosphorus_mg": 387,
+      "potassium_mg": 350,
+      "sodium_mg": 0.668,
+      "zinc_mg": 2.74,
+      "copper_mg": 0.428,
+      "thiamin_mg": 0.406,
+      "niacin_mg": 0.993,
+      "selenium_ug": 25.4,
+      "vitaminB6_mg": 0.135,
+      "folate_ug": 32.0,
+      "fat_g": 5.89,
+      "calcium_mg": 45.5,
+      "carbohydrate_g": 68.7,
+      "protein_g": 13.5
+    },
+    "usdaff_2346397": {
+      "iron_mg": 3.8,
+      "magnesium_mg": 129,
+      "phosphorus_mg": 417,
+      "potassium_mg": 376,
+      "sodium_mg": 0.311,
+      "zinc_mg": 2.84,
+      "copper_mg": 0.411,
+      "thiamin_mg": 0.334,
+      "niacin_mg": 0.926,
+      "selenium_ug": 29.0,
+      "vitaminB6_mg": 0.119,
+      "folate_ug": 30.0,
+      "fat_g": 5.8,
+      "calcium_mg": 51.3,
+      "carbohydrate_g": 69.8,
+      "protein_g": 12.5
+    },
+    "usdaff_2346398": {
+      "iron_mg": 0.054,
+      "magnesium_mg": 13.4,
+      "phosphorus_mg": 5.42,
+      "potassium_mg": 137,
+      "zinc_mg": 0.107,
+      "vitaminC_mg": 58.6,
+      "copper_mg": 0.095,
+      "thiamin_mg": 0.064,
+      "niacin_mg": 0.228,
+      "vitaminB6_mg": 0.11,
+      "fat_g": 0.211,
+      "calcium_mg": 12.5,
+      "carbohydrate_g": 14.1,
+      "protein_g": 0.461
+    },
+    "usdaff_2346399": {
+      "iron_mg": 0.105,
+      "magnesium_mg": 12.1,
+      "phosphorus_mg": 23.2,
+      "potassium_mg": 230,
+      "zinc_mg": 0.065,
+      "vitaminC_mg": 10.4,
+      "copper_mg": 0.069,
+      "vitaminB6_mg": 0.049,
+      "fat_g": 0.192,
+      "calcium_mg": 12.3,
+      "protein_g": 1.04,
+      "carbohydrate_g": 16.2
+    },
+    "usdaff_2346400": {
+      "iron_mg": 0.652,
+      "magnesium_mg": 28.2,
+      "phosphorus_mg": 41.2,
+      "potassium_mg": 290,
+      "zinc_mg": 0.35,
+      "copper_mg": 0.098,
+      "fat_g": 0.275,
+      "thiamin_mg": 0.06,
+      "niacin_mg": 0.731,
+      "vitaminB6_mg": 0.121,
+      "calcium_mg": 40.0,
+      "protein_g": 1.97,
+      "carbohydrate_g": 7.41
+    },
+    "usdaff_2346401": {
+      "iron_mg": 0.384,
+      "magnesium_mg": 25.6,
+      "phosphorus_mg": 55.2,
+      "potassium_mg": 450,
+      "sodium_mg": 2.74,
+      "zinc_mg": 0.378,
+      "copper_mg": 0.091,
+      "vitaminC_mg": 10.9,
+      "thiamin_mg": 0.074,
+      "niacin_mg": 1.5,
+      "vitaminB6_mg": 0.157,
+      "fat_g": 0.36,
+      "calcium_mg": 7.8,
+      "carbohydrate_g": 17.8,
+      "protein_g": 2.27
+    },
+    "usdaff_2346402": {
+      "iron_mg": 0.391,
+      "magnesium_mg": 23.6,
+      "phosphorus_mg": 55.6,
+      "potassium_mg": 472,
+      "sodium_mg": 2.86,
+      "zinc_mg": 0.392,
+      "copper_mg": 0.091,
+      "vitaminC_mg": 21.3,
+      "thiamin_mg": 0.066,
+      "niacin_mg": 1.48,
+      "vitaminB6_mg": 0.144,
+      "fat_g": 0.248,
+      "calcium_mg": 5.13,
+      "protein_g": 2.06,
+      "carbohydrate_g": 16.3
+    },
+    "usdaff_2346403": {
+      "iron_mg": 0.373,
+      "magnesium_mg": 22.3,
+      "phosphorus_mg": 57.0,
+      "potassium_mg": 446,
+      "sodium_mg": 2.24,
+      "zinc_mg": 0.374,
+      "copper_mg": 0.13,
+      "vitaminC_mg": 23.3,
+      "thiamin_mg": 0.051,
+      "niacin_mg": 1.58,
+      "vitaminB6_mg": 0.145,
+      "fat_g": 0.264,
+      "calcium_mg": 5.94,
+      "protein_g": 1.81,
+      "carbohydrate_g": 16.0
+    },
+    "usdaff_2346404": {
+      "iron_mg": 0.398,
+      "magnesium_mg": 19.1,
+      "phosphorus_mg": 36.7,
+      "potassium_mg": 486,
+      "zinc_mg": 0.337,
+      "copper_mg": 0.187,
+      "vitaminC_mg": 14.8,
+      "thiamin_mg": 0.045,
+      "niacin_mg": 0.432,
+      "vitaminB6_mg": 0.124,
+      "fat_g": 0.375,
+      "calcium_mg": 22.3,
+      "carbohydrate_g": 17.3,
+      "protein_g": 1.58
+    },
+    "usdaff_2346405": {
+      "magnesium_mg": 10.9,
+      "phosphorus_mg": 21.6,
+      "potassium_mg": 265,
+      "sodium_mg": 97.2,
+      "zinc_mg": 0.093,
+      "fat_g": 0.162,
+      "vitaminB6_mg": 0.052,
+      "calcium_mg": 46.3,
+      "protein_g": 0.492,
+      "carbohydrate_g": 3.32
+    },
+    "usdaff_2346406": {
+      "magnesium_mg": 10.1,
+      "phosphorus_mg": 23.2,
+      "potassium_mg": 170,
+      "sodium_mg": 1.52,
+      "zinc_mg": 0.204,
+      "copper_mg": 0.063,
+      "fat_g": 0.178,
+      "calcium_mg": 16.3,
+      "protein_g": 0.625,
+      "carbohydrate_g": 2.95
+    },
+    "usdaff_2346407": {
+      "iron_mg": 0.066,
+      "magnesium_mg": 13.9,
+      "phosphorus_mg": 26.9,
+      "potassium_mg": 207,
+      "sodium_mg": 16.1,
+      "zinc_mg": 0.211,
+      "vitaminC_mg": 40.3,
+      "fat_g": 0.228,
+      "vitaminB6_mg": 0.138,
+      "calcium_mg": 41.8,
+      "protein_g": 0.961,
+      "carbohydrate_g": 6.38
+    },
+    "usdaff_2346408": {
+      "magnesium_mg": 13.3,
+      "phosphorus_mg": 35.8,
+      "potassium_mg": 269,
+      "sodium_mg": 11.7,
+      "zinc_mg": 0.245,
+      "vitaminC_mg": 53.9,
+      "copper_mg": 0.004,
+      "fat_g": 0.214,
+      "vitaminB6_mg": 0.179,
+      "calcium_mg": 31.0,
+      "protein_g": 1.24,
+      "carbohydrate_g": 6.79
+    },
+    "usdaff_2346409": {
+      "iron_mg": 0.255,
+      "magnesium_mg": 12.5,
+      "phosphorus_mg": 23.0,
+      "potassium_mg": 161,
+      "zinc_mg": 0.114,
+      "copper_mg": 0.035,
+      "vitaminC_mg": 59.6,
+      "fat_g": 0.22,
+      "calcium_mg": 16.9,
+      "carbohydrate_g": 7.96,
+      "protein_g": 0.641
+    },
+    "usdaff_2346410": {
+      "iron_mg": 0.45,
+      "magnesium_mg": 19.2,
+      "phosphorus_mg": 27.5,
+      "potassium_mg": 156,
+      "zinc_mg": 0.221,
+      "copper_mg": 0.053,
+      "vitaminC_mg": 23.0,
+      "fat_g": 0.188,
+      "calcium_mg": 16.4,
+      "carbohydrate_g": 12.9,
+      "protein_g": 1.01
+    },
+    "usdaff_2346411": {
+      "iron_mg": 0.34,
+      "magnesium_mg": 6.18,
+      "phosphorus_mg": 13.0,
+      "potassium_mg": 85.6,
+      "zinc_mg": 0.085,
+      "copper_mg": 0.046,
+      "vitaminC_mg": 8.06,
+      "fat_g": 0.306,
+      "calcium_mg": 11.7,
+      "protein_g": 0.703,
+      "carbohydrate_g": 14.6
+    },
+    "usdaff_2346412": {
+      "iron_mg": 0.162,
+      "magnesium_mg": 8.56,
+      "phosphorus_mg": 24.9,
+      "potassium_mg": 229,
+      "sodium_mg": 7.0,
+      "zinc_mg": 0.036,
+      "copper_mg": 0.081,
+      "vitaminC_mg": 3.31,
+      "fat_g": 0.164,
+      "calcium_mg": 10.2,
+      "protein_g": 0.914,
+      "carbohydrate_g": 20.2
+    },
+    "usdaff_2346413": {
+      "iron_mg": 0.199,
+      "magnesium_mg": 7.12,
+      "phosphorus_mg": 22.0,
+      "potassium_mg": 218,
+      "sodium_mg": 3.17,
+      "zinc_mg": 0.027,
+      "copper_mg": 0.061,
+      "vitaminC_mg": 3.02,
+      "fat_g": 0.232,
+      "calcium_mg": 9.9,
+      "protein_g": 0.899,
+      "carbohydrate_g": 18.6
+    },
+    "usdaff_2346414": {
+      "iron_mg": 0.045,
+      "magnesium_mg": 3.94,
+      "phosphorus_mg": 9.12,
+      "potassium_mg": 108,
+      "sodium_mg": 0.504,
+      "zinc_mg": 0.003,
+      "copper_mg": 0.039,
+      "vitaminC_mg": 43.7,
+      "fat_g": 0.162,
+      "calcium_mg": 3.82,
+      "carbohydrate_g": 12.3,
+      "protein_g": 0.273
+    },
+    "usdaff_2512371": {
+      "iron_mg": 7.56,
+      "magnesium_mg": 233,
+      "phosphorus_mg": 425,
+      "potassium_mg": 396,
+      "zinc_mg": 3.0,
+      "copper_mg": 0.518,
+      "thiamin_mg": 0.059,
+      "riboflavin_mg": 0.175,
+      "niacin_mg": 0.748,
+      "vitaminB6_mg": 0.387,
+      "fat_g": 6.24,
+      "calcium_mg": 135,
+      "protein_g": 13.2,
+      "carbohydrate_g": 68.8,
+      "selenium_ug": 21.1
+    },
+    "usdaff_2512372": {
+      "iron_mg": 4.53,
+      "magnesium_mg": 164,
+      "phosphorus_mg": 369,
+      "potassium_mg": 551,
+      "sodium_mg": 6.32,
+      "zinc_mg": 2.77,
+      "copper_mg": 0.482,
+      "thiamin_mg": 0.345,
+      "riboflavin_mg": 0.316,
+      "niacin_mg": 1.21,
+      "vitaminB6_mg": 0.222,
+      "fat_g": 6.6,
+      "calcium_mg": 37.6,
+      "protein_g": 11.9,
+      "carbohydrate_g": 69.5,
+      "selenium_ug": 4.1
+    },
+    "usdaff_2512373": {
+      "iron_mg": 3.72,
+      "magnesium_mg": 116,
+      "phosphorus_mg": 262,
+      "potassium_mg": 335,
+      "zinc_mg": 1.66,
+      "copper_mg": 0.237,
+      "thiamin_mg": 0.27,
+      "riboflavin_mg": 0.15,
+      "niacin_mg": 3.95,
+      "vitaminB6_mg": 0.166,
+      "fat_g": 3.59,
+      "calcium_mg": 11.4,
+      "protein_g": 8.27,
+      "carbohydrate_g": 77.4,
+      "selenium_ug": 12.4
+    },
+    "usdaff_2512374": {
+      "iron_mg": 3.84,
+      "magnesium_mg": 167,
+      "phosphorus_mg": 282,
+      "potassium_mg": 378,
+      "zinc_mg": 1.76,
+      "copper_mg": 0.53,
+      "thiamin_mg": 0.241,
+      "riboflavin_mg": 0.16,
+      "niacin_mg": 3.84,
+      "vitaminB6_mg": 0.17,
+      "fat_g": 2.48,
+      "calcium_mg": 30.6,
+      "protein_g": 8.88,
+      "carbohydrate_g": 75.0,
+      "selenium_ug": 15.7
+    },
+    "usdaff_2512375": {
+      "iron_mg": 2.54,
+      "magnesium_mg": 95.4,
+      "phosphorus_mg": 280,
+      "potassium_mg": 434,
+      "zinc_mg": 2.33,
+      "copper_mg": 0.338,
+      "thiamin_mg": 0.216,
+      "riboflavin_mg": 0.17,
+      "niacin_mg": 1.16,
+      "vitaminB6_mg": 0.164,
+      "fat_g": 1.91,
+      "calcium_mg": 32.2,
+      "protein_g": 8.4,
+      "carbohydrate_g": 77.2,
+      "selenium_ug": 16.6
+    },
+    "usdaff_2512376": {
+      "iron_mg": 3.3,
+      "magnesium_mg": 88.0,
+      "phosphorus_mg": 234,
+      "potassium_mg": 367,
+      "sodium_mg": 20.3,
+      "zinc_mg": 2.14,
+      "copper_mg": 0.394,
+      "thiamin_mg": 0.225,
+      "riboflavin_mg": 0.146,
+      "niacin_mg": 5.94,
+      "vitaminB6_mg": 0.2,
+      "fat_g": 2.45,
+      "calcium_mg": 35.6,
+      "protein_g": 8.72,
+      "carbohydrate_g": 77.4,
+      "selenium_ug": 13.1
+    },
+    "usdaff_2512377": {
+      "iron_mg": 3.99,
+      "magnesium_mg": 33.6,
+      "phosphorus_mg": 39.2,
+      "potassium_mg": 198,
+      "sodium_mg": 13.1,
+      "zinc_mg": 0.41,
+      "copper_mg": 0.077,
+      "thiamin_mg": 0.051,
+      "riboflavin_mg": 0.068,
+      "niacin_mg": 0.6,
+      "vitaminB6_mg": 0.05,
+      "fat_g": 0.494,
+      "calcium_mg": 74.6,
+      "protein_g": 0.918,
+      "carbohydrate_g": 87.3
+    },
+    "usdaff_2512378": {
+      "iron_mg": 2.44,
+      "magnesium_mg": 203,
+      "phosphorus_mg": 374,
+      "potassium_mg": 414,
+      "zinc_mg": 2.24,
+      "copper_mg": 0.476,
+      "thiamin_mg": 0.539,
+      "riboflavin_mg": 0.178,
+      "niacin_mg": 5.37,
+      "vitaminB6_mg": 0.278,
+      "fat_g": 3.04,
+      "calcium_mg": 13.6,
+      "protein_g": 11.1,
+      "carbohydrate_g": 71.1,
+      "selenium_ug": 13.6
+    },
+    "usdaff_2512379": {
+      "iron_mg": 2.53,
+      "magnesium_mg": 106,
+      "phosphorus_mg": 258,
+      "potassium_mg": 214,
+      "zinc_mg": 2.26,
+      "copper_mg": 0.488,
+      "thiamin_mg": 0.411,
+      "riboflavin_mg": 0.136,
+      "niacin_mg": 4.86,
+      "vitaminB6_mg": 0.192,
+      "fat_g": 4.19,
+      "calcium_mg": 9.1,
+      "protein_g": 10.0,
+      "carbohydrate_g": 74.4,
+      "selenium_ug": 23.1
+    },
+    "usdaff_2512380": {
+      "iron_mg": 1.24,
+      "magnesium_mg": 115,
+      "phosphorus_mg": 303,
+      "potassium_mg": 250,
+      "zinc_mg": 1.85,
+      "copper_mg": 0.266,
+      "fat_g": 3.31,
+      "thiamin_mg": 0.326,
+      "riboflavin_mg": 0.102,
+      "niacin_mg": 6.27,
+      "vitaminB6_mg": 0.161,
+      "calcium_mg": 8.06,
+      "protein_g": 7.25,
+      "carbohydrate_g": 76.7,
+      "selenium_ug": 14.8
+    },
+    "usdaff_2512381": {
+      "iron_mg": 0.14,
+      "magnesium_mg": 26.5,
+      "phosphorus_mg": 108,
+      "potassium_mg": 82.3,
+      "sodium_mg": 0.462,
+      "zinc_mg": 1.35,
+      "copper_mg": 0.214,
+      "fat_g": 1.03,
+      "thiamin_mg": 0.065,
+      "riboflavin_mg": 0.08,
+      "niacin_mg": 1.43,
+      "vitaminB6_mg": 0.058,
+      "calcium_mg": 4.46,
+      "carbohydrate_g": 80.3,
+      "protein_g": 7.04,
+      "selenium_ug": 6.6
+    },
+    "usdaff_2514743": {
+      "iron_mg": 2.13,
+      "magnesium_mg": 16.5,
+      "phosphorus_mg": 148,
+      "potassium_mg": 281,
+      "sodium_mg": 61.6,
+      "zinc_mg": 4.19,
+      "copper_mg": 0.056,
+      "fat_g": 12.8,
+      "calcium_mg": 7.14,
+      "protein_g": 18.2
+    },
+    "usdaff_2514744": {
+      "iron_mg": 1.96,
+      "magnesium_mg": 16.4,
+      "phosphorus_mg": 144,
+      "potassium_mg": 273,
+      "sodium_mg": 54.9,
+      "zinc_mg": 3.85,
+      "copper_mg": 0.055,
+      "fat_g": 19.4,
+      "calcium_mg": 6.89,
+      "protein_g": 17.5
+    },
+    "usdaff_2514745": {
+      "iron_mg": 0.788,
+      "magnesium_mg": 19.0,
+      "phosphorus_mg": 173,
+      "potassium_mg": 318,
+      "sodium_mg": 53.6,
+      "zinc_mg": 2.23,
+      "copper_mg": 0.067,
+      "fat_g": 17.5,
+      "calcium_mg": 5.86,
+      "protein_g": 17.8
+    },
+    "usdaff_2514746": {
+      "iron_mg": 0.593,
+      "magnesium_mg": 20.5,
+      "phosphorus_mg": 166,
+      "potassium_mg": 302,
+      "sodium_mg": 63.0,
+      "zinc_mg": 1.18,
+      "copper_mg": 0.036,
+      "fat_g": 7.16,
+      "calcium_mg": 5.82,
+      "protein_g": 17.9
+    },
+    "usdaff_2514747": {
+      "iron_mg": 1.09,
+      "magnesium_mg": 17.3,
+      "phosphorus_mg": 162,
+      "potassium_mg": 246,
+      "sodium_mg": 80.2,
+      "zinc_mg": 2.95,
+      "copper_mg": 0.076,
+      "fat_g": 9.59,
+      "calcium_mg": 23.6,
+      "protein_g": 17.3
+    },
+    "usdaff_2515373": {
+      "iron_mg": 2.47,
+      "magnesium_mg": 351,
+      "phosphorus_mg": 707,
+      "potassium_mg": 592,
+      "zinc_mg": 3.82,
+      "copper_mg": 1.74,
+      "fat_g": 57.4,
+      "selenium_ug": 280,
+      "calcium_mg": 168,
+      "protein_g": 15.0,
+      "carbohydrate_g": 21.6
+    },
+    "usdaff_2515374": {
+      "iron_mg": 5.99,
+      "magnesium_mg": 251,
+      "phosphorus_mg": 532,
+      "potassium_mg": 638,
+      "sodium_mg": 4.76,
+      "zinc_mg": 5.07,
+      "copper_mg": 2.22,
+      "fat_g": 38.9,
+      "selenium_ug": 20.7,
+      "calcium_mg": 42.0,
+      "protein_g": 17.4,
+      "carbohydrate_g": 36.3
+    },
+    "usdaff_2515375": {
+      "iron_mg": 3.46,
+      "magnesium_mg": 156,
+      "phosphorus_mg": 321,
+      "potassium_mg": 636,
+      "zinc_mg": 2.33,
+      "copper_mg": 1.41,
+      "fat_g": 53.5,
+      "calcium_mg": 135,
+      "protein_g": 13.5,
+      "carbohydrate_g": 26.5
+    },
+    "usdaff_2515376": {
+      "iron_mg": 1.55,
+      "magnesium_mg": 180,
+      "phosphorus_mg": 380,
+      "potassium_mg": 636,
+      "sodium_mg": 1.49,
+      "zinc_mg": 2.78,
+      "copper_mg": 0.46,
+      "fat_g": 43.3,
+      "selenium_ug": 17.8,
+      "calcium_mg": 49.1,
+      "protein_g": 23.2,
+      "carbohydrate_g": 26.5
+    },
+    "usdaff_2515377": {
+      "iron_mg": 1.62,
+      "magnesium_mg": 68.8,
+      "phosphorus_mg": 134,
+      "potassium_mg": 1030.0,
+      "zinc_mg": 1.04,
+      "copper_mg": 0.581,
+      "vitaminC_mg": 4.05,
+      "fat_g": 4.64,
+      "calcium_mg": 55.8,
+      "protein_g": 5.29,
+      "carbohydrate_g": 80.5
+    },
+    "usdaff_2515378": {
+      "iron_mg": 1.88,
+      "magnesium_mg": 107,
+      "phosphorus_mg": 208,
+      "potassium_mg": 373,
+      "zinc_mg": 1.2,
+      "copper_mg": 0.446,
+      "fat_g": 64.9,
+      "selenium_ug": 32.6,
+      "calcium_mg": 52.7,
+      "protein_g": 7.79,
+      "carbohydrate_g": 24.1
+    },
+    "usdaff_2515379": {
+      "iron_mg": 3.46,
+      "magnesium_mg": 110,
+      "phosphorus_mg": 500,
+      "potassium_mg": 947,
+      "zinc_mg": 2.18,
+      "copper_mg": 1.05,
+      "fat_g": 45.0,
+      "selenium_ug": 23.1,
+      "calcium_mg": 117,
+      "protein_g": 20.5,
+      "carbohydrate_g": 27.7
+    },
+    "usdaff_2515380": {
+      "iron_mg": 8.36,
+      "magnesium_mg": 500,
+      "phosphorus_mg": 1150.0,
+      "potassium_mg": 691,
+      "zinc_mg": 6.34,
+      "copper_mg": 1.22,
+      "fat_g": 40.0,
+      "selenium_ug": 20.5,
+      "calcium_mg": 37.4,
+      "protein_g": 29.9,
+      "carbohydrate_g": 18.7
+    },
+    "usdaff_2515381": {
+      "iron_mg": 4.37,
+      "magnesium_mg": 302,
+      "phosphorus_mg": 732,
+      "potassium_mg": 657,
+      "zinc_mg": 5.58,
+      "copper_mg": 1.88,
+      "fat_g": 48.4,
+      "selenium_ug": 17.8,
+      "calcium_mg": 116,
+      "protein_g": 18.9,
+      "carbohydrate_g": 24.5
+    },
+    "usdaff_2515382": {
+      "iron_mg": 8.02,
+      "magnesium_mg": 248,
+      "phosphorus_mg": 507,
+      "potassium_mg": 2090.0,
+      "sodium_mg": 46.9,
+      "zinc_mg": 3.7,
+      "copper_mg": 2.08,
+      "fat_g": 15.3,
+      "selenium_ug": 26.8,
+      "calcium_mg": 36.0,
+      "protein_g": 16.1,
+      "carbohydrate_g": 58.9
+    },
+    "usdaff_2644281": {
+      "iron_mg": 6.67,
+      "magnesium_mg": 154,
+      "phosphorus_mg": 412,
+      "potassium_mg": 1420.0,
+      "zinc_mg": 2.72,
+      "copper_mg": 0.742,
+      "fat_g": 2.2,
+      "calcium_mg": 143,
+      "protein_g": 21.6,
+      "carbohydrate_g": 59.8
+    },
+    "usdaff_2644282": {
+      "iron_mg": 5.09,
+      "magnesium_mg": 135,
+      "phosphorus_mg": 353,
+      "potassium_mg": 1070.0,
+      "sodium_mg": 8.78,
+      "zinc_mg": 3.12,
+      "copper_mg": 0.804,
+      "fat_g": 6.27,
+      "calcium_mg": 111,
+      "carbohydrate_g": 60.4,
+      "protein_g": 21.3
+    },
+    "usdaff_2644283": {
+      "iron_mg": 7.16,
+      "magnesium_mg": 107,
+      "phosphorus_mg": 374,
+      "potassium_mg": 949,
+      "zinc_mg": 3.86,
+      "copper_mg": 0.838,
+      "fat_g": 1.92,
+      "calcium_mg": 61.8,
+      "protein_g": 23.6,
+      "carbohydrate_g": 62.2
+    },
+    "usdaff_2644284": {
+      "iron_mg": 5.93,
+      "magnesium_mg": 184,
+      "phosphorus_mg": 428,
+      "potassium_mg": 1240.0,
+      "sodium_mg": 3.46,
+      "zinc_mg": 3.65,
+      "copper_mg": 0.936,
+      "fat_g": 2.42,
+      "calcium_mg": 71.4,
+      "protein_g": 21.2,
+      "carbohydrate_g": 61.8
+    },
+    "usdaff_2644285": {
+      "iron_mg": 1.69,
+      "magnesium_mg": 32.5,
+      "phosphorus_mg": 91.0,
+      "potassium_mg": 253,
+      "sodium_mg": 218,
+      "zinc_mg": 0.74,
+      "copper_mg": 0.336,
+      "fat_g": 1.27,
+      "calcium_mg": 43.3,
+      "protein_g": 6.91,
+      "carbohydrate_g": 19.8
+    },
+    "usdaff_2644286": {
+      "iron_mg": 1.6,
+      "magnesium_mg": 29.6,
+      "phosphorus_mg": 86.7,
+      "potassium_mg": 184,
+      "sodium_mg": 190,
+      "zinc_mg": 0.631,
+      "copper_mg": 0.29,
+      "fat_g": 1.4,
+      "calcium_mg": 63.9,
+      "protein_g": 6.57,
+      "carbohydrate_g": 20.0
+    },
+    "usdaff_2644287": {
+      "iron_mg": 1.4,
+      "magnesium_mg": 29.3,
+      "phosphorus_mg": 94.7,
+      "potassium_mg": 203,
+      "sodium_mg": 164,
+      "zinc_mg": 0.516,
+      "copper_mg": 0.219,
+      "fat_g": 1.17,
+      "calcium_mg": 69.2,
+      "protein_g": 7.41,
+      "carbohydrate_g": 18.8
+    },
+    "usdaff_2644288": {
+      "iron_mg": 1.04,
+      "magnesium_mg": 28.4,
+      "phosphorus_mg": 86.5,
+      "potassium_mg": 137,
+      "sodium_mg": 202,
+      "zinc_mg": 0.724,
+      "copper_mg": 0.267,
+      "fat_g": 3.1,
+      "calcium_mg": 40.5,
+      "protein_g": 7.02,
+      "carbohydrate_g": 20.3
+    },
+    "usdaff_2644289": {
+      "iron_mg": 1.44,
+      "magnesium_mg": 29.3,
+      "phosphorus_mg": 104,
+      "potassium_mg": 227,
+      "sodium_mg": 172,
+      "zinc_mg": 0.56,
+      "copper_mg": 0.273,
+      "fat_g": 1.26,
+      "calcium_mg": 56.9,
+      "protein_g": 7.8,
+      "carbohydrate_g": 21.0
+    },
+    "usdaff_2644290": {
+      "iron_mg": 1.3,
+      "magnesium_mg": 25.5,
+      "phosphorus_mg": 93.6,
+      "potassium_mg": 209,
+      "sodium_mg": 158,
+      "zinc_mg": 0.526,
+      "copper_mg": 0.271,
+      "fat_g": 1.3,
+      "calcium_mg": 60.2,
+      "protein_g": 7.31,
+      "carbohydrate_g": 21.4
+    },
+    "usdaff_2644291": {
+      "iron_mg": 1.14,
+      "magnesium_mg": 21.9,
+      "phosphorus_mg": 77.7,
+      "potassium_mg": 109,
+      "sodium_mg": 207,
+      "zinc_mg": 0.712,
+      "copper_mg": 0.123,
+      "fat_g": 1.15,
+      "calcium_mg": 28.2,
+      "protein_g": 4.73,
+      "carbohydrate_g": 12.7
+    },
+    "usdaff_2644292": {
+      "iron_mg": 1.28,
+      "magnesium_mg": 27.5,
+      "phosphorus_mg": 83.1,
+      "potassium_mg": 210,
+      "sodium_mg": 202,
+      "zinc_mg": 0.625,
+      "copper_mg": 0.255,
+      "fat_g": 1.27,
+      "calcium_mg": 55.2,
+      "carbohydrate_g": 19.6,
+      "protein_g": 6.69
+    },
+    "usdaff_2644293": {
+      "iron_mg": 1.08,
+      "magnesium_mg": 27.3,
+      "phosphorus_mg": 83.0,
+      "potassium_mg": 138,
+      "sodium_mg": 227,
+      "zinc_mg": 0.655,
+      "copper_mg": 0.285,
+      "fat_g": 1.3,
+      "calcium_mg": 27.8,
+      "carbohydrate_g": 19.2,
+      "protein_g": 6.92
+    },
+    "usdaff_2644294": {
+      "iron_mg": 1.38,
+      "magnesium_mg": 29.3,
+      "phosphorus_mg": 88.6,
+      "potassium_mg": 213,
+      "sodium_mg": 223,
+      "zinc_mg": 0.635,
+      "copper_mg": 0.256,
+      "fat_g": 1.27,
+      "calcium_mg": 67.2,
+      "carbohydrate_g": 19.3,
+      "protein_g": 7.03
+    },
+    "usdaff_2646168": {
+      "iron_mg": 0.452,
+      "magnesium_mg": 22.0,
+      "phosphorus_mg": 197,
+      "potassium_mg": 361,
+      "sodium_mg": 40.2,
+      "zinc_mg": 1.57,
+      "copper_mg": 0.038,
+      "fat_g": 9.47,
+      "calcium_mg": 4.11,
+      "protein_g": 21.1
+    },
+    "usdaff_2646169": {
+      "iron_mg": 0.929,
+      "magnesium_mg": 24.7,
+      "phosphorus_mg": 217,
+      "potassium_mg": 397,
+      "sodium_mg": 41.4,
+      "zinc_mg": 1.77,
+      "copper_mg": 0.077,
+      "fat_g": 3.9,
+      "calcium_mg": 4.53,
+      "protein_g": 21.6
+    },
+    "usdaff_2646170": {
+      "iron_mg": 0.354,
+      "magnesium_mg": 26.2,
+      "phosphorus_mg": 215,
+      "potassium_mg": 330,
+      "sodium_mg": 65.8,
+      "zinc_mg": 0.654,
+      "copper_mg": 0.004,
+      "fat_g": 1.93,
+      "calcium_mg": 3.94,
+      "protein_g": 22.5
+    },
+    "usdaff_2646171": {
+      "iron_mg": 0.602,
+      "magnesium_mg": 21.8,
+      "phosphorus_mg": 178,
+      "potassium_mg": 272,
+      "sodium_mg": 62.3,
+      "zinc_mg": 1.35,
+      "copper_mg": 0.042,
+      "fat_g": 7.92,
+      "calcium_mg": 5.65,
+      "protein_g": 18.6
+    },
+    "usdaff_2646172": {
+      "iron_mg": 1.64,
+      "magnesium_mg": 16.7,
+      "phosphorus_mg": 150,
+      "potassium_mg": 288,
+      "sodium_mg": 42.5,
+      "zinc_mg": 4.06,
+      "copper_mg": 0.043,
+      "fat_g": 20.0,
+      "calcium_mg": 4.17,
+      "protein_g": 18.7
+    },
+    "usdaff_2646173": {
+      "iron_mg": 1.9,
+      "magnesium_mg": 22.1,
+      "phosphorus_mg": 192,
+      "potassium_mg": 352,
+      "sodium_mg": 45.5,
+      "zinc_mg": 3.78,
+      "copper_mg": 0.055,
+      "fat_g": 5.7,
+      "calcium_mg": 4.07,
+      "protein_g": 21.5,
+      "carbohydrate_g": 0.852
+    },
+    "usdaff_2646174": {
+      "iron_mg": 2.06,
+      "magnesium_mg": 17.0,
+      "phosphorus_mg": 151,
+      "potassium_mg": 281,
+      "sodium_mg": 48.4,
+      "zinc_mg": 5.39,
+      "copper_mg": 0.054,
+      "fat_g": 17.8,
+      "calcium_mg": 4.58,
+      "protein_g": 18.4
+    },
+    "usdaff_2646175": {
+      "iron_mg": 1.83,
+      "magnesium_mg": 18.9,
+      "phosphorus_mg": 167,
+      "potassium_mg": 332,
+      "sodium_mg": 51.3,
+      "zinc_mg": 5.56,
+      "copper_mg": 0.045,
+      "fat_g": 9.4,
+      "calcium_mg": 3.84,
+      "protein_g": 20.1
+    },
+    "usdaff_2647437": {
+      "magnesium_mg": 15.2,
+      "phosphorus_mg": 127,
+      "potassium_mg": 210,
+      "sodium_mg": 51.5,
+      "zinc_mg": 0.599,
+      "fat_g": 0.087,
+      "calcium_mg": 167,
+      "protein_g": 4.23,
+      "carbohydrate_g": 8.08,
+      "vitaminD_ug": 0.217
+    },
+    "usdaff_2647438": {
+      "magnesium_mg": 29.6,
+      "phosphorus_mg": 471,
+      "potassium_mg": 82.9,
+      "sodium_mg": 662,
+      "zinc_mg": 3.78,
+      "fat_g": 32.6,
+      "calcium_mg": 715,
+      "carbohydrate_g": 1.9,
+      "protein_g": 22.6
+    },
+    "usdaff_2647439": {
+      "iron_mg": 1.3,
+      "magnesium_mg": 34.6,
+      "phosphorus_mg": 880,
+      "potassium_mg": 212,
+      "sodium_mg": 1420.0,
+      "zinc_mg": 2.38,
+      "fat_g": 23.9,
+      "calcium_mg": 1500.0,
+      "carbohydrate_g": 8.19,
+      "protein_g": 15.6,
+      "vitaminD_ug": 4.42
+    },
+    "usdaff_2647440": {
+      "magnesium_mg": 29.5,
+      "phosphorus_mg": 494,
+      "potassium_mg": 94.8,
+      "sodium_mg": 601,
+      "zinc_mg": 3.89,
+      "fat_g": 28.1,
+      "calcium_mg": 749,
+      "protein_g": 23.5,
+      "carbohydrate_g": 2.45
+    },
+    "usdaff_2647441": {
+      "magnesium_mg": 21.6,
+      "phosphorus_mg": 380,
+      "potassium_mg": 80.7,
+      "sodium_mg": 734,
+      "zinc_mg": 3.51,
+      "fat_g": 22.1,
+      "calcium_mg": 532,
+      "carbohydrate_g": 2.4,
+      "protein_g": 22.1
+    },
+    "usdaff_2647442": {
+      "magnesium_mg": 27.6,
+      "phosphorus_mg": 390,
+      "potassium_mg": 126,
+      "sodium_mg": 626,
+      "zinc_mg": 2.91,
+      "fat_g": 23.4,
+      "calcium_mg": 602,
+      "carbohydrate_g": 2.96,
+      "protein_g": 18.9
+    },
+    "usdaff_2647443": {
+      "magnesium_mg": 29.9,
+      "phosphorus_mg": 486,
+      "potassium_mg": 117,
+      "sodium_mg": 1620.0,
+      "zinc_mg": 3.6,
+      "fat_g": 27.2,
+      "calcium_mg": 700,
+      "protein_g": 23.8,
+      "carbohydrate_g": 2.72
+    },
+    "usdaff_2684440": {
+      "iron_mg": 0.402,
+      "magnesium_mg": 26.2,
+      "phosphorus_mg": 226,
+      "potassium_mg": 330,
+      "sodium_mg": 53.3,
+      "zinc_mg": 0.425,
+      "copper_mg": 0.062,
+      "fat_g": 4.94,
+      "selenium_ug": 30.2,
+      "vitaminB12_ug": 5.16,
+      "calcium_mg": 14.8,
+      "protein_g": 22.3
+    },
+    "usdaff_2684441": {
+      "iron_mg": 0.259,
+      "magnesium_mg": 25.4,
+      "phosphorus_mg": 230,
+      "potassium_mg": 378,
+      "sodium_mg": 49.5,
+      "zinc_mg": 0.339,
+      "copper_mg": 0.025,
+      "fat_g": 13.1,
+      "selenium_ug": 22.8,
+      "vitaminB12_ug": 5.7,
+      "calcium_mg": 9.42,
+      "protein_g": 20.3
+    },
+    "usdaff_2684442": {
+      "magnesium_mg": 24.3,
+      "phosphorus_mg": 159,
+      "potassium_mg": 342,
+      "sodium_mg": 93.7,
+      "zinc_mg": 0.3,
+      "fat_g": 2.48,
+      "selenium_ug": 20.5,
+      "vitaminB12_ug": 0.759,
+      "calcium_mg": 8.63,
+      "protein_g": 19.0
+    },
+    "usdaff_2684443": {
+      "iron_mg": 0.522,
+      "magnesium_mg": 22.5,
+      "phosphorus_mg": 191,
+      "potassium_mg": 146,
+      "sodium_mg": 475,
+      "zinc_mg": 0.937,
+      "copper_mg": 0.208,
+      "fat_g": 0.801,
+      "selenium_ug": 19.5,
+      "vitaminB12_ug": 0.996,
+      "calcium_mg": 64.6,
+      "protein_g": 15.6,
+      "carbohydrate_g": 0.485
+    },
+    "usdaff_2684444": {
+      "iron_mg": 0.065,
+      "magnesium_mg": 18.0,
+      "phosphorus_mg": 224,
+      "potassium_mg": 245,
+      "sodium_mg": 299,
+      "zinc_mg": 0.305,
+      "copper_mg": 0.004,
+      "fat_g": 0.668,
+      "selenium_ug": 22.8,
+      "vitaminB12_ug": 1.25,
+      "calcium_mg": 6.59,
+      "protein_g": 16.1
+    },
+    "usdaff_2684445": {
+      "magnesium_mg": 20.6,
+      "phosphorus_mg": 166,
+      "potassium_mg": 292,
+      "sodium_mg": 60.5,
+      "zinc_mg": 0.475,
+      "fat_g": 7.31,
+      "selenium_ug": 9.28,
+      "vitaminB12_ug": 2.27,
+      "calcium_mg": 7.8,
+      "protein_g": 16.5
+    },
+    "usdaff_2684446": {
+      "iron_mg": 0.632,
+      "magnesium_mg": 43.1,
+      "phosphorus_mg": 278,
+      "potassium_mg": 235,
+      "sodium_mg": 331,
+      "zinc_mg": 3.48,
+      "copper_mg": 1.09,
+      "fat_g": 0.808,
+      "selenium_ug": 45.8,
+      "vitaminB12_ug": 3.12,
+      "calcium_mg": 111,
+      "protein_g": 18.6
+    },
+    "usdaff_2685568": {
+      "iron_mg": 0.194,
+      "magnesium_mg": 15.3,
+      "phosphorus_mg": 32.9,
+      "potassium_mg": 226,
+      "zinc_mg": 0.26,
+      "copper_mg": 0.064,
+      "fat_g": 0.205,
+      "calcium_mg": 20.8,
+      "protein_g": 0.984,
+      "carbohydrate_g": 3.27,
+      "folate_ug": 71.0,
+      "vitaminC_mg": 15.0
+    },
+    "usdaff_2685569": {
+      "iron_mg": 0.137,
+      "magnesium_mg": 16.8,
+      "phosphorus_mg": 30.7,
+      "potassium_mg": 220,
+      "zinc_mg": 0.203,
+      "copper_mg": 0.061,
+      "fat_g": 0.135,
+      "calcium_mg": 22.7,
+      "protein_g": 0.891,
+      "carbohydrate_g": 4.39,
+      "folate_ug": 36.0,
+      "vitaminC_mg": 17.0
+    },
+    "usdaff_2685570": {
+      "iron_mg": 0.213,
+      "magnesium_mg": 15.0,
+      "phosphorus_mg": 26.5,
+      "potassium_mg": 329,
+      "zinc_mg": 0.193,
+      "copper_mg": 0.073,
+      "fat_g": 0.168,
+      "calcium_mg": 21.7,
+      "protein_g": 1.15,
+      "carbohydrate_g": 10.5,
+      "folate_ug": 55.0,
+      "vitaminC_mg": 7.6
+    },
+    "usdaff_2685571": {
+      "iron_mg": 0.308,
+      "magnesium_mg": 23.8,
+      "phosphorus_mg": 42.0,
+      "potassium_mg": 332,
+      "zinc_mg": 0.294,
+      "copper_mg": 0.087,
+      "fat_g": 0.182,
+      "calcium_mg": 24.8,
+      "protein_g": 1.25,
+      "carbohydrate_g": 10.5,
+      "folate_ug": 50.0,
+      "vitaminC_mg": 7.0
+    },
+    "usdaff_2685572": {
+      "iron_mg": 0.439,
+      "magnesium_mg": 13.6,
+      "phosphorus_mg": 30.5,
+      "potassium_mg": 228,
+      "sodium_mg": 14.3,
+      "zinc_mg": 0.274,
+      "copper_mg": 0.028,
+      "fat_g": 0.234,
+      "calcium_mg": 61.9,
+      "protein_g": 1.02,
+      "carbohydrate_g": 3.51,
+      "folate_ug": 68.0,
+      "vitaminC_mg": 30.3
+    },
+    "usdaff_2685573": {
+      "iron_mg": 0.334,
+      "magnesium_mg": 14.2,
+      "phosphorus_mg": 39.7,
+      "potassium_mg": 274,
+      "sodium_mg": 20.0,
+      "zinc_mg": 0.234,
+      "copper_mg": 0.024,
+      "fat_g": 0.238,
+      "calcium_mg": 20.4,
+      "protein_g": 1.64,
+      "carbohydrate_g": 4.72,
+      "folate_ug": 97.0,
+      "vitaminC_mg": 67.1
+    },
+    "usdaff_2685574": {
+      "iron_mg": 0.75,
+      "magnesium_mg": 49.5,
+      "phosphorus_mg": 45.0,
+      "potassium_mg": 410,
+      "sodium_mg": 18.4,
+      "zinc_mg": 0.459,
+      "copper_mg": 0.111,
+      "fat_g": 0.77,
+      "calcium_mg": 276,
+      "protein_g": 2.97,
+      "carbohydrate_g": 7.02,
+      "folate_ug": 168,
+      "vitaminC_mg": 89.4
+    },
+    "usdaff_2685575": {
+      "iron_mg": 0.73,
+      "magnesium_mg": 25.0,
+      "phosphorus_mg": 78.5,
+      "potassium_mg": 477,
+      "sodium_mg": 25.7,
+      "zinc_mg": 0.366,
+      "copper_mg": 0.038,
+      "fat_g": 0.565,
+      "calcium_mg": 38.6,
+      "protein_g": 3.98,
+      "carbohydrate_g": 9.62,
+      "folate_ug": 86.0,
+      "vitaminC_mg": 143
+    },
+    "usdaff_2685576": {
+      "iron_mg": 0.428,
+      "magnesium_mg": 21.0,
+      "phosphorus_mg": 33.6,
+      "potassium_mg": 342,
+      "sodium_mg": 112,
+      "zinc_mg": 0.31,
+      "copper_mg": 0.161,
+      "fat_g": 0.302,
+      "calcium_mg": 13.8,
+      "carbohydrate_g": 8.79,
+      "protein_g": 1.69,
+      "folate_ug": 103,
+      "vitaminC_mg": 4.6
+    },
+    "usdaff_2685577": {
+      "magnesium_mg": 13.5,
+      "phosphorus_mg": 22.8,
+      "potassium_mg": 222,
+      "sodium_mg": 0.442,
+      "zinc_mg": 0.119,
+      "copper_mg": 0.061,
+      "fat_g": 0.12,
+      "calcium_mg": 11.1,
+      "protein_g": 0.852,
+      "carbohydrate_g": 5.4,
+      "folate_ug": 20.0,
+      "vitaminC_mg": 0.8
+    },
+    "usdaff_2685578": {
+      "iron_mg": 0.929,
+      "magnesium_mg": 10.8,
+      "phosphorus_mg": 17.3,
+      "potassium_mg": 203,
+      "sodium_mg": 112,
+      "zinc_mg": 0.12,
+      "copper_mg": 0.059,
+      "fat_g": 0.206,
+      "calcium_mg": 19.8,
+      "protein_g": 0.868,
+      "carbohydrate_g": 4.29,
+      "vitaminC_mg": 7.7
+    },
+    "usdaff_2685579": {
+      "iron_mg": 1.11,
+      "magnesium_mg": 18.7,
+      "phosphorus_mg": 29.2,
+      "potassium_mg": 356,
+      "sodium_mg": 417,
+      "zinc_mg": 0.183,
+      "copper_mg": 0.089,
+      "fat_g": 0.382,
+      "calcium_mg": 17.1,
+      "protein_g": 1.35,
+      "carbohydrate_g": 6.33,
+      "vitaminC_mg": 9.2
+    },
+    "usdaff_2685580": {
+      "iron_mg": 3.18,
+      "magnesium_mg": 49.6,
+      "phosphorus_mg": 91.2,
+      "potassium_mg": 972,
+      "sodium_mg": 61.2,
+      "zinc_mg": 0.511,
+      "copper_mg": 0.295,
+      "fat_g": 0.732,
+      "calcium_mg": 36.8,
+      "protein_g": 4.23,
+      "carbohydrate_g": 20.2,
+      "vitaminC_mg": 18.4
+    },
+    "usdaff_2685581": {
+      "iron_mg": 2.27,
+      "magnesium_mg": 18.6,
+      "phosphorus_mg": 32.9,
+      "potassium_mg": 346,
+      "sodium_mg": 140,
+      "zinc_mg": 0.201,
+      "copper_mg": 0.104,
+      "fat_g": 0.398,
+      "calcium_mg": 19.2,
+      "protein_g": 1.44,
+      "carbohydrate_g": 7.14,
+      "vitaminC_mg": 9.1
+    },
+    "usdaff_2685582": {
+      "iron_mg": 1.24,
+      "magnesium_mg": 19.3,
+      "phosphorus_mg": 34.1,
+      "potassium_mg": 416,
+      "sodium_mg": 29.4,
+      "zinc_mg": 0.208,
+      "copper_mg": 0.123,
+      "fat_g": 0.265,
+      "calcium_mg": 17.6,
+      "protein_g": 1.58,
+      "carbohydrate_g": 8.04,
+      "vitaminC_mg": 10.4
+    },
+    "usdaff_2710815": {
+      "iron_mg": 0.163,
+      "magnesium_mg": 8.88,
+      "phosphorus_mg": 22.5,
+      "potassium_mg": 231,
+      "zinc_mg": 0.148,
+      "copper_mg": 0.056,
+      "vitaminC_mg": 3.07,
+      "fat_g": 0.405,
+      "calcium_mg": 11.6,
+      "protein_g": 0.961,
+      "carbohydrate_g": 10.2
+    },
+    "usdaff_2710816": {
+      "magnesium_mg": 9.5,
+      "phosphorus_mg": 11.7,
+      "potassium_mg": 209,
+      "sodium_mg": 21.2,
+      "zinc_mg": 0.06,
+      "vitaminC_mg": 15.7,
+      "copper_mg": 0.009,
+      "fat_g": 0.216,
+      "calcium_mg": 6.58,
+      "protein_g": 0.531,
+      "carbohydrate_g": 8.15
+    },
+    "usdaff_2710817": {
+      "iron_mg": 0.319,
+      "magnesium_mg": 33.9,
+      "phosphorus_mg": 30.1,
+      "potassium_mg": 396,
+      "zinc_mg": 0.147,
+      "copper_mg": 0.1,
+      "vitaminC_mg": 20.1,
+      "fat_g": 0.893,
+      "riboflavin_mg": 0.1,
+      "vitaminB6_mg": 0.189,
+      "calcium_mg": 3.82,
+      "protein_g": 1.16,
+      "carbohydrate_g": 31.0
+    },
+    "usdaff_2710818": {
+      "iron_mg": 0.334,
+      "magnesium_mg": 29.5,
+      "phosphorus_mg": 27.9,
+      "potassium_mg": 406,
+      "zinc_mg": 0.185,
+      "copper_mg": 0.109,
+      "vitaminC_mg": 18.5,
+      "fat_g": 0.685,
+      "riboflavin_mg": 0.092,
+      "vitaminB6_mg": 0.159,
+      "calcium_mg": 4.83,
+      "protein_g": 1.23,
+      "carbohydrate_g": 33.6
+    },
+    "usdaff_2710819": {
+      "iron_mg": 6.04,
+      "magnesium_mg": 326,
+      "phosphorus_mg": 691,
+      "potassium_mg": 642,
+      "zinc_mg": 5.56,
+      "copper_mg": 1.57,
+      "fat_g": 32.9,
+      "thiamin_mg": 0.5,
+      "niacin_mg": 8.68,
+      "vitaminB6_mg": 0.202,
+      "calcium_mg": 595,
+      "protein_g": 17.0,
+      "carbohydrate_g": 38.3
+    },
+    "usdaff_2710820": {
+      "iron_mg": 2.62,
+      "magnesium_mg": 119,
+      "phosphorus_mg": 312,
+      "potassium_mg": 358,
+      "sodium_mg": 2.18,
+      "zinc_mg": 2.15,
+      "copper_mg": 0.377,
+      "fat_g": 2.42,
+      "thiamin_mg": 0.226,
+      "niacin_mg": 5.18,
+      "vitaminB6_mg": 0.223,
+      "calcium_mg": 34.1,
+      "protein_g": 11.8,
+      "carbohydrate_g": 75.9
+    },
+    "usdaff_2710821": {
+      "iron_mg": 1.53,
+      "magnesium_mg": 108,
+      "phosphorus_mg": 355,
+      "potassium_mg": 299,
+      "sodium_mg": 1.01,
+      "zinc_mg": 5.84,
+      "copper_mg": 0.487,
+      "fat_g": 1.7,
+      "thiamin_mg": 0.339,
+      "niacin_mg": 6.91,
+      "vitaminB6_mg": 0.393,
+      "calcium_mg": 7.97,
+      "protein_g": 12.8,
+      "carbohydrate_g": 75.7
+    },
+    "usdaff_2710822": {
+      "iron_mg": 1.39,
+      "magnesium_mg": 42.6,
+      "phosphorus_mg": 51.2,
+      "potassium_mg": 407,
+      "sodium_mg": 86.9,
+      "zinc_mg": 0.348,
+      "vitaminC_mg": 101,
+      "copper_mg": 0.083,
+      "fat_g": 0.325,
+      "folate_ug": 149,
+      "calcium_mg": 204,
+      "protein_g": 1.65,
+      "carbohydrate_g": 5.37
+    },
+    "usdaff_2710823": {
+      "iron_mg": 0.444,
+      "magnesium_mg": 13.8,
+      "phosphorus_mg": 53.9,
+      "potassium_mg": 278,
+      "sodium_mg": 2.46,
+      "zinc_mg": 0.596,
+      "vitaminC_mg": 9.15,
+      "copper_mg": 0.132,
+      "fat_g": 0.216,
+      "thiamin_mg": 0.069,
+      "niacin_mg": 1.08,
+      "vitaminB6_mg": 0.112,
+      "folate_ug": 182,
+      "calcium_mg": 20.6,
+      "protein_g": 1.44,
+      "carbohydrate_g": 5.1
+    },
+    "usdaff_2710824": {
+      "iron_mg": 0.613,
+      "magnesium_mg": 32.8,
+      "phosphorus_mg": 42.4,
+      "potassium_mg": 576,
+      "zinc_mg": 0.46,
+      "copper_mg": 0.285,
+      "fat_g": 20.3,
+      "vitaminB6_mg": 0.167,
+      "folate_ug": 129,
+      "calcium_mg": 14.5,
+      "protein_g": 1.81,
+      "carbohydrate_g": 8.32
+    },
+    "usdaff_2710825": {
+      "iron_mg": 1.12,
+      "magnesium_mg": 113,
+      "phosphorus_mg": 307,
+      "potassium_mg": 256,
+      "zinc_mg": 1.72,
+      "copper_mg": 0.21,
+      "fat_g": 3.44,
+      "thiamin_mg": 0.319,
+      "niacin_mg": 8.28,
+      "vitaminB6_mg": 0.202,
+      "calcium_mg": 14.4,
+      "protein_g": 7.57,
+      "carbohydrate_g": 77.2
+    },
+    "usdaff_2710826": {
+      "iron_mg": 0.388,
+      "magnesium_mg": 25.8,
+      "phosphorus_mg": 75.5,
+      "potassium_mg": 237,
+      "zinc_mg": 0.556,
+      "copper_mg": 0.056,
+      "thiamin_mg": 0.079,
+      "riboflavin_mg": 0.138,
+      "niacin_mg": 1.59,
+      "vitaminB6_mg": 0.15,
+      "fat_g": 1.63,
+      "calcium_mg": 0.656,
+      "protein_g": 2.79,
+      "carbohydrate_g": 14.7
+    },
+    "usdaff_2710827": {
+      "iron_mg": 3.69,
+      "magnesium_mg": 140,
+      "phosphorus_mg": 436,
+      "potassium_mg": 432,
+      "zinc_mg": 5.23,
+      "copper_mg": 0.549,
+      "fat_g": 3.81,
+      "thiamin_mg": 0.49,
+      "niacin_mg": 5.69,
+      "vitaminB6_mg": 0.264,
+      "calcium_mg": 41.4,
+      "protein_g": 15.1,
+      "carbohydrate_g": 68.7
+    },
+    "usdaff_2710828": {
+      "iron_mg": 3.2,
+      "magnesium_mg": 119,
+      "phosphorus_mg": 368,
+      "potassium_mg": 385,
+      "sodium_mg": 0.845,
+      "zinc_mg": 3.97,
+      "copper_mg": 0.47,
+      "fat_g": 3.1,
+      "thiamin_mg": 0.376,
+      "niacin_mg": 5.82,
+      "vitaminB6_mg": 0.235,
+      "calcium_mg": 25.9,
+      "protein_g": 12.6,
+      "carbohydrate_g": 72.1
+    },
+    "usdaff_2710829": {
+      "iron_mg": 2.66,
+      "magnesium_mg": 39.1,
+      "phosphorus_mg": 93.2,
+      "potassium_mg": 43.8,
+      "sodium_mg": 2.97,
+      "zinc_mg": 1.85,
+      "copper_mg": 0.36,
+      "fat_g": 1.69,
+      "thiamin_mg": 0.086,
+      "niacin_mg": 0.716,
+      "vitaminB6_mg": 0.025,
+      "calcium_mg": 11.6,
+      "protein_g": 7.17,
+      "carbohydrate_g": 81.3
+    },
+    "usdaff_2710830": {
+      "iron_mg": 3.87,
+      "magnesium_mg": 130,
+      "phosphorus_mg": 371,
+      "potassium_mg": 450,
+      "sodium_mg": 3.94,
+      "zinc_mg": 4.46,
+      "copper_mg": 0.594,
+      "fat_g": 2.8,
+      "thiamin_mg": 0.478,
+      "niacin_mg": 6.66,
+      "vitaminB6_mg": 0.258,
+      "calcium_mg": 24.1,
+      "protein_g": 14.8,
+      "carbohydrate_g": 71.8
+    },
+    "usdaff_2710831": {
+      "iron_mg": 0.037,
+      "magnesium_mg": 14.8,
+      "phosphorus_mg": 27.6,
+      "potassium_mg": 302,
+      "sodium_mg": 2.28,
+      "zinc_mg": 0.455,
+      "vitaminC_mg": 58.8,
+      "copper_mg": 0.128,
+      "fat_g": 0.64,
+      "folate_ug": 32.8,
+      "calcium_mg": 24.4,
+      "protein_g": 1.01,
+      "carbohydrate_g": 13.8
+    },
+    "usdaff_2710832": {
+      "magnesium_mg": 12.6,
+      "phosphorus_mg": 19.7,
+      "potassium_mg": 167,
+      "zinc_mg": 0.069,
+      "vitaminC_mg": 21.2,
+      "copper_mg": 0.043,
+      "fat_g": 0.458,
+      "calcium_mg": 44.0,
+      "protein_g": 1.04,
+      "carbohydrate_g": 13.4
+    },
+    "usdaff_2710833": {
+      "magnesium_mg": 10.3,
+      "phosphorus_mg": 16.4,
+      "potassium_mg": 165,
+      "zinc_mg": 0.066,
+      "vitaminC_mg": 25.5,
+      "copper_mg": 0.091,
+      "fat_g": 0.572,
+      "vitaminB6_mg": 0.071,
+      "calcium_mg": 12.4,
+      "protein_g": 0.562,
+      "carbohydrate_g": 15.3
+    },
+    "usdaff_2710834": {
+      "magnesium_mg": 10.6,
+      "phosphorus_mg": 17.7,
+      "potassium_mg": 204,
+      "zinc_mg": 0.102,
+      "copper_mg": 0.103,
+      "vitaminC_mg": 168,
+      "fat_g": 0.681,
+      "vitaminB6_mg": 0.108,
+      "calcium_mg": 10.0,
+      "protein_g": 0.688,
+      "carbohydrate_g": 17.4
+    },
+    "usdaff_2710835": {
+      "iron_mg": 1.7,
+      "magnesium_mg": 93.3,
+      "phosphorus_mg": 241,
+      "potassium_mg": 277,
+      "sodium_mg": 2.73,
+      "zinc_mg": 1.62,
+      "copper_mg": 0.13,
+      "fat_g": 4.34,
+      "thiamin_mg": 0.233,
+      "niacin_mg": 1.69,
+      "vitaminB6_mg": 0.229,
+      "calcium_mg": 112,
+      "protein_g": 7.56,
+      "carbohydrate_g": 76.7
+    },
+    "usdaff_2710836": {
+      "magnesium_mg": 6.49,
+      "phosphorus_mg": 12.3,
+      "potassium_mg": 122,
+      "sodium_mg": 0.398,
+      "zinc_mg": 0.107,
+      "copper_mg": 0.081,
+      "vitaminC_mg": 5.51,
+      "fat_g": 0.371,
+      "calcium_mg": 9.99,
+      "protein_g": 0.312,
+      "carbohydrate_g": 14.8
+    },
+    "usdaff_2710837": {
+      "magnesium_mg": 6.62,
+      "phosphorus_mg": 18.6,
+      "potassium_mg": 186,
+      "zinc_mg": 0.045,
+      "copper_mg": 0.054,
+      "vitaminC_mg": 1.82,
+      "fat_g": 0.282,
+      "calcium_mg": 4.03,
+      "protein_g": 0.578,
+      "carbohydrate_g": 13.5
+    },
+    "usdaff_2710838": {
+      "iron_mg": 1.2,
+      "magnesium_mg": 126,
+      "phosphorus_mg": 314,
+      "potassium_mg": 245,
+      "sodium_mg": 0.438,
+      "zinc_mg": 2.56,
+      "copper_mg": 0.269,
+      "fat_g": 3.44,
+      "thiamin_mg": 0.339,
+      "niacin_mg": 6.68,
+      "vitaminB6_mg": 0.137,
+      "calcium_mg": 9.22,
+      "protein_g": 8.56,
+      "carbohydrate_g": 76.2
+    },
+    "usdaff_2710839": {
+      "iron_mg": 14.2,
+      "magnesium_mg": 274,
+      "phosphorus_mg": 517,
+      "potassium_mg": 852,
+      "sodium_mg": 2.92,
+      "zinc_mg": 4.4,
+      "copper_mg": 0.841,
+      "fat_g": 9.26,
+      "thiamin_mg": 0.556,
+      "niacin_mg": 24.6,
+      "vitaminB6_mg": 0.408,
+      "calcium_mg": 61.7,
+      "protein_g": 11.2,
+      "carbohydrate_g": 68.7
+    },
+    "usdaff_2710840": {
+      "iron_mg": 2.22,
+      "magnesium_mg": 107,
+      "phosphorus_mg": 246,
+      "potassium_mg": 274,
+      "zinc_mg": 1.32,
+      "copper_mg": 0.214,
+      "fat_g": 3.24,
+      "thiamin_mg": 0.394,
+      "niacin_mg": 2.85,
+      "vitaminB6_mg": 0.133,
+      "calcium_mg": 7.89,
+      "protein_g": 10.2,
+      "carbohydrate_g": 73.5
+    },
+    "usdaff_2710841": {
+      "iron_mg": 2.04,
+      "magnesium_mg": 109,
+      "phosphorus_mg": 243,
+      "potassium_mg": 274,
+      "zinc_mg": 1.28,
+      "copper_mg": 0.208,
+      "fat_g": 3.26,
+      "thiamin_mg": 0.416,
+      "niacin_mg": 2.65,
+      "vitaminB6_mg": 0.144,
+      "calcium_mg": 7.45,
+      "protein_g": 10.2,
+      "carbohydrate_g": 74.9
+    },
+    "usdaff_2710842": {
+      "iron_mg": 3.9,
+      "magnesium_mg": 136,
+      "phosphorus_mg": 294,
+      "potassium_mg": 367,
+      "sodium_mg": 0.329,
+      "zinc_mg": 1.77,
+      "copper_mg": 0.3,
+      "fat_g": 4.22,
+      "thiamin_mg": 0.45,
+      "niacin_mg": 6.1,
+      "vitaminB6_mg": 0.191,
+      "calcium_mg": 14.9,
+      "carbohydrate_g": 73.6,
+      "protein_g": 10.1
+    },
+    "usdaff_2710843": {
+      "iron_mg": 0.315,
+      "magnesium_mg": 31.7,
+      "phosphorus_mg": 28.9,
+      "potassium_mg": 408,
+      "zinc_mg": 0.149,
+      "copper_mg": 0.103,
+      "vitaminC_mg": 19.1,
+      "fat_g": 0.99,
+      "riboflavin_mg": 0.102,
+      "vitaminB6_mg": 0.196,
+      "calcium_mg": 3.9,
+      "protein_g": 1.17,
+      "carbohydrate_g": 29.2
+    },
+    "usdaff_2727566": {
+      "iron_mg": 0.666,
+      "magnesium_mg": 18.6,
+      "phosphorus_mg": 152,
+      "potassium_mg": 244,
+      "sodium_mg": 91.0,
+      "zinc_mg": 1.7,
+      "copper_mg": 0.044,
+      "fat_g": 5.94,
+      "calcium_mg": 8.28,
+      "protein_g": 18.4
+    },
+    "usdaff_2727567": {
+      "iron_mg": 0.586,
+      "magnesium_mg": 18.5,
+      "phosphorus_mg": 154,
+      "potassium_mg": 246,
+      "sodium_mg": 63.6,
+      "zinc_mg": 1.2,
+      "copper_mg": 0.039,
+      "fat_g": 13.4,
+      "calcium_mg": 5.73,
+      "protein_g": 17.1
+    },
+    "usdaff_2727568": {
+      "iron_mg": 0.511,
+      "magnesium_mg": 16.5,
+      "phosphorus_mg": 133,
+      "potassium_mg": 194,
+      "sodium_mg": 84.1,
+      "zinc_mg": 1.18,
+      "copper_mg": 0.011,
+      "fat_g": 10.6,
+      "calcium_mg": 13.6,
+      "protein_g": 18.4
+    },
+    "usdaff_2727569": {
+      "iron_mg": 0.354,
+      "magnesium_mg": 25.4,
+      "phosphorus_mg": 204,
+      "potassium_mg": 332,
+      "sodium_mg": 48.1,
+      "zinc_mg": 0.624,
+      "copper_mg": 0.004,
+      "fat_g": 4.78,
+      "calcium_mg": 6.9,
+      "protein_g": 21.4
+    },
+    "usdaff_2727570": {
+      "iron_mg": 1.64,
+      "magnesium_mg": 17.5,
+      "phosphorus_mg": 156,
+      "potassium_mg": 272,
+      "sodium_mg": 53.4,
+      "zinc_mg": 3.13,
+      "copper_mg": 0.085,
+      "fat_g": 18.6,
+      "calcium_mg": 6.58,
+      "protein_g": 17.5
+    },
+    "usdaff_2727571": {
+      "iron_mg": 2.17,
+      "magnesium_mg": 18.5,
+      "phosphorus_mg": 166,
+      "potassium_mg": 301,
+      "sodium_mg": 55.7,
+      "zinc_mg": 3.76,
+      "copper_mg": 0.078,
+      "fat_g": 8.88,
+      "calcium_mg": 6.83,
+      "protein_g": 19.9
+    },
+    "usdaff_2727572": {
+      "iron_mg": 1.61,
+      "magnesium_mg": 19.5,
+      "phosphorus_mg": 171,
+      "potassium_mg": 323,
+      "sodium_mg": 43.1,
+      "zinc_mg": 3.28,
+      "copper_mg": 0.043,
+      "fat_g": 11.5,
+      "calcium_mg": 5.04,
+      "protein_g": 21.3,
+      "carbohydrate_g": 0.221
+    },
+    "usdaff_2727573": {
+      "iron_mg": 2.53,
+      "magnesium_mg": 22.0,
+      "phosphorus_mg": 190,
+      "potassium_mg": 345,
+      "sodium_mg": 44.8,
+      "zinc_mg": 3.22,
+      "copper_mg": 0.105,
+      "fat_g": 6.46,
+      "calcium_mg": 4.09,
+      "protein_g": 21.1,
+      "carbohydrate_g": 0.18
+    },
+    "usdaff_2727574": {
+      "iron_mg": 2.22,
+      "magnesium_mg": 22.1,
+      "phosphorus_mg": 193,
+      "potassium_mg": 349,
+      "sodium_mg": 42.8,
+      "zinc_mg": 3.45,
+      "copper_mg": 0.07,
+      "fat_g": 5.71,
+      "calcium_mg": 3.7,
+      "protein_g": 22.0,
+      "carbohydrate_g": 0.218
+    },
+    "usdaff_2727575": {
+      "iron_mg": 0.421,
+      "magnesium_mg": 23.4,
+      "phosphorus_mg": 202,
+      "potassium_mg": 366,
+      "sodium_mg": 39.3,
+      "zinc_mg": 1.32,
+      "copper_mg": 0.034,
+      "fat_g": 5.48,
+      "calcium_mg": 4.12,
+      "protein_g": 22.8
+    },
+    "usdaff_2727576": {
+      "iron_mg": 0.382,
+      "magnesium_mg": 12.2,
+      "phosphorus_mg": 114,
+      "potassium_mg": 208,
+      "sodium_mg": 49.7,
+      "zinc_mg": 1.07,
+      "copper_mg": 0.033,
+      "fat_g": 35.8,
+      "calcium_mg": 4.2,
+      "protein_g": 15.2
+    },
+    "usdaff_2727577": {
+      "iron_mg": 0.075,
+      "magnesium_mg": 10.6,
+      "phosphorus_mg": 23.4,
+      "potassium_mg": 221,
+      "sodium_mg": 0.351,
+      "zinc_mg": 0.085,
+      "copper_mg": 0.105,
+      "vitaminC_mg": 27.6,
+      "folate_ug": 116,
+      "calcium_mg": 9.91,
+      "protein_g": 1.15
+    },
+    "usdaff_2727578": {
+      "iron_mg": 0.063,
+      "magnesium_mg": 12.8,
+      "phosphorus_mg": 22.3,
+      "potassium_mg": 472,
+      "sodium_mg": 0.312,
+      "zinc_mg": 0.139,
+      "copper_mg": 0.062,
+      "vitaminC_mg": 10.1,
+      "folate_ug": 31.0,
+      "calcium_mg": 16.4,
+      "protein_g": 0.854
+    },
+    "usdaff_2727579": {
+      "iron_mg": 0.031,
+      "magnesium_mg": 13.3,
+      "phosphorus_mg": 17.0,
+      "potassium_mg": 267,
+      "sodium_mg": 0.312,
+      "zinc_mg": 0.105,
+      "copper_mg": 0.058,
+      "vitaminC_mg": 5.55,
+      "vitaminB6_mg": 0.104,
+      "folate_ug": 12.7,
+      "calcium_mg": 16.6,
+      "protein_g": 0.792
+    },
+    "usdaff_2727580": {
+      "iron_mg": 0.137,
+      "magnesium_mg": 15.4,
+      "phosphorus_mg": 38.9,
+      "potassium_mg": 267,
+      "sodium_mg": 4.59,
+      "zinc_mg": 0.211,
+      "copper_mg": 0.024,
+      "vitaminB6_mg": 0.199,
+      "calcium_mg": 42.0,
+      "protein_g": 0.888
+    },
+    "usdaff_2727581": {
+      "iron_mg": 0.208,
+      "magnesium_mg": 20.6,
+      "phosphorus_mg": 20.2,
+      "potassium_mg": 167,
+      "sodium_mg": 1.55,
+      "zinc_mg": 0.189,
+      "copper_mg": 0.145,
+      "vitaminC_mg": 15.4,
+      "calcium_mg": 15.4,
+      "protein_g": 1.53
+    },
+    "usdaff_2727582": {
+      "iron_mg": 0.245,
+      "magnesium_mg": 13.5,
+      "phosphorus_mg": 24.2,
+      "potassium_mg": 239,
+      "sodium_mg": 0.311,
+      "zinc_mg": 0.159,
+      "copper_mg": 0.052,
+      "vitaminC_mg": 2.18,
+      "folate_ug": 16.4,
+      "calcium_mg": 7.14,
+      "protein_g": 1.06
+    },
+    "usdaff_2727583": {
+      "iron_mg": 0.255,
+      "magnesium_mg": 11.3,
+      "phosphorus_mg": 34.4,
+      "potassium_mg": 235,
+      "sodium_mg": 12.6,
+      "zinc_mg": 0.253,
+      "copper_mg": 0.024,
+      "vitaminB6_mg": 0.086,
+      "calcium_mg": 35.0,
+      "protein_g": 1.06
+    },
+    "usdaff_2727584": {
+      "iron_mg": 0.761,
+      "magnesium_mg": 15.7,
+      "phosphorus_mg": 34.6,
+      "potassium_mg": 319,
+      "sodium_mg": 17.7,
+      "zinc_mg": 0.293,
+      "copper_mg": 0.057,
+      "vitaminB6_mg": 0.208,
+      "calcium_mg": 51.4,
+      "protein_g": 1.47
+    },
+    "usdaff_2727585": {
+      "iron_mg": 1.04,
+      "magnesium_mg": 18.9,
+      "phosphorus_mg": 27.9,
+      "potassium_mg": 232,
+      "sodium_mg": 9.95,
+      "zinc_mg": 0.248,
+      "copper_mg": 0.035,
+      "calcium_mg": 59.4,
+      "protein_g": 0.669
+    },
+    "usdaff_2727586": {
+      "iron_mg": 0.332,
+      "magnesium_mg": 15.1,
+      "phosphorus_mg": 54.6,
+      "potassium_mg": 252,
+      "sodium_mg": 3.64,
+      "zinc_mg": 0.282,
+      "copper_mg": 0.08,
+      "vitaminB6_mg": 0.177,
+      "calcium_mg": 26.1,
+      "protein_g": 1.38
+    },
+    "usdaff_2727587": {
+      "iron_mg": 0.444,
+      "magnesium_mg": 15.2,
+      "phosphorus_mg": 19.0,
+      "potassium_mg": 216,
+      "sodium_mg": 10.3,
+      "zinc_mg": 0.122,
+      "copper_mg": 0.022,
+      "vitaminB6_mg": 0.081,
+      "folate_ug": 5.29,
+      "calcium_mg": 16.2,
+      "protein_g": 0.423
+    },
+    "usdaff_2727588": {
+      "iron_mg": 0.031,
+      "magnesium_mg": 6.86,
+      "phosphorus_mg": 8.94,
+      "potassium_mg": 166,
+      "sodium_mg": 4.04,
+      "zinc_mg": 0.082,
+      "copper_mg": 0.01,
+      "folate_ug": 5.87,
+      "calcium_mg": 11.0
+    },
+    "usdaff_2727589": {
+      "iron_mg": 0.203,
+      "magnesium_mg": 12.1,
+      "phosphorus_mg": 16.1,
+      "potassium_mg": 170,
+      "sodium_mg": 1.36,
+      "zinc_mg": 0.033,
+      "copper_mg": 0.014,
+      "folate_ug": 4.67,
+      "calcium_mg": 16.2,
+      "protein_g": 0.147
+    },
+    "usdaff_2747652": {
+      "iron_mg": 2.69,
+      "magnesium_mg": 228,
+      "phosphorus_mg": 226,
+      "potassium_mg": 298,
+      "sodium_mg": 5400.0,
+      "zinc_mg": 2.54,
+      "copper_mg": 0.235,
+      "fat_g": 9.85,
+      "selenium_ug": 48.2,
+      "vitaminB12_ug": 12.6,
+      "calcium_mg": 240,
+      "protein_g": 26.9,
+      "carbohydrate_g": 2.41
+    },
+    "usdaff_2747653": {
+      "iron_mg": 3.16,
+      "magnesium_mg": 74.4,
+      "phosphorus_mg": 26.8,
+      "potassium_mg": 369,
+      "sodium_mg": 280,
+      "zinc_mg": 0.315,
+      "copper_mg": 0.076,
+      "vitaminC_mg": 8.58,
+      "riboflavin_mg": 0.142,
+      "vitaminB6_mg": 0.115,
+      "folate_ug": 152,
+      "fat_g": 0.144,
+      "calcium_mg": 72.8,
+      "protein_g": 1.61,
+      "carbohydrate_g": 4.66
+    },
+    "usdaff_2747654": {
+      "magnesium_mg": 17.9,
+      "phosphorus_mg": 279,
+      "potassium_mg": 192,
+      "sodium_mg": 354,
+      "zinc_mg": 0.269,
+      "copper_mg": 0.009,
+      "fat_g": 0.216,
+      "selenium_ug": 22.3,
+      "vitaminB12_ug": 0.586,
+      "calcium_mg": 9.01,
+      "protein_g": 14.2,
+      "carbohydrate_g": 0.524
+    },
+    "usdaff_2747655": {
+      "magnesium_mg": 15.0,
+      "phosphorus_mg": 33.4,
+      "potassium_mg": 332,
+      "sodium_mg": 49.0,
+      "zinc_mg": 0.141,
+      "copper_mg": 0.073,
+      "vitaminC_mg": 14.7,
+      "fat_g": 0.14,
+      "folate_ug": 37.0,
+      "calcium_mg": 41.3,
+      "protein_g": 0.922,
+      "carbohydrate_g": 5.49
+    },
+    "usdaff_2747656": {
+      "magnesium_mg": 23.1,
+      "phosphorus_mg": 217,
+      "potassium_mg": 430,
+      "sodium_mg": 108,
+      "zinc_mg": 0.327,
+      "fat_g": 0.592,
+      "selenium_ug": 53.7,
+      "vitaminB12_ug": 0.582,
+      "calcium_mg": 4.1,
+      "protein_g": 19.1
+    },
+    "usdaff_2747657": {
+      "iron_mg": 0.173,
+      "magnesium_mg": 39.0,
+      "phosphorus_mg": 175,
+      "potassium_mg": 213,
+      "sodium_mg": 509,
+      "zinc_mg": 1.54,
+      "copper_mg": 0.243,
+      "fat_g": 0.367,
+      "selenium_ug": 63.1,
+      "vitaminB12_ug": 0.995,
+      "calcium_mg": 71.6,
+      "protein_g": 13.0,
+      "carbohydrate_g": 0.886
+    },
+    "usdaff_2747658": {
+      "iron_mg": 0.052,
+      "magnesium_mg": 28.0,
+      "phosphorus_mg": 224,
+      "potassium_mg": 408,
+      "sodium_mg": 51.9,
+      "zinc_mg": 0.296,
+      "copper_mg": 0.029,
+      "fat_g": 0.377,
+      "selenium_ug": 50.2,
+      "vitaminB12_ug": 1.34,
+      "calcium_mg": 6.0,
+      "protein_g": 19.8,
+      "carbohydrate_g": 0.287
+    },
+    "usdaff_2747659": {
+      "iron_mg": 0.505,
+      "magnesium_mg": 22.0,
+      "phosphorus_mg": 62.5,
+      "potassium_mg": 493,
+      "sodium_mg": 0.491,
+      "zinc_mg": 0.328,
+      "copper_mg": 0.116,
+      "vitaminC_mg": 11.8,
+      "fat_g": 0.538,
+      "folate_ug": 83.4,
+      "calcium_mg": 44.2,
+      "protein_g": 1.27,
+      "carbohydrate_g": 19.3
+    },
+    "usdaff_2747660": {
+      "iron_mg": 0.162,
+      "magnesium_mg": 10.2,
+      "phosphorus_mg": 21.8,
+      "potassium_mg": 177,
+      "zinc_mg": 0.13,
+      "copper_mg": 0.061,
+      "vitaminC_mg": 112,
+      "fat_g": 0.131,
+      "vitaminB6_mg": 0.287,
+      "folate_ug": 31.8,
+      "calcium_mg": 9.82,
+      "protein_g": 0.723,
+      "carbohydrate_g": 4.97
+    },
+    "usdaff_2747661": {
+      "iron_mg": 0.038,
+      "magnesium_mg": 8.95,
+      "phosphorus_mg": 19.1,
+      "potassium_mg": 167,
+      "zinc_mg": 0.094,
+      "copper_mg": 0.051,
+      "vitaminC_mg": 89.9,
+      "fat_g": 0.149,
+      "vitaminB6_mg": 0.267,
+      "folate_ug": 27.4,
+      "calcium_mg": 10.1,
+      "carbohydrate_g": 5.08,
+      "protein_g": 0.621
+    },
+    "usdaff_2747662": {
+      "iron_mg": 0.117,
+      "magnesium_mg": 10.7,
+      "phosphorus_mg": 22.4,
+      "potassium_mg": 192,
+      "zinc_mg": 0.128,
+      "copper_mg": 0.064,
+      "vitaminC_mg": 128,
+      "niacin_mg": 0.645,
+      "vitaminB6_mg": 0.309,
+      "folate_ug": 26.0,
+      "fat_g": 0.191,
+      "calcium_mg": 8.37,
+      "carbohydrate_g": 5.14,
+      "protein_g": 1.43
+    },
+    "usdaff_2747663": {
+      "iron_mg": 0.057,
+      "magnesium_mg": 12.7,
+      "phosphorus_mg": 24.2,
+      "potassium_mg": 224,
+      "zinc_mg": 0.138,
+      "copper_mg": 0.061,
+      "vitaminC_mg": 94.6,
+      "fat_g": 0.141,
+      "vitaminB6_mg": 0.39,
+      "folate_ug": 28.2,
+      "calcium_mg": 12.9,
+      "carbohydrate_g": 6.14,
+      "protein_g": 0.856
+    },
+    "usdaff_2747664": {
+      "iron_mg": 0.401,
+      "magnesium_mg": 13.0,
+      "phosphorus_mg": 35.5,
+      "potassium_mg": 335,
+      "sodium_mg": 8.08,
+      "zinc_mg": 0.2,
+      "copper_mg": 0.059,
+      "vitaminC_mg": 6.18,
+      "fat_g": 0.143,
+      "folate_ug": 117,
+      "calcium_mg": 30.9,
+      "protein_g": 1.31,
+      "carbohydrate_g": 4.96
+    },
+    "usdaff_2747665": {
+      "magnesium_mg": 8.94,
+      "phosphorus_mg": 17.9,
+      "potassium_mg": 198,
+      "sodium_mg": 51.2,
+      "zinc_mg": 0.104,
+      "copper_mg": 0.002,
+      "vitaminC_mg": 17.8,
+      "fat_g": 0.083,
+      "folate_ug": 63.2,
+      "calcium_mg": 21.5,
+      "carbohydrate_g": 4.06,
+      "protein_g": 0.656
+    },
+    "usdaff_2747666": {
+      "iron_mg": 0.172,
+      "magnesium_mg": 46.4,
+      "phosphorus_mg": 229,
+      "potassium_mg": 292,
+      "sodium_mg": 252,
+      "zinc_mg": 1.02,
+      "fat_g": 0.419,
+      "selenium_ug": 28.4,
+      "vitaminB12_ug": 0.67,
+      "calcium_mg": 14.0,
+      "protein_g": 16.4,
+      "carbohydrate_g": 2.28
+    },
+    "usdaff_2747667": {
+      "iron_mg": 0.213,
+      "magnesium_mg": 30.6,
+      "phosphorus_mg": 214,
+      "potassium_mg": 245,
+      "sodium_mg": 313,
+      "zinc_mg": 1.0,
+      "copper_mg": 0.004,
+      "fat_g": 0.493,
+      "selenium_ug": 15.7,
+      "vitaminB12_ug": 1.28,
+      "calcium_mg": 10.5,
+      "protein_g": 13.5,
+      "carbohydrate_g": 1.97
+    },
+    "usdaff_2747668": {
+      "magnesium_mg": 16.6,
+      "phosphorus_mg": 152,
+      "potassium_mg": 236,
+      "sodium_mg": 109,
+      "zinc_mg": 0.295,
+      "fat_g": 16.6,
+      "selenium_ug": 69.4,
+      "vitaminB12_ug": 0.588,
+      "calcium_mg": 6.82,
+      "protein_g": 14.9,
+      "carbohydrate_g": 0.139
+    },
+    "usdaff_2747669": {
+      "iron_mg": 0.201,
+      "magnesium_mg": 27.5,
+      "phosphorus_mg": 199,
+      "potassium_mg": 349,
+      "sodium_mg": 93.1,
+      "zinc_mg": 0.364,
+      "copper_mg": 0.019,
+      "fat_g": 0.569,
+      "selenium_ug": 71.4,
+      "vitaminB12_ug": 1.57,
+      "calcium_mg": 13.9,
+      "protein_g": 20.7,
+      "carbohydrate_g": 0.441
+    },
+    "usdaff_2747670": {
+      "iron_mg": 0.276,
+      "magnesium_mg": 58.4,
+      "phosphorus_mg": 162,
+      "potassium_mg": 193,
+      "sodium_mg": 728,
+      "zinc_mg": 3.37,
+      "copper_mg": 0.609,
+      "fat_g": 0.294,
+      "selenium_ug": 60.0,
+      "vitaminB12_ug": 2.22,
+      "calcium_mg": 97.8,
+      "protein_g": 15.5,
+      "carbohydrate_g": 1.11
+    },
+    "usdaff_2747671": {
+      "magnesium_mg": 10.5,
+      "phosphorus_mg": 63.8,
+      "potassium_mg": 9.48,
+      "sodium_mg": 272,
+      "zinc_mg": 0.527,
+      "copper_mg": 0.077,
+      "fat_g": 0.551,
+      "selenium_ug": 20.9,
+      "vitaminB12_ug": 1.12,
+      "calcium_mg": 10.6,
+      "protein_g": 8.81,
+      "carbohydrate_g": 0.932
+    },
+    "usdaff_2747672": {
+      "iron_mg": 0.096,
+      "magnesium_mg": 26.7,
+      "phosphorus_mg": 235,
+      "potassium_mg": 414,
+      "sodium_mg": 56.9,
+      "zinc_mg": 0.541,
+      "copper_mg": 0.02,
+      "fat_g": 8.12,
+      "selenium_ug": 60.7,
+      "vitaminB12_ug": 0.87,
+      "calcium_mg": 3.62,
+      "protein_g": 19.2,
+      "carbohydrate_g": 0.45
+    },
+    "usdaff_2747673": {
+      "iron_mg": 0.591,
+      "magnesium_mg": 35.5,
+      "phosphorus_mg": 271,
+      "potassium_mg": 420,
+      "sodium_mg": 94.4,
+      "zinc_mg": 0.352,
+      "copper_mg": 0.03,
+      "fat_g": 0.388,
+      "selenium_ug": 76.5,
+      "vitaminB12_ug": 1.37,
+      "calcium_mg": 3.19,
+      "protein_g": 24.7
+    },
+    "usdaff_2747674": {
+      "magnesium_mg": 10.4,
+      "phosphorus_mg": 31.3,
+      "potassium_mg": 262,
+      "sodium_mg": 12.8,
+      "zinc_mg": 0.156,
+      "copper_mg": 0.022,
+      "vitaminC_mg": 26.8,
+      "fat_g": 0.119,
+      "vitaminB6_mg": 0.118,
+      "folate_ug": 60.2,
+      "calcium_mg": 32.7,
+      "carbohydrate_g": 7.27,
+      "protein_g": 0.953
+    },
+    "usdaff_2747675": {
+      "iron_mg": 0.021,
+      "magnesium_mg": 11.4,
+      "phosphorus_mg": 17.1,
+      "potassium_mg": 117,
+      "zinc_mg": 0.102,
+      "copper_mg": 0.046,
+      "vitaminC_mg": 6.46,
+      "folate_ug": 11.9,
+      "calcium_mg": 7.86,
+      "protein_g": 0.871
+    },
+    "usdaff_2747676": {
+      "magnesium_mg": 9.67,
+      "phosphorus_mg": 20.7,
+      "potassium_mg": 272,
+      "sodium_mg": 3.76,
+      "zinc_mg": 0.121,
+      "copper_mg": 0.007,
+      "vitaminC_mg": 7.09,
+      "thiamin_mg": 0.033,
+      "riboflavin_mg": 0.072,
+      "niacin_mg": 0.169,
+      "vitaminB6_mg": 0.029,
+      "folate_ug": 29.7,
+      "fat_g": 0.07,
+      "calcium_mg": 16.9,
+      "protein_g": 0.531,
+      "carbohydrate_g": 4.17
+    }
+  },
+  "by_cat": {
+    "坚果": {
+      "name": "坚果",
+      "children": [
+        {
+          "id": "usdaff_323294",
+          "name": "Nuts, almonds, dry roasted, with salt added"
+        },
+        {
+          "id": "usdaff_325524",
+          "name": "Seeds, sunflower seed kernels, dry roasted, with salt added"
+        },
+        {
+          "id": "usdaff_2261420",
+          "name": "Flour, almond"
+        },
+        {
+          "id": "usdaff_2262073",
+          "name": "Sesame butter, creamy"
+        },
+        {
+          "id": "usdaff_2262074",
+          "name": "Almond butter, creamy"
+        },
+        {
+          "id": "usdaff_2262075",
+          "name": "Flaxseed, ground"
+        },
+        {
+          "id": "usdaff_2346392",
+          "name": "Nuts, pine nuts, raw"
+        },
+        {
+          "id": "usdaff_2346393",
+          "name": "Nuts, almonds, whole, raw"
+        },
+        {
+          "id": "usdaff_2346394",
+          "name": "Nuts, walnuts, English, halves, raw"
+        },
+        {
+          "id": "usdaff_2346395",
+          "name": "Nuts, pecans, halves, raw"
+        },
+        {
+          "id": "usdaff_2515373",
+          "name": "Nuts, brazilnuts, raw"
+        },
+        {
+          "id": "usdaff_2515374",
+          "name": "Nuts, cashew nuts, raw"
+        },
+        {
+          "id": "usdaff_2515375",
+          "name": "Nuts, hazelnuts or filberts, raw"
+        },
+        {
+          "id": "usdaff_2515377",
+          "name": "Flour, chestnut"
+        },
+        {
+          "id": "usdaff_2515378",
+          "name": "Nuts, macadamia nuts, raw"
+        },
+        {
+          "id": "usdaff_2515379",
+          "name": "Nuts, pistachio nuts, raw"
+        },
+        {
+          "id": "usdaff_2515380",
+          "name": "Seeds, pumpkin seeds (pepitas), raw"
+        },
+        {
+          "id": "usdaff_2515381",
+          "name": "Seeds, sunflower seed, kernel, raw"
+        },
+        {
+          "id": "usdaff_2515382",
+          "name": "Flour, coconut"
+        }
+      ]
+    },
+    "水产": {
+      "name": "水产",
+      "children": [
+        {
+          "id": "usdaff_333374",
+          "name": "黑线鳕"
+        },
+        {
+          "id": "usdaff_333476",
+          "name": "Fish, pollock, raw"
+        },
+        {
+          "id": "usdaff_334194",
+          "name": "金枪鱼罐头（水浸）"
+        },
+        {
+          "id": "usdaff_2684440",
+          "name": "三文鱼（野生）"
+        },
+        {
+          "id": "usdaff_2684441",
+          "name": "三文鱼（养殖）"
+        },
+        {
+          "id": "usdaff_2684442",
+          "name": "罗非鱼（养殖）"
+        },
+        {
+          "id": "usdaff_2684443",
+          "name": "虾（养殖）"
+        },
+        {
+          "id": "usdaff_2684444",
+          "name": "鳕鱼"
+        },
+        {
+          "id": "usdaff_2684445",
+          "name": "Fish, catfish, farm raised, raw"
+        },
+        {
+          "id": "usdaff_2684446",
+          "name": "Crustaceans, crab, blue swimming, lump, pasteurized, refrigerated"
+        },
+        {
+          "id": "usdaff_2747652",
+          "name": "Anchovies, canned in olive oil, with salt, drained"
+        },
+        {
+          "id": "usdaff_2747654",
+          "name": "Cod, Pacific or Alaskan, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747656",
+          "name": "Halibut, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747657",
+          "name": "Lobster, tail only, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747658",
+          "name": "Mahi mahi, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747666",
+          "name": "Scallops, bay, Patagonian, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747667",
+          "name": "Scallops, sea, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747668",
+          "name": "Sea bass, Chilean, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747669",
+          "name": "Snapper, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747670",
+          "name": "Snow crab, legs only, frozen  "
+        },
+        {
+          "id": "usdaff_2747671",
+          "name": "Squid (calamari), frozen, tubes only"
+        },
+        {
+          "id": "usdaff_2747672",
+          "name": "Swordfish, frozen, wild caught"
+        },
+        {
+          "id": "usdaff_2747673",
+          "name": "Tuna, ahi or yellowfin, frozen, wild caught"
+        }
+      ]
+    },
+    "水果": {
+      "name": "水果",
+      "children": [
+        {
+          "id": "usdaff_325287",
+          "name": "Grapefruit juice, white, canned or bottled, unsweetened"
+        },
+        {
+          "id": "usdaff_325430",
+          "name": "Peaches, yellow, raw"
+        },
+        {
+          "id": "usdaff_327046",
+          "name": "Kiwifruit, green, raw"
+        },
+        {
+          "id": "usdaff_327357",
+          "name": "Nectarines, raw"
+        },
+        {
+          "id": "usdaff_332791",
+          "name": "Olives, green, Manzanilla, stuffed with pimiento"
+        },
+        {
+          "id": "usdaff_746768",
+          "name": "Figs, dried, uncooked"
+        },
+        {
+          "id": "usdaff_746770",
+          "name": "Melons, cantaloupe, raw"
+        },
+        {
+          "id": "usdaff_746771",
+          "name": "Oranges, raw, navels"
+        },
+        {
+          "id": "usdaff_746773",
+          "name": "Pears, raw, bartlett"
+        },
+        {
+          "id": "usdaff_1105073",
+          "name": "Bananas, overripe, raw"
+        },
+        {
+          "id": "usdaff_1105314",
+          "name": "Bananas, ripe and slightly ripe, raw"
+        },
+        {
+          "id": "usdaff_1750339",
+          "name": "Apples, red delicious, with skin, raw"
+        },
+        {
+          "id": "usdaff_1750340",
+          "name": "Apples, fuji, with skin, raw"
+        },
+        {
+          "id": "usdaff_1750341",
+          "name": "Apples, gala, with skin, raw"
+        },
+        {
+          "id": "usdaff_1750342",
+          "name": "Apples, granny smith, with skin, raw"
+        },
+        {
+          "id": "usdaff_1750343",
+          "name": "Apples, honeycrisp, with skin, raw"
+        },
+        {
+          "id": "usdaff_2003590",
+          "name": "Apple juice, with added vitamin C, from concentrate, shelf stable"
+        },
+        {
+          "id": "usdaff_2003591",
+          "name": "Orange juice, no pulp, not fortified, from concentrate, refrigerated"
+        },
+        {
+          "id": "usdaff_2003592",
+          "name": "Grape juice, purple, with added vitamin C, from concentrate, shelf stable"
+        },
+        {
+          "id": "usdaff_2003593",
+          "name": "Grape juice, white, with added vitamin C, from concentrate, shelf stable"
+        },
+        {
+          "id": "usdaff_2003594",
+          "name": "Cranberry juice, not fortified, from concentrate, shelf stable"
+        },
+        {
+          "id": "usdaff_2003595",
+          "name": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated"
+        },
+        {
+          "id": "usdaff_2003597",
+          "name": "Orange juice, no pulp, not fortified, not from concentrate, refrigerated"
+        },
+        {
+          "id": "usdaff_2346398",
+          "name": "Pineapple, raw"
+        },
+        {
+          "id": "usdaff_2346399",
+          "name": "Cherries, sweet, dark red, raw"
+        },
+        {
+          "id": "usdaff_2346409",
+          "name": "草莓"
+        },
+        {
+          "id": "usdaff_2346410",
+          "name": "Raspberries, raw"
+        },
+        {
+          "id": "usdaff_2346411",
+          "name": "蓝莓"
+        },
+        {
+          "id": "usdaff_2346412",
+          "name": "Grapes, red, seedless, raw"
+        },
+        {
+          "id": "usdaff_2346413",
+          "name": "青葡萄"
+        },
+        {
+          "id": "usdaff_2346414",
+          "name": "Applesauce, unsweetened, with added vitamin C"
+        },
+        {
+          "id": "usdaff_2710815",
+          "name": "Apricot, with skin, raw"
+        },
+        {
+          "id": "usdaff_2710816",
+          "name": "Melons, honeydew, raw"
+        },
+        {
+          "id": "usdaff_2710817",
+          "name": "Plantains, ripe, raw"
+        },
+        {
+          "id": "usdaff_2710818",
+          "name": "Plantains, underripe, raw"
+        },
+        {
+          "id": "usdaff_2710824",
+          "name": "Avocado, Hass, peeled, raw"
+        },
+        {
+          "id": "usdaff_2710831",
+          "name": "Kiwifruit (kiwi), green, peeled, raw"
+        },
+        {
+          "id": "usdaff_2710832",
+          "name": "Mandarin, seedless, peeled, raw"
+        },
+        {
+          "id": "usdaff_2710833",
+          "name": "Mango, Tommy Atkins, peeled, raw"
+        },
+        {
+          "id": "usdaff_2710834",
+          "name": "Mango, Ataulfo, peeled, raw"
+        },
+        {
+          "id": "usdaff_2710836",
+          "name": "Pear, Anjou, green, with skin, raw"
+        },
+        {
+          "id": "usdaff_2710837",
+          "name": "Plum, black, with skin, raw"
+        },
+        {
+          "id": "usdaff_2710843",
+          "name": "Plantains, overripe, raw"
+        },
+        {
+          "id": "usdaff_2727577",
+          "name": "Pawpaw, peeled, seeded, raw"
+        },
+        {
+          "id": "usdaff_2727581",
+          "name": "Blackberries, raw"
+        },
+        {
+          "id": "usdaff_2727587",
+          "name": "Juice, prune, shelf-stable"
+        },
+        {
+          "id": "usdaff_2727588",
+          "name": "Juice, pomegranate, from concentrate, shelf-stable"
+        },
+        {
+          "id": "usdaff_2727589",
+          "name": "Juice, tart cherry, from concentrate, shelf-stable"
+        },
+        {
+          "id": "usdaff_2747675",
+          "name": "Watermelon, seedless, flesh only, raw"
+        },
+        {
+          "id": "usdaff_2747676",
+          "name": "Watermelon, seedless, rind only, raw"
+        }
+      ]
+    },
+    "肉类": {
+      "name": "肉类",
+      "children": [
+        {
+          "id": "usdaff_331897",
+          "name": "鸡腿肉"
+        },
+        {
+          "id": "usdaff_331960",
+          "name": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, braised"
+        },
+        {
+          "id": "usdaff_746758",
+          "name": "Beef, loin, tenderloin roast, separable lean only, boneless, trimmed to 0\" fat, select, cooked, roasted"
+        },
+        {
+          "id": "usdaff_746759",
+          "name": "Beef, loin, top loin steak, boneless, lip-on, separable lean only, trimmed to 1/8\" fat, choice, raw"
+        },
+        {
+          "id": "usdaff_746760",
+          "name": "Beef, round, eye of round roast, boneless, separable lean only, trimmed to 0\" fat, select, raw"
+        },
+        {
+          "id": "usdaff_746761",
+          "name": "Beef, round, top round roast, boneless, separable lean only, trimmed to 0\" fat, select, raw"
+        },
+        {
+          "id": "usdaff_746762",
+          "name": "Beef, short loin, porterhouse steak, separable lean only, trimmed to 1/8\" fat, select, raw"
+        },
+        {
+          "id": "usdaff_746763",
+          "name": "Beef, short loin, t-bone steak, bone-in, separable lean only, trimmed to 1/8\" fat, choice, cooked, grilled"
+        },
+        {
+          "id": "usdaff_746785",
+          "name": "Turkey, ground, 93% lean, 7% fat, pan-broiled crumbles"
+        },
+        {
+          "id": "usdaff_746952",
+          "name": "Ham, sliced, restaurant"
+        },
+        {
+          "id": "usdaff_749420",
+          "name": "Pork, cured, bacon, cooked, restaurant"
+        },
+        {
+          "id": "usdaff_2514743",
+          "name": "牛肉末（90%瘦肉）"
+        },
+        {
+          "id": "usdaff_2514744",
+          "name": "牛肉末（80%瘦肉）"
+        },
+        {
+          "id": "usdaff_2514745",
+          "name": "Pork, ground, raw"
+        },
+        {
+          "id": "usdaff_2514746",
+          "name": "Chicken, ground, with additives, raw"
+        },
+        {
+          "id": "usdaff_2514747",
+          "name": "Turkey, ground, 93% lean/ 7% fat, raw"
+        },
+        {
+          "id": "usdaff_2646168",
+          "name": "Pork, loin, boneless, raw"
+        },
+        {
+          "id": "usdaff_2646169",
+          "name": "Pork, loin, tenderloin, boneless, raw"
+        },
+        {
+          "id": "usdaff_2646170",
+          "name": "鸡胸肉"
+        },
+        {
+          "id": "usdaff_2646171",
+          "name": "Chicken, thigh, boneless, skinless, raw"
+        },
+        {
+          "id": "usdaff_2646172",
+          "name": "Beef, ribeye, steak, boneless, choice, raw"
+        },
+        {
+          "id": "usdaff_2646173",
+          "name": "Beef, round, top round, boneless, choice, raw"
+        },
+        {
+          "id": "usdaff_2646174",
+          "name": "Beef, chuck, roast, boneless, choice, raw"
+        },
+        {
+          "id": "usdaff_2646175",
+          "name": "Beef, flank, steak, boneless, choice, raw"
+        },
+        {
+          "id": "usdaff_2727566",
+          "name": "Chicken, drumstick, meat and skin, raw"
+        },
+        {
+          "id": "usdaff_2727567",
+          "name": "Chicken, thigh, meat and skin, raw"
+        },
+        {
+          "id": "usdaff_2727568",
+          "name": "Chicken, wing, meat and skin, raw"
+        },
+        {
+          "id": "usdaff_2727569",
+          "name": "Chicken, breast, meat and skin, raw"
+        },
+        {
+          "id": "usdaff_2727570",
+          "name": "羊肉"
+        },
+        {
+          "id": "usdaff_2727571",
+          "name": "Bison, ground, raw"
+        },
+        {
+          "id": "usdaff_2727572",
+          "name": "Beef, short loin (NY strip steak), raw"
+        },
+        {
+          "id": "usdaff_2727573",
+          "name": "Beef, tenderloin steak, raw"
+        },
+        {
+          "id": "usdaff_2727574",
+          "name": "Beef, top sirloin steak, raw"
+        },
+        {
+          "id": "usdaff_2727575",
+          "name": "Pork, chop, center cut, raw"
+        },
+        {
+          "id": "usdaff_2727576",
+          "name": "Pork, belly, with skin, raw"
+        }
+      ]
+    },
+    "蔬菜": {
+      "name": "蔬菜",
+      "children": [
+        {
+          "id": "usdaff_321360",
+          "name": "小番茄"
+        },
+        {
+          "id": "usdaff_321611",
+          "name": "Beans, snap, green, canned, regular pack, drained solids"
+        },
+        {
+          "id": "usdaff_323505",
+          "name": "羽衣甘蓝"
+        },
+        {
+          "id": "usdaff_324317",
+          "name": "Onion rings, breaded, par fried, frozen, prepared, heated in oven"
+        },
+        {
+          "id": "usdaff_324653",
+          "name": "Pickles, cucumber, dill or kosher dill"
+        },
+        {
+          "id": "usdaff_326196",
+          "name": "Kale, frozen, cooked, boiled, drained, without salt"
+        },
+        {
+          "id": "usdaff_333281",
+          "name": "Tomatoes, canned, red, ripe, diced"
+        },
+        {
+          "id": "usdaff_746764",
+          "name": "Carrots, frozen, unprepared"
+        },
+        {
+          "id": "usdaff_746769",
+          "name": "Lettuce, cos or romaine, raw"
+        },
+        {
+          "id": "usdaff_747447",
+          "name": "西兰花"
+        },
+        {
+          "id": "usdaff_747693",
+          "name": "Ketchup, restaurant"
+        },
+        {
+          "id": "usdaff_790577",
+          "name": "Onions, red, raw"
+        },
+        {
+          "id": "usdaff_790646",
+          "name": "洋葱"
+        },
+        {
+          "id": "usdaff_1104647",
+          "name": "大蒜"
+        },
+        {
+          "id": "usdaff_1104962",
+          "name": "Onions, white, raw"
+        },
+        {
+          "id": "usdaff_1999626",
+          "name": "Mushroom, lion's mane"
+        },
+        {
+          "id": "usdaff_1999627",
+          "name": "Mushroom, oyster"
+        },
+        {
+          "id": "usdaff_1999628",
+          "name": "Mushrooms, shiitake"
+        },
+        {
+          "id": "usdaff_1999629",
+          "name": "白蘑菇"
+        },
+        {
+          "id": "usdaff_1999632",
+          "name": "Spinach, baby"
+        },
+        {
+          "id": "usdaff_1999633",
+          "name": "Spinach, mature"
+        },
+        {
+          "id": "usdaff_1999634",
+          "name": "Tomato, roma"
+        },
+        {
+          "id": "usdaff_2003596",
+          "name": "Tomato juice, with added ingredients, from concentrate, shelf stable"
+        },
+        {
+          "id": "usdaff_2003598",
+          "name": "Mushroom, portabella"
+        },
+        {
+          "id": "usdaff_2003599",
+          "name": "Mushroom, king oyster"
+        },
+        {
+          "id": "usdaff_2003600",
+          "name": "Mushroom, enoki"
+        },
+        {
+          "id": "usdaff_2003601",
+          "name": "Mushroom, crimini"
+        },
+        {
+          "id": "usdaff_2003602",
+          "name": "Mushroom, maitake"
+        },
+        {
+          "id": "usdaff_2003603",
+          "name": "Mushroom, beech"
+        },
+        {
+          "id": "usdaff_2003604",
+          "name": "Mushroom, pioppini"
+        },
+        {
+          "id": "usdaff_2258586",
+          "name": "胡萝卜"
+        },
+        {
+          "id": "usdaff_2258587",
+          "name": "Carrots, baby, raw"
+        },
+        {
+          "id": "usdaff_2258588",
+          "name": "Peppers, bell, green, raw"
+        },
+        {
+          "id": "usdaff_2258589",
+          "name": "Peppers, bell, yellow, raw"
+        },
+        {
+          "id": "usdaff_2258590",
+          "name": "Peppers, bell, red, raw"
+        },
+        {
+          "id": "usdaff_2258591",
+          "name": "Peppers, bell, orange, raw"
+        },
+        {
+          "id": "usdaff_2261422",
+          "name": "Flour, potato"
+        },
+        {
+          "id": "usdaff_2346388",
+          "name": "生菜"
+        },
+        {
+          "id": "usdaff_2346389",
+          "name": "Lettuce, romaine, green, raw"
+        },
+        {
+          "id": "usdaff_2346390",
+          "name": "Lettuce, leaf, red, raw"
+        },
+        {
+          "id": "usdaff_2346391",
+          "name": "Lettuce, leaf, green, raw"
+        },
+        {
+          "id": "usdaff_2346400",
+          "name": "Beans, snap, green, raw"
+        },
+        {
+          "id": "usdaff_2346401",
+          "name": "土豆（生）"
+        },
+        {
+          "id": "usdaff_2346402",
+          "name": "Potatoes, red, without skin, raw"
+        },
+        {
+          "id": "usdaff_2346403",
+          "name": "Potatoes, gold, without skin, raw"
+        },
+        {
+          "id": "usdaff_2346404",
+          "name": "红薯"
+        },
+        {
+          "id": "usdaff_2346405",
+          "name": "Celery, raw"
+        },
+        {
+          "id": "usdaff_2346406",
+          "name": "Cucumber, with peel, raw"
+        },
+        {
+          "id": "usdaff_2346407",
+          "name": "Cabbage, green, raw"
+        },
+        {
+          "id": "usdaff_2346408",
+          "name": "Cabbage, red, raw"
+        },
+        {
+          "id": "usdaff_2512377",
+          "name": "Flour, cassava"
+        },
+        {
+          "id": "usdaff_2644291",
+          "name": "Peas, green, sweet, canned, sodium added, sugar added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2685568",
+          "name": "Squash, summer, green, zucchini, includes skin, raw"
+        },
+        {
+          "id": "usdaff_2685569",
+          "name": "Squash, summer, yellow, includes skin, raw"
+        },
+        {
+          "id": "usdaff_2685570",
+          "name": "Squash, winter, butternut, raw"
+        },
+        {
+          "id": "usdaff_2685571",
+          "name": "Squash, winter, acorn, raw"
+        },
+        {
+          "id": "usdaff_2685572",
+          "name": "Cabbage, bok choy, raw"
+        },
+        {
+          "id": "usdaff_2685573",
+          "name": "Cauliflower, raw"
+        },
+        {
+          "id": "usdaff_2685574",
+          "name": "Collards, raw"
+        },
+        {
+          "id": "usdaff_2685575",
+          "name": "Brussels sprouts, raw"
+        },
+        {
+          "id": "usdaff_2685576",
+          "name": "Beets, raw"
+        },
+        {
+          "id": "usdaff_2685577",
+          "name": "Eggplant, raw"
+        },
+        {
+          "id": "usdaff_2685578",
+          "name": "Tomatoes, whole, canned, solids and liquids, with salt added"
+        },
+        {
+          "id": "usdaff_2685579",
+          "name": "Tomato, sauce, canned, with salt added"
+        },
+        {
+          "id": "usdaff_2685580",
+          "name": "Tomato, paste, canned, without salt added"
+        },
+        {
+          "id": "usdaff_2685581",
+          "name": "Tomatoes, crushed, canned"
+        },
+        {
+          "id": "usdaff_2685582",
+          "name": "Tomato, puree, canned"
+        },
+        {
+          "id": "usdaff_2710822",
+          "name": "Arugula, baby, raw"
+        },
+        {
+          "id": "usdaff_2710823",
+          "name": "Asparagus, green, raw"
+        },
+        {
+          "id": "usdaff_2710826",
+          "name": "Corn, sweet, yellow and white kernels,  fresh, raw"
+        },
+        {
+          "id": "usdaff_2727578",
+          "name": "Squash, pie pumpkin, peeled, seeded, raw"
+        },
+        {
+          "id": "usdaff_2727579",
+          "name": "Squash, spaghetti, peeled, seeded, raw"
+        },
+        {
+          "id": "usdaff_2727580",
+          "name": "Rutabaga, peeled, raw"
+        },
+        {
+          "id": "usdaff_2727582",
+          "name": "Tomatillos, dehusked, raw"
+        },
+        {
+          "id": "usdaff_2727583",
+          "name": "Cabbage, napa, leaf, destemmed, raw"
+        },
+        {
+          "id": "usdaff_2727584",
+          "name": "Leeks, bulb and greens, root removed, raw"
+        },
+        {
+          "id": "usdaff_2727585",
+          "name": "Green onion, (scallion), bulb and greens, root removed, raw"
+        },
+        {
+          "id": "usdaff_2727586",
+          "name": "Shallots, bulb, peeled, root removed, raw"
+        },
+        {
+          "id": "usdaff_2747653",
+          "name": "Beet greens, raw"
+        },
+        {
+          "id": "usdaff_2747655",
+          "name": "Fennel, bulb, raw"
+        },
+        {
+          "id": "usdaff_2747659",
+          "name": "Parsnips, raw"
+        },
+        {
+          "id": "usdaff_2747660",
+          "name": "Peppers, banana or Hungarian wax, seeded, raw"
+        },
+        {
+          "id": "usdaff_2747661",
+          "name": "Peppers, jalapeno, seeded, raw"
+        },
+        {
+          "id": "usdaff_2747662",
+          "name": "Peppers, poblano, seeded, raw"
+        },
+        {
+          "id": "usdaff_2747663",
+          "name": "Peppers, serrano, seeded, raw"
+        },
+        {
+          "id": "usdaff_2747664",
+          "name": "Radicchio, raw"
+        },
+        {
+          "id": "usdaff_2747665",
+          "name": "Radishes, red, raw"
+        },
+        {
+          "id": "usdaff_2747674",
+          "name": "Turnips, raw"
+        }
+      ]
+    },
+    "蛋奶": {
+      "name": "蛋奶",
+      "children": [
+        {
+          "id": "usdaff_323604",
+          "name": "全蛋（巴氏）"
+        },
+        {
+          "id": "usdaff_323697",
+          "name": "Egg, white, raw, frozen, pasteurized"
+        },
+        {
+          "id": "usdaff_323793",
+          "name": "Egg, white, dried"
+        },
+        {
+          "id": "usdaff_325036",
+          "name": "Cheese, parmesan, grated"
+        },
+        {
+          "id": "usdaff_325198",
+          "name": "Cheese, pasteurized process, American, vitamin D fortified"
+        },
+        {
+          "id": "usdaff_328637",
+          "name": "切达奶酪"
+        },
+        {
+          "id": "usdaff_328841",
+          "name": "Cheese, cottage, lowfat, 2% milkfat"
+        },
+        {
+          "id": "usdaff_329370",
+          "name": "Cheese, mozzarella, low moisture, part-skim"
+        },
+        {
+          "id": "usdaff_329490",
+          "name": "Egg, whole, dried"
+        },
+        {
+          "id": "usdaff_329596",
+          "name": "Egg, yolk, raw, frozen, pasteurized"
+        },
+        {
+          "id": "usdaff_329716",
+          "name": "Egg, yolk, dried"
+        },
+        {
+          "id": "usdaff_330137",
+          "name": "Yogurt, Greek, plain, nonfat"
+        },
+        {
+          "id": "usdaff_330415",
+          "name": "Yogurt, Greek, strawberry, nonfat"
+        },
+        {
+          "id": "usdaff_746765",
+          "name": "Cheese, dry white, queso seco"
+        },
+        {
+          "id": "usdaff_746766",
+          "name": "Cheese, ricotta, whole milk"
+        },
+        {
+          "id": "usdaff_746767",
+          "name": "Cheese, swiss"
+        },
+        {
+          "id": "usdaff_746772",
+          "name": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D"
+        },
+        {
+          "id": "usdaff_746776",
+          "name": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)"
+        },
+        {
+          "id": "usdaff_746778",
+          "name": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D"
+        },
+        {
+          "id": "usdaff_746782",
+          "name": "全脂牛奶（加维D）"
+        },
+        {
+          "id": "usdaff_747429",
+          "name": "Cheese, American, restaurant"
+        },
+        {
+          "id": "usdaff_747997",
+          "name": "Eggs, Grade A, Large, egg white"
+        },
+        {
+          "id": "usdaff_748236",
+          "name": "Eggs, Grade A, Large, egg yolk"
+        },
+        {
+          "id": "usdaff_748967",
+          "name": "鸡蛋"
+        },
+        {
+          "id": "usdaff_789828",
+          "name": "Butter, stick, unsalted"
+        },
+        {
+          "id": "usdaff_790508",
+          "name": "Butter, stick, salted"
+        },
+        {
+          "id": "usdaff_2259792",
+          "name": "Buttermilk, low fat"
+        },
+        {
+          "id": "usdaff_2259793",
+          "name": "全脂酸奶"
+        },
+        {
+          "id": "usdaff_2259794",
+          "name": "Yogurt, Greek, plain, whole milk"
+        },
+        {
+          "id": "usdaff_2259795",
+          "name": "Cheese, parmesan, grated, refrigerated"
+        },
+        {
+          "id": "usdaff_2259796",
+          "name": "Cheese, feta, whole milk, crumbled"
+        },
+        {
+          "id": "usdaff_2346384",
+          "name": "Cottage cheese, full fat, large or small curd"
+        },
+        {
+          "id": "usdaff_2346385",
+          "name": "Cream cheese, full fat, block"
+        },
+        {
+          "id": "usdaff_2346386",
+          "name": "Cream, heavy"
+        },
+        {
+          "id": "usdaff_2346387",
+          "name": "Cream, sour, full fat"
+        },
+        {
+          "id": "usdaff_2647437",
+          "name": "Yogurt, plain, nonfat"
+        },
+        {
+          "id": "usdaff_2647438",
+          "name": "Cheese, monterey jack, solid"
+        },
+        {
+          "id": "usdaff_2647439",
+          "name": "Cheese, pasteurized process cheese food or product, American, singles"
+        },
+        {
+          "id": "usdaff_2647440",
+          "name": "Cheese, provolone, sliced"
+        },
+        {
+          "id": "usdaff_2647441",
+          "name": "Cheese, oaxaca, solid"
+        },
+        {
+          "id": "usdaff_2647442",
+          "name": "Cheese, queso fresco, solid"
+        },
+        {
+          "id": "usdaff_2647443",
+          "name": "Cheese, cotija, solid"
+        }
+      ]
+    },
+    "调料": {
+      "name": "调料",
+      "children": [
+        {
+          "id": "usdaff_326698",
+          "name": "黄芥末"
+        },
+        {
+          "id": "usdaff_746775",
+          "name": "碘盐"
+        }
+      ]
+    },
+    "谷物": {
+      "name": "谷物",
+      "children": [
+        {
+          "id": "usdaff_789890",
+          "name": "Flour, wheat, all-purpose, enriched, bleached"
+        },
+        {
+          "id": "usdaff_789951",
+          "name": "Flour, wheat, all-purpose, enriched, unbleached"
+        },
+        {
+          "id": "usdaff_790018",
+          "name": "Flour, wheat, all-purpose, unenriched, unbleached"
+        },
+        {
+          "id": "usdaff_790085",
+          "name": "Flour, whole wheat, unenriched"
+        },
+        {
+          "id": "usdaff_790146",
+          "name": "Flour, bread, white, enriched, unbleached"
+        },
+        {
+          "id": "usdaff_790214",
+          "name": "Flour, rice, white, unenriched"
+        },
+        {
+          "id": "usdaff_790276",
+          "name": "Flour, corn, yellow, fine meal, enriched"
+        },
+        {
+          "id": "usdaff_1104812",
+          "name": "Flour, rice, brown"
+        },
+        {
+          "id": "usdaff_1104867",
+          "name": "Flour, rice, glutinous"
+        },
+        {
+          "id": "usdaff_1104913",
+          "name": "Flour, pastry, unenriched, unbleached"
+        },
+        {
+          "id": "usdaff_2003586",
+          "name": "Flour, 00"
+        },
+        {
+          "id": "usdaff_2003587",
+          "name": "Flour, spelt, whole grain"
+        },
+        {
+          "id": "usdaff_2003588",
+          "name": "Flour, semolina, coarse and semi-coarse"
+        },
+        {
+          "id": "usdaff_2003589",
+          "name": "Flour, semolina, fine"
+        },
+        {
+          "id": "usdaff_2261421",
+          "name": "Flour, oat, whole grain"
+        },
+        {
+          "id": "usdaff_2346396",
+          "name": "燕麦片"
+        },
+        {
+          "id": "usdaff_2346397",
+          "name": "Oats, whole grain, steel cut"
+        },
+        {
+          "id": "usdaff_2512371",
+          "name": "Flour, amaranth"
+        },
+        {
+          "id": "usdaff_2512372",
+          "name": "Flour, quinoa"
+        },
+        {
+          "id": "usdaff_2512373",
+          "name": "Flour, sorghum"
+        },
+        {
+          "id": "usdaff_2512374",
+          "name": "Flour, buckwheat"
+        },
+        {
+          "id": "usdaff_2512375",
+          "name": "Flour, rye"
+        },
+        {
+          "id": "usdaff_2512376",
+          "name": "Flour, barley"
+        },
+        {
+          "id": "usdaff_2512378",
+          "name": "Buckwheat, whole grain"
+        },
+        {
+          "id": "usdaff_2512379",
+          "name": "Millet, whole grain"
+        },
+        {
+          "id": "usdaff_2512380",
+          "name": "糙米"
+        },
+        {
+          "id": "usdaff_2512381",
+          "name": "Rice, white, long grain, unenriched, raw"
+        },
+        {
+          "id": "usdaff_2710819",
+          "name": "Chia seeds, dry, raw"
+        },
+        {
+          "id": "usdaff_2710820",
+          "name": "Bulgur, dry, raw"
+        },
+        {
+          "id": "usdaff_2710821",
+          "name": "Wild rice, dry, raw"
+        },
+        {
+          "id": "usdaff_2710825",
+          "name": "Rice, black, unenriched, raw"
+        },
+        {
+          "id": "usdaff_2710827",
+          "name": "Einkorn, grain, dry, raw"
+        },
+        {
+          "id": "usdaff_2710828",
+          "name": "Farro, pearled, dry, raw"
+        },
+        {
+          "id": "usdaff_2710829",
+          "name": "Fonio, grain, dry, raw"
+        },
+        {
+          "id": "usdaff_2710830",
+          "name": "Khorasan, grain, dry, raw"
+        },
+        {
+          "id": "usdaff_2710835",
+          "name": "Corn flour, masa harina, white or yellow, dry, raw"
+        },
+        {
+          "id": "usdaff_2710838",
+          "name": "Rice, red, unenriched, dry, raw"
+        },
+        {
+          "id": "usdaff_2710839",
+          "name": "Sorghum bran, white, unenriched, dry, raw"
+        },
+        {
+          "id": "usdaff_2710840",
+          "name": "Sorghum flour, white, pearled, unenriched, dry, raw"
+        },
+        {
+          "id": "usdaff_2710841",
+          "name": "Sorghum grain, white, pearled, unenriched, dry, raw"
+        },
+        {
+          "id": "usdaff_2710842",
+          "name": "Sorghum, whole grain, white, dry, raw"
+        }
+      ]
+    },
+    "豆类": {
+      "name": "豆类",
+      "children": [
+        {
+          "id": "usdaff_321358",
+          "name": "鹰嘴豆泥"
+        },
+        {
+          "id": "usdaff_747430",
+          "name": "Beans, Dry, Medium Red (0% moisture)"
+        },
+        {
+          "id": "usdaff_747431",
+          "name": "Beans, Dry, Red (0% moisture)"
+        },
+        {
+          "id": "usdaff_747432",
+          "name": "Beans, Dry, Flor de Mayo (0% moisture)"
+        },
+        {
+          "id": "usdaff_747433",
+          "name": "Beans, Dry, Brown (0% moisture)"
+        },
+        {
+          "id": "usdaff_747434",
+          "name": "Beans, Dry, Tan (0% moisture)"
+        },
+        {
+          "id": "usdaff_747435",
+          "name": "Beans, Dry, Light Tan (0% moisture)"
+        },
+        {
+          "id": "usdaff_747436",
+          "name": "Beans, Dry, Carioca (0% moisture)"
+        },
+        {
+          "id": "usdaff_747437",
+          "name": "Beans, Dry, Cranberry (0% moisture)"
+        },
+        {
+          "id": "usdaff_747438",
+          "name": "Beans, Dry, Light Red Kidney (0% moisture)"
+        },
+        {
+          "id": "usdaff_747439",
+          "name": "Beans, Dry, Pink (0% moisture)"
+        },
+        {
+          "id": "usdaff_747440",
+          "name": "Beans, Dry, Dark Red Kidney (0% moisture)"
+        },
+        {
+          "id": "usdaff_747441",
+          "name": "Beans, Dry, Navy (0% moisture)"
+        },
+        {
+          "id": "usdaff_747442",
+          "name": "Beans, Dry, Small White (0% moisture)"
+        },
+        {
+          "id": "usdaff_747443",
+          "name": "Beans, Dry, Small Red (0% moisture)"
+        },
+        {
+          "id": "usdaff_747444",
+          "name": "黑豆（干）"
+        },
+        {
+          "id": "usdaff_747445",
+          "name": "Beans, Dry, Pinto (0% moisture)"
+        },
+        {
+          "id": "usdaff_747446",
+          "name": "Beans, Dry, Great Northern (0% moisture)"
+        },
+        {
+          "id": "usdaff_1104705",
+          "name": "Flour, soy, defatted"
+        },
+        {
+          "id": "usdaff_1104766",
+          "name": "Flour, soy, full-fat"
+        },
+        {
+          "id": "usdaff_1999630",
+          "name": "Soy milk, unsweetened, plain, shelf stable"
+        },
+        {
+          "id": "usdaff_2257044",
+          "name": "Soy milk, sweetened, plain, refrigerated"
+        },
+        {
+          "id": "usdaff_2262072",
+          "name": "花生酱"
+        },
+        {
+          "id": "usdaff_2515376",
+          "name": "Peanuts, raw"
+        },
+        {
+          "id": "usdaff_2644281",
+          "name": "Beans, cannellini, dry"
+        },
+        {
+          "id": "usdaff_2644282",
+          "name": "鹰嘴豆"
+        },
+        {
+          "id": "usdaff_2644283",
+          "name": "小扁豆"
+        },
+        {
+          "id": "usdaff_2644284",
+          "name": "Blackeye pea, dry"
+        },
+        {
+          "id": "usdaff_2644285",
+          "name": "Beans, black, canned, sodium added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644286",
+          "name": "Beans, navy, canned, sodium added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644287",
+          "name": "Beans, cannellini, canned, sodium added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644288",
+          "name": "Chickpeas (garbanzo beans, bengal gram), canned, sodium added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644289",
+          "name": "Beans, kidney, dark red, canned, sodium added, sugar added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644290",
+          "name": "Beans, kidney, light red, canned, sodium added, sugar added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644292",
+          "name": "Beans, pinto, canned, sodium added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644293",
+          "name": "Blackeye pea, canned, sodium added, drained and rinsed"
+        },
+        {
+          "id": "usdaff_2644294",
+          "name": "Beans, great northern, canned, sodium added, drained and rinsed"
+        }
+      ]
+    }
+  }
+}

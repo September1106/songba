@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "source": "USDA FoodData Central SR Legacy (2018-04)",
+    "total_count": 12
+  },
+  "grains": [
+    {
+      "id": "rice-white-long",
+      "chinese": "白米饭（长粒，熟）",
+      "english": "Rice, white, long-grain, regular, enriched, cooked",
+      "fdc_id": 168878,
+      "nutrients": {
+        "Fiber, total dietary (g)": 0.4,
+        "Iron, Fe (mg)": 1.2,
+        "Vitamin A, RAE (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Protein (g)": 2.69,
+        "Calcium, Ca (mg)": 10,
+        "Zinc, Zn (mg)": 0.49,
+        "Total lipid (fat) (g)": 0.28,
+        "Carbohydrate, by difference (g)": 28.2,
+        "Energy (kcal)": 130,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "rice-white-short",
+      "chinese": "白米饭（短粒，熟）",
+      "english": "Rice, white, short-grain, cooked, unenriched",
+      "fdc_id": 168932,
+      "nutrients": {
+        "Total lipid (fat) (g)": 0.19,
+        "Carbohydrate, by difference (g)": 28.7,
+        "Energy (kcal)": 130,
+        "Calcium, Ca (mg)": 1,
+        "Zinc, Zn (mg)": 0.4,
+        "Iron, Fe (mg)": 0.2,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Protein (g)": 2.36,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "rice-brown",
+      "chinese": "糙米饭",
+      "english": "Rice, brown, long-grain, cooked",
+      "fdc_id": 169704,
+      "nutrients": {
+        "Fiber, total dietary (g)": 1.6,
+        "Iron, Fe (mg)": 0.56,
+        "Vitamin A, RAE (µg)": 0,
+        "Protein (g)": 2.74,
+        "Total lipid (fat) (g)": 0.97,
+        "Carbohydrate, by difference (g)": 25.6,
+        "Energy (kcal)": 123,
+        "Calcium, Ca (mg)": 3,
+        "Zinc, Zn (mg)": 0.71,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "rice-glutinous",
+      "chinese": "糯米/紫米饭（熟）",
+      "english": "Rice, white, glutinous, unenriched, cooked",
+      "fdc_id": 169711,
+      "nutrients": {
+        "Total lipid (fat) (g)": 0.19,
+        "Carbohydrate, by difference (g)": 21.1,
+        "Energy (kcal)": 97,
+        "Calcium, Ca (mg)": 2,
+        "Zinc, Zn (mg)": 0.41,
+        "Protein (g)": 2.02,
+        "Fiber, total dietary (g)": 1,
+        "Iron, Fe (mg)": 0.14,
+        "Vitamin A, RAE (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "rice-noodles",
+      "chinese": "米粉/米线（熟）",
+      "english": "Rice noodles, cooked",
+      "fdc_id": 168914,
+      "nutrients": {
+        "Vitamin D (D2 + D3) (µg)": 0,
+        "Fiber, total dietary (g)": 1,
+        "Iron, Fe (mg)": 0.14,
+        "Vitamin A, RAE (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Total lipid (fat) (g)": 0.2,
+        "Calcium, Ca (mg)": 4,
+        "Zinc, Zn (mg)": 0.25,
+        "Carbohydrate, by difference (g)": 24,
+        "Energy (kcal)": 108,
+        "Protein (g)": 1.79
+      }
+    },
+    {
+      "id": "buckwheat-noodles",
+      "chinese": "荞麦面（熟）",
+      "english": "Noodles, japanese, soba, cooked",
+      "fdc_id": 168907,
+      "nutrients": {
+        "Total lipid (fat) (g)": 0.1,
+        "Carbohydrate, by difference (g)": 21.4,
+        "Energy (kcal)": 99,
+        "Calcium, Ca (mg)": 4,
+        "Zinc, Zn (mg)": 0.12,
+        "Iron, Fe (mg)": 0.48,
+        "Vitamin A, RAE (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Protein (g)": 5.06,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "pasta",
+      "chinese": "意大利面（熟）",
+      "english": "Pasta, cooked, enriched, without added salt",
+      "fdc_id": 169737,
+      "nutrients": {
+        "Total lipid (fat) (g)": 0.93,
+        "Protein (g)": 5.8,
+        "Calcium, Ca (mg)": 7,
+        "Zinc, Zn (mg)": 0.51,
+        "Vitamin A, RAE (µg)": 0,
+        "Iron, Fe (mg)": 1.28,
+        "Carbohydrate, by difference (g)": 30.9,
+        "Energy (kcal)": 158,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Fiber, total dietary (g)": 1.8,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "corn-grits",
+      "chinese": "玉米碴（熟）",
+      "english": "Cereals, corn grits, white, regular and quick, enriched, cooked with water, without salt",
+      "fdc_id": 171655,
+      "nutrients": {
+        "Carbohydrate, by difference (g)": 14.8,
+        "Energy (kcal)": 71,
+        "Iron, Fe (mg)": 0.57,
+        "Vitamin A, RAE (µg)": 0,
+        "Total lipid (fat) (g)": 0.46,
+        "Calcium, Ca (mg)": 1,
+        "Zinc, Zn (mg)": 0.18,
+        "Protein (g)": 1.71,
+        "Fiber, total dietary (g)": 0.8,
+        "Vitamin D (D2 + D3) (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0
+      }
+    },
+    {
+      "id": "oatmeal",
+      "chinese": "燕麦（熟）",
+      "english": "Cereals, oats, regular and quick, unenriched, cooked with water",
+      "fdc_id": 173905,
+      "nutrients": {
+        "Vitamin A, RAE (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Protein (g)": 2.54,
+        "Fiber, total dietary (g)": 1.7,
+        "Iron, Fe (mg)": 0.9,
+        "Calcium, Ca (mg)": 9,
+        "Zinc, Zn (mg)": 1,
+        "Total lipid (fat) (g)": 1.52,
+        "Carbohydrate, by difference (g)": 12,
+        "Energy (kcal)": 71,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "millet",
+      "chinese": "小米（熟）",
+      "english": "Millet, cooked",
+      "fdc_id": 168871,
+      "nutrients": {
+        "Vitamin A, RAE (µg)": 3,
+        "Fiber, total dietary (g)": 1.3,
+        "Iron, Fe (mg)": 0.63,
+        "Protein (g)": 3.51,
+        "Vitamin C, total ascorbic acid (mg)": 0,
+        "Total lipid (fat) (g)": 1,
+        "Carbohydrate, by difference (g)": 23.7,
+        "Energy (kcal)": 119,
+        "Calcium, Ca (mg)": 3,
+        "Zinc, Zn (mg)": 0.91,
+        "Vitamin D (D2 + D3) (µg)": 0
+      }
+    },
+    {
+      "id": "bread-white",
+      "chinese": "普通白面包",
+      "english": "Bread, white, commercially prepared",
+      "fdc_id": 174924,
+      "nutrients": {
+        "Vitamin A, RAE (µg)": 1,
+        "Fiber, total dietary (g)": 2.7,
+        "Total lipid (fat) (g)": 3.33,
+        "Carbohydrate, by difference (g)": 49.4,
+        "Energy (kcal)": 266,
+        "Calcium, Ca (mg)": 144,
+        "Zinc, Zn (mg)": 0.74,
+        "Protein (g)": 8.85,
+        "Iron, Fe (mg)": 3.61,
+        "Vitamin D (D2 + D3) (µg)": 0,
+        "Vitamin C, total ascorbic acid (mg)": 0
+      }
+    }
+  ]
+}
