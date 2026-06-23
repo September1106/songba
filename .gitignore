@@ -2,3 +2,7 @@ node_modules
 dist
 .DS_Store
 *.local
+
+# Keep src/lib/dist as it's needed for build
+src/lib/dist
+
