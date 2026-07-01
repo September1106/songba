@@ -6,3 +6,10 @@ dist
 # Keep src/lib/dist as it's needed for build
 src/lib/dist
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
