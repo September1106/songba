@@ -50,7 +50,7 @@ export default function ChildSelector({ onChildChange }: ChildSelectorProps) {
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: children.length > 0 ? '10px' : '0' }}>
         <span style={{ fontSize: '13px', color: 'var(--text-secondary)', fontWeight: 600 }}>👶 当前孩子：</span>
 
-        {children.length === 0 && !showAdd && (
+        {children.length === 0 && (
           <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>暂无，请添加</span>
         )}
 

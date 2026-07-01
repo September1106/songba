@@ -1,7 +1,9 @@
 // 中国食物数据 (来源: 中国疾控中心营养与健康所)
 // 自动生成，请勿手动修改
 
-export const CN_FOODS_DATA = 
+import type { CnFood } from './cnFoodsTypes';
+
+export const CN_FOODS_DATA: CnFood[] = 
 [
   {"food_name": "面条(富强粉，切面)", "cat1": "谷类及制品", "cat2": "小麦", "source": "中国疾控中心营养与健康所", "edible_pct": 100.0, "water_g": 29.2, "energy_kJ": 1214.0, "protein_g": 9.3, "fat_g": 1.1, "ash_g": 0.5, "carbs_g": 59.9, "vitB1_mg": 0.18, "vitB2_mg": 0.04, "niacin_mg": 2.2, "calcium_mg": 24.0, "phosphorus_mg": 92.0, "potassium_mg": 102.0, "sodium_mg": 1.5, "magnesium_mg": 29.0, "iron_mg": 2.0, "zinc_mg": 0.83, "selenium_ug": 17.3, "copper_mg": 0.14, "manganese_mg": 0.56},
   {"food_name": "挂面(富强粉)", "cat1": "谷类及制品", "cat2": "小麦", "source": "中国疾控中心营养与健康所", "edible_pct": 100.0, "water_g": 12.7, "energy_kJ": 1475.0, "protein_g": 9.6, "fat_g": 0.6, "ash_g": 1.1, "carbs_g": 76.0, "vitB1_mg": 0.2, "vitB2_mg": 0.04, "niacin_mg": 2.4, "calcium_mg": 21.0, "phosphorus_mg": 112.0, "potassium_mg": 122.0, "sodium_mg": 110.6, "magnesium_mg": 48.0, "iron_mg": 3.2, "zinc_mg": 0.74, "selenium_ug": 11.1, "copper_mg": 0.4, "manganese_mg": 0.68},
@@ -1071,4 +1073,3 @@ export const CN_FOODS_DATA =
   {"food_name": "蜂蜜(硬蜜)", "cat1": "糖、果脯和蜜饯、蜂蜜", "cat2": "蜂蜜", "source": "中国疾控中心营养与健康所", "edible_pct": 100.0, "water_g": 18.5, "energy_kJ": 1392.0, "protein_g": 0.3, "fat_g": 0.5, "ash_g": 0.2, "carbs_g": 80.5, "vitA_ug": 0.0, "vitE_mg_alpha": 0.0, "vitB2_mg": 0.02, "niacin_mg": 0.1, "vitC_mg": 3.0, "calcium_mg": 10.0, "phosphorus_mg": 0.0, "potassium_mg": 116.0, "sodium_mg": 15.4, "magnesium_mg": 32.0, "iron_mg": 15.9, "zinc_mg": 0.67, "selenium_ug": 1.5, "copper_mg": 0.47, "manganese_mg": 2.25}
 ] as const;
 
-export type CnFood = typeof CN_FOODS_DATA[number];

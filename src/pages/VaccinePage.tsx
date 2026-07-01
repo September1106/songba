@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Card } from '@/lib';
 import {
   buildVaccineList, getPaidVaccines,
-  type VaccineListItem,
+  type VaccineListItem, type VaccineItem,
   JE_CHOICE_KEY, HEPA_CHOICE_KEY,
+  JE_OPTIONS, JE_OPTION_LABELS,
+  HEPA_OPTIONS, HEPA_OPTION_LABELS,
 } from '../data/vaccines';
 import DateInput from '../components/DateInput';
 
