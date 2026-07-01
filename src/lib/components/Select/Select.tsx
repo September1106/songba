@@ -12,6 +12,8 @@ export interface SelectProps {
     onChange: (key: string) => void;
     placeholder?: string;
     disabled?: boolean;
+    /** 下拉菜单可见选项数量（默认10），超过则出现滚动条 */
+    visibleCount?: number;
     /** 对外暴露的无障碍标签（无可见 label 时使用） */
     'aria-label'?: string;
     /** 关联外部可见 label 的 id */
@@ -24,6 +26,7 @@ export const Select: React.FC<SelectProps> = ({
     onChange,
     placeholder = '请选择',
     disabled = false,
+    visibleCount = 10,
     'aria-label': ariaLabel,
     'aria-labelledby': ariaLabelledBy,
 }) => {
@@ -57,7 +60,7 @@ export const Select: React.FC<SelectProps> = ({
             const rect = wrapperRef.current.getBoundingClientRect();
             const viewportWidth = window.innerWidth;
             const viewportHeight = window.innerHeight;
-            const dropdownHeight = options.length * 44 + 24;
+            const dropdownHeight = Math.min(options.length, visibleCount) * 44 + 24;
 
             const newStyle: React.CSSProperties = {
                 position: 'absolute',
@@ -97,6 +100,11 @@ export const Select: React.FC<SelectProps> = ({
                 newStyle.bottom = 'auto';
             }
 
+            // max-height: visibleCount条的高度，超出则滚动
+            if (options.length > visibleCount) {
+                newStyle.maxHeight = `${visibleCount * 44 + 24}px`;
+                newStyle.overflowY = 'auto';
+            }
             setDropdownStyle(newStyle);
             requestAnimationFrame(() => {
                 setMounted(true);
@@ -186,7 +194,11 @@ export const Select: React.FC<SelectProps> = ({
                 aria-labelledby={ariaLabelledBy}
                 tabIndex={disabled ? -1 : 0}
             >
-                <span className={value ? styles.value : styles.placeholder}>{currentLabel}</span>
+                <span className={value ? styles.value : styles.placeholder}>
+                    {currentLabel.split('\n').map((line, i) => (
+                      <span key={i} style={{ display: 'block', textAlign: 'center' }}>{line}</span>
+                    ))}
+                </span>
                 <span className={styles.arrow} aria-hidden>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <path
@@ -223,7 +235,11 @@ export const Select: React.FC<SelectProps> = ({
                                 }}
                             >
                                 <span className={styles.optionDot} aria-hidden />
-                                {option.label}
+                                <span style={{ textAlign: 'center', flex: 1 }}>
+                                  {option.label.split('\n').map((line, i) => (
+                                    <span key={i} style={{ display: 'block', textAlign: 'center' }}>{line}</span>
+                                  ))}
+                                </span>
                                 {selected && <div className={styles.pillBar} />}
                             </div>
                         );

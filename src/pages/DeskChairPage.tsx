@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/lib';
+import { Select } from '@/lib/components/Select';
 
 /********************* 中小学生课桌椅数据（GB/T 3976-2014） *********************/
 interface SchoolDesk {
@@ -78,16 +79,23 @@ function buildKidRecs(matches: KidDesk[]): KidRec[] {
   return matches.map(d => ({ 桌型号: d.型号, 椅型号: d.型号, 桌高: d.桌高, 椅高: d.椅高 }));
 }
 
-function filterInput(value: string): string {
-  return value.replace(/[^0-9]/g, '').replace(/^(\d{3,}).*/, '$1').replace(/^(\d{2,3}).*/, '$1');
-}
+type Stage = 'kindergarten' | 'school';
 
-type Stage = 'school' | 'kindergarten';
+const STAGE_OPTIONS = [
+  { key: 'kindergarten', label: '幼儿园' },
+  { key: 'school', label: '中小学' },
+];
+
+// 身高选项：75～199
+const HEIGHT_OPTIONS = Array.from({ length: 199 - 75 + 1 }, (_, i) => ({
+  key: String(75 + i),
+  label: String(75 + i),
+}));
 
 export default function DeskChairPage() {
   const navigate = useNavigate();
-  const [height, setHeight] = useState('');
-  const [stage, setStage] = useState<Stage | null>(null);
+  const [stage, setStage] = useState<Stage | ''>('');
+  const [height, setHeight] = useState<string>('');
   const [submitted, setSubmitted] = useState(false);
   const h = parseFloat(height);
 
@@ -99,17 +107,22 @@ export default function DeskChairPage() {
   const schoolTip = h && !isNaN(h) && h > 187 ? '身高超过187cm，建议使用0号课桌椅，或咨询学校/厂家定制' : null;
   const kidTip = h && !isNaN(h) && h < 75 ? '身高低于75cm，相关标准数据暂未覆盖' : null;
 
-  const canSubmit = stage !== null && height !== '';
+  const canSubmit = stage !== '' && height !== '';
+
+  const handleStageChange = (s: Stage | '') => {
+    setStage(s);
+    setHeight('');
+    setSubmitted(false);
+  };
+
+  const handleHeightChange = (v: string) => {
+    setHeight(v);
+    setSubmitted(false);
+  };
 
   const handleConfirm = () => {
     if (!canSubmit) return;
     setSubmitted(true);
-  };
-
-  const handleStageChange = (s: Stage) => {
-    setStage(s);
-    setHeight('');
-    setSubmitted(false);
   };
 
   return (
@@ -121,73 +134,41 @@ export default function DeskChairPage() {
 
       {/* 学段选择 + 身高输入 — 同一个圆角矩形背景 */}
       <div style={{ background: '#F7F3DF', borderRadius: 16, padding: '16px', marginBottom: 16 }}>
-        <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 8 }}>请先选择孩子所在学段</p>
-        <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
-          <div
-            onClick={() => handleStageChange('kindergarten')}
-            style={{
-              flex: 1,
-              padding: '10px 0',
-              borderRadius: 'var(--radius-base)',
-              background: stage === 'kindergarten' ? 'var(--primary)' : 'var(--bg-secondary)',
-              color: stage === 'kindergarten' ? '#fff' : 'var(--text-body)',
-              fontSize: 14,
-              fontWeight: 600,
-              textAlign: 'center',
-              cursor: 'pointer',
-              transition: 'all 0.2s',
-            }}
-          >
-            幼儿园
-          </div>
-          <div
-            onClick={() => handleStageChange('school')}
-            style={{
-              flex: 1,
-              padding: '10px 0',
-              borderRadius: 'var(--radius-base)',
-              background: stage === 'school' ? 'var(--primary)' : 'var(--bg-secondary)',
-              color: stage === 'school' ? '#fff' : 'var(--text-body)',
-              fontSize: 14,
-              fontWeight: 600,
-              textAlign: 'center',
-              cursor: 'pointer',
-              transition: 'all 0.2s',
-            }}
-          >
-            中小学
-          </div>
+        <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 10 }}>请选择孩子所在学段和身高</p>
+
+        {/* 学段下拉 */}
+        <div style={{ marginBottom: 12 }}>
+          <label style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500, display: 'block', marginBottom: 6 }}>
+            学段
+          </label>
+          <Select
+            options={STAGE_OPTIONS}
+            value={stage}
+            onChange={(v) => handleStageChange(v as Stage)}
+            placeholder="请选择学段"
+          />
         </div>
 
-        {/* 身高输入 */}
+        {/* 身高下拉 */}
         <div>
-          <label style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500 }}>
+          <label style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500, display: 'block', marginBottom: 6 }}>
             孩子身高（cm）
           </label>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 10 }}>
-            <input
-              type="number"
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+            <Select
+              options={HEIGHT_OPTIONS}
               value={height}
-              onChange={e => { setHeight(filterInput(e.target.value)); setSubmitted(false); }}
-              placeholder={stage === null ? '请先选择学段' : '请输入身高'}
-              disabled={stage === null}
-              style={{
-                flex: 1,
-                padding: '10px 14px',
-                borderRadius: 12,
-                border: '1.5px solid var(--border)',
-                fontSize: 16,
-                outline: 'none',
-                background: stage === null ? 'var(--bg-secondary)' : '#fff',
-                color: 'var(--text)',
-                cursor: stage === null ? 'not-allowed' : 'text',
-              }}
+              onChange={handleHeightChange}
+              placeholder={stage === '' ? '请先选择学段' : '请选择身高'}
+              disabled={stage === ''}
+              visibleCount={10}
+              aria-label="孩子身高"
             />
             <Button
               type="primary"
               onClick={handleConfirm}
               disabled={!canSubmit}
-              style={{ borderRadius: 12, fontSize: 14, padding: '0 16px', height: 44 }}
+              style={{ borderRadius: 12, fontSize: 14, padding: '0 16px', height: 44, flexShrink: 0 }}
             >
               确认
             </Button>

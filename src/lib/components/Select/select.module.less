@@ -55,11 +55,36 @@
 .dropdown {
     background: #ffeea0;
     border-radius: 28px;
-    overflow: visible;
+    overflow-y: auto;
+    max-height: 220px;
+    width: 180px;
     padding: 12px 0px;
     z-index: 100;
     opacity: 0;
     animation: dropdownFadeIn 0.2s ease forwards;
+
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #d4c4a8 #ffeea0;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ffeea0;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c8b488;
+        border-radius: 5px;
+        border: 2px solid #ffeea0;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #b8a478;
+    }
 }
 
 @keyframes dropdownFadeIn {
@@ -95,13 +120,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 30px 10px 14px;
+    padding: 10px 14px;
     font-size: 14px;
     font-weight: 500;
     color: #725d42;
     cursor: pointer;
     position: relative;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-all;
 }
 
 .option.active {

@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from './footer.module.less';
 
+const ICP_BEIAN = {
+  number: '陕ICP备2026016431号',
+  url: 'https://beian.miit.gov.cn/',
+};
+
 export type FooterType = 'sea' | 'tree';
 
 export interface FooterProps {
@@ -16,7 +21,21 @@ export interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false, className, style }) => {
     const cls = [styles.footer, styles[type], seamless && styles.seamless, className].filter(Boolean).join(' ');
-    return <div className={cls} style={style} />;
+    return (
+      <>
+        <div className={cls} style={style} />
+        <div className={styles.beian}>
+          <a
+            href={ICP_BEIAN.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.beianLink}
+          >
+            {ICP_BEIAN.number}
+          </a>
+        </div>
+      </>
+    );
 };
 
 Footer.displayName = 'Footer';

@@ -1,19 +1,12 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card } from '@/lib';
 import {
   buildVaccineList, getPaidVaccines,
-  type VaccineListItem, type VaccineItem,
-  JE_CHOICE_KEY, HEPA_CHOICE_KEY, JE_OPTIONS, HEPA_OPTIONS,
-  JE_OPTION_LABELS, HEPA_OPTION_LABELS,
+  type VaccineListItem,
+  JE_CHOICE_KEY, HEPA_CHOICE_KEY,
 } from '../data/vaccines';
 import DateInput from '../components/DateInput';
-import ChildSelector from '../components/ChildSelector';
-import {
-  getChildren, updateChild,
-  updateVaccinated, updateJeChoice, updateHepaChoice,
-  type ChildProfile,
-} from '../data/children';
 
 type FilterMode = 'all' | 'pending' | 'done';
 type ViewMode = 'free' | 'paid' | 'knowledge';
@@ -257,7 +250,6 @@ const KNOWLEDGE_CARDS_EXTRA = [
 // ==================== 主页面 ====================
 export default function VaccinePage() {
   const navigate = useNavigate();
-  const [activeChild, setActiveChild] = useState<ChildProfile | null>(null);
   const [birthYear, setBirthYear] = useState<string>('');
   const [birthMonth, setBirthMonth] = useState<string>('');
   const [birthDay, setBirthDay] = useState<string>('');
@@ -269,57 +261,10 @@ export default function VaccinePage() {
   const [jeChoice, setJeChoice] = useState<string | undefined>(undefined);
   const [hepaChoice, setHepaChoice] = useState<string | undefined>(undefined);
 
-  // 每次活跃孩子变化时，同步表单数据
-  useEffect(() => {
-    if (!activeChild) {
-      setBirthYear('');
-      setBirthMonth('');
-      setBirthDay('');
-      setVaccinated(new Set());
-      setJeChoice(undefined);
-      setHepaChoice(undefined);
-      return;
-    }
-    const [y, m, d] = activeChild.birthDate.split('-');
-    setBirthYear(y);
-    setBirthMonth(m);
-    setBirthDay(d);
-    setVaccinated(new Set(activeChild.vaccinated));
-    setJeChoice(activeChild.jeChoice);
-    setHepaChoice(activeChild.hepaChoice);
-  }, [activeChild?.id]);
-
-  // 出生日期变化 → 同步写回 children.ts
-  useEffect(() => {
-    if (!activeChild || !birthYear || !birthMonth || !birthDay) return;
-    const birthDate = `${birthYear}-${birthMonth.padStart(2, '0')}-${birthDay.padStart(2, '0')}`;
-    if (birthDate === activeChild.birthDate) return;
-    updateChild(activeChild.id, { birthDate });
-    const kids = getChildren();
-    const latest = kids.find(c => c.id === activeChild.id);
-    if (latest) setActiveChild(latest);
-  }, [birthYear, birthMonth, birthDay]);
-
   const birthDateStr = useMemo(() => {
     if (!birthYear || !birthMonth || !birthDay) return '';
     return `${birthYear}-${birthMonth.padStart(2, '0')}-${birthDay.padStart(2, '0')}`;
   }, [birthYear, birthMonth, birthDay]);
-
-  // 持久化 helpers
-  const syncVaccinated = (keys: Set<string>) => {
-    setVaccinated(keys);
-    if (activeChild) updateVaccinated(activeChild.id, Array.from(keys));
-  };
-
-  const syncJeChoice = (v: string | undefined) => {
-    setJeChoice(v);
-    if (activeChild) updateJeChoice(activeChild.id, v);
-  };
-
-  const syncHepaChoice = (v: string | undefined) => {
-    setHepaChoice(v);
-    if (activeChild) updateHepaChoice(activeChild.id, v);
-  };
 
   const choices = useMemo(() => {
     const c: Record<string, string> = {};
@@ -340,7 +285,7 @@ export default function VaccinePage() {
     const next = new Set(vaccinated);
     if (next.has(doseKey)) next.delete(doseKey);
     else next.add(doseKey);
-    syncVaccinated(next);
+    setVaccinated(next);
   };
 
   // 找到第一个 months >= 8 / >= 18 的疫苗索引（插入选择卡）
@@ -354,21 +299,21 @@ export default function VaccinePage() {
 
     list.forEach((v, i) => {
       if (!jeInserted && jeInsertIdx !== -1 && i === jeInsertIdx) {
-        items.push(<JeChoiceCard key="je-choice" chosen={jeChoice} onChoose={syncJeChoice} />);
+        items.push(<JeChoiceCard key="je-choice" chosen={jeChoice} onChoose={setJeChoice} />);
         jeInserted = true;
       }
       if (!hepaInserted && hepaInsertIdx !== -1 && i === hepaInsertIdx) {
-        items.push(<HepaChoiceCard key="hepa-choice" chosen={hepaChoice} onChoose={syncHepaChoice} />);
+        items.push(<HepaChoiceCard key="hepa-choice" chosen={hepaChoice} onChoose={setHepaChoice} />);
         hepaInserted = true;
       }
       items.push(<FreeVaccineCard key={v.doseKey} v={v} onToggle={toggleVaccinated} />);
     });
 
     if (!jeInserted && list.length > 0) {
-      items.push(<JeChoiceCard key="je-choice" chosen={jeChoice} onChoose={syncJeChoice} />);
+      items.push(<JeChoiceCard key="je-choice" chosen={jeChoice} onChoose={setJeChoice} />);
     }
     if (!hepaInserted && list.length > 0) {
-      items.push(<HepaChoiceCard key="hepa-choice" chosen={hepaChoice} onChoose={syncHepaChoice} />);
+      items.push(<HepaChoiceCard key="hepa-choice" chosen={hepaChoice} onChoose={setHepaChoice} />);
     }
 
     return items;
@@ -384,8 +329,6 @@ export default function VaccinePage() {
         <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
         <h2 className="page-title">💉 疫苗接种计算器</h2>
       </div>
-
-      <ChildSelector onChildChange={setActiveChild} />
 
       <Card className="vaccine-info">
         <div className="form-group">
