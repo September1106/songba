@@ -42,11 +42,12 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
           </a>
           <span className={styles.beianDivider}>·</span>
           <a
-            href={GONG_AN_BEIAN.url}
+            href="https://beian.mps.gov.cn/#/query/webSearch?code=34011102004132"
+            rel="noreferrer"
             target="_blank"
-            rel="noopener noreferrer"
             className={styles.beianLink}
           >
+            <img src="/备案图标.png" alt="公安网备案图标" className={styles.beianIcon} />
             {GONG_AN_BEIAN.number}
           </a>
           <span className={styles.beianDivider}>·</span>
