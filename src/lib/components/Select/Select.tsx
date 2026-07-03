@@ -14,6 +14,8 @@ export interface SelectProps {
     disabled?: boolean;
     /** 下拉菜单可见选项数量（默认10），超过则出现滚动条 */
     visibleCount?: number;
+    /** 下拉菜单网格列数（默认1，即纵向列表）；大于1时启用网格布局 */
+    columns?: number;
     /** 对外暴露的无障碍标签（无可见 label 时使用） */
     'aria-label'?: string;
     /** 关联外部可见 label 的 id */
@@ -27,6 +29,7 @@ export const Select: React.FC<SelectProps> = ({
     placeholder = '请选择',
     disabled = false,
     visibleCount = 10,
+    columns = 1,
     'aria-label': ariaLabel,
     'aria-labelledby': ariaLabelledBy,
 }) => {
@@ -104,6 +107,10 @@ export const Select: React.FC<SelectProps> = ({
             if (options.length > visibleCount) {
                 newStyle.maxHeight = `${visibleCount * 44 + 24}px`;
                 newStyle.overflowY = 'auto';
+            }
+            // 网格布局时设置 grid-template-columns
+            if (columns > 1) {
+                newStyle.gridTemplateColumns = `repeat(${columns}, 1fr)`;
             }
             setDropdownStyle(newStyle);
             requestAnimationFrame(() => {
@@ -219,6 +226,7 @@ export const Select: React.FC<SelectProps> = ({
                     id={listboxId}
                     aria-label={ariaLabel}
                     aria-labelledby={ariaLabelledBy}
+                    data-columns={columns}
                 >
                     {options.map((option) => {
                         const selected = value === option.key;

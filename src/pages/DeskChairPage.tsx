@@ -161,7 +161,8 @@ export default function DeskChairPage() {
               onChange={handleHeightChange}
               placeholder={stage === '' ? '请先选择学段' : '请选择身高'}
               disabled={stage === ''}
-              visibleCount={10}
+              visibleCount={8}
+              columns={5}
               aria-label="孩子身高"
             />
             <Button
