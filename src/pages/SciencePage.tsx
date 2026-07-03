@@ -66,7 +66,7 @@ export default function SciencePage() {
           <Card
             key={article.id}
             color="app-blue"
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', background: '#889df0', border: '1.5px solid #889df0' }}
             onClick={() => window.open(article.url, '_blank')}
           >
             <div style={{ marginBottom: '10px' }}>

@@ -61,6 +61,7 @@ export default function HomePage() {
             key={tool.path}
             color={tool.color}
             className="tool-card"
+            style={tool.color === 'app-blue' ? { background: '#889df0', border: '1.5px solid #889df0' } : undefined}
             onClick={() => navigate(tool.path)}
           >
             <div className="tool-card-content">

@@ -44,18 +44,21 @@ function fmt(v: number | null): string {
   return String(Math.round(v * 10) / 10);
 }
 
-function NutrientTable({ food, ageGroup }: { food: CnFood; ageGroup: string }) {
+function NutrientTable({ food, ageGroup, onAgeGroupChange }: { food: CnFood; ageGroup: string; onAgeGroupChange: (v: string) => void }) {
   const dris = getDRI(ageGroup);
 
   return (
-    <div>
+    <div style={{ background: '#F7F3DF', borderRadius: 16, padding: '16px', position: 'relative', overflow: 'visible' }}>
       <div style={{ overflowX: 'auto' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
           <thead>
-            <tr style={{ background: 'var(--bg-secondary)' }}>
-              <th style={{ padding: '8px 10px', textAlign: 'left', color: 'var(--text-header)', fontWeight: 600 }}>营养素</th>
-              <th style={{ padding: '8px 10px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 600 }}>每100g</th>
-              <th style={{ padding: '8px 10px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 600 }}>占日需%</th>
+            <tr style={{ background: '#F0E8D8' }}>
+              <th style={{ padding: '10px 12px', textAlign: 'left', color: 'var(--text-header)', fontWeight: 700, fontSize: '15px' }}>营养素</th>
+              <th style={{ padding: '10px 12px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 700, fontSize: '15px' }}>每100g</th>
+              <th style={{ padding: '10px 12px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 700, fontSize: '15px', whiteSpace: 'nowrap' }}>
+                占每日需求量%
+                <AgeSelectorInline value={ageGroup} onChange={onAgeGroupChange} />
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -78,8 +81,8 @@ function NutrientTable({ food, ageGroup }: { food: CnFood; ageGroup: string }) {
                   <td style={{ padding: '8px 10px', color: 'var(--text-body)' }}>{n.label}</td>
                   <td style={{
                     padding: '8px 10px', textAlign: 'right',
-                    color: n.key === 'vitC_mg' && val !== null && val > 0 ? '#e05a5a' : 'var(--text-body)',
-                    fontWeight: (n.key === 'vitC_mg' && val !== null && val > 0) ? 700 : 500,
+                    color: 'var(--text-body)',
+                    fontWeight: 500,
                   }}>
                     {val !== null ? `${fmt(val)} ${n.unit}` : '—'}
                   </td>
@@ -103,7 +106,7 @@ function NutrientTable({ food, ageGroup }: { food: CnFood; ageGroup: string }) {
       </div>
       <div style={{ marginTop: '12px', padding: '10px', background: 'var(--bg-secondary)', borderRadius: '8px' }}>
         <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: 0 }}>
-          💡 占日需% = 100g该食物 ÷ 该年龄段推荐摄入量。<br />
+          💡 占每日需求量% = 100g该食物 ÷ 该年龄段推荐摄入量。<br />
           数据来源：中国疾病预防控制中心营养与健康所。
         </p>
       </div>
@@ -120,6 +123,30 @@ function AgeSelector({ value, onChange }: { value: string; onChange: (v: string)
       onChange={onChange}
       aria-label="选择孩子年龄"
     />
+  );
+}
+
+function AgeSelectorInline({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const options = getDRIOptions();
+  return (
+    <select
+      value={value}
+      onChange={e => onChange(e.target.value)}
+      style={{
+        fontSize: '11px',
+        color: 'var(--text-secondary)',
+        background: 'transparent',
+        border: '1px solid var(--border-light)',
+        borderRadius: '6px',
+        padding: '2px 4px',
+        cursor: 'pointer',
+        outline: 'none',
+      }}
+    >
+      {options.map(opt => (
+        <option key={opt.key} value={opt.key}>{opt.label}</option>
+      ))}
+    </select>
   );
 }
 
@@ -219,14 +246,7 @@ export default function NutritionPage() {
       </div>
 
       <Card className="mb-16">
-        <div className="form-group">
-          <label className="form-label">选择孩子年龄（计算占日需百分比）</label>
-          <div style={{ marginTop: '8px' }}>
-            <AgeSelector value={ageGroup} onChange={setAgeGroup} />
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', gap: '8px', marginTop: '12px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); }} size="small">📂 分类浏览</Button>
           <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
           <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
@@ -399,7 +419,7 @@ export default function NutritionPage() {
               {selectedFood.cat1} · 每100g可食部分营养含量
             </p>
           </div>
-          <NutrientTable food={selectedFood} ageGroup={ageGroup} />
+          <NutrientTable food={selectedFood} ageGroup={ageGroup} onAgeGroupChange={setAgeGroup} />
           <div style={{ marginTop: '16px' }}>
             <Button type="default" size="small" onClick={() => setSelectedFood(null)}>重新选择</Button>
           </div>

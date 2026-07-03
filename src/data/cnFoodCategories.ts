@@ -114,9 +114,7 @@ export const CN_NUTRIENT_DISPLAY: { key: keyof CnFood; label: string; unit: stri
   { key: 'carbs_g',            label: '碳水化合物',      unit: 'g',    dri_key: 'carbohydrate_g' },
   { key: 'fiber_g',            label: '膳食纤维',        unit: 'g',    dri_key: 'fiber_g' },
   { key: 'cholesterol_mg',      label: '胆固醇',          unit: 'mg' },
-  { key: 'sat_fat_g',          label: '饱和脂肪酸(SFA)',  unit: 'g' },
-  { key: 'monounsat_fat_g',    label: '单不饱和脂肪酸',  unit: 'g' },
-  { key: 'polyunsat_fat_g',    label: '多不饱和脂肪酸',  unit: 'g' },
+  // 饱和脂肪酸、单不饱和脂肪酸、多不饱和脂肪酸已移除
   { key: 'vitA_ug',            label: '维生素A',         unit: 'μg',  dri_key: 'vitaminA_ug' },
   { key: 'vitB1_mg',           label: '维生素B1',        unit: 'mg',  dri_key: 'vitaminB1_mg' },
   { key: 'vitB2_mg',           label: '维生素B2',        unit: 'mg',  dri_key: 'vitaminB2_mg' },
