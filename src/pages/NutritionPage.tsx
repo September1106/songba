@@ -16,7 +16,7 @@ import type { CnFood } from '../data/cnFoodsTypes';
 type Mode = 'browse' | 'search' | 'rank' | 'towers';
 
 const DRI_KEY_MAP: Record<string, string> = {
-  energy_kcal: 'energy_kcal',
+  energy_kcal: 'energy_kJ', // 食品数据用 kJ，显示时转 kcal
   protein_g: 'protein_g',
   fat_g: 'fat_g',
   carbs_g: 'carbohydrate_g',
@@ -64,7 +64,9 @@ function NutrientTable({ food, ageGroup, onAgeGroupChange }: { food: CnFood; age
           <tbody>
             {CN_NUTRIENT_DISPLAY.map((n, idx) => {
               const rawVal = (food as unknown as Record<string, unknown>)[n.key];
-              const val = typeof rawVal === 'number' ? rawVal : null;
+              const val = n.key === 'energy_kcal'
+                ? (typeof rawVal === 'number' ? rawVal / 4.184 : null)
+                : (typeof rawVal === 'number' ? rawVal : null);
               const drv = n.dri_key
                 ? (dris as unknown as Record<string, number>)[DRI_KEY_MAP[n.key] || n.key] || 0
                 : 0;
@@ -179,7 +181,43 @@ export default function NutritionPage() {
     return () => clearTimeout(timer);
   }, [query, mode]);
 
-  // ── 膳食宝塔模式 ───────────────────────────────────────
+  // ── 营养素排名模式（条件渲染） ────────────────────────
+  if (mode === 'rank') {
+    return (
+      <div className="nutrition-page ac-fade-up">
+        <div className="page-header">
+          <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
+          <h2 className="page-title">🏆 营养素排名</h2>
+        </div>
+
+        <Card className="mb-16">
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
+            <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
+            <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
+            <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
+          </div>
+        </Card>
+
+        <Card className="mb-16">
+          <div className="form-group">
+            <label className="form-label">选择孩子年龄（计算占日需百分比）</label>
+            <div style={{ marginTop: '8px' }}>
+              <AgeSelector value={ageGroup} onChange={setAgeGroup} />
+            </div>
+          </div>
+        </Card>
+        <RankMode ageGroup={ageGroup} />
+        <div style={{ marginTop: '24px', padding: '16px', background: 'var(--bg-content)', borderRadius: '12px' }}>
+          <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: 0 }}>
+            ⚠️ 数据来源于中国疾病预防控制中心营养与健康所，仅供参考。
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // ── 膳食宝塔模式（条件渲染） ──────────────────────────
   if (mode === 'towers') {
     return (
       <div className="nutrition-page ac-fade-up">
@@ -187,6 +225,16 @@ export default function NutritionPage() {
           <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
           <h2 className="page-title">🏯 膳食宝塔</h2>
         </div>
+
+        <Card className="mb-16">
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
+            <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
+            <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
+            <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
+          </div>
+        </Card>
+
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
           {[
             { key: 'tower-toddler', label: '中国学龄前儿童\n平衡膳食宝塔', img: '/images/diet-tower-toddler.jpg' },
@@ -211,32 +259,6 @@ export default function NutritionPage() {
     );
   }
 
-  // ── 营养素排名模式 ─────────────────────────────────────
-  if (mode === 'rank') {
-    return (
-      <div className="nutrition-page ac-fade-up">
-        <div className="page-header">
-          <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
-          <h2 className="page-title">🏆 营养素排名</h2>
-        </div>
-        <Card className="mb-16">
-          <div className="form-group">
-            <label className="form-label">选择孩子年龄（计算占日需百分比）</label>
-            <div style={{ marginTop: '8px' }}>
-              <AgeSelector value={ageGroup} onChange={setAgeGroup} />
-            </div>
-          </div>
-        </Card>
-        <RankMode ageGroup={ageGroup} />
-        <div style={{ marginTop: '24px', padding: '16px', background: 'var(--bg-content)', borderRadius: '12px' }}>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: 0 }}>
-            ⚠️ 数据来源于中国疾病预防控制中心营养与健康所，仅供参考。
-          </p>
-        </div>
-      </div>
-    );
-  }
-
   // ── 主界面（浏览 + 搜索） ────────────────────────────────
   return (
     <div className="nutrition-page ac-fade-up">
@@ -247,7 +269,7 @@ export default function NutritionPage() {
 
       <Card className="mb-16">
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); }} size="small">📂 分类浏览</Button>
+          <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
           <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
           <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
           <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
@@ -255,7 +277,7 @@ export default function NutritionPage() {
       </Card>
 
       {/* ── 分类浏览 ──────────────────────────────────── */}
-      {mode === 'browse' && !selectedFood && (
+      {mode === 'browse' && (
         <>
           {/* 未选分类 → 显示 16 大类网格 */}
           {!selectedCat && (
@@ -283,8 +305,8 @@ export default function NutritionPage() {
             </div>
           )}
 
-          {/* 已选大类 → 显示该类子类/食物列表 */}
-          {selectedCat && !selectedFood && (
+          {/* 已选大类 → 显示该类子类/食物列表（选中食物时也保留，方便后退） */}
+          {selectedCat && (
             <div style={{ background: 'var(--bg-content)', borderRadius: 16, padding: '16px', marginBottom: 16 }}>
               {/* 子类选择区 */}
               {(() => {
@@ -292,9 +314,17 @@ export default function NutritionPage() {
                 return (
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '13px' }}>
-                      <Button type="default" size="small" onClick={() => setSelectedCat('')}>← 全部</Button>
+                      <Button type="default" size="small" onClick={() => { setSelectedCat(''); setSelectedSubCat(''); setSelectedFood(null); }}>返回全部</Button>
                       <span style={{ color: 'var(--text-muted)' }}>/</span>
                       <span style={{ fontWeight: 600, color: 'var(--text-header)' }}>{selectedCat}</span>
+                      {selectedSubCat && (
+                        <>
+                          <span style={{ color: 'var(--text-muted)' }}>/</span>
+                          <Button type="default" size="small" onClick={() => { setSelectedSubCat(''); setSelectedFood(null); }}>返回子类</Button>
+                          <span style={{ color: 'var(--text-muted)' }}>/</span>
+                          <span style={{ fontWeight: 600, color: 'var(--text-header)' }}>{selectedSubCat}</span>
+                        </>
+                      )}
                     </div>
 
                     {/* 如果子类 > 1 个，显示子类选择网格 */}
@@ -318,17 +348,8 @@ export default function NutritionPage() {
                     )}
 
                     {/* 子类已选或仅有一个子类，直接展示食物列表 */}
-                    {(selectedSubCat || subcats.length === 1) && (
+                    {(selectedSubCat || subcats.length === 1) && !selectedFood && (
                       <div className="animal-zoom-in">
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '13px' }}>
-                          {subcats.length > 1 && (
-                            <>
-                              <Button type="default" size="small" onClick={() => setSelectedSubCat('')}>← 子类</Button>
-                              <span style={{ color: 'var(--text-muted)' }}>/</span>
-                            </>
-                          )}
-                          <span style={{ fontWeight: 600, color: 'var(--text-header)' }}>{selectedSubCat || subcats[0].name}</span>
-                        </div>
                         {(() => {
                           const targetSub = selectedSubCat || subcats[0].name;
                           const foods = getCnFoodsByCategory(selectedCat).filter(f => (f.cat2 || '（无子类）') === targetSub);
@@ -365,46 +386,50 @@ export default function NutritionPage() {
       )}
 
       {/* ── 搜索模式 ──────────────────────────────────── */}
-      {mode === 'search' && !selectedFood && (
+      {mode === 'search' && (
         <div>
           <Card className="mb-16">
             <Input
               type="text"
               value={query}
-              onChange={e => setQuery(e.target.value)}
+              onChange={e => { setQuery(e.target.value); if (e.target.value) setSelectedFood(null); }}
               placeholder="输入食物名称，如：冬枣、鸡胸肉、三文鱼..."
             />
-            {query.trim().length > 0 && (
+            {query.trim().length > 0 && !selectedFood && (
               <p style={{ marginTop: '6px', fontSize: '12px', color: 'var(--text-muted)' }}>
                 找到 {searchResults.length} 条结果
               </p>
             )}
           </Card>
-          <div className="animal-zoom-in">
-            {query.trim().length === 0 && (
-              <div style={{ textAlign: 'center', padding: '32px', color: 'var(--text-muted)', fontSize: '14px' }}>🔍 输入食物名称开始搜索</div>
-            )}
-            {query.trim().length > 0 && searchResults.length === 0 && (
-              <div style={{ textAlign: 'center', padding: '32px', color: 'var(--text-muted)', fontSize: '14px' }}>没有找到「{query}」，试试其他关键词</div>
-            )}
-            {searchResults.map(food => (
-              <Card
-                key={food.food_name}
-                color="default"
-                className="food-stage"
-                onClick={() => setSelectedFood(food)}
-                style={{ marginBottom: '8px', cursor: 'pointer' }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div>
-                    <div style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-header)' }}>{food.food_name}</div>
-                    <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '2px' }}>{food.cat1}</div>
+
+          {/* 搜索结果列表（选中食物后隐藏） */}
+          {!selectedFood && (
+            <div className="animal-zoom-in">
+              {query.trim().length === 0 && (
+                <div style={{ textAlign: 'center', padding: '32px', color: 'var(--text-muted)', fontSize: '14px' }}>🔍 输入食物名称开始搜索</div>
+              )}
+              {query.trim().length > 0 && searchResults.length === 0 && (
+                <div style={{ textAlign: 'center', padding: '32px', color: 'var(--text-muted)', fontSize: '14px' }}>没有找到「{query}」，试试其他关键词</div>
+              )}
+              {searchResults.map(food => (
+                <Card
+                  key={food.food_name}
+                  color="default"
+                  className="food-stage"
+                  onClick={() => setSelectedFood(food)}
+                  style={{ marginBottom: '8px', cursor: 'pointer' }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <div style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-header)' }}>{food.food_name}</div>
+                      <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '2px' }}>{food.cat1}</div>
+                    </div>
+                    <span style={{ fontSize: '20px' }}>→</span>
                   </div>
-                  <span style={{ fontSize: '20px' }}>→</span>
-                </div>
-              </Card>
-            ))}
-          </div>
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
@@ -420,9 +445,6 @@ export default function NutritionPage() {
             </p>
           </div>
           <NutrientTable food={selectedFood} ageGroup={ageGroup} onAgeGroupChange={setAgeGroup} />
-          <div style={{ marginTop: '16px' }}>
-            <Button type="default" size="small" onClick={() => setSelectedFood(null)}>重新选择</Button>
-          </div>
         </Card>
       )}
 
