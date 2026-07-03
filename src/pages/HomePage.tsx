@@ -52,9 +52,7 @@ export default function HomePage() {
   return (
     <div className="home-page animal-zoom-in">
       <section className="hero">
-        <p>
-          这里汇集了怂爸制作的科学育儿小工具，帮助爸爸妈妈轻松应对儿童生长发育和营养常见问题。
-        </p>
+        <p />
       </section>
 
       <section className="tools-grid">
