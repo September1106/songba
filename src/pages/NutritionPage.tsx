@@ -192,8 +192,8 @@ export default function NutritionPage() {
 
         <Card className="mb-16">
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
-            <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
+            <Button type={(mode as Mode) === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
+            <Button type={(mode as Mode) === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
             <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
             <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
           </div>
@@ -228,8 +228,8 @@ export default function NutritionPage() {
 
         <Card className="mb-16">
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
-            <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
+            <Button type={(mode as Mode) === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
+            <Button type={(mode as Mode) === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
             <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
             <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
           </div>
