@@ -108,7 +108,7 @@ export function getSubCategories(cat1: string): { name: string; count: number }[
 
 // ── 展示全部营养素 ──────────────────────────────────────────
 export const CN_NUTRIENT_DISPLAY: { key: keyof CnFood; label: string; unit: string; dri_key?: string }[] = [
-  { key: 'energy_kcal',       label: '能量',           unit: 'kcal', dri_key: 'energy_kcal' },
+  { key: 'energy_kJ',        label: '能量',           unit: 'kcal', dri_key: 'energy_kcal' },
   { key: 'protein_g',          label: '蛋白质',          unit: 'g',    dri_key: 'protein_g' },
   { key: 'fat_g',              label: '脂肪',            unit: 'g',    dri_key: 'fat_g' },
   { key: 'carbs_g',            label: '碳水化合物',      unit: 'g',    dri_key: 'carbohydrate_g' },
