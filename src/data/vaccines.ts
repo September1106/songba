@@ -75,9 +75,9 @@ export const vaccineData: VaccineItem[] = [
     type: 'free',
     description: '同时预防百日咳、白喉、破伤风三种严重疾病。',
     doses: [
-      { dose: 1, recommendAge: '3月龄', months: 3 },
+      { dose: 1, recommendAge: '2月龄', months: 2 },
       { dose: 2, recommendAge: '4月龄', months: 4 },
-      { dose: 3, recommendAge: '5月龄', months: 5 },
+      { dose: 3, recommendAge: '6月龄', months: 6 },
       { dose: 4, recommendAge: '18月龄', months: 18 },
     ],
     precautions: '接种后部分孩子会有局部红肿、发热，属于正常反应。如发热超38.5℃可服退热药。',
@@ -85,14 +85,14 @@ export const vaccineData: VaccineItem[] = [
   },
   {
     id: 'td',
-    name: '白破疫苗',
+    name: '百白破疫苗',
     type: 'free',
-    description: '预防白喉和破伤风，用于6岁以上儿童加强免疫。',
+    description: '预防百日咳、白喉、破伤风，用于6岁以上儿童加强免疫。',
     doses: [
-      { dose: 1, recommendAge: '6周岁', months: 72, notes: '6岁接种白破疫苗（非百白破）' },
+      { dose: 5, recommendAge: '6周岁', months: 72 },
     ],
     precautions: '接种后部分孩子会有局部红肿、发热，属于正常反应。',
-    notes: '白破疫苗（Td）不含百日咳成分，用于6岁以上加强，与4岁前接种的百白破疫苗相区分',
+    notes: '6岁时接种百白破疫苗第5针（加强），不含百日咳成分的DTaP用于6岁以上',
   },
   // ===================== 麻腮风疫苗 ====================
   {
@@ -107,6 +107,19 @@ export const vaccineData: VaccineItem[] = [
     precautions: '接种后部分孩子会有轻微发热、皮疹，属于正常反应，通常2-3天自愈。',
     notes: '麻腮风疫苗是联合疫苗，可同时预防三种疾病，减少接种次数',
   },
+  // ===================== HPV疫苗（双价）====================
+  {
+    id: 'hpv2',
+    name: '双价HPV疫苗',
+    type: 'free',
+    description: '预防高危型人乳头瘤病毒（HPV）16/18型感染，降低宫颈癌发病风险。',
+    doses: [
+      { dose: 1, recommendAge: '13周岁', months: 156 },
+      { dose: 2, recommendAge: '13周岁（与第1剂间隔6个月）', months: 162 },
+    ],
+    notes: '双价HPV疫苗适用于9-45岁女性，13岁接种2剂程序（0-6月）。世界卫生组织推荐9-14岁青少年为优先接种人群。',
+  },
+
   // ===================== 乙脑疫苗（两选一）====================
   {
     id: 'jele',

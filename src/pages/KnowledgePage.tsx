@@ -73,6 +73,13 @@ const knowledgeCards: KnowledgeCard[] = [
     summary: '不会。1998年英国《柳叶刀》论文早已被撤稿，作者被吊销执照，研究被证明造假。后续大量研究（涉及数百万儿童）均未发现疫苗与自闭症之间存在任何关联。自闭症是一种先天的神经发育差异，通常在宝宝出生后早期就已决定。',
     tags: ['自闭症', '疫苗安全', '谣言'],
   },
+  {
+    id: 'blood-product',
+    icon: '🩸',
+    title: '注射过血液制品后，接种疫苗要等多久？',
+    summary: '如果宝宝用了血液制品（比如全血、血浆、静脉注射的免疫球蛋白等），不用等太久就能打疫苗。打了卡介苗、口服疫苗（脊灰糖丸）或者灭活疫苗（乙肝、乙脑等），随时可以接着打，不用间隔。但如果打的是注射类减毒活疫苗（比如麻腮风、水痘），需要在用完美球蛋白后等上至少3个月再接种。',
+    tags: ['血液制品', '免疫球蛋白', '间隔'],
+  },
 ];
 
 export default function KnowledgePage() {
@@ -94,7 +101,7 @@ export default function KnowledgePage() {
         color: 'var(--text-secondary)',
         lineHeight: 1.6,
       }}>
-        💡 以下内容依据《国家免疫规划疫苗儿童免疫程序说明（2021年版）》整理，帮助家长了解接种规则与注意事项。
+        💡 以下内容依据《国家免疫规划疫苗儿童免疫程序说明（2026年版）》整理，帮助家长了解接种规则与注意事项。
       </div>
 
       <div style={{
@@ -149,7 +156,7 @@ export default function KnowledgePage() {
 
       <div style={{ marginTop: '24px', padding: '16px', background: 'var(--bg-content)', borderRadius: '12px' }}>
         <p className="text-sm" style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-          📖 参考文献：《国家免疫规划疫苗儿童免疫程序说明（2021年版）》
+          📖 参考文献：《国家免疫规划疫苗儿童免疫程序说明（2026年版）》
         </p>
       </div>
     </div>

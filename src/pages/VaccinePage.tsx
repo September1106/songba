@@ -247,6 +247,11 @@ const KNOWLEDGE_CARDS_EXTRA = [
     title: '接种疫苗会导致自闭症？',
     content: '不会。1998年英国《柳叶刀》论文早已被撤稿，作者被吊销执照，研究被证明造假。后续大量研究（涉及数百万儿童）均未发现疫苗与自闭症之间存在任何关联。自闭症是一种先天的神经发育差异，通常在宝宝出生后早期就已决定。',
   },
+  {
+    icon: '🩸',
+    title: '注射过血液制品后，接种疫苗要等多久？',
+    content: '如果宝宝用了血液制品（比如全血、血浆、静脉注射的免疫球蛋白等），不用等太久就能打疫苗。打了卡介苗、口服疫苗（脊灰糖丸）或者灭活疫苗（乙肝、乙脑等），随时可以接着打，不用间隔。但如果打的是注射类减毒活疫苗（比如麻腮风、水痘），需要在用完美球蛋白后等上至少3个月再接种。',
+  },
 ];
 
 // ==================== 主页面 ====================
@@ -460,7 +465,7 @@ export default function VaccinePage() {
             color: 'var(--text-secondary)',
             lineHeight: 1.6,
           }}>
-            💡 以下内容依据《国家免疫规划疫苗儿童免疫程序说明（2021年版）》，帮助家长了解接种规则与注意事项。
+            💡 以下内容依据《国家免疫规划疫苗儿童免疫程序说明（2026年版）》，帮助家长了解接种规则与注意事项。
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {[...KNOWLEDGE_CARDS, ...KNOWLEDGE_CARDS_EXTRA].map((card, idx) => (
@@ -493,7 +498,7 @@ export default function VaccinePage() {
           </div>
           <div style={{ marginTop: '20px', padding: '12px', background: 'var(--bg-content)', borderRadius: '12px' }}>
             <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              📖 参考来源：《国家免疫规划疫苗儿童免疫程序说明（2021年版）》
+              📖 参考来源：《国家免疫规划疫苗儿童免疫程序说明（2026年版）》
             </p>
           </div>
         </div>
@@ -502,7 +507,7 @@ export default function VaccinePage() {
       {viewMode !== 'knowledge' && (
         <div style={{ marginTop: '24px', padding: '16px', background: 'var(--bg-content)', borderRadius: '12px' }}>
           <p className="text-sm text-muted">
-            ⚠️ 疫苗接种信息根据国家免疫规划疫苗儿童免疫程序及说明（2021年版）制作，具体接种方案请遵医嘱。如有疑问请咨询当地疾控中心或社区卫生服务中心。
+            ⚠️ 疫苗接种信息根据国家免疫规划疫苗儿童免疫程序及说明（2026年版）制作，具体接种方案请遵医嘱。如有疑问请咨询当地疾控中心或社区卫生服务中心。
           </p>
         </div>
       )}
