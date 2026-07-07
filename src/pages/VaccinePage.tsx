@@ -347,7 +347,7 @@ export default function VaccinePage() {
             onYearChange={setBirthYear}
             onMonthChange={setBirthMonth}
             onDayChange={setBirthDay}
-            maxYearsBack={6}
+            maxYearsBack={14}
           />
           <p className="form-hint">选择后自动计算所有应种疫苗</p>
         </div>

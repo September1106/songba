@@ -186,7 +186,7 @@ export default function FoodPage() {
 
       <div style={{ marginTop: '24px', padding: '16px', background: 'var(--bg-content)', borderRadius: '12px' }}>
         <p className="text-sm text-muted">
-          ⚠️ 本工具参考WS/T 678-2020《婴幼儿辅食添加营养指南》及WHO指引，具体添加时间和方式请遵医嘱。如有过敏反应应立即停止并就医。
+          ⚠️ 本工具参考WS/T 678-2020《婴幼儿辅食添加营养指南》及WHO指引，适用于满6月至24月龄内婴幼儿辅食添加的营养指导，具体添加时间和方式请遵医嘱。如有过敏反应应立即停止并就医。
         </p>
       </div>
     </div>
