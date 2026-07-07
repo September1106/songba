@@ -32,6 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
       <>
         <div className={cls} style={style} />
         <div className={styles.beian}>
+          <span style={{ fontSize: '13px', marginRight: '12px' }}>📊 网站统计中</span>·
           <a
             href={ICP_BEIAN.url}
             target="_blank"
