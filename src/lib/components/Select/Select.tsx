@@ -69,7 +69,13 @@ export const Select: React.FC<SelectProps> = ({
                 position: 'absolute',
             };
 
-            if (rect.right + 200 > viewportWidth) {
+            // 手机窄屏（<480px）强制下拉框在触发器右侧，避免超出屏幕左侧
+            const IS_MOBILE = viewportWidth < 480;
+            if (IS_MOBILE) {
+                newStyle.left = '100%';
+                newStyle.marginLeft = '6px';
+                newStyle.right = 'auto';
+            } else if (rect.right + 200 > viewportWidth) {
                 newStyle.right = '100%';
                 newStyle.marginRight = '6px';
                 newStyle.left = 'auto';
