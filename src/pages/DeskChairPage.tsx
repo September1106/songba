@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/lib';
 import { Select } from '@/lib/components/Select';
@@ -86,12 +86,6 @@ const STAGE_OPTIONS = [
   { key: 'school', label: '中小学' },
 ];
 
-// 身高选项：75～199
-const HEIGHT_OPTIONS = Array.from({ length: 199 - 75 + 1 }, (_, i) => ({
-  key: String(75 + i),
-  label: String(75 + i),
-}));
-
 export default function DeskChairPage() {
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage | ''>('');
@@ -149,21 +143,47 @@ export default function DeskChairPage() {
           />
         </div>
 
-        {/* 身高下拉 */}
+        {/* 身高输入框 — 手动输入，限制 75~199 整数 */}
         <div>
           <label style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500, display: 'block', marginBottom: 6 }}>
             孩子身高（cm）
           </label>
           <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-            <Select
-              options={HEIGHT_OPTIONS}
+            <input
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
               value={height}
-              onChange={handleHeightChange}
-              placeholder={stage === '' ? '请先选择学段' : '请选择身高'}
+              onChange={(e) => {
+                // 只允许数字，可自由输入/删除，范围校验放到 blur 时做
+                const filtered = e.target.value.replace(/\D/g, '');
+                handleHeightChange(filtered);
+              }}
+              onBlur={(e) => {
+                const n = parseInt(e.target.value, 10);
+                if (!isNaN(n) && n >= 75 && n <= 199) {
+                  handleHeightChange(String(n));
+                  e.target.value = String(n);
+                } else {
+                  // 超出范围则取最近的边界值
+                  const clamped = Math.min(199, Math.max(75, n || 75));
+                  handleHeightChange(String(clamped));
+                  e.target.value = String(clamped);
+                }
+              }}
+              placeholder={stage === '' ? '请先选择学段' : '75 ~ 199'}
               disabled={stage === ''}
-              visibleCount={8}
-              columns={5}
-              aria-label="孩子身高"
+              style={{
+                width: '100%',
+                padding: '8px 12px',
+                fontSize: '14px',
+                color: 'var(--text-body)',
+                background: '#fff',
+                border: '1px solid var(--border-light)',
+                borderRadius: '8px',
+                outline: 'none',
+                MozAppearance: 'textfield',
+              }}
             />
             <Button
               type="primary"
