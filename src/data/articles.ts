@@ -10,6 +10,14 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    id: 'beads-craft',
+    title: '拼豆能不能给孩子玩？这几件事，家长一定要先搞清楚',
+    summary: '拼豆（像素珠手工）是近年来流行的亲子手工，但安全隐患常被忽视。ABS材质、烫拼风险、小零件误食……家长必须知道的几件事',
+    url: 'https://mp.weixin.qq.com/s/IVD0kRAgVgrPyhRhs4objQ',
+    date: '2026-07-20',
+    tags: ['拼豆', '儿童安全', '亲子手工'],
+  },
+  {
     id: 'hormone-face-cream',
     title: '激素面霜又爆雷：一份不制造焦虑的儿童化妆品选购指南收好',
     summary: '激素面霜为何屡禁不止？儿童化妆品到底怎么选？一份不制造焦虑的科学选购指南',
