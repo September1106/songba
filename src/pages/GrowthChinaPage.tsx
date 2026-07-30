@@ -382,9 +382,10 @@ export default function GrowthChinaPage() {
               <div key={record.id} className="record-item">
                 <div className="record-info">
                   <span className="record-date">{record.date}</span>
+                  <span style={{color:'#999',margin:'0 2px'}}>，</span>
                   <span className="record-date">{Math.floor(record.ageMonths / 12)}岁{record.ageMonths % 12}个月</span>
-                  {record.height && <span className="record-value">身高 {record.height}cm</span>}
-                  {record.weight && <span className="record-value">体重 {record.weight}kg</span>}
+                  {record.height && <><span style={{color:'#999',margin:'0 2px'}}>，</span><span className="record-value">身高 {record.height}cm</span></>}
+                  {record.weight && <><span style={{color:'#999',margin:'0 2px'}}>，</span><span className="record-value">体重 {record.weight}kg</span></>}
                 </div>
                 <Button size="small" onClick={() => removeRecord(record.id)}>删除</Button>
               </div>

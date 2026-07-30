@@ -26,9 +26,16 @@ const tools = [
   {
     path: '/growth-china',
     icon: '📈',
-    title: '身高体重曲线',
+    title: '0~7岁身高体重曲线',
     desc: '记录生长数据，查看儿童生长发育百分位',
     color: 'app-pink' as const,
+  },
+  {
+    path: '/bmi-evaluation',
+    icon: '⚖️',
+    title: '6~18岁发育评价',
+    desc: '评价儿童青少年超重、肥胖、消瘦',
+    color: 'app-red' as const,
   },
   {
     path: '/nutrition',

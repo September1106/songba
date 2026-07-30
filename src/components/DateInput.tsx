@@ -7,42 +7,52 @@ interface DateInputProps {
   onYearChange: (val: string) => void;
   onMonthChange: (val: string) => void;
   onDayChange: (val: string) => void;
-  maxYearsBack?: number; // 往前最多多少年，默认0（仅今天）
-  maxMonthsBack?: number; // 往前最多多少个月（会覆盖 maxYearsBack），默认 undefined
+  maxYearsBack?: number; // 往前最多多少年（以今天为基准），默认0
+  maxMonthsBack?: number; // 往前最多多少个月（以今天为基准，会覆盖 maxYearsBack）
+  minYear?: number; // 精确控制：最小的可选年份
+  maxYear?: number; // 精确控制：最大的可选年份
+  minDate?: string; // 最早可选日期，格式 YYYY-MM-DD，优先级最高
+  maxDate?: string; // 最晚可选日期，格式 YYYY-MM-DD
 }
 
-export default function DateInput({ 
-  year, month, day, 
+export default function DateInput({
+  year, month, day,
   onYearChange, onMonthChange, onDayChange,
   maxYearsBack = 0,
-  maxMonthsBack
+  maxMonthsBack,
+  minYear: minYearProp,
+  maxYear: maxYearProp,
+  minDate,
+  maxDate,
 }: DateInputProps) {
   const today = new Date();
   const currentYear = today.getFullYear();
   const currentMonth = today.getMonth() + 1;
   const currentDay = today.getDate();
 
-  // minAllowedDate: 最早的可选日期
+  // minDate: 精确的最早日期（优先级最高）
+  const minDateObj = minDate ? new Date(minDate + 'T00:00:00') : null;
+  const maxDateObj = maxDate ? new Date(maxDate + 'T00:00:00') : null;
+
+  // minAllowedDate: 最早的可选日期（往前 maxYearsBack 年，或往前 maxMonthsBack 月）
   const minAllowedDate = maxMonthsBack !== undefined
     ? new Date(today.getFullYear(), today.getMonth() - maxMonthsBack, today.getDate())
     : new Date(currentYear - maxYearsBack, currentMonth - 1, currentDay);
-  const minYear = minAllowedDate.getFullYear();
-  const minMonth = minAllowedDate.getMonth() + 1; // 1-12
-  const minDay = minAllowedDate.getDate();
+
+  // 年份范围：minDate 精确值 > minYearProp > minAllowedDate
+  const minYear = minDateObj ? minDateObj.getFullYear() : (minYearProp ?? minAllowedDate.getFullYear());
+  const maxYear = maxDateObj ? maxDateObj.getFullYear() : (maxYearProp ?? currentYear);
+  const minMonth = minDateObj ? minDateObj.getMonth() + 1 : minAllowedDate.getMonth() + 1;
+  const minDay = minDateObj ? minDateObj.getDate() : minAllowedDate.getDate();
 
   const selectedYear = parseInt(year) || 0;
   const selectedMonthNum = parseInt(month) || 0;
 
-  // 动态计算日期天数
-  const daysInMonth = selectedYear > 0 && selectedMonthNum > 0
-    ? new Date(selectedYear, selectedMonthNum, 0).getDate()
-    : 31;
-
   // 年份下拉
   const yearOptions = [
     { key: '', label: '—选择年—' },
-    ...Array.from({ length: currentYear - minYear + 1 }, (_, i) => {
-      const y = currentYear - i;
+    ...Array.from({ length: maxYear - minYear + 1 }, (_, i) => {
+      const y = maxYear - i;
       return { key: String(y), label: `${y}年` };
     }),
   ];
@@ -51,10 +61,13 @@ export default function DateInput({
   const monthOptions = (() => {
     const opts: { key: string; label: string }[] = [{ key: '', label: '—选择月—' }];
     if (!year) return opts;
-    
-    const minMonthOfYear = parseInt(year) === minYear ? minMonth : 1;
-    const maxMonthOfYear = parseInt(year) === currentYear ? currentMonth : 12;
-    
+
+    const isSelectedMinYear = parseInt(year) === minYear;
+    const isCurrentYear = parseInt(year) === currentYear;
+    const minMonthOfYear = isSelectedMinYear ? minMonth : 1;
+    const isMaxYear = parseInt(year) === maxYear;
+    const maxMonthOfYear = isMaxYear && maxDateObj ? maxDateObj.getMonth() + 1 : (isCurrentYear ? currentMonth : 12);
+
     for (let m = minMonthOfYear; m <= maxMonthOfYear; m++) {
       opts.push({ key: String(m), label: `${m}月` });
     }
@@ -62,10 +75,15 @@ export default function DateInput({
   })();
 
   // 日下拉：动态 + 边界限制
-  const maxDayOfMonth = selectedYear > 0 && selectedMonthNum > 0
+  const isMinYear = parseInt(year) === minYear;
+  const isMaxYearSel = parseInt(year) === maxYear;
+  const minDayOfMonth = (isMinYear && selectedMonthNum === minMonth) ? minDay : 1;
+  const computedMaxDay = selectedYear > 0 && selectedMonthNum > 0
     ? new Date(selectedYear, selectedMonthNum, 0).getDate()
     : 31;
-  const minDayOfMonth = (parseInt(year) === minYear && selectedMonthNum === minMonth) ? minDay : 1;
+  const maxDayOfMonth = (isMaxYearSel && maxDateObj && selectedMonthNum === maxDateObj.getMonth() + 1)
+    ? maxDateObj.getDate()
+    : computedMaxDay;
   const dayOptions = [
     { key: '', label: '—选择日—' },
     ...Array.from({ length: maxDayOfMonth - minDayOfMonth + 1 }, (_, i) => ({

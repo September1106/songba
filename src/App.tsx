@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import VaccinePage from './pages/VaccinePage';
 import FoodPage from './pages/FoodPage';
 import GrowthChinaPage from './pages/GrowthChinaPage';
+import BMIEvaluationPage from './pages/BMIEvaluationPage';
 import NutritionPage from './pages/NutritionPage';
 import DeskChairPage from './pages/DeskChairPage';
 import SciencePage from './pages/SciencePage';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/vaccine" element={<VaccinePage />} />
           <Route path="/food" element={<FoodPage />} />
           <Route path="/growth-china" element={<GrowthChinaPage />} />
+          <Route path="/bmi-evaluation" element={<BMIEvaluationPage />} />
           <Route path="/nutrition" element={<NutritionPage />} />
           <Route path="/science" element={<SciencePage />} />
           <Route path="/desk-chair" element={<DeskChairPage />} />
