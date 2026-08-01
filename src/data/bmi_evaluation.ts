@@ -98,8 +98,10 @@ export function deleteBMIRecord(id: string): void {
 
 /**
  * 计算半岁年龄
- * 月份不满6个月 → 向下保留到整岁
- * 超过6个月但不到下一个年龄 → x.5岁
+ * 调查日期未到生日 anniversary → x.0岁
+ * 调查日期在生日 anniversary~anniversary+6个月 → x.5岁
+ * 调查日期在生日+6个月~下一个生日 → (x+1).0岁
+ * 以调查日期是否已超过生日 anniversary 为判断基准
  */
 export function calculateHalfYearAge(birthDateStr: string, measureDateStr: string): number {
   const birth = new Date(birthDateStr);
@@ -109,10 +111,14 @@ export function calculateHalfYearAge(birthDateStr: string, measureDateStr: strin
   const adjustedMonths = extraDays < 0 ? totalMonths - 1 : totalMonths;
   const years = Math.floor(adjustedMonths / 12);
   const months = adjustedMonths % 12;
-  if (months < 6) {
-    return years;
+  // remainder === 0 表示恰好满整岁生日，remainder < 6 表示未满半年，remainder >= 6 表示已满半年
+  if (months === 0) {
+    return years; // 精确满整岁
   }
-  return years + 0.5;
+  if (months < 6) {
+    return years; // 未满半年，返回整岁
+  }
+  return years + 0.5; // 已满半年但不满整岁，返回.5岁
 }
 
 /**
