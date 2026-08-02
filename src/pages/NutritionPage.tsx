@@ -12,6 +12,7 @@ import {
   CN_NUTRIENT_DISPLAY,
 } from '../data/cnFoodCategories';
 import type { CnFood } from '../data/cnFoodsTypes';
+import 'animal-island-ui/dist/index.css';
 
 type Mode = 'browse' | 'search' | 'rank' | 'towers';
 
@@ -48,21 +49,21 @@ function NutrientTable({ food, ageGroup, onAgeGroupChange }: { food: CnFood; age
   const dris = getDRI(ageGroup);
 
   return (
-    <div style={{ background: '#F7F3DF', borderRadius: 16, padding: '16px', position: 'relative', overflow: 'visible' }}>
-      <div style={{ overflowX: 'auto' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
-          <thead>
-            <tr style={{ background: '#F0E8D8' }}>
-              <th style={{ padding: '10px 12px', textAlign: 'left', color: 'var(--text-header)', fontWeight: 700, fontSize: '15px' }}>营养素</th>
-              <th style={{ padding: '10px 12px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 700, fontSize: '15px' }}>每100g</th>
-              <th style={{ padding: '10px 12px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 700, fontSize: '15px', whiteSpace: 'nowrap' }}>
+    <div style={{ background: '#F7F3DF', borderRadius: 16, padding: 16, position: 'relative', overflow: 'visible' }}>
+      <div className="animal-scrollable-5Wnhh">
+        <table className="animal-table-Os4fM">
+          <thead className="animal-thead-2ge5M">
+            <tr className="animal-headerRow-sAsWX">
+              <th className="animal-headerCell-LhL6h" style={{ fontSize: 15 }}>营养素</th>
+              <th className="animal-headerCell-LhL6h" style={{ fontSize: 15, textAlign: 'right' }}>每100g</th>
+              <th className="animal-headerCell-LhL6h" style={{ fontSize: 15, textAlign: 'right', whiteSpace: 'nowrap' }}>
                 占每日需求量%
                 <AgeSelectorInline value={ageGroup} onChange={onAgeGroupChange} />
               </th>
             </tr>
           </thead>
-          <tbody>
-            {CN_NUTRIENT_DISPLAY.map((n, idx) => {
+          <tbody className="animal-tbody-3RGsp">
+            {CN_NUTRIENT_DISPLAY.map((n) => {
               const rawVal = (food as unknown as Record<string, unknown>)[n.key];
               const val = n.key === 'energy_kcal'
                 ? (typeof rawVal === 'number' ? rawVal / 4.184 : null)
@@ -79,20 +80,16 @@ function NutrientTable({ food, ageGroup, onAgeGroupChange }: { food: CnFood; age
               else if (pct > 66) { pctColor = '#fff'; pctBg = 'var(--success)'; }
 
               return (
-                <tr key={n.key} style={{ borderBottom: '1px solid var(--border-light)', background: idx % 2 === 0 ? 'transparent' : 'var(--bg-content)' }}>
-                  <td style={{ padding: '8px 10px', color: 'var(--text-body)' }}>{n.label}</td>
-                  <td style={{
-                    padding: '8px 10px', textAlign: 'right',
-                    color: 'var(--text-body)',
-                    fontWeight: 500,
-                  }}>
+                <tr key={n.key} className="animal-row-iDOMw">
+                  <td className="animal-cell-4PAU2">{n.label}</td>
+                  <td className="animal-cell-4PAU2" style={{ textAlign: 'right', fontWeight: 500 }}>
                     {val !== null ? `${fmt(val)} ${n.unit}` : '—'}
                   </td>
-                  <td style={{ padding: '8px 10px', textAlign: 'right' }}>
+                  <td className="animal-cell-4PAU2" style={{ textAlign: 'right' }}>
                     {drv > 0 && val !== null && val > 0 ? (
                       <span style={{
                         display: 'inline-block', padding: '2px 8px', borderRadius: '20px',
-                        background: pctBg, color: pctColor, fontWeight: 600, fontSize: '12px', minWidth: '40px', textAlign: 'center',
+                        background: pctBg, color: pctColor, fontWeight: 600, fontSize: 12, minWidth: 40, textAlign: 'center',
                       }}>
                         {pct}%
                       </span>
@@ -106,8 +103,8 @@ function NutrientTable({ food, ageGroup, onAgeGroupChange }: { food: CnFood; age
           </tbody>
         </table>
       </div>
-      <div style={{ marginTop: '12px', padding: '10px', background: 'var(--bg-secondary)', borderRadius: '8px' }}>
-        <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: 0 }}>
+      <div style={{ marginTop: 12, padding: 10, background: 'var(--bg-secondary)', borderRadius: 8 }}>
+        <p style={{ fontSize: 12, color: 'var(--text-muted)', margin: 0 }}>
           💡 占每日需求量% = 100g该食物 ÷ 该年龄段推荐摄入量。<br />
           数据来源：中国疾病预防控制中心营养与健康所。
         </p>
@@ -285,21 +282,15 @@ export default function NutritionPage() {
               <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '12px' }}>
                 共 16 个食物大类，点击进入
               </p>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '8px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {CN_FOOD_CATEGORIES.map(cat => (
-                  <Card
+                  <Button
                     key={cat.id}
-                    color="default"
-                    className="food-stage"
+                    type="default"
                     onClick={() => handleCatChange(cat.id)}
-                    style={{ cursor: 'pointer', textAlign: 'center' }}
                   >
-                    <div style={{ fontSize: '18px', marginBottom: '4px' }}>{cat.name.split(' ')[0]}</div>
-                    <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-header)', lineHeight: 1.2, marginBottom: '2px' }}>
-                      {cat.name.replace(/^[^\s]+\s/, '')}
-                    </div>
-                    <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{cat.count} 种</div>
-                  </Card>
+                    {cat.name}
+                  </Button>
                 ))}
               </div>
             </div>
@@ -332,16 +323,13 @@ export default function NutritionPage() {
                       <div className="animal-zoom-in">
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '8px', marginBottom: '16px' }}>
                           {subcats.map(sub => (
-                            <Card
+                            <Button
                               key={sub.name}
-                              color="default"
-                              className="food-stage"
+                              type="default"
                               onClick={() => handleSubCatChange(sub.name)}
-                              style={{ cursor: 'pointer', textAlign: 'center' }}
                             >
-                              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-header)', lineHeight: 1.2 }}>{sub.name}</div>
-                              <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '2px' }}>{sub.count} 种</div>
-                            </Card>
+                              {sub.name}
+                            </Button>
                           ))}
                         </div>
                       </div>

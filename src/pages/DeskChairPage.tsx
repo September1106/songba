@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/lib';
 import { Select } from '@/lib/components/Select';
+import 'animal-island-ui/dist/index.css';
 
 /********************* 中小学生课桌椅数据（GB/T 3976-2014） *********************/
 interface SchoolDesk {
@@ -273,26 +274,26 @@ export default function DeskChairPage() {
       </div>
 
       {/* 中小学生桌椅型号对照表 */}
-      <div style={{ padding: '16px', background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
+      <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
         <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-header)', marginBottom: 14 }}>📋 中小学生桌椅型号对照表</h3>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-            <thead>
-              <tr style={{ background: 'var(--bg-secondary)', borderBottom: '2px solid var(--border)' }}>
+        <div className="animal-scrollable-5Wnhh">
+          <table className="animal-table-Os4fM">
+            <thead className="animal-thead-2ge5M">
+              <tr className="animal-headerRow-sAsWX">
                 {['课桌椅型号', '标准桌面高(cm)', '标准坐面高(cm)', '学生身高范围(cm)'].map((h, i) => (
-                  <th key={i} style={{ padding: '8px 8px', textAlign: 'center', color: 'var(--text-secondary)', fontWeight: 600, whiteSpace: 'nowrap' }}>{h}</th>
+                  <th key={i} className="animal-headerCell-LhL6h" style={{ textAlign: 'center' }}>{h}</th>
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className="animal-tbody-3RGsp">
               {schoolData.map((row) => {
                 const matched = stage === 'school' && schoolMatches.some(m => m.型号 === row.型号) || (h > 187 && row.型号 === '0号');
                 return (
-                  <tr key={row.型号} style={{ borderBottom: '1px solid var(--border)', background: matched ? 'rgba(229,146,102,0.15)' : 'transparent' }}>
-                    <td style={{ padding: '9px 8px', textAlign: 'center', fontWeight: matched ? 700 : 400, color: matched ? 'var(--primary)' : 'var(--text)' }}>{row.型号}</td>
-                    <td style={{ padding: '9px 8px', textAlign: 'center' }}>{row.桌高}</td>
-                    <td style={{ padding: '9px 8px', textAlign: 'center' }}>{row.椅高}</td>
-                    <td style={{ padding: '9px 8px', textAlign: 'center', color: matched ? 'var(--primary)' : 'var(--text)', fontWeight: matched ? 700 : 400 }}>{row.范围}</td>
+                  <tr key={row.型号} className="animal-row-iDOMw" style={matched ? { background: 'rgba(229,146,102,0.15)' } : undefined}>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center', fontWeight: matched ? 700 : 500, color: matched ? 'var(--primary)' : undefined }}>{row.型号}</td>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center' }}>{row.桌高}</td>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center' }}>{row.椅高}</td>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center', fontWeight: matched ? 700 : 500, color: matched ? 'var(--primary)' : undefined }}>{row.范围}</td>
                   </tr>
                 );
               })}
@@ -302,26 +303,26 @@ export default function DeskChairPage() {
       </div>
 
       {/* 儿童桌椅型号对照表 */}
-      <div style={{ padding: '16px', background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
+      <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
         <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-header)', marginBottom: 14 }}>📋 儿童桌椅型号对照表</h3>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-            <thead>
-              <tr style={{ background: 'var(--bg-secondary)', borderBottom: '2px solid var(--border)' }}>
+        <div className="animal-scrollable-5Wnhh">
+          <table className="animal-table-Os4fM">
+            <thead className="animal-thead-2ge5M">
+              <tr className="animal-headerRow-sAsWX">
                 {['课桌椅型号', '桌面高(cm)', '座面高(cm)', '学生身高范围(cm)'].map((h, i) => (
-                  <th key={i} style={{ padding: '8px 8px', textAlign: 'center', color: 'var(--text-secondary)', fontWeight: 600, whiteSpace: 'nowrap' }}>{h}</th>
+                  <th key={i} className="animal-headerCell-LhL6h" style={{ textAlign: 'center' }}>{h}</th>
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className="animal-tbody-3RGsp">
               {kidData.map((row) => {
                 const matched = stage === 'kindergarten' && kidMatches.some(m => m.型号 === row.型号);
                 return (
-                  <tr key={row.型号} style={{ borderBottom: '1px solid var(--border)', background: matched ? 'rgba(229,146,102,0.15)' : 'transparent' }}>
-                    <td style={{ padding: '9px 8px', textAlign: 'center', fontWeight: matched ? 700 : 400, color: matched ? 'var(--primary)' : 'var(--text)' }}>{row.型号}</td>
-                    <td style={{ padding: '9px 8px', textAlign: 'center' }}>{row.桌高}</td>
-                    <td style={{ padding: '9px 8px', textAlign: 'center' }}>{row.椅高}</td>
-                    <td style={{ padding: '9px 8px', textAlign: 'center', color: matched ? 'var(--primary)' : 'var(--text)', fontWeight: matched ? 700 : 400 }}>{row.范围}</td>
+                  <tr key={row.型号} className="animal-row-iDOMw" style={matched ? { background: 'rgba(229,146,102,0.15)' } : undefined}>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center', fontWeight: matched ? 700 : 500, color: matched ? 'var(--primary)' : undefined }}>{row.型号}</td>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center' }}>{row.桌高}</td>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center' }}>{row.椅高}</td>
+                    <td className="animal-cell-4PAU2" style={{ textAlign: 'center', fontWeight: matched ? 700 : 500, color: matched ? 'var(--primary)' : undefined }}>{row.范围}</td>
                   </tr>
                 );
               })}

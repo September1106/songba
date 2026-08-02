@@ -199,7 +199,7 @@ export const vaccineData: VaccineItem[] = [
     id: 'influenza',
     name: '流感疫苗',
     type: 'paid',
-    description: '预防季节性流感，降低重症风险。每年接种。',
+    description: '预防季节性流感，降低重症风险。',
     doses: [
       { dose: 1, recommendAge: '6月龄以上', months: 6 },
       { dose: 2, recommendAge: '每年秋季', months: 12, notes: '每年需重新接种' },

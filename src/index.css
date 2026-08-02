@@ -62,7 +62,7 @@ body {
 
 /* ==================== Header ==================== */
 .app-header {
-  background: linear-gradient(135deg, var(--primary-bg) 0%, #fff 100%);
+  background-image: url('/content_bg_pc.jpg');
   padding: 24px 16px;
   text-align: center;
   border-bottom: 3px solid var(--border-light);
@@ -117,7 +117,7 @@ body {
 
 .site-subtitle {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--text-header);
   font-weight: 500;
 }
 
@@ -149,6 +149,13 @@ body {
   font-weight: 700;
   color: var(--text-header);
   margin-bottom: 12px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 15px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .hero p {
@@ -539,3 +546,4 @@ body {
   background: var(--bg-content);
   border: 2px solid var(--border-light);
 }
+.animal-body--aiyx { align-items: center !important; }

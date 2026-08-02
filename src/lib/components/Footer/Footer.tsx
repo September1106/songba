@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './footer.module.less';
+import { Modal } from 'animal-island-ui';
+import 'animal-island-ui/dist/index.css';
 
 const ICP_BEIAN = {
   number: '陕ICP备2026016431号',
@@ -60,25 +62,27 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
           </button>
         </div>
 
-        {showQR && (
-          <div className={styles.qrOverlay} onClick={() => setShowQR(false)}>
-            <div className={styles.qrModal} onClick={(e) => e.stopPropagation()}>
-              <h3 className={styles.qrTitle}>扫码关注「怂爸的养娃攻略」</h3>
-              <p className={styles.qrDesc}>关注后发送消息，怂爸会认真回复每一条~</p>
-              <img
-                src="/公众号二维码.jpg"
-                alt="公众号二维码"
-                className={styles.qrImg}
-              />
-              <button
-                className={styles.qrClose}
-                onClick={() => setShowQR(false)}
-              >
-                ×
-              </button>
-            </div>
+        <Modal
+          open={showQR}
+          title="扫码关注「怂爸的养娃攻略」"
+          width={480}
+          maskClosable
+          footer={null}
+          typewriter={false}
+          onClose={() => setShowQR(false)}
+          className="footer-qr-modal"
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, width: '100%' }}>
+            <p style={{ fontSize: 16, fontWeight: 600, color: '#8a7b66', textAlign: 'center', lineHeight: 1.6 }}>
+              关注后发送消息，怂爸会认真回复每一条~
+            </p>
+            <img
+              src="/公众号二维码.jpg"
+              alt="公众号二维码"
+              style={{ width: 200, height: 200, objectFit: 'contain', borderRadius: 12 }}
+            />
           </div>
-        )}
+        </Modal>
       </>
     );
 };

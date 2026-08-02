@@ -14,7 +14,7 @@ const tools = [
     icon: '💉',
     title: '疫苗接种计算器',
     desc: '计算孩子应种疫苗，追踪接种进度',
-    color: 'app-teal' as const,
+    color: 'warm-peach-pink' as const,
   },
   {
     path: '/food',

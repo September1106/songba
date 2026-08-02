@@ -62,17 +62,17 @@ export default function RankTable({ nutrientKey, ageGroup, sortDesc, filterCat }
 
   return (
     <div>
-      <div style={{ overflowX: 'auto', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
-          <thead>
-            <tr style={{ background: 'var(--bg-secondary)' }}>
-              <th style={{ padding: '8px 10px', textAlign: 'left', color: 'var(--text-header)', fontWeight: 600, width: '40px' }}>#</th>
-              <th style={{ padding: '8px 10px', textAlign: 'left', color: 'var(--text-header)', fontWeight: 600 }}>食物</th>
-              <th style={{ padding: '8px 10px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 600, whiteSpace: 'nowrap' }}>每100g</th>
-              <th style={{ padding: '8px 10px', textAlign: 'right', color: 'var(--text-header)', fontWeight: 600 }}>占日需%</th>
+      <div className="animal-scrollable-5Wnhh" style={{ borderRadius: 12, border: '1px solid var(--border-color)' }}>
+        <table className="animal-table-Os4fM">
+          <thead className="animal-thead-2ge5M">
+            <tr className="animal-headerRow-sAsWX">
+              <th className="animal-headerCell-LhL6h" style={{ width: 40 }}>#</th>
+              <th className="animal-headerCell-LhL6h">食物</th>
+              <th className="animal-headerCell-LhL6h" style={{ textAlign: 'right', whiteSpace: 'nowrap' }}>每100g</th>
+              <th className="animal-headerCell-LhL6h" style={{ textAlign: 'right' }}>占日需%</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="animal-tbody-3RGsp">
             {visible.map((item, idx) => {
               const pct = drv > 0 ? Math.round((item.value / drv) * 100) : 0;
               let pctColor = 'var(--text-muted)';
@@ -82,20 +82,20 @@ export default function RankTable({ nutrientKey, ageGroup, sortDesc, filterCat }
               else if (pct > 66) { pctColor = '#fff'; pctBg = 'var(--success)'; }
 
               return (
-                <tr key={item.name + idx} style={{ borderBottom: '1px solid var(--border-light)', background: idx % 2 === 0 ? 'transparent' : 'var(--bg-content)' }}>
-                  <td style={{ padding: '8px 10px', color: 'var(--text-muted)', fontWeight: 500 }}>{page * PAGE_SIZE + idx + 1}</td>
-                  <td style={{ padding: '8px 10px' }}>
+                <tr key={item.name + idx} className="animal-row-iDOMw">
+                  <td className="animal-cell-4PAU2" style={{ color: 'var(--text-muted)', fontWeight: 500 }}>{page * PAGE_SIZE + idx + 1}</td>
+                  <td className="animal-cell-4PAU2">
                     <div style={{ fontWeight: 500, color: 'var(--text-body)' }}>{item.name}</div>
-                    <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{item.cat1}</div>
+                    <div style={{ fontSize: 11, color: 'var(--text-muted)' }}>{item.cat1}</div>
                   </td>
-                  <td style={{ padding: '8px 10px', textAlign: 'right', color: 'var(--text-body)', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                  <td className="animal-cell-4PAU2" style={{ textAlign: 'right', fontWeight: 600, whiteSpace: 'nowrap' }}>
                     {item.value.toFixed(1)} {unit}
                   </td>
-                  <td style={{ padding: '8px 10px', textAlign: 'right' }}>
+                  <td className="animal-cell-4PAU2" style={{ textAlign: 'right' }}>
                     {drv > 0 ? (
                       <span style={{
                         display: 'inline-block', padding: '2px 8px', borderRadius: '20px',
-                        background: pctBg, color: pctColor, fontWeight: 600, fontSize: '12px', minWidth: '40px', textAlign: 'center',
+                        background: pctBg, color: pctColor, fontWeight: 600, fontSize: 12, minWidth: 40, textAlign: 'center',
                       }}>
                         {pct}%
                       </span>

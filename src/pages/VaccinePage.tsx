@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card } from '@/lib';
+import { Collapse } from 'animal-island-ui';
+import 'animal-island-ui/dist/index.css';
 import {
   buildVaccineList, getPaidVaccines,
   type VaccineListItem, type VaccineItem,
@@ -157,21 +159,18 @@ function FreeVaccineCard({ v, onToggle }: { v: VaccineListItem; onToggle: (key: 
 }
 
 function PaidVaccineCard({ v }: { v: VaccineItem }) {
-  return (
-    <Card color="default" style={{ marginBottom: '12px' }}>
-      <div style={{ marginBottom: '8px' }}>
-        <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-header)', marginBottom: '4px' }}>
-          💰 {v.name}
-        </div>
-        <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '6px' }}>
-          {v.description}
-        </div>
-      </div>
-
+  const answer = (
+    <div>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
         <tbody>
+          {v.description && (
+            <tr>
+              <td style={{ padding: '4px 0', color: 'var(--text-muted)', width: '70px', verticalAlign: 'top' }}>疫苗作用</td>
+              <td style={{ padding: '4px 0', color: 'var(--text-body)' }}>{v.description}</td>
+            </tr>
+          )}
           <tr>
-            <td style={{ padding: '4px 0', color: 'var(--text-muted)', width: '70px' }}>接种时间</td>
+            <td style={{ padding: '4px 0', color: 'var(--text-muted)', width: '70px', verticalAlign: 'top' }}>接种时间</td>
             <td style={{ padding: '4px 0', color: 'var(--text-body)' }}>
               {v.doses[0]?.recommendAge}起，共{v.doses.length}剂
             </td>
@@ -188,7 +187,13 @@ function PaidVaccineCard({ v }: { v: VaccineItem }) {
           )}
         </tbody>
       </table>
-    </Card>
+    </div>
+  );
+  return (
+    <Collapse
+      question={<span>💰 {v.name}</span>}
+      answer={answer}
+    />
   );
 }
 
@@ -467,33 +472,17 @@ export default function VaccinePage() {
           }}>
             💡 以下内容依据《国家免疫规划疫苗儿童免疫程序说明（2026年版）》，帮助家长了解接种规则与注意事项。
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div>
             {[...KNOWLEDGE_CARDS, ...KNOWLEDGE_CARDS_EXTRA].map((card, idx) => (
-              <Card key={idx} color="default" style={{ cursor: 'default' }}>
-                <div style={{ display: 'flex', gap: '12px' }}>
-                  <div style={{
-                    flexShrink: 0,
-                    width: '40px',
-                    height: '40px',
-                    background: 'var(--primary-bg)',
-                    borderRadius: '10px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '20px',
-                  }}>
-                    {card.icon}
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-header)', marginBottom: '6px' }}>
-                      {card.title}
-                    </div>
-                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.7, whiteSpace: 'pre-line' }}>
-                      {card.content}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              <Collapse
+                key={idx}
+                question={<span>{card.icon} {card.title}</span>}
+                answer={
+                  <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.7, whiteSpace: 'pre-line', margin: 0 }}>
+                    {card.content}
+                  </p>
+                }
+              />
             ))}
           </div>
           <div style={{ marginTop: '20px', padding: '12px', background: 'var(--bg-content)', borderRadius: '12px' }}>

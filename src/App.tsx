@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Footer } from '@/lib';
 import '@/lib/dist/index.css';
 import './index.css';
+import FloatingIsland from './components/FloatingIsland';
 
 import HomePage from './pages/HomePage';
 import VaccinePage from './pages/VaccinePage';
@@ -39,6 +40,7 @@ function App() {
       </main>
 
       <Footer type="sea" />
+      <FloatingIsland />
     </div>
   );
 }
