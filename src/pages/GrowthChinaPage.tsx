@@ -52,7 +52,8 @@ const PERCENTILE_COLORS: Array<{key: keyof GrowthStandard; label: string; dash?:
   { key: 'p3',  label: 'P3',  dash: true },
 ];
 
-export default function GrowthChinaPage() {
+interface GrowthChinaPageProps { embedded?: boolean; }
+export default function GrowthChinaPage({ embedded = false }: GrowthChinaPageProps) {
   const navigate = useNavigate();
   const [gender, setGender] = useState<Gender>('male');
   const [birthYear, setBirthYear] = useState<string>('');
@@ -260,10 +261,15 @@ export default function GrowthChinaPage() {
 
   return (
     <div className="growth-page ac-fade-up">
-      <div className="page-header">
+      {!embedded && (
+
+        <div className="page-header">
         <h2 className="page-title">📈 身高体重曲线</h2>
         <div className="page-desc"><Typewriter speed={60}>根据WHO和中国标准，评估生长发育水平</Typewriter></div>
-      </div>
+
+        </div>
+
+      )}
 
       <Card className="growth-form">
         <div className="form-group">

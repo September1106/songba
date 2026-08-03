@@ -1,3 +1,12 @@
+/* ==================== 页面背景（参考站content_bg_pc.jpg）==================== */
+body {
+  background-image: url('https://guokaigdg.github.io/animal-island-ui/assets/content_bg_pc-CRf0ymIA.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* ==================== 字体引入 ==================== */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap');
 
@@ -237,7 +246,7 @@ body {
 }
 .page-desc {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--text-header);
   line-height: 1.5;
 }
 
@@ -558,7 +567,6 @@ body {
 .island-page {
   display: flex;
   min-height: 100dvh;
-  background-color: #f8f8f0;
 }
 
 .sidebar-sticky-wrapper {
@@ -643,6 +651,15 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.tool-header {
+  margin-bottom: 12px;
+}
+
+.tool-content-card {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .island-main {

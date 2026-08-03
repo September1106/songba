@@ -150,7 +150,8 @@ function AgeSelectorInline({ value, onChange }: { value: string; onChange: (v: s
   );
 }
 
-export default function NutritionPage() {
+interface NutritionPageProps { embedded?: boolean; }
+export default function NutritionPage({ embedded = false }: NutritionPageProps) {
   const navigate = useNavigate();
   const [mode, setMode] = useState<Mode>('browse');
   const [ageGroup, setAgeGroup] = useState<string>('1-3y');
@@ -183,10 +184,15 @@ export default function NutritionPage() {
   if (mode === 'rank') {
     return (
       <div className="nutrition-page ac-fade-up">
-        <div className="page-header">
+        {!embedded && (
+
+          <div className="page-header">
           <h2 className="page-title">🏆 营养素排名</h2>
           <div className="page-desc"><Typewriter speed={60}>查食物营养素含量，了解孩子每日所需</Typewriter></div>
-        </div>
+
+          </div>
+
+        )}
 
         <Card className="mb-16">
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -219,10 +225,15 @@ export default function NutritionPage() {
   if (mode === 'towers') {
     return (
       <div className="nutrition-page ac-fade-up">
-        <div className="page-header">
+        {!embedded && (
+
+          <div className="page-header">
           <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
           <h2 className="page-title">🏯 膳食宝塔</h2>
-        </div>
+
+          </div>
+
+        )}
 
         <Card className="mb-16">
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -260,10 +271,15 @@ export default function NutritionPage() {
   // ── 主界面（浏览 + 搜索） ────────────────────────────────
   return (
     <div className="nutrition-page ac-fade-up">
-      <div className="page-header">
+      {!embedded && (
+
+        <div className="page-header">
         <h2 className="page-title">🥗 营养查询</h2>
         <div className="page-desc"><Typewriter speed={60}>查食物营养素含量，了解孩子每日所需</Typewriter></div>
-      </div>
+
+        </div>
+
+      )}
 
       <Card className="mb-16">
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>

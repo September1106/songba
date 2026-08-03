@@ -260,7 +260,8 @@ const KNOWLEDGE_CARDS_EXTRA = [
 ];
 
 // ==================== 主页面 ====================
-export default function VaccinePage() {
+interface VaccinePageProps { embedded?: boolean; }
+export default function VaccinePage({ embedded = false }: VaccinePageProps) {
   const navigate = useNavigate();
   const [birthYear, setBirthYear] = useState<string>('');
   const [birthMonth, setBirthMonth] = useState<string>('');
@@ -337,10 +338,10 @@ export default function VaccinePage() {
 
   return (
     <div className="vaccine-page ac-fade-up">
-      <div className="page-header">
+      {!embedded && (<div className="page-header">
         <h2 className="page-title">💉 疫苗接种计算器</h2>
         <div className="page-desc"><Typewriter speed={60}>输入出生日期，自动计算每种疫苗的接种时间</Typewriter></div>
-      </div>
+      </div>)}
 
       <Card className="vaccine-info">
         <div className="form-group">

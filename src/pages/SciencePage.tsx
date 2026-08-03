@@ -4,7 +4,8 @@ import { Button, Card, Input } from '@/lib';
 import { Typewriter } from 'animal-island-ui';
 import articles from '../data/articles';
 
-export default function SciencePage() {
+interface SciencePageProps { embedded?: boolean; }
+export default function SciencePage({ embedded = false }: SciencePageProps) {
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
 
@@ -20,10 +21,15 @@ export default function SciencePage() {
 
   return (
     <div className="science-page ac-fade-up">
-      <div className="page-header">
+      {!embedded && (
+
+        <div className="page-header">
         <h2 className="page-title">📖 怂爸科普</h2>
         <div className="page-desc"><Typewriter speed={60}>公众号文章索引，科学育儿有料又有趣</Typewriter></div>
-      </div>
+
+        </div>
+
+      )}
 
       <div style={{
         padding: '12px 16px',

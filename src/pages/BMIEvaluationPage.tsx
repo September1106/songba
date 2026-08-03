@@ -25,7 +25,8 @@ function findStandard(ageYears: number, sex: '男' | '女'): BMICutoff | undefin
   return bmiStandards.filter(s => s.sex === sex).sort((a, b) => a.age_years - b.age_years)[0];
 }
 
-export default function BMIEvaluationPage() {
+interface BMIEvaluationPageProps { embedded?: boolean; }
+export default function BMIEvaluationPage({ embedded = false }: BMIEvaluationPageProps) {
   const navigate = useNavigate();
   const [gender, setGender] = useState<Gender>('male');
   const [birthYear, setBirthYear] = useState<string>('');
@@ -238,10 +239,15 @@ export default function BMIEvaluationPage() {
 
   return (
     <div className="growth-page ac-fade-up">
-      <div className="page-header">
+      {!embedded && (
+
+        <div className="page-header">
         <h2 className="page-title">⚖️ 6~18岁儿童发育评价</h2>
         <div className="page-desc"><Typewriter speed={60}>计算BMI值，评估消瘦、超重与肥胖</Typewriter></div>
-      </div>
+
+        </div>
+
+      )}
 
       <Card className="growth-form">
         <div className="form-group">

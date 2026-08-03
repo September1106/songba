@@ -100,7 +100,8 @@ function FoodStageCard({ stage }: { stage: FoodStage }) {
   );
 }
 
-export default function FoodPage() {
+interface FoodPageProps { embedded?: boolean; }
+export default function FoodPage({ embedded = false }: FoodPageProps) {
   const navigate = useNavigate();
   const [birthYear, setBirthYear] = useState<string>('');
   const [birthMonth, setBirthMonth] = useState<string>('');
@@ -113,10 +114,15 @@ export default function FoodPage() {
 
   return (
     <div className="food-page ac-fade-up">
-      <div className="page-header">
+      {!embedded && (
+
+        <div className="page-header">
         <h2 className="page-title">🍎 辅食添加指南</h2>
         <div className="page-desc"><Typewriter speed={60}>根据月龄推荐辅食性状、餐次和食材</Typewriter></div>
-      </div>
+
+        </div>
+
+      )}
 
       <Card className="mb-16">
         <div className="form-group">

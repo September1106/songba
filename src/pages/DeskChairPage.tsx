@@ -88,7 +88,8 @@ const STAGE_OPTIONS = [
   { key: 'school', label: '中小学' },
 ];
 
-export default function DeskChairPage() {
+interface DeskChairPageProps { embedded?: boolean; }
+export default function DeskChairPage({ embedded = false }: DeskChairPageProps) {
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage | ''>('');
   const [height, setHeight] = useState<string>('');
@@ -123,10 +124,15 @@ export default function DeskChairPage() {
 
   return (
     <div className="page" style={{ padding: '0 16px 32px' }}>
-      <div className="page-header">
+      {!embedded && (
+
+        <div className="page-header">
         <h2 className="page-title">🪑 课桌椅搭配</h2>
         <div className="page-desc"><Typewriter speed={60}>根据身高选择合适的课桌椅型号</Typewriter></div>
-      </div>
+
+        </div>
+
+      )}
 
       {/* 学段选择 + 身高输入 — 同一个圆角矩形背景 */}
       <div style={{ background: '#F7F3DF', borderRadius: 16, padding: '16px', marginBottom: 16 }}>
@@ -302,8 +308,7 @@ export default function DeskChairPage() {
             </tbody>
           </table>
         </div>
-      </div>
-      )}
+      </div>)}
 
       {/* 儿童桌椅型号对照表 — 仅在"幼儿园"学段提交后显示 */}
       {stage === 'kindergarten' && submitted && (
