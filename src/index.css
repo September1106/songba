@@ -221,20 +221,26 @@ body {
 /* ==================== Page Header ==================== */
 .page-header {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 4px;
   margin-bottom: 20px;
 }
 
 .back-btn {
-  flex-shrink: 0;
+  display: none;
 }
 
 .page-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   color: var(--text-header);
 }
+.page-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 
 /* ==================== Form Elements ==================== */
 .form-group {
@@ -547,3 +553,232 @@ body {
   border: 2px solid var(--border-light);
 }
 .animal-body--aiyx { align-items: center !important; }
+
+/* ── IslandPage 单页布局 ──────────────────────────────── */
+.island-page {
+  display: flex;
+  min-height: 100dvh;
+  background-color: #f8f8f0;
+}
+
+.sidebar-sticky-wrapper {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 220px;
+  height: calc(100dvh - 20px);
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.island-sidebar {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://guokaigdg.github.io/animal-island-ui/assets/menu_bg-BjaGz8mm.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  background-color: #fffdf7;
+  border: 1.5px solid #d4c4a8;
+  box-shadow: 2px 4px 12px rgba(61, 52, 40, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 16px 14px 18px;
+  border-bottom: 1.5px solid #d4c4a8;
+  cursor: pointer;
+}
+
+.sidebar-logo-icon {
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(91, 78, 30, 0.2));
+}
+
+.sidebar-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #794f27;
+  white-space: nowrap;
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 10px 0;
+  overflow-y: auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px 0 22px;
+  height: 42px;
+  cursor: pointer;
+  color: #794f27;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin: 1px 5px;
+  transition: background 0.15s ease;
+}
+
+.menu-item:hover {
+  background: #d6dff0;
+}
+
+.menu-item.active {
+  background: #b7c6e5;
+  color: #fff;
+  margin: 0;
+}
+
+.menu-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.island-main {
+  flex: 1;
+  padding: 24px 32px 24px 256px;
+  overflow-y: auto;
+}
+
+/* ── HomePage Landing ────────────────────────────────── */
+.home-landing {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #6ab87a 0%, #4a9e5c 50%, #3d8a4a 100%);
+}
+
+.home-char-left {
+  position: fixed;
+  bottom: -10px;
+  left: -10px;
+  font-size: 160px;
+  line-height: 1;
+  z-index: 10;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+  user-select: none;
+  pointer-events: none;
+}
+
+.home-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.home-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  margin: 0 0 20px;
+  letter-spacing: 0.04em;
+}
+
+.home-desc {
+  font-size: 17px;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.85;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  margin: 0 0 36px;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 42px;
+  background: #19c8b9;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #0e9691, 0 8px 20px rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  font-family: inherit;
+  letter-spacing: 0.04em;
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #0e9691, 0 12px 24px rgba(0,0,0,0.22);
+}
+
+.home-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #0e9691, 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Island 内容层（遮罩下方） */
+.home-island-underlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow-y: auto;
+  pointer-events: none;
+}
+
+/* Loading 遮罩 */
+.home-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+/* ── 背景滚动动画 ─────────────────────────────────── */
+@keyframes bgScroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 480px; }
+}
+
+/* ── Loading 黑色背景改透明 ────────────────────────── */
+.animal-container {
+  background: transparent !important;
+}
+
+/* ── 圆形扩散遮罩动画 ──────────────────────────────── */
+@property --mask-r {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
+.home-loading-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background-color: #f7f3df;
+  pointer-events: none;
+  --mask-r: 0px;
+  -webkit-mask-image: radial-gradient(circle at center, transparent var(--mask-r), black calc(var(--mask-r) + 1px));
+  mask-image: radial-gradient(circle at center, transparent var(--mask-r), black calc(var(--mask-r) + 1px));
+}
+
+.mask-expand {
+  animation: maskExpand 1.4s ease-out forwards;
+  pointer-events: all;
+}
+
+@keyframes maskExpand {
+  to {
+    --mask-r: calc((min(100vw, 100vh) * 1.41421356) + 1px);
+  }
+}

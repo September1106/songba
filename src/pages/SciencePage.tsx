@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card, Input } from '@/lib';
+import { Typewriter } from 'animal-island-ui';
 import articles from '../data/articles';
 
 export default function SciencePage() {
@@ -20,8 +21,8 @@ export default function SciencePage() {
   return (
     <div className="science-page ac-fade-up">
       <div className="page-header">
-        <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
         <h2 className="page-title">📖 怂爸科普</h2>
+        <div className="page-desc"><Typewriter speed={60}>公众号文章索引，科学育儿有料又有趣</Typewriter></div>
       </div>
 
       <div style={{

@@ -1,90 +1,46 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card } from '@/lib';
-
-const tools = [
-  {
-    path: '/science',
-    icon: '📖',
-    title: '怂爸科普',
-    desc: '公众号文章索引，科学育儿有料又有趣',
-    color: 'app-blue' as const,
-  },
-  {
-    path: '/vaccine',
-    icon: '💉',
-    title: '疫苗接种计算器',
-    desc: '计算孩子应种疫苗，追踪接种进度',
-    color: 'warm-peach-pink' as const,
-  },
-  {
-    path: '/food',
-    icon: '🍎',
-    title: '辅食月龄对照表',
-    desc: '根据月龄查看辅食喂养指南',
-    color: 'app-yellow' as const,
-  },
-  {
-    path: '/growth-china',
-    icon: '📈',
-    title: '0~7岁身高体重曲线',
-    desc: '记录生长数据，查看儿童生长发育百分位',
-    color: 'app-pink' as const,
-  },
-  {
-    path: '/bmi-evaluation',
-    icon: '⚖️',
-    title: '6~18岁发育评价',
-    desc: '评价儿童青少年超重、肥胖、消瘦',
-    color: 'app-red' as const,
-  },
-  {
-    path: '/nutrition',
-    icon: '🥗',
-    title: '营养素查询',
-    desc: '查食物营养含量，算一餐占日需百分比',
-    color: 'app-green' as const,
-  },
-  {
-    path: '/desk-chair',
-    icon: '🪑',
-    title: '课桌椅搭配',
-    desc: '根据身高自动推荐合适高度的课桌椅',
-    color: 'app-orange' as const,
-  },
-];
+import IslandPage from './IslandPage';
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const [showIsland, setShowIsland] = useState(false);
+
+  const handleStart = () => {
+    setShowIsland(true); // 先把岛屿内容渲染到底层
+    setTimeout(() => {
+      // 动画结束后跳岛
+      navigate('/island');
+    }, 1600);
+  };
 
   return (
-    <div className="home-page animal-zoom-in">
-      <section className="hero">
-        <p />
-      </section>
+    <div className="home-landing">
+      {/* 左下角卡通形象 */}
+      <div className="home-char-left">🐻</div>
 
-      <section className="tools-grid">
-        {tools.map(tool => (
-          <Card
-            key={tool.path}
-            color={tool.color}
-            className="tool-card"
-            style={tool.color === 'app-blue' ? { background: '#889df0', border: '1.5px solid #889df0' } : undefined}
-            onClick={() => navigate(tool.path)}
-          >
-            <div className="tool-card-content">
-              <div className="tool-card-icon">{tool.icon}</div>
-              <h3 style={{ color: '#fff' }}>{tool.title}</h3>
-              <p style={{ color: 'rgba(255,255,255,0.88)' }}>{tool.desc}</p>
-            </div>
-          </Card>
-        ))}
-      </section>
-
-      <section style={{ textAlign: 'center', marginTop: '32px' }}>
-        <p className="text-sm text-muted">
-          🌟 数据仅供参考，具体请遵医嘱
+      {/* 中心内容 */}
+      <div className="home-center">
+        <h1 className="home-title">怂爸小岛</h1>
+        <p className="home-desc">
+          这里汇集了怂爸制作的科学育儿小工具<br />
+          帮助爸爸妈妈轻松应对儿童生长发育和营养常见问题
         </p>
-      </section>
+        <button className="home-btn" onClick={handleStart}>
+          开始使用
+        </button>
+      </div>
+
+      {/* 底层：岛屿页面内容（z-index 低，圆形遮罩扩散后露出） */}
+      <div
+        className={`home-island-underlay ${showIsland ? 'island-visible' : ''}`}
+        style={showIsland ? {} : { visibility: 'hidden' }}
+      >
+        <IslandPage embedded />
+      </div>
+
+      {/* 遮罩层：点击后从中心扩散的圆形遮罩 */}
+      <div className={`home-loading-mask ${showIsland ? 'mask-expand' : ''}`} />
     </div>
   );
 }

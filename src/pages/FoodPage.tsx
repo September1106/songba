@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card } from '@/lib';
+import { Typewriter } from 'animal-island-ui';
 import { foodStages, type FoodStage } from '../data/foods';
 import DateInput from '../components/DateInput';
 
@@ -113,13 +114,13 @@ export default function FoodPage() {
   return (
     <div className="food-page ac-fade-up">
       <div className="page-header">
-        <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
         <h2 className="page-title">🍎 辅食添加指南</h2>
+        <div className="page-desc"><Typewriter speed={60}>根据月龄推荐辅食性状、餐次和食材</Typewriter></div>
       </div>
 
       <Card className="mb-16">
         <div className="form-group">
-          <label className="form-label">孩子的出生日期</label>
+          <label className="form-label">选择孩子的出生日期，自动计算月龄并给出辅食建议</label>
           <DateInput
             year={birthYear}
             month={birthMonth}
@@ -177,12 +178,7 @@ export default function FoodPage() {
         </div>
       )}
 
-      {ageMonths === 0 && (
-        <div className="empty-state">
-          <div className="empty-state-icon">🍼</div>
-          <p>请输入孩子出生日期，自动计算月龄并显示辅食建议</p>
-        </div>
-      )}
+      {ageMonths === 0 && null}
 
       <div style={{ marginTop: '24px', padding: '16px', background: 'var(--bg-content)', borderRadius: '12px' }}>
         <p className="text-sm text-muted">

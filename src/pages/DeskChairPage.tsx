@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/lib';
 import { Select } from '@/lib/components/Select';
+import { Typewriter } from 'animal-island-ui';
 import 'animal-island-ui/dist/index.css';
 
 /********************* 中小学生课桌椅数据（GB/T 3976-2014） *********************/
@@ -123,8 +124,8 @@ export default function DeskChairPage() {
   return (
     <div className="page" style={{ padding: '0 16px 32px' }}>
       <div className="page-header">
-        <Button size="small" onClick={() => navigate('/')} className="back-btn" style={{ marginBottom: 8 }}>← 返回</Button>
         <h2 className="page-title">🪑 课桌椅搭配</h2>
+        <div className="page-desc"><Typewriter speed={60}>根据身高选择合适的课桌椅型号</Typewriter></div>
       </div>
 
       {/* 学段选择 + 身高输入 — 同一个圆角矩形背景 */}
@@ -273,7 +274,8 @@ export default function DeskChairPage() {
         )}
       </div>
 
-      {/* 中小学生桌椅型号对照表 */}
+      {/* 中小学生桌椅型号对照表 — 仅在"中小学"学段提交后显示 */}
+      {stage === 'school' && submitted && (
       <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
         <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-header)', marginBottom: 14 }}>📋 中小学生桌椅型号对照表</h3>
         <div className="animal-scrollable-5Wnhh">
@@ -301,8 +303,10 @@ export default function DeskChairPage() {
           </table>
         </div>
       </div>
+      )}
 
-      {/* 儿童桌椅型号对照表 */}
+      {/* 儿童桌椅型号对照表 — 仅在"幼儿园"学段提交后显示 */}
+      {stage === 'kindergarten' && submitted && (
       <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
         <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-header)', marginBottom: 14 }}>📋 儿童桌椅型号对照表</h3>
         <div className="animal-scrollable-5Wnhh">
@@ -334,6 +338,7 @@ export default function DeskChairPage() {
           ⚠️ 每个身高通常可适配2个相邻型号，实际选择请结合孩子体型、教室环境综合考虑，具体请遵学校或厂家指导。
         </p>
       </div>
+      )}
     </div>
   );
 }

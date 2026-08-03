@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import ImageViewer from '@/components/ImageViewer';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card, Input, Select } from '@/lib';
+import { Typewriter } from 'animal-island-ui';
 import { getDRIOptions, getDRI } from '../data/nutrition';
 import RankMode from './RankMode';
 import {
@@ -183,16 +184,16 @@ export default function NutritionPage() {
     return (
       <div className="nutrition-page ac-fade-up">
         <div className="page-header">
-          <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
           <h2 className="page-title">🏆 营养素排名</h2>
+          <div className="page-desc"><Typewriter speed={60}>查食物营养素含量，了解孩子每日所需</Typewriter></div>
         </div>
 
         <Card className="mb-16">
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            <Button type={(mode as Mode) === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
-            <Button type={(mode as Mode) === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
-            <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
-            <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
+            <Button type={(mode as Mode) === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }}>📂 分类浏览</Button>
+            <Button type={(mode as Mode) === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }}>🔍 搜索食物</Button>
+            <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')}>🏆 营养素排名</Button>
+            <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')}>🏯 膳食宝塔</Button>
           </div>
         </Card>
 
@@ -260,16 +261,16 @@ export default function NutritionPage() {
   return (
     <div className="nutrition-page ac-fade-up">
       <div className="page-header">
-        <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
         <h2 className="page-title">🥗 营养查询</h2>
+        <div className="page-desc"><Typewriter speed={60}>查食物营养素含量，了解孩子每日所需</Typewriter></div>
       </div>
 
       <Card className="mb-16">
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }} size="small">📂 分类浏览</Button>
-          <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }} size="small">🔍 搜索食物</Button>
-          <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')} size="small">🏆 营养素排名</Button>
-          <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')} size="small">🏯 膳食宝塔</Button>
+          <Button type={mode === 'browse' ? 'primary' : 'default'} onClick={() => { setMode('browse'); setSelectedFood(null); setSelectedCat(''); setSelectedSubCat(''); }}>📂 分类浏览</Button>
+          <Button type={mode === 'search' ? 'primary' : 'default'} onClick={() => { setMode('search'); setSelectedFood(null); }}>🔍 搜索食物</Button>
+          <Button type={(mode as Mode) === 'rank' ? 'primary' : 'default'} onClick={() => setMode('rank')}>🏆 营养素排名</Button>
+          <Button type={(mode as Mode) === 'towers' ? 'primary' : 'default'} onClick={() => setMode('towers')}>🏯 膳食宝塔</Button>
         </div>
       </Card>
 

@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card } from '@/lib';
-import { Collapse } from 'animal-island-ui';
+import { Collapse, Typewriter } from 'animal-island-ui';
 import 'animal-island-ui/dist/index.css';
 import {
   buildVaccineList, getPaidVaccines,
@@ -338,13 +338,13 @@ export default function VaccinePage() {
   return (
     <div className="vaccine-page ac-fade-up">
       <div className="page-header">
-        <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
         <h2 className="page-title">💉 疫苗接种计算器</h2>
+        <div className="page-desc"><Typewriter speed={60}>输入出生日期，自动计算每种疫苗的接种时间</Typewriter></div>
       </div>
 
       <Card className="vaccine-info">
         <div className="form-group">
-          <label className="form-label">孩子的出生日期</label>
+          <label className="form-label">选择孩子的出生日期，自动计算所有应接种疫苗的接种时间</label>
           <DateInput
             year={birthYear}
             month={birthMonth}
@@ -354,12 +354,11 @@ export default function VaccinePage() {
             onDayChange={setBirthDay}
             maxYearsBack={14}
           />
-          <p className="form-hint">选择后自动计算所有应种疫苗</p>
         </div>
       </Card>
 
       {/* 视图切换 */}
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '16px', justifyContent: 'center' }}>
         <Button
           type={viewMode === 'free' ? 'primary' : 'default'}
           onClick={() => setViewMode('free')}
@@ -386,12 +385,7 @@ export default function VaccinePage() {
       {/* 一类疫苗视图 */}
       {viewMode === 'free' && (
         <div>
-          {!birthDateStr && (
-            <div className="empty-state">
-              <div className="empty-state-icon">📅</div>
-              <p>请输入孩子出生日期开始计算</p>
-            </div>
-          )}
+          {!birthDateStr && null}
 
           {birthDateStr && (
             <>

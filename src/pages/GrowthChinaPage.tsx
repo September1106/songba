@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card, Input, Select } from '@/lib';
+import { Typewriter } from 'animal-island-ui';
 import DateInput from '../components/DateInput';
 import {
   heightStandardsMale, heightStandardsFemale,
@@ -260,8 +261,8 @@ export default function GrowthChinaPage() {
   return (
     <div className="growth-page ac-fade-up">
       <div className="page-header">
-        <Button size="small" onClick={() => navigate('/')} className="back-btn">← 返回</Button>
         <h2 className="page-title">📈 身高体重曲线</h2>
+        <div className="page-desc"><Typewriter speed={60}>根据WHO和中国标准，评估生长发育水平</Typewriter></div>
       </div>
 
       <Card className="growth-form">

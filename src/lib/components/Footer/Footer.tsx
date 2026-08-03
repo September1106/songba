@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './footer.module.less';
-import { Modal } from 'animal-island-ui';
+import { Modal, Icon } from 'animal-island-ui';
 import 'animal-island-ui/dist/index.css';
 
 const ICP_BEIAN = {
@@ -33,6 +33,16 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
     return (
       <>
         <div className={cls} style={style} />
+        {/* 右上角扫码关注悬浮按钮 */}
+        <button
+          className={styles.fixedQRBtn}
+          onClick={() => setShowQR(true)}
+          aria-label="扫码关注公众号"
+        >
+          <Icon name="icon-chat" />
+          <span>扫码关注</span>
+        </button>
+
         <div className={styles.beian}>
           <span style={{ fontSize: '13px', marginRight: '12px' }}>📊 网站统计中</span>·
           <a
@@ -53,13 +63,6 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
             <img src="/备案图标.png" alt="公安网备案图标" className={styles.beianIcon} />
             {GONG_AN_BEIAN.number}
           </a>
-          <span className={styles.beianDivider}>·</span>
-          <button
-            className={styles.feedbackBtn}
-            onClick={() => setShowQR(true)}
-          >
-            扫码关注公众号 → 留言
-          </button>
         </div>
 
         <Modal

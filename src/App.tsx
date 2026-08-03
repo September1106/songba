@@ -2,45 +2,17 @@ import { Routes, Route } from 'react-router-dom';
 import { Footer } from '@/lib';
 import '@/lib/dist/index.css';
 import './index.css';
-import FloatingIsland from './components/FloatingIsland';
 
-import HomePage from './pages/HomePage';
-import VaccinePage from './pages/VaccinePage';
-import FoodPage from './pages/FoodPage';
-import GrowthChinaPage from './pages/GrowthChinaPage';
-import BMIEvaluationPage from './pages/BMIEvaluationPage';
-import NutritionPage from './pages/NutritionPage';
-import DeskChairPage from './pages/DeskChairPage';
-import SciencePage from './pages/SciencePage';
+import IslandPage from './pages/IslandPage';
 
 function App() {
   return (
     <div className="app">
-      <header className="app-header">
-        <div className="header-content">
-          <h1 className="site-title">
-            <span className="title-icon">🏝️</span>
-            怂爸小岛
-          </h1>
-          <p className="site-subtitle">这里汇集了怂爸制作的科学育儿小工具，帮助爸爸妈妈轻松应对儿童生长发育和营养常见问题。</p>
-        </div>
-      </header>
+      <Routes>
+        <Route path="/" element={<IslandPage />} />
+      </Routes>
 
-      <main className="app-main">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/vaccine" element={<VaccinePage />} />
-          <Route path="/food" element={<FoodPage />} />
-          <Route path="/growth-china" element={<GrowthChinaPage />} />
-          <Route path="/bmi-evaluation" element={<BMIEvaluationPage />} />
-          <Route path="/nutrition" element={<NutritionPage />} />
-          <Route path="/science" element={<SciencePage />} />
-          <Route path="/desk-chair" element={<DeskChairPage />} />
-        </Routes>
-      </main>
-
-      <Footer type="sea" />
-      <FloatingIsland />
+      <Footer type="tree" />
     </div>
   );
 }
