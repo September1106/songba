@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon, Typewriter, Card } from 'animal-island-ui';
+import FloatingIsland from '../components/FloatingIsland';
 
 const toolGroups = [
   {
@@ -138,6 +139,8 @@ export default function IslandPage({ embedded = false }: IslandPageProps) {
         <Card className="tool-content-card">
           {pageMap[active]}
         </Card>
+
+        <FloatingIsland />
       </main>
     </div>
   );
