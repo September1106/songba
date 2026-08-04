@@ -825,6 +825,43 @@ body {
   box-shadow: 0 1px #bdaea0;
 }
 
+/* ── 首页底部备案文字 ───────────────────────────────── */
+.home-beian {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #794f27;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.home-beian-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #794f27;
+  text-decoration: none;
+}
+
+.home-beian-link:hover {
+  text-decoration: underline;
+}
+
+.home-beian-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.home-beian-sep {
+  color: #794f27;
+}
+
 
 /* ── 响应式侧边栏（窄屏） ──────────────────────────────── */
 @media (max-width: 768px) {
