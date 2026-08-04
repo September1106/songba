@@ -17,9 +17,11 @@ function App() {
         <Route path="/island" element={<IslandPage />} />
       </Routes>
 
-      <div style={{ backgroundColor: location.pathname === '/' ? '#7dc395' : undefined, position: 'relative', zIndex: 1 }}>
-        <Footer type="tree" showQRButton={location.pathname !== '/'} showBeian={location.pathname !== '/'} />
-      </div>
+      {location.pathname === '/island' && (
+        <div style={{ backgroundColor: '#7dc395', position: 'relative', zIndex: 1 }}>
+          <Footer type="tree" />
+        </div>
+      )}
     </div>
   );
 }
