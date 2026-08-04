@@ -84,7 +84,7 @@ export const DRI_BY_AGE: Record<string, { label: string; dris: DRIValue }> = {
     },
   },
   '18y+': {
-    label: '18岁以上（成人）',
+    label: '18岁以上',
     dris: {
       energy_kcal: 2100, protein_g: 65, fat_g: 60, carbohydrate_g: 300, fiber_g: 30,
       calcium_mg: 800, iron_mg: 12, zinc_mg: 7,

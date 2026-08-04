@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/lib';
-import { Select } from '@/lib/components/Select';
-import { Typewriter } from 'animal-island-ui';
+import { Typewriter, Radio } from 'animal-island-ui';
 import 'animal-island-ui/dist/index.css';
 
 /********************* 中小学生课桌椅数据（GB/T 3976-2014） *********************/
@@ -84,16 +83,17 @@ function buildKidRecs(matches: KidDesk[]): KidRec[] {
 type Stage = 'kindergarten' | 'school';
 
 const STAGE_OPTIONS = [
-  { key: 'kindergarten', label: '幼儿园' },
-  { key: 'school', label: '中小学' },
+  { value: 'kindergarten', label: '幼儿园' },
+  { value: 'school', label: '中小学' },
 ];
 
 interface DeskChairPageProps { embedded?: boolean; }
 export default function DeskChairPage({ embedded = false }: DeskChairPageProps) {
   const navigate = useNavigate();
-  const [stage, setStage] = useState<Stage | ''>('');
+  const [stage, setStage] = useState<Stage>('kindergarten');
   const [height, setHeight] = useState<string>('');
   const [submitted, setSubmitted] = useState(false);
+
   const h = parseFloat(height);
 
   const schoolMatches = findMatches(h, schoolData);
@@ -136,18 +136,18 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
 
       {/* 学段选择 + 身高输入 — 同一个圆角矩形背景 */}
       <div style={{ background: '#F7F3DF', borderRadius: 16, padding: '16px', marginBottom: 16 }}>
-        <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 10 }}>请选择孩子所在学段和身高</p>
+        <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 10 }}>请选择学段并输入身高</p>
 
         {/* 学段下拉 */}
         <div style={{ marginBottom: 12 }}>
           <label style={{ fontSize: 14, color: 'var(--text-secondary)', fontWeight: 500, display: 'block', marginBottom: 6 }}>
             学段
           </label>
-          <Select
+          <Radio
             options={STAGE_OPTIONS}
-            value={stage}
+            defaultValue="kindergarten"
             onChange={(v) => handleStageChange(v as Stage)}
-            placeholder="请选择学段"
+            direction="horizontal"
           />
         </div>
 

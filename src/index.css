@@ -573,7 +573,9 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 220px;
+  width: 18%;
+  min-width: 160px;
+  max-width: 260px;
   height: calc(100dvh - 20px);
   flex-shrink: 0;
   z-index: 100;
@@ -647,6 +649,20 @@ body {
   margin: 0;
 }
 
+.menu-group {
+  margin-bottom: 4px;
+}
+
+.menu-group-title {
+  padding: 6px 16px 2px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9f927d;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
 .menu-label {
   white-space: nowrap;
   overflow: hidden;
@@ -664,7 +680,8 @@ body {
 
 .island-main {
   flex: 1;
-  padding: 24px 32px 24px 256px;
+  padding: 24px 32px 24px calc(18% + 50px);
+  padding-left: max(calc(18% + 50px), 256px);
   overflow-y: auto;
 }
 

@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card, Input, Select } from '@/lib';
-import { Typewriter } from 'animal-island-ui';
+import { Typewriter, Radio } from 'animal-island-ui';
 import DateInput from '../components/DateInput';
 import {
   bmiStandards,
@@ -252,10 +252,11 @@ export default function BMIEvaluationPage({ embedded = false }: BMIEvaluationPag
       <Card className="growth-form">
         <div className="form-group">
           <label className="form-label">孩子的性别</label>
-          <Select
+          <Radio
             value={gender}
             onChange={val => setGender(val as Gender)}
-            options={[{ key: 'male', label: '男孩' }, { key: 'female', label: '女孩' }]}
+            options={[{ label: '男孩', value: 'male' }, { label: '女孩', value: 'female' }]}
+            direction="horizontal"
           />
         </div>
         <div className="form-group">

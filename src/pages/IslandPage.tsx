@@ -2,15 +2,42 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon, Typewriter, Card } from 'animal-island-ui';
 
-const tools = [
-  { key: 'science',      label: '怂爸科普',              desc: '公众号文章索引，科学育儿有料又有趣' },
-  { key: 'vaccine',      label: '疫苗接种计算器',         desc: '输入出生日期，自动计算每种疫苗的接种时间' },
-  { key: 'food',         label: '辅食月龄对照表',         desc: '根据月龄推荐辅食性状、餐次和食材' },
-  { key: 'growth-china', label: '0~7岁身高体重曲线',      desc: '根据WHO和中国标准，评估生长发育水平' },
-  { key: 'bmi-evaluation', label: '6~18岁发育评价',      desc: '计算BMI值，评估消瘦、超重与肥胖' },
-  { key: 'nutrition',    label: '营养素查询',             desc: '查食物营养素含量，了解孩子每日所需' },
-  { key: 'desk-chair',   label: '课桌椅搭配',             desc: '根据身高选择合适的课桌椅型号' },
+const toolGroups = [
+  {
+    group: '知识学习',
+    items: [
+      { key: 'science',      label: '怂爸科普',              desc: '公众号文章索引，科学育儿有料又有趣' },
+    ],
+  },
+  {
+    group: '疾病预防',
+    items: [
+      { key: 'vaccine',      label: '疫苗接种计算器',         desc: '输入出生日期，自动计算每种疫苗的接种时间' },
+    ],
+  },
+  {
+    group: '营养',
+    items: [
+      { key: 'food',         label: '辅食月龄对照表',         desc: '根据月龄推荐辅食性状、餐次和食材' },
+      { key: 'nutrition',    label: '营养素查询',             desc: '查食物营养素含量，了解孩子每日所需' },
+    ],
+  },
+  {
+    group: '生长发育',
+    items: [
+      { key: 'growth-china', label: '0~7岁身高体重曲线',      desc: '根据WHO和中国标准，评估生长发育水平' },
+      { key: 'bmi-evaluation', label: '6~18岁发育评价',     desc: '计算BMI值，评估消瘦、超重与肥胖' },
+    ],
+  },
+  {
+    group: '学习用品',
+    items: [
+      { key: 'desk-chair',   label: '课桌椅搭配',             desc: '根据身高选择合适的课桌椅型号' },
+    ],
+  },
 ];
+
+const tools = toolGroups.flatMap(g => g.items);
 
 import VaccinePage from './VaccinePage';
 import FoodPage from './FoodPage';
@@ -51,13 +78,18 @@ export default function IslandPage({ embedded = false }: IslandPageProps) {
           </div>
 
           <nav className="sidebar-menu">
-            {tools.map(t => (
-              <div
-                key={t.key}
-                className={`menu-item ${active === t.key ? 'active' : ''}`}
-                onClick={() => setActive(t.key)}
-              >
-                <span className="menu-label">{t.label}</span>
+            {toolGroups.map(group => (
+              <div key={group.group} className="menu-group">
+                <div className="menu-group-title">{group.group}</div>
+                {group.items.map(t => (
+                  <div
+                    key={t.key}
+                    className={`menu-item ${active === t.key ? 'active' : ''}`}
+                    onClick={() => setActive(t.key)}
+                  >
+                    <span className="menu-label">{t.label}</span>
+                  </div>
+                ))}
               </div>
             ))}
           </nav>
