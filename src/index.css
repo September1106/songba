@@ -7,7 +7,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 /* ==================== 设计 Token ==================== */
@@ -63,7 +62,7 @@ body {
 
 /* ==================== App Layout ==================== */
 .app {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   position: relative;

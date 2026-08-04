@@ -18,7 +18,7 @@ function App() {
       </Routes>
 
       {location.pathname === '/island' && (
-        <div style={{ backgroundColor: '#7dc395', position: 'relative', zIndex: 1 }}>
+        <div style={{ position: 'relative', zIndex: 1 }}>
           <Footer type="tree" />
         </div>
       )}
