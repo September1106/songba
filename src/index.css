@@ -573,12 +573,11 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 18%;
-  min-width: 160px;
-  max-width: 260px;
+  width: 220px;
   height: calc(100dvh - 20px);
   flex-shrink: 0;
-  z-index: 100;
+  z-index: 200;
+  transition: left 0.3s ease;
 }
 
 .island-sidebar {
@@ -595,6 +594,65 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 199;
+}
+
+.sidebar-backdrop.active {
+  display: block;
+}
+
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background-image: url('https://guokaigdg.github.io/animal-island-ui/assets/menu_bg-BjaGz8mm.svg');
+  background-position: center;
+  background-size: cover;
+  background-color: #fffdf7;
+  border-bottom: 1.5px solid #d4c4a8;
+  z-index: 300;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-shadow: 0 2px 8px rgba(61, 52, 40, 0.1);
+}
+
+.mobile-header-left,
+.mobile-header-right {
+  width: 40px;
+}
+
+.mobile-header-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #794f27;
+  text-align: center;
+  flex: 1;
+}
+
+.mobile-menu-btn {
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #794f27;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .sidebar-header {
@@ -680,8 +738,9 @@ body {
 
 .island-main {
   flex: 1;
-  padding: 24px 32px 24px calc(18% + 50px);
-  padding-left: max(calc(18% + 50px), 256px);
+  margin-left: 280px;
+  margin-right: 32px;
+  padding: 24px 0;
   overflow-y: auto;
 }
 
@@ -814,5 +873,34 @@ body {
 @keyframes maskExpand {
   to {
     --mask-r: calc((min(100vw, 100vh) * 1.41421356) + 1px);
+  }
+}
+
+/* ── 响应式侧边栏（窄屏） ──────────────────────────────── */
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar-sticky-wrapper {
+    left: -230px;
+    top: 0;
+    width: 220px;
+    height: 100dvh;
+    border-radius: 0;
+  }
+
+  .sidebar-sticky-wrapper.open {
+    left: 10px;
+  }
+
+  .sidebar-sticky-wrapper .island-sidebar {
+    border-radius: 12px;
+  }
+
+  .island-main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 80px 16px 24px;
   }
 }

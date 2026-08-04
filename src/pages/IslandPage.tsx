@@ -64,15 +64,42 @@ interface IslandPageProps {
 export default function IslandPage({ embedded = false }: IslandPageProps) {
   const navigate = useNavigate();
   const [active, setActive] = useState('science');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const currentTool = tools.find(t => t.key === active);
 
+  const handleMenuClick = (key: string) => {
+    setActive(key);
+    setSidebarOpen(false);
+  };
+
   return (
     <div className="island-page">
+      {/* 窄屏顶部导航栏 */}
+      <div className="mobile-header">
+        <div className="mobile-header-left">
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setSidebarOpen(o => !o)}
+            aria-label="打开菜单"
+          >
+            {sidebarOpen ? '✕' : '☰'}
+          </button>
+        </div>
+        <div className="mobile-header-title">{currentTool?.label || ''}</div>
+        <div className="mobile-header-right" />
+      </div>
+
+      {/* 遮罩层 */}
+      <div
+        className={`sidebar-backdrop ${sidebarOpen ? 'active' : ''}`}
+        onClick={() => setSidebarOpen(false)}
+      />
+
       {/* 侧边栏 */}
-      <div className="sidebar-sticky-wrapper">
+      <div className={`sidebar-sticky-wrapper ${sidebarOpen ? 'open' : ''}`}>
         <aside className="island-sidebar">
-          <div className="sidebar-header" onClick={() => navigate('/')}>
+          <div className="sidebar-header" onClick={() => { navigate('/'); setSidebarOpen(false); }}>
             <Icon name="icon-miles" size={36} className="sidebar-logo-icon" />
             <span className="sidebar-title">怂爸小岛</span>
           </div>
@@ -85,7 +112,7 @@ export default function IslandPage({ embedded = false }: IslandPageProps) {
                   <div
                     key={t.key}
                     className={`menu-item ${active === t.key ? 'active' : ''}`}
-                    onClick={() => setActive(t.key)}
+                    onClick={() => handleMenuClick(t.key)}
                   >
                     <span className="menu-label">{t.label}</span>
                   </div>
