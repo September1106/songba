@@ -8,7 +8,7 @@ import IslandPage from './pages/IslandPage';
 
 function App() {
   const location = useLocation();
-  const showFooter = location.pathname === '/island';
+  const showFooter = true;
 
   return (
     <div className="app">
@@ -17,11 +17,9 @@ function App() {
         <Route path="/island" element={<IslandPage />} />
       </Routes>
 
-      {showFooter && (
-        <div style={{ backgroundColor: location.pathname === '/' ? '#7dc395' : undefined, position: 'relative', zIndex: 1 }}>
-          <Footer type="tree" />
-        </div>
-      )}
+      <div style={{ backgroundColor: location.pathname === '/' ? '#7dc395' : undefined, position: 'relative', zIndex: 1 }}>
+        <Footer type="tree" />
+      </div>
     </div>
   );
 }
