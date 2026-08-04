@@ -18,7 +18,7 @@ function App() {
       </Routes>
 
       <div style={{ backgroundColor: location.pathname === '/' ? '#7dc395' : undefined, position: 'relative', zIndex: 1 }}>
-        <Footer type="tree" />
+        <Footer type="tree" showQRButton={location.pathname !== '/'} showBeian={location.pathname !== '/'} />
       </div>
     </div>
   );

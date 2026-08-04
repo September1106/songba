@@ -24,9 +24,13 @@ export interface FooterProps {
     className?: string;
     /** 自定义样式 */
     style?: React.CSSProperties;
+    /** 显示扫码关注按钮 */
+    showQRButton?: boolean;
+    /** 显示备案号 */
+    showBeian?: boolean;
 }
 
-export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false, className, style }) => {
+export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false, className, style, showQRButton = true, showBeian = true }) => {
     const cls = [styles.footer, styles[type], seamless && styles.seamless, className].filter(Boolean).join(' ');
     const [showQR, setShowQR] = useState(false);
 
@@ -34,16 +38,18 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
       <>
         <div className={cls} style={style} />
         {/* 右上角扫码关注悬浮按钮 */}
-        <button
-          className={styles.fixedQRBtn}
-          onClick={() => setShowQR(true)}
-          aria-label="扫码关注公众号"
-        >
-          <Icon name="icon-chat" />
-          <span>扫码关注</span>
-        </button>
+        {showQRButton && (
+          <button
+            className={styles.fixedQRBtn}
+            onClick={() => setShowQR(true)}
+            aria-label="扫码关注公众号"
+          >
+            <Icon name="icon-chat" />
+            <span>扫码关注</span>
+          </button>
+        )}
 
-        <div className={styles.beian}>
+        {showBeian && <div className={styles.beian}>
           <span style={{ fontSize: '13px', marginRight: '12px' }}>📊 网站统计中</span>·
           <a
             href={ICP_BEIAN.url}
@@ -64,6 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
             {GONG_AN_BEIAN.number}
           </a>
         </div>
+        )}
 
         <Modal
           open={showQR}
