@@ -104,9 +104,9 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
   const schoolTip = h && !isNaN(h) && h > 187 ? '身高超过187cm，建议使用0号课桌椅，或咨询学校/厂家定制' : null;
   const kidTip = h && !isNaN(h) && h < 75 ? '身高低于75cm，相关标准数据暂未覆盖' : null;
 
-  const canSubmit = stage !== '' && height !== '';
+  const canSubmit = height !== '';
 
-  const handleStageChange = (s: Stage | '') => {
+  const handleStageChange = (s: Stage) => {
     setStage(s);
     setHeight('');
     setSubmitted(false);
@@ -179,8 +179,7 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
                   e.target.value = String(clamped);
                 }
               }}
-              placeholder={stage === '' ? '请先选择学段' : '75 ~ 199'}
-              disabled={stage === ''}
+              placeholder="75 ~ 199"
               style={{
                 width: '100%',
                 padding: '8px 12px',
