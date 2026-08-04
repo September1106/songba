@@ -1,3 +1,6 @@
+/* ==================== 字体引入（必须放最前） ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
 /* ==================== 页面背景（参考站content_bg_pc.jpg）==================== */
 body {
   background-image: url('https://guokaigdg.github.io/animal-island-ui/assets/content_bg_pc-CRf0ymIA.jpg');
@@ -6,9 +9,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-/* ==================== 字体引入 ==================== */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap');
 
 /* ==================== 设计 Token ==================== */
 :root {
@@ -748,21 +748,12 @@ body {
 .home-landing {
   position: relative;
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(180deg, #6ab87a 0%, #4a9e5c 50%, #3d8a4a 100%);
-}
-
-.home-char-left {
-  position: fixed;
-  bottom: -10px;
-  left: -10px;
-  font-size: 160px;
-  line-height: 1;
-  z-index: 10;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
-  user-select: none;
-  pointer-events: none;
+  background-color: #7dc395;
+  background-image: url('https://guokaigdg.github.io/animal-island-ui/assets/home_bg-CzHux1Sq.webp');
+  background-size: auto;
+  background-repeat: repeat;
 }
 
 .home-center {
@@ -770,24 +761,38 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   z-index: 10;
+}
+
+.home-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.home-text-block {
+  text-align: left;
+}
+
+.home-icon {
+  width: 400px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .home-title {
   font-size: 52px;
   font-weight: 800;
-  color: #fff;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  color: #fff9e6;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.3);
   margin: 0 0 20px;
   letter-spacing: 0.04em;
 }
 
 .home-desc {
   font-size: 17px;
-  color: rgba(255,255,255,0.92);
+  color: #794f27;
   line-height: 1.85;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
   margin: 0 0 36px;
 }
 
@@ -796,85 +801,31 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 42px;
-  background: #19c8b9;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 700;
-  border: none;
+  height: 45px;
+  padding: 0 32px;
+  background: #f8f8f0;
+  color: #794f27;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1.5px solid #f8f8f0;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 6px 0 #0e9691, 0 8px 20px rgba(0,0,0,0.18);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 5px #bdaea0;
+  transition: all 0.2s ease;
   font-family: inherit;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .home-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 0 #0e9691, 0 12px 24px rgba(0,0,0,0.22);
+  transform: translateY(-1px);
+  box-shadow: 0 6px #bdaea0;
 }
 
 .home-btn:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 0 #0e9691, 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(2px);
+  box-shadow: 0 1px #bdaea0;
 }
 
-/* Island 内容层（遮罩下方） */
-.home-island-underlay {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  overflow-y: auto;
-  pointer-events: none;
-}
-
-/* Loading 遮罩 */
-.home-loading-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-}
-
-/* ── 背景滚动动画 ─────────────────────────────────── */
-@keyframes bgScroll {
-  from { background-position: 0 0; }
-  to { background-position: 0 480px; }
-}
-
-/* ── Loading 黑色背景改透明 ────────────────────────── */
-.animal-container {
-  background: transparent !important;
-}
-
-/* ── 圆形扩散遮罩动画 ──────────────────────────────── */
-@property --mask-r {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 0px;
-}
-
-.home-loading-mask {
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  background-color: #f7f3df;
-  pointer-events: none;
-  --mask-r: 0px;
-  -webkit-mask-image: radial-gradient(circle at center, transparent var(--mask-r), black calc(var(--mask-r) + 1px));
-  mask-image: radial-gradient(circle at center, transparent var(--mask-r), black calc(var(--mask-r) + 1px));
-}
-
-.mask-expand {
-  animation: maskExpand 1.4s ease-out forwards;
-  pointer-events: all;
-}
-
-@keyframes maskExpand {
-  to {
-    --mask-r: calc((min(100vw, 100vh) * 1.41421356) + 1px);
-  }
-}
 
 /* ── 响应式侧边栏（窄屏） ──────────────────────────────── */
 @media (max-width: 768px) {
