@@ -49,27 +49,28 @@ export const Footer: React.FC<FooterProps> = ({ type = 'tree', seamless = false,
           </button>
         )}
 
-        {showBeian && <div className={styles.beian}>
-          <span style={{ fontSize: '13px', marginRight: '12px' }}>📊 网站统计中</span>·
-          <a
-            href={ICP_BEIAN.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.beianLink}
-          >
-            {ICP_BEIAN.number}
-          </a>
-          <span className={styles.beianDivider}>·</span>
-          <a
-            href="https://beian.mps.gov.cn/#/query/webSearch?code=34011102004132"
-            rel="noreferrer"
-            target="_blank"
-            className={styles.beianLink}
-          >
-            <img src="/备案图标.png" alt="公安网备案图标" className={styles.beianIcon} />
-            {GONG_AN_BEIAN.number}
-          </a>
-        </div>
+        {showBeian && (
+          <div className={styles.beian}>
+            <span style={{ fontSize: '13px', marginRight: '12px' }}>📊 网站统计中</span>·
+            <a
+              href={ICP_BEIAN.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.beianLink}
+            >
+              {ICP_BEIAN.number}
+            </a>
+            <span className={styles.beianDivider}>·</span>
+            <a
+              href="https://beian.mps.gov.cn/#/query/webSearch?code=34011102004132"
+              rel="noreferrer"
+              target="_blank"
+              className={styles.beianLink}
+            >
+              <img src="/备案图标.png" alt="公安网备案图标" className={styles.beianIcon} />
+              {GONG_AN_BEIAN.number}
+            </a>
+          </div>
         )}
 
         <Modal
