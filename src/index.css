@@ -797,6 +797,30 @@ body {
   width: 400px;
   height: auto;
   flex-shrink: 0;
+  max-width: 50vw;
+}
+
+@media (max-width: 768px) {
+  .home-content-wrapper {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .home-icon {
+    width: 60vw;
+    max-width: 240px;
+  }
+
+  .home-title {
+    font-size: 36px;
+  }
+
+  .home-desc {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
 }
 
 .home-title {
