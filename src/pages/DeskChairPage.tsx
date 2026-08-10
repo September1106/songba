@@ -167,6 +167,9 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
                 const filtered = e.target.value.replace(/\D/g, '');
                 handleHeightChange(filtered);
               }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') handleConfirm();
+              }}
               onBlur={(e) => {
                 const n = parseInt(e.target.value, 10);
                 if (!isNaN(n) && n >= 75 && n <= 199) {
@@ -205,7 +208,7 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
 
         {/* 匹配结果 */}
         {submitted && (
-          <div style={{ marginTop: 16, padding: '16px', background: '#fff', borderRadius: 12, textAlign: 'center' }}>
+          <div style={{ marginTop: 16, padding: '16px', background: '#fff', borderRadius: 12, textAlign: 'center' }} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.preventDefault()}>
             {/* 中小学模式 */}
             {stage === 'school' && (
               schoolTip ? (
@@ -281,7 +284,7 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
 
       {/* 中小学生桌椅型号对照表 — 仅在"中小学"学段提交后显示 */}
       {stage === 'school' && submitted && (
-      <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
+      <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.preventDefault()}>
         <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-header)', marginBottom: 14 }}>📋 中小学生桌椅型号对照表</h3>
         <div className="animal-scrollable-5Wnhh">
           <table className="animal-table-Os4fM">
@@ -311,7 +314,7 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
 
       {/* 儿童桌椅型号对照表 — 仅在"幼儿园"学段提交后显示 */}
       {stage === 'kindergarten' && submitted && (
-      <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }}>
+      <div style={{ padding: 16, background: 'var(--bg-content)', borderRadius: 16, marginBottom: 16 }} onClick={(e) => e.stopPropagation()} onMouseDown={(e) => e.preventDefault()}>
         <h3 style={{ fontSize: 15, fontWeight: 700, color: 'var(--text-header)', marginBottom: 14 }}>📋 儿童桌椅型号对照表</h3>
         <div className="animal-scrollable-5Wnhh">
           <table className="animal-table-Os4fM">

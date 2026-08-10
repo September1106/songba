@@ -182,3 +182,17 @@
     border-right-color: var(--border);
   }
 }
+
+
+/* 课桌椅对照表 — 匹配行圆角矩形 */
+.desk-chair-table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+
+.desk-chair-table .matched-cell {
+  background: #00B3A4 !important;
+  color: #3D2E1E !important;
+  font-weight: 700;
+  border-radius: 999px !important;
+}
