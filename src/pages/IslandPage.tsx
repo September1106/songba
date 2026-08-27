@@ -36,6 +36,13 @@ const toolGroups = [
       { key: 'desk-chair',   label: '课桌椅搭配',             desc: '根据身高选择合适的课桌椅型号' },
     ],
   },
+  {
+    group: '监测工具',
+    items: [
+      { key: 'age-check',    label: '幼儿园年龄判断',         desc: '批量判断是否在5.5~6.5岁范围' },
+      { key: 'id-card',      label: '身份证号码校验',         desc: '批量校验身份证号合法性（MOD 11-2）' },
+    ],
+  },
 ];
 
 const tools = toolGroups.flatMap(g => g.items);
@@ -47,6 +54,8 @@ import BMIEvaluationPage from './BMIEvaluationPage';
 import NutritionPage from './NutritionPage';
 import DeskChairPage from './DeskChairPage';
 import SciencePage from './SciencePage';
+import AgeCheckPage from './AgeCheckPage';
+import IdCardPage from './IdCardPage';
 
 const pageMap: Record<string, React.ReactNode> = {
   vaccine:          <VaccinePage embedded />,
@@ -56,6 +65,8 @@ const pageMap: Record<string, React.ReactNode> = {
   nutrition:        <NutritionPage embedded />,
   'desk-chair':     <DeskChairPage embedded />,
   science:          <SciencePage embedded />,
+  'age-check':      <AgeCheckPage embedded />,
+  'id-card':       <IdCardPage embedded />,
 };
 
 interface IslandPageProps {
