@@ -90,7 +90,7 @@ const STAGE_OPTIONS = [
 interface DeskChairPageProps { embedded?: boolean; }
 export default function DeskChairPage({ embedded = false }: DeskChairPageProps) {
   const navigate = useNavigate();
-  const [stage, setStage] = useState<Stage>('kindergarten');
+  const [stage, setStage] = useState<Stage | ''>('');
   const [height, setHeight] = useState<string>('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -145,7 +145,7 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
           </label>
           <Radio
             options={STAGE_OPTIONS}
-            defaultValue="kindergarten"
+            value={stage}
             onChange={(v) => handleStageChange(v as Stage)}
             direction="horizontal"
           />
@@ -162,6 +162,8 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
               inputMode="numeric"
               pattern="[0-9]*"
               value={height}
+              disabled={stage === ''}
+              placeholder={stage === '' ? '请先选择学段' : '75 ~ 199'}
               onChange={(e) => {
                 // 只允许数字，可自由输入/删除，范围校验放到 blur 时做
                 const filtered = e.target.value.replace(/\D/g, '');
@@ -182,7 +184,6 @@ export default function DeskChairPage({ embedded = false }: DeskChairPageProps) 
                   e.target.value = String(clamped);
                 }
               }}
-              placeholder="75 ~ 199"
               style={{
                 width: '100%',
                 padding: '8px 12px',

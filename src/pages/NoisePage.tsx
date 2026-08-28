@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Card, Button, Radio, Modal } from 'animal-island-ui';
 import 'animal-island-ui/dist/index.css';
 
@@ -29,30 +29,48 @@ const POINT_COUNT_OPTIONS = [
 
 interface Props { embedded?: boolean; }
 export default function NoisePage({ embedded = false }: Props) {
-  const [pointCount, setPointCount] = useState<string>('1');
+  const [pointCount, setPointCount] = useState<string>(() => {
+    try { return sessionStorage.getItem('noise_pointCount') || '1'; } catch { return '1'; }
+  });
   const [point1, setPoint1] = useState<string[]>(Array(12).fill(''));
   const [point2, setPoint2] = useState<string[]>(Array(12).fill(''));
   const [pointResults, setPointResults] = useState<number[]>([]);
   const [finalResult, setFinalResult] = useState<number | null>(null);
+
+  // 初始化：从 sessionStorage 恢复数据
+  useEffect(() => {
+    try {
+// pointCount restored via lazy init above
+      const p1 = sessionStorage.getItem('noise_point1');
+      if (p1) setPoint1(JSON.parse(p1));
+      const p2 = sessionStorage.getItem('noise_point2');
+      if (p2) setPoint2(JSON.parse(p2));
+      const pr = sessionStorage.getItem('noise_results');
+      if (pr) setPointResults(JSON.parse(pr));
+      const fr = sessionStorage.getItem('noise_final');
+      if (fr !== null) setFinalResult(JSON.parse(fr));
+    } catch {}
+  }, []);
   const [errors, setErrors] = useState<Record<string, boolean>>({});
   const [showModal, setShowModal] = useState(false);
   const [modalMsg, setModalMsg] = useState('');
 
+  const saveState = (field: string, val: unknown) => {
+    try { sessionStorage.setItem('noise_' + field, JSON.stringify(val)); } catch {}
+  };
+
   const handlePointCountChange = (v: string) => {
     setPointCount(v);
-    setPointResults([]);
-    setFinalResult(null);
-    setErrors({});
+    try { sessionStorage.setItem('noise_pointCount', v); } catch {}
   };
 
   const handleInputChange = useCallback((point: number, idx: number, rawVal: string) => {
-    // 过滤：只允许数字和小数点，最多一位小数
     let val = rawVal.replace(/[^\d.]/g, '');
     const dotIdx = val.indexOf('.');
     if (dotIdx !== -1) {
       val = val.slice(0, dotIdx + 1) + val.slice(dotIdx + 1).replace(/\./g, '').slice(0, 1);
     }
-    // 范围限制：超过120弹窗并清空，<30不阻止（blur时处理）
+    // 范围限制：超过120弹窗并清空
     if (val !== '' && val !== '.') {
       const num = parseFloat(val);
       if (!isNaN(num) && num > 120) {
@@ -67,6 +85,7 @@ export default function NoisePage({ embedded = false }: Props) {
     setter(prev => {
       const next = [...prev];
       next[idx] = val;
+      saveState(point === 1 ? 'point1' : 'point2', next);
       return next;
     });
 
@@ -84,7 +103,12 @@ export default function NoisePage({ embedded = false }: Props) {
       setModalMsg('教室噪声数值错误');
       setShowModal(true);
       const setter = point === 1 ? setPoint1 : setPoint2;
-      setter(prev => { const next = [...prev]; next[idx] = ''; return next; });
+      setter(prev => {
+        const next = [...prev];
+        next[idx] = '';
+        saveState(point === 1 ? 'point1' : 'point2', next);
+        return next;
+      });
     }
   }, []);
 
@@ -134,8 +158,11 @@ export default function NoisePage({ embedded = false }: Props) {
     }
 
     setPointResults(results);
+    saveState('results', results);
     const avg = results.reduce((a, b) => a + b, 0) / count;
-    setFinalResult(Math.round(avg * 10) / 10);
+    const rounded = Math.round(avg * 10) / 10;
+    setFinalResult(rounded);
+    saveState('final', rounded);
   };
 
   const handleClear = () => {
@@ -144,9 +171,22 @@ export default function NoisePage({ embedded = false }: Props) {
     setPointResults([]);
     setFinalResult(null);
     setErrors({});
+    try {
+      sessionStorage.removeItem('noise_pointCount');
+      sessionStorage.removeItem('noise_point1');
+      sessionStorage.removeItem('noise_point2');
+      sessionStorage.removeItem('noise_results');
+      sessionStorage.removeItem('noise_final');
+    } catch {}
   };
 
   const getValues = (p: number) => p === 1 ? point1 : point2;
+
+  const hasValidCount = parseInt(pointCount) >= 1;
+  const allFilled = hasValidCount && Array.from({ length: parseInt(pointCount) }, (_, p) => p + 1).every(pNum => {
+    const vals = getValues(pNum);
+    return vals.every(v => v !== '');
+  });
 
   return (
     <div className="page" style={{ padding: '0 16px 32px' }}>
@@ -227,16 +267,16 @@ export default function NoisePage({ embedded = false }: Props) {
         </div>
 
         <div style={{ display: 'flex', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
-          <Button type="primary" onClick={handleCalc}>🧮 计算</Button>
-          <Button type="default" onClick={handleClear}>🔄 清空所有值</Button>
+          <Button type="primary" disabled={!allFilled} onClick={handleCalc}>🧮 计算</Button>
+          <Button type="default" disabled={!allFilled} onClick={handleClear}>🔄 清空所有值</Button>
         </div>
       </Card>
 
       {/* 结果 */}
-      {pointResults.length > 0 && finalResult !== null ? (
+      {finalResult !== null && (
         <Card style={{ marginBottom: 12 }}>
           <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--primary)', marginBottom: 12 }}>📊 计算结果</div>
-          {parseInt(pointCount) === 2 && (
+          {parseInt(pointCount) === 2 && pointResults.length > 0 && (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 12, marginBottom: 12 }}>
               {pointResults.map((r, i) => (
                 <div key={i} style={{ background: '#f8fafc', borderRadius: 8, padding: 12, textAlign: 'center' }}>
@@ -251,14 +291,8 @@ export default function NoisePage({ embedded = false }: Props) {
             <div style={{ fontSize: 36, fontWeight: 800, color: 'var(--primary)' }}>{finalResult.toFixed(1)} <span style={{ fontSize: 16, color: 'var(--text-muted)', fontWeight: 400 }}>dB(A)</span></div>
           </div>
         </Card>
-      ) : (
-        <Card style={{ marginBottom: 12 }}>
-          <div style={{ textAlign: 'center', padding: '30px 20px', color: 'var(--text-muted)' }}>
-            <div style={{ fontSize: 32, marginBottom: 10 }}>🔊</div>
-            <div style={{ fontSize: 14 }}>请选择测点数并填写所有测量值后点击「计算」</div>
-          </div>
-        </Card>
       )}
+
       <Modal
         open={showModal}
         title="⚠️ 数据错误"
