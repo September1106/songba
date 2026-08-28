@@ -186,7 +186,6 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
             📂 {fileLoading ? '读取中...' : (fileName ? '重新选择文件' : '选择 Excel 文件')}
           </Button>
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={handleFileChange} style={{ display: 'none' }} />
-          {fileName && <span style={{ fontSize: 12, color: 'var(--success)', wordBreak: 'break-all' }}>✅ {fileName}</span>}
         </div>
         {statusMsg && (
           <div style={{ marginTop: 10, padding: '8px 12px', borderRadius: 8, fontSize: 13, background: statusMsg.type === 'error' ? '#fff5f5' : '#f0fff4', color: statusMsg.type === 'error' ? '#d93030' : '#28a745', border: '1px solid ' + (statusMsg.type === 'error' ? '#e84040' : '#30c758') }}>

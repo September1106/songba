@@ -226,7 +226,6 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
             📂 {fileLoading ? '读取中...' : (fileName ? '重新选择文件' : '选择 Excel 文件')}
           </Button>
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={handleFileChange} style={{ display: 'none' }} />
-          {fileName && <span style={{ fontSize: 12, color: 'var(--success)', wordBreak: 'break-all' }}>✅ {fileName}</span>}
         </div>
         {statusMsg && (
           <div style={{ marginTop: 10, padding: '8px 12px', borderRadius: 8, fontSize: 13, background: statusMsg.type === 'error' ? '#fff5f5' : '#f0fff4', color: statusMsg.type === 'error' ? '#d93030' : '#28a745', border: '1px solid ' + (statusMsg.type === 'error' ? '#e84040' : '#30c758') }}>
@@ -252,14 +251,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, flex: 1, minWidth: 160 }}>
             <label style={{ fontSize: 13, fontWeight: 500, color: '#555' }}>体检日期</label>
-            <DatePicker
-              value={measureDate || null}
-              onChange={val => { const v = val as string; setMeasureDate(v); saveState('measure', v); }}
-              placeholder="选择体检日期"
-              disabledDate={d => d.getDay() === 0 || d.getDay() === 6}
-              size="large"
-              style={{ width: '100%' }}
-            />
+            <input type="date" value={measureDate} onChange={e => { setMeasureDate(e.target.value); saveState('measure', e.target.value); }} style={{ height: 38, border: '1.5px solid var(--border)', borderRadius: 8, padding: '0 10px', fontSize: 14, color: 'var(--text)', background: '#fff', outline: 'none' }} />
           </div>
         </div>
         <div style={{ background: '#f0f7ff', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#555', lineHeight: 1.6, marginBottom: 12 }}>
