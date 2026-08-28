@@ -182,7 +182,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
       <Card style={{ marginBottom: 12 }}>
         <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--primary)', marginBottom: 12 }}>📂 步骤1：上传 Excel 文件</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <Button type="default" block loading={fileLoading} onClick={() => fileRef.current?.click()}>
+          <Button type="default" loading={fileLoading} onClick={() => fileRef.current?.click()}>
             📂 {fileLoading ? '读取中...' : (fileName ? '重新选择文件' : '选择 Excel 文件')}
           </Button>
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={handleFileChange} style={{ display: 'none' }} />
@@ -211,7 +211,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
           </div>
         </div>
         <div style={{ background: '#f0f7ff', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#555', lineHeight: 1.6, marginBottom: 12 }}>
-          📋 <strong>使用说明：</strong>身份证号必须为 <strong>18位</strong>，前17位为数字，最后1位可为数字或 X
+          📋 <strong>使用说明：</strong>身份证号必须为 <strong>18位</strong>，前17位为数字，最后1位可为数字或 X。上传之前注意删除空格等不可见字符
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <Button type="primary" disabled={headers.length === 0} onClick={handleCheck}>🚀 开始校验</Button>
