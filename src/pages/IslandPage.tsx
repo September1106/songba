@@ -41,6 +41,7 @@ const toolGroups = [
     items: [
       { key: 'age-check',    label: '幼儿园年龄判断',         desc: '批量判断是否在5.5~6.5岁范围' },
       { key: 'id-card',      label: '身份证号码校验',         desc: '批量校验身份证号合法性（MOD 11-2）' },
+      { key: 'noise',         label: '教室噪声计算',           desc: '非周期非稳态噪声·连续12次测量值计算' },
     ],
   },
 ];
@@ -56,6 +57,7 @@ import DeskChairPage from './DeskChairPage';
 import SciencePage from './SciencePage';
 import AgeCheckPage from './AgeCheckPage';
 import IdCardPage from './IdCardPage';
+import NoisePage from './NoisePage';
 
 const pageMap: Record<string, React.ReactNode> = {
   vaccine:          <VaccinePage embedded />,
@@ -67,6 +69,7 @@ const pageMap: Record<string, React.ReactNode> = {
   science:          <SciencePage embedded />,
   'age-check':      <AgeCheckPage embedded />,
   'id-card':       <IdCardPage embedded />,
+  'noise':          <NoisePage embedded />,
 };
 
 interface IslandPageProps {
