@@ -126,9 +126,9 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
     const hdr = headers[colIdx];
     const mapped: Array<{ idCard: string; result: string }> = [];
     rows.forEach(row => {
-      let val = row[hdr];
-      if (val === null || val === undefined || val === '' || val === ' ') return;
-      val = String(val).trim();
+      const raw = row[hdr];
+      if (raw == null || raw === '') return;
+      const val = String(raw).trim();
       if (!val) return;
       const ck = checkIdCard(val);
       mapped.push({ idCard: val, result: ck.ok ? '正确' : '错误' });
