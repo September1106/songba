@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Button } from '@/lib';
-import { Card } from 'animal-island-ui';
+import { Card, DatePicker } from 'animal-island-ui';
 import 'animal-island-ui/dist/index.css';
 import * as XLSX from 'xlsx';
 
@@ -222,7 +222,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
       <Card style={{ marginBottom: 12 }}>
         <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--primary)', marginBottom: 12 }}>📂 步骤1：上传 Excel 文件</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <Button type="default" block loading={fileLoading} onClick={() => fileRef.current?.click()}>
+          <Button type="default" loading={fileLoading} onClick={() => fileRef.current?.click()}>
             📂 {fileLoading ? '读取中...' : (fileName ? '重新选择文件' : '选择 Excel 文件')}
           </Button>
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={handleFileChange} style={{ display: 'none' }} />
@@ -252,7 +252,14 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, flex: 1, minWidth: 160 }}>
             <label style={{ fontSize: 13, fontWeight: 500, color: '#555' }}>体检日期</label>
-            <input type="date" value={measureDate} onChange={e => { setMeasureDate(e.target.value); saveState('measure', e.target.value); }} style={{ height: 38, border: '1.5px solid var(--border)', borderRadius: 8, padding: '0 10px', fontSize: 14, color: 'var(--text)', background: '#fff', outline: 'none' }} />
+            <DatePicker
+              value={measureDate || null}
+              onChange={val => { const v = val as string; setMeasureDate(v); saveState('measure', v); }}
+              placeholder="选择体检日期"
+              disabledDate={d => d.getDay() === 0 || d.getDay() === 6}
+              size="large"
+              style={{ width: '100%' }}
+            />
           </div>
         </div>
         <div style={{ background: '#f0f7ff', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#555', lineHeight: 1.6, marginBottom: 12 }}>
