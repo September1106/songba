@@ -196,3 +196,6 @@
   font-weight: 700;
   border-radius: 999px !important;
 }
+.noise-table-row:hover td {
+  background: transparent !important;
+}
