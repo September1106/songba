@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生体检批量分析工具</title>
+    <style>
+        *{ margin:0; padding:0; box-sizing:border-box; font-family:"Microsoft YaHei",Arial,sans-serif; }
+        body{ background:#f5f7fa; padding:30px; }
+        .box{ max-width:1100px; margin:0 auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.1); }
+        h1{ text-align:center; color:#2d3748; margin-bottom:5px; font-size:22px; }
+        .upload-area{ border:2px dashed #cbd5e0; padding:25px; text-align:center; border-radius:8px; margin-bottom:20px; background:#fafbfc; }
+        .btn{ padding:10px 24px; background:#3182ce; color:#fff; border:none; border-radius:6px; cursor:pointer; font-size:15px; margin:0 6px; }
+        .btn:hover{ background:#2b6cb0; }
+        .btn:disabled{ background:#a0aec0; cursor:not-allowed; }
+        .btn-success{ background:#38a169; }
+        .btn-success:hover{ background:#2f855a; }
+        .result{ padding:18px; background:#edf2f7; border-radius:6px; margin-top:20px; display:none; max-height:500px; overflow:auto; font-size:14px; }
+        .stats-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:15px; }
+        .stat-card{ background:white; padding:12px; border-radius:8px; text-align:center; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+        .stat-label{ color:#4a5568; font-size:13px; margin-bottom:6px; }
+        .stat-value{ font-size:24px; font-weight:bold; color:#2d3748; }
+        .stat-percent{ color:#718096; font-size:12px; margin-top:4px; }
+        .gender-row{ display:flex; justify-content:space-around; margin:15px 0; padding:10px; background:white; border-radius:8px; }
+        .gender-item{ text-align:center; }
+        .summary-title{ font-size:16px; font-weight:bold; color:#2d3748; margin:15px 0 10px 0; }
+        .detail-table{ width:100%; border-collapse:collapse; margin-top:10px; background:white; border-radius:8px; overflow:hidden; font-size:13px; }
+        .detail-table th{ background:#4a5568; color:white; padding:8px; }
+        .detail-table td{ padding:6px; text-align:center; border-bottom:1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>📊 学生体检批量分析工具</h1>
+    <div class="upload-area">
+        <input type="file" id="file" accept=".xlsx,.xls"><br><br>
+        <button class="btn" id="start">🔍 开始分析</button>
+        <button class="btn btn-success" id="download" disabled>⬇ 下载结果 (Excel)</button>
+    </div>
+    <div class="result" id="result"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+(function(){
+    "use strict";
+    let resultData = null;
+    let statistics = null;
+
+    // ========== 超重/肥胖界值 ==========
+    const bmiStandard = {
+        1: { 6.0:[16.4,17.7],6.5:[16.7,18.1],7.0:[17.0,18.7],7.5:[17.4,19.2],8.0:[17.8,19.7],8.5:[18.1,20.3],9.0:[18.5,20.8],9.5:[18.9,21.4],10.0:[19.2,21.9],10.5:[19.6,22.5],11.0:[19.9,23.0],11.5:[20.3,23.6],12.0:[20.7,24.1],12.5:[21.0,24.7],13.0:[21.4,25.2],13.5:[21.9,25.7],14.0:[22.3,26.1],14.5:[22.6,26.4],15.0:[22.9,26.6],15.5:[23.1,26.9],16.0:[23.3,27.1],16.5:[23.5,27.4],17.0:[23.7,27.6],17.5:[23.8,27.8],18.0:[24.0,28.0] },
+        2: { 6.0:[16.2,17.5],6.5:[16.5,18.0],7.0:[16.8,18.5],7.5:[17.2,19.0],8.0:[17.6,19.4],8.5:[18.1,19.9],9.0:[18.5,20.4],9.5:[19.0,21.0],10.0:[19.5,21.5],10.5:[20.0,22.1],11.0:[20.5,22.7],11.5:[21.1,23.3],12.0:[21.5,23.9],12.5:[21.9,24.5],13.0:[22.2,25.0],13.5:[22.6,25.6],14.0:[22.8,25.9],14.5:[23.0,26.3],15.0:[23.2,26.6],15.5:[23.4,26.9],16.0:[23.6,27.1],16.5:[23.7,27.4],17.0:[23.8,27.6],17.5:[23.9,27.8],18.0:[24.0,28.0] }
+    };
+    // ========== 生长迟缓界值 ==========
+    const stuntStandard = {
+        1: { 6.0:106.3,6.5:109.5,7.0:111.3,7.5:112.8,8.0:115.4,8.5:117.6,9.0:120.6,9.5:123.0,10.0:125.2,10.5:127.0,11.0:129.1,11.5:130.8,12.0:133.1,12.5:134.9,13.0:136.9,13.5:138.6,14.0:141.9,14.5:144.7,15.0:149.6,15.5:153.6,16.0:155.1,16.5:156.4,17.0:156.8,17.5:157.1,18.0:157.1 },
+        2: { 6.0:105.7,6.5:108.0,7.0:110.2,7.5:111.8,8.0:114.5,8.5:116.8,9.0:119.5,9.5:121.7,10.0:123.9,10.5:125.7,11.0:128.6,11.5:131.0,12.0:133.6,12.5:135.7,13.0:138.8,13.5:141.4,14.0:142.9,14.5:144.1,15.0:145.4,15.5:146.5,16.0:146.8,16.5:147.0,17.0:147.3,17.5:147.5,18.0:147.5 }
+    };
+    // ========== 消瘦界值 ==========
+    const thinStandard = {
+        1: { 6.0:[13.2,13.4],6.5:[13.4,13.8],7.0:[13.5,13.9],7.5:[13.5,13.9],8.0:[13.6,14.0],8.5:[13.6,14.0],9.0:[13.7,14.1],9.5:[13.8,14.2],10.0:[13.9,14.4],10.5:[14.0,14.6],11.0:[14.2,14.9],11.5:[14.3,15.1],12.0:[14.4,15.4],12.5:[14.5,15.6],13.0:[14.8,15.9],13.5:[15.0,16.1],14.0:[15.3,16.4],14.5:[15.5,16.7],15.0:[15.8,16.9],15.5:[16.0,17.0],16.0:[16.2,17.3],16.5:[16.4,17.5],17.0:[16.6,17.7],17.5:[16.8,17.9],18.0:[16.8,17.9] },
+        2: { 6.0:[12.8,13.1],6.5:[12.9,13.3],7.0:[13.0,13.4],7.5:[13.0,13.5],8.0:[13.1,13.6],8.5:[13.1,13.7],9.0:[13.2,13.8],9.5:[13.2,13.9],10.0:[13.3,14.0],10.5:[13.4,14.1],11.0:[13.7,14.3],11.5:[13.9,14.5],12.0:[14.1,14.7],12.5:[14.3,14.9],13.0:[14.6,15.3],13.5:[14.9,15.6],14.0:[15.3,16.0],14.5:[15.7,16.3],15.0:[16.0,16.6],15.5:[16.2,16.8],16.0:[16.4,17.0],16.5:[16.5,17.1],17.0:[16.6,17.2],17.5:[16.7,17.3],18.0:[16.7,17.3] }
+    };
+    // ========== 血压数据 ==========
+    const heightPercentileMale = {
+        7:[115.7,117.9,121.5,125.5,129.5,133.3,135.4],
+        8:[120.6,122.9,126.5,130.7,134.9,138.7,141.0],
+        9:[125.0,127.4,131.4,135.8,140.3,144.2,146.6],
+        10:[130.0,132.1,136.1,140.8,145.4,149.8,152.4],
+        11:[133.7,136.4,141.0,146.0,151.3,156.5,159.7],
+        12:[138.4,141.2,146.0,152.0,158.6,164.1,167.3],
+        13:[145.1,148.2,154.0,160.2,166.2,170.7,173.4],
+        14:[151.6,155.0,160.4,165.7,170.5,175.0,177.5],
+        15:[157.2,160.0,164.4,169.0,173.4,177.4,180.0],
+        16:[160.0,162.4,166.3,170.5,174.9,178.8,181.0],
+        17:[161.2,163.3,167.1,171.4,175.6,179.5,181.9]
+    };
+    const heightPercentileFemale = {
+        7:[114.3,116.5,120.1,124.1,128.1,131.9,134.0],
+        8:[119.2,121.5,125.2,129.3,133.6,137.2,139.6],
+        9:[124.0,126.4,130.3,135.0,139.6,143.9,146.5],
+        10:[129.1,131.8,136.0,141.2,146.3,150.7,153.3],
+        11:[134.2,137.1,142.0,147.3,152.7,157.1,159.6],
+        12:[139.7,142.6,147.5,152.5,157.1,160.9,163.5],
+        13:[145.6,148.0,152.0,156.1,160.0,163.8,166.0],
+        14:[148.2,150.4,154.0,157.8,161.6,165.1,167.2],
+        15:[149.2,151.4,154.8,158.4,162.2,166.0,168.0],
+        16:[150.0,151.7,155.2,159.0,162.8,166.3,168.3],
+        17:[150.1,152.0,155.3,159.2,163.1,166.6,168.8]
+    };
+    const bp95Male = {
+        7:{sbp:[108,110,112,113,115,117,118,121],dbp:[72,74,74,74,75,77,78,79]},
+        8:{sbp:[110,112,113,115,117,119,120,124],dbp:[73,75,75,76,76,78,80,80]},
+        9:{sbp:[112,114,114,117,119,121,122,126],dbp:[74,76,76,77,77,79,81,81]},
+        10:{sbp:[113,115,116,119,121,123,125,129],dbp:[75,76,76,78,78,80,81,82]},
+        11:{sbp:[115,116,117,120,123,126,128,131],dbp:[76,77,77,79,79,81,81,82]},
+        12:{sbp:[116,117,119,122,125,128,130,133],dbp:[77,77,78,79,80,81,82,83]},
+        13:{sbp:[117,119,122,125,127,130,132,134],dbp:[78,78,79,80,81,82,82,83]},
+        14:{sbp:[120,122,125,128,129,131,133,135],dbp:[79,79,80,81,82,83,83,84]},
+        15:{sbp:[123,126,128,130,131,132,133,136],dbp:[80,80,82,82,83,83,83,84]},
+        16:{sbp:[127,129,130,131,132,133,134,136],dbp:[81,82,83,83,84,84,84,85]},
+        17:{sbp:[129,131,131,132,133,134,135,136],dbp:[82,83,84,84,85,85,85,86]}
+    };
+    const bp95Female = {
+        7:{sbp:[109,109,111,111,113,115,117,121],dbp:[73,73,74,74,74,75,76,77]},
+        8:{sbp:[110,110,113,113,115,117,119,123],dbp:[74,74,75,75,76,77,78,78]},
+        9:{sbp:[112,112,114,115,117,119,121,124],dbp:[75,76,76,77,77,78,79,81]},
+        10:{sbp:[113,114,116,117,119,121,123,125],dbp:[77,77,78,78,79,79,80,81]},
+        11:{sbp:[115,116,117,119,121,123,124,126],dbp:[78,78,79,79,79,80,81,81]},
+        12:{sbp:[116,117,119,121,122,124,125,126],dbp:[79,79,79,80,80,80,81,81]},
+        13:{sbp:[118,119,120,122,123,124,125,126],dbp:[79,79,80,80,80,80,81,81]},
+        14:{sbp:[120,120,121,122,123,124,125,126],dbp:[80,80,80,80,80,80,81,81]},
+        15:{sbp:[122,122,122,123,123,124,126,126],dbp:[80,80,80,80,80,81,82,82]},
+        16:{sbp:[122,122,122,123,123,125,126,126],dbp:[80,80,80,80,81,81,82,82]},
+        17:{sbp:[122,122,123,124,124,125,126,126],dbp:[80,80,81,81,81,81,82,82]}
+    };
+
+    function parseDate(input) {
+        if (!input) return null;
+        if (typeof input === 'number') return new Date((input - 25569) * 86400 * 1000);
+        let str = String(input).trim();
+        if (str === '') return null;
+        let d = new Date(str);
+        if (!isNaN(d.getTime())) return d;
+        let match = str.match(/(\d{4})[年\-\/](\d{1,2})[月\-\/](\d{1,2})/);
+        if (match) return new Date(parseInt(match[1]), parseInt(match[2])-1, parseInt(match[3]));
+        return null;
+    }
+
+    // ========== 半岁年龄计算 ==========
+    // 公式：(examYear - birthYear)*12 + (examMonth - birthMonth)，若examDay < birthDay则-1，再除以6向下取整
+    function getHalfAge(birthStr, examStr) {
+        const birth = parseDate(birthStr), exam = parseDate(examStr);
+        if (!birth || !exam) return null;
+        let totalMonths = (exam.getFullYear() - birth.getFullYear()) * 12 + (exam.getMonth() - birth.getMonth());
+        if (exam.getDate() < birth.getDate()) totalMonths--;
+        return Math.floor(totalMonths / 6) * 0.5;
+    }
+
+    function getIntAge(birthStr, examStr) {
+        const birth = parseDate(birthStr), exam = parseDate(examStr);
+        if (!birth || !exam) return null;
+        let totalMonths = (exam.getFullYear() - birth.getFullYear()) * 12 + (exam.getMonth() - birth.getMonth());
+        if (exam.getDate() < birth.getDate()) totalMonths--;
+        return Math.round(totalMonths / 12);
+    }
+
+    function calcBMI(weight, height) {
+        if (!weight || !height || height <= 0) return null;
+        const raw = weight / Math.pow(height / 100, 2);
+        // 用 1e-9 epsilon 消除浮点误差导致的 .5 被误舍
+        return Math.round(raw * 10 + 1e-9) / 10;
+    }
+
+    function judgeObesity(gender, halfAge, bmi) {
+        if (halfAge === null || bmi === null) return '';
+        let age = halfAge > 18.0 ? 18.0 : halfAge;
+        if (age < 6.0) return '';
+        const ref = bmiStandard[gender]?.[age];
+        if (!ref) return '';
+        if (bmi >= ref[1]) return '肥胖';
+        if (bmi >= ref[0]) return '超重';
+        return '正常';
+    }
+
+    function judgeStunting(gender, halfAge, height) {
+        if (halfAge === null || height === null) return '';
+        let age = halfAge > 18.0 ? 18.0 : halfAge;
+        if (age < 6.0) return '';
+        const cut = stuntStandard[gender]?.[age];
+        if (cut === undefined) return '';
+        return (height <= cut) ? '是' : '否';
+    }
+
+    function judgeThin(gender, halfAge, bmi) {
+        if (halfAge === null || bmi === null) return '';
+        let age = halfAge > 18.0 ? 18.0 : halfAge;
+        if (age < 6.0) return '';
+        const ref = thinStandard[gender]?.[age];
+        if (!ref) return '';
+        if (bmi <= ref[0]) return '中重度消瘦';
+        if (bmi <= ref[1]) return '轻度消瘦';
+        return '正常';
+    }
+
+    function getPercentileIndex(h, arr) {
+        if (h < arr[0]) return 0; if (h < arr[1]) return 1; if (h < arr[2]) return 2;
+        if (h < arr[3]) return 3; if (h < arr[4]) return 4; if (h < arr[5]) return 5;
+        if (h < arr[6]) return 6; return 7;
+    }
+
+    // ========== 血压偏高判断 ==========
+    // 7-17岁：根据身高百分位查 bp95 表，收缩压或舒张压任一超标即为偏高
+    // 18岁+：收缩压>=140 或 舒张压>=90 即为偏高
+    function judgeBP(gender, intAge, height, sbp, dbp) {
+        if (sbp >= 900 || dbp >= 900 || intAge === null) return '';
+        if (intAge >= 18) {
+            return (sbp >= 140 || dbp >= 90) ? '是' : '否';
+        } else if (intAge >= 7 && intAge <= 17) {
+            const refArray = (gender === 1) ? heightPercentileMale[intAge] : heightPercentileFemale[intAge];
+            const bpTable = (gender === 1) ? bp95Male[intAge] : bp95Female[intAge];
+            if (refArray && bpTable) {
+                let idx = getPercentileIndex(height, refArray);
+                return (sbp >= bpTable.sbp[idx] || dbp >= bpTable.dbp[idx]) ? '是' : '否';
+            }
+        }
+        return '';
+    }
+
+    function getStage(grade) {
+        const g = parseInt(grade);
+        if (isNaN(g)) return '其他';
+        if (g >= 1 && g <= 6) return '小学';
+        if (g >= 11 && g <= 13) return '初中';
+        if (g >= 21 && g <= 23) return '普高';
+        if (g >= 31 && g <= 33) return '职高';
+        return '其他';
+    }
+
+    function calculateStats(data) {
+        let s = { total:0, male:0, female:0, overwt:0, obese:0, stunt:0, thinMild:0, thinSevere:0, bpHigh:0,
+                  primary:0, junior:0, senior:0, vocational:0 };
+        data.forEach(r => {
+            if (r.错误) return;
+            s.total++;
+            if (r.性别 === '男') s.male++; else s.female++;
+            if (r.超重肥胖 === '超重') s.overwt++;
+            if (r.超重肥胖 === '肥胖') s.obese++;
+            if (r.生长迟缓 === '是') s.stunt++;
+            if (r.消瘦 === '轻度消瘦') s.thinMild++;
+            if (r.消瘦 === '中重度消瘦') s.thinSevere++;
+            if (r.血压偏高 === '是') s.bpHigh++;
+            const stage = r.学段;
+            if (stage === '小学') s.primary++;
+            else if (stage === '初中') s.junior++;
+            else if (stage === '普高') s.senior++;
+            else if (stage === '职高') s.vocational++;
+        });
+        return s;
+    }
+
+    function renderStats(s) {
+        const t = s.total;
+        const thinTotal = s.thinMild + s.thinSevere;
+        return `
+            <div class="summary-title">📊 统计分析</div>
+            <div class="gender-row">
+                <div class="gender-item"><div>总人数</div><div style="font-size:28px;">${t}</div></div>
+                <div class="gender-item"><div>👨 男生</div><div style="font-size:28px;color:#3182ce;">${s.male}</div><div>${(s.male/t*100).toFixed(2)}%</div></div>
+                <div class="gender-item"><div>👩 女生</div><div style="font-size:28px;color:#d53f8c;">${s.female}</div><div>${(s.female/t*100).toFixed(2)}%</div></div>
+            </div>
+            <div style="display:flex; justify-content:space-around; margin:10px 0; padding:10px; background:white; border-radius:8px; flex-wrap:wrap; gap:8px;">
+                <div>小学: ${s.primary} (${(s.primary/t*100).toFixed(2)}%)</div>
+                <div>初中: ${s.junior} (${(s.junior/t*100).toFixed(2)}%)</div>
+                <div>普高: ${s.senior} (${(s.senior/t*100).toFixed(2)}%)</div>
+                <div>职高: ${s.vocational} (${(s.vocational/t*100).toFixed(2)}%)</div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-label">超重</div><div class="stat-value" style="color:#dd6b20;">${s.overwt}</div><div class="stat-percent">${(s.overwt/t*100).toFixed(2)}%</div></div>
+                <div class="stat-card"><div class="stat-label">肥胖</div><div class="stat-value" style="color:#e53e3e;">${s.obese}</div><div class="stat-percent">${(s.obese/t*100).toFixed(2)}%</div></div>
+                <div class="stat-card"><div class="stat-label">生长迟缓</div><div class="stat-value" style="color:#805ad5;">${s.stunt}</div><div class="stat-percent">${(s.stunt/t*100).toFixed(2)}%</div></div>
+                <div class="stat-card"><div class="stat-label">消瘦合计</div><div class="stat-value" style="color:#319795;">${thinTotal}</div><div class="stat-percent">${(thinTotal/t*100).toFixed(2)}%</div></div>
+                <div class="stat-card"><div class="stat-label">血压偏高</div><div class="stat-value" style="color:#c53030;">${s.bpHigh}</div><div class="stat-percent">${(s.bpHigh/t*100).toFixed(2)}%</div></div>
+            </div>
+            <table class="detail-table">
+                <tr><th>指标</th><th>人数</th><th>比例</th></tr>
+                <tr><td>超重</td><td>${s.overwt}</td><td>${(s.overwt/t*100).toFixed(2)}%</td></tr>
+                <tr><td>肥胖</td><td>${s.obese}</td><td>${(s.obese/t*100).toFixed(2)}%</td></tr>
+                <tr><td>超重+肥胖</td><td>${s.overwt+s.obese}</td><td>${((s.overwt+s.obese)/t*100).toFixed(2)}%</td></tr>
+                <tr><td>生长迟缓</td><td>${s.stunt}</td><td>${(s.stunt/t*100).toFixed(2)}%</td></tr>
+                <tr><td>轻度消瘦</td><td>${s.thinMild}</td><td>${(s.thinMild/t*100).toFixed(2)}%</td></tr>
+                <tr><td>中重度消瘦</td><td>${s.thinSevere}</td><td>${(s.thinSevere/t*100).toFixed(2)}%</td></tr>
+                <tr><td>血压偏高</td><td>${s.bpHigh}</td><td>${(s.bpHigh/t*100).toFixed(2)}%</td></tr>
+            </table>
+        `;
+    }
+
+    function getField(row, key) {
+        if (row[key] !== undefined) return row[key];
+        const lowerKey = key.toLowerCase();
+        for (let k in row) {
+            if (k.toLowerCase() === lowerKey) return row[k];
+        }
+        return undefined;
+    }
+
+    document.getElementById("start").onclick = function() {
+        const file = document.getElementById("file").files[0];
+        if (!file) { alert("请选择Excel文件"); return; }
+        const resBox = document.getElementById("result");
+        resBox.style.display = "block";
+        resBox.innerText = "正在处理...";
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const wb = XLSX.read(e.target.result);
+            const data = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+            const out = [];
+            let validCount = 0, errorCount = 0;
+            data.forEach(row => {
+                const genderVal = parseInt(getField(row, 'gender')) || 0;
+                const birth = getField(row, 'birth');
+                const exam = getField(row, 'examine');
+                const height = parseFloat(getField(row, 'q6')) || 0;
+                const weight = parseFloat(getField(row, 'q7')) || 0;
+                const sbp = parseFloat(getField(row, 'q81')) || 999;
+                const dbp = parseFloat(getField(row, 'q82')) || 999;
+                const gradeVal = getField(row, 'grade');
+
+                let idVal = getField(row, 'sfz') || getField(row, 'id1') || getField(row, 'id') || getField(row, 'ID') || '';
+
+                if (![1,2].includes(genderVal) || !birth || !exam) {
+                    out.push({ 身份证号:idVal, ID:idVal, 错误:"字段缺失或非法" });
+                    errorCount++;
+                    return;
+                }
+
+                const halfAge = getHalfAge(birth, exam);
+                const intAge = getIntAge(birth, exam);
+                if (halfAge === null || intAge === null) {
+                    out.push({ 身份证号:idVal, ID:idVal, 错误:"年龄计算失败" });
+                    errorCount++;
+                    return;
+                }
+
+                if (height <= 0 || weight <= 0) {
+                    out.push({ 身份证号:idVal, ID:idVal, 错误:"身高体重数据无效" });
+                    errorCount++;
+                    return;
+                }
+
+                const bmi = calcBMI(weight, height);
+                const gender = genderVal === 1 ? '男' : '女';
+
+                const obesity = judgeObesity(genderVal, halfAge, bmi);
+                const stunting = judgeStunting(genderVal, halfAge, height);
+                const thin = judgeThin(genderVal, halfAge, bmi);
+                const bpStatus = judgeBP(genderVal, intAge, height, sbp, dbp);
+
+                const stage = getStage(gradeVal);
+                out.push({
+                    身份证号: idVal,
+                    ID: idVal,
+                    性别: gender,
+                    整岁年龄: intAge,
+                    半岁年龄: halfAge,
+                    年级: gradeVal,
+                    学段: stage,
+                    身高_cm: height,
+                    体重_kg: weight,
+                    BMI: bmi,
+                    超重肥胖: obesity,
+                    生长迟缓: stunting,
+                    消瘦: thin,
+                    血压偏高: bpStatus
+                });
+                validCount++;
+            });
+            resultData = out;
+            statistics = calculateStats(out);
+            resBox.innerHTML = `<div>✅ 处理完成：有效 ${validCount} 条，错误 ${errorCount} 条</div>` + renderStats(statistics);
+            document.getElementById("download").disabled = false;
+        };
+        reader.readAsArrayBuffer(file);
+    };
+
+    document.getElementById("download").onclick = function() {
+        if (!resultData) return;
+        const ws = XLSX.utils.json_to_sheet(resultData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "分析结果");
+        XLSX.writeFile(wb, "学生体检分析结果.xlsx");
+    };
+})();
+</script>
+</body>
+</html>

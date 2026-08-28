@@ -51,6 +51,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
     try { const s = sessionStorage.getItem('idcard_results'); return s ? JSON.parse(s) : []; } catch { return []; }
   });
   const [statusMsg, setStatusMsg] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
+  const [fileLoading, setFileLoading] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const saveState = (field: string, val: unknown) => {
@@ -66,6 +67,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
     setStatusMsg(null);
     setResults([]);
     saveState('results', []);
+    setFileLoading(true);
 
     try {
       const data = new Uint8Array(await f.arrayBuffer());
@@ -118,6 +120,8 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
       }
     } catch (err: unknown) {
       setStatusMsg({ text: '读取失败：' + (err instanceof Error ? err.message : String(err)), type: 'error' });
+    } finally {
+      setFileLoading(false);
     }
   };
 
@@ -178,8 +182,8 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
       <Card style={{ marginBottom: 12 }}>
         <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--primary)', marginBottom: 12 }}>📂 步骤1：上传 Excel 文件</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <Button type="default" block onClick={() => fileRef.current?.click()}>
-            📂 {fileName ? '重新选择文件' : '选择 Excel 文件'}
+          <Button type="default" block loading={fileLoading} onClick={() => fileRef.current?.click()}>
+            📂 {fileLoading ? '读取中...' : (fileName ? '重新选择文件' : '选择 Excel 文件')}
           </Button>
           <input ref={fileRef} type="file" accept=".xlsx,.xls,.csv" onChange={handleFileChange} style={{ display: 'none' }} />
           {fileName && <span style={{ fontSize: 12, color: 'var(--success)', wordBreak: 'break-all' }}>✅ {fileName}</span>}
