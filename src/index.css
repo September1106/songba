@@ -9,6 +9,21 @@ body {
   background-repeat: no-repeat;
 }
 
+/* 去除表格行悬停效果 */
+.animal-row-iDOMw:hover,
+.animal-striped-8Ih-N:hover {
+  background-image: none !important;
+  background-color: inherit !important;
+}
+.animal-row-iDOMw:hover .animal-cell-4PAU2,
+.animal-striped-8Ih-N:hover .animal-cell-4PAU2 {
+  color: inherit !important;
+}
+.animal-row-iDOMw:hover::after,
+.animal-striped-8Ih-N:hover::after {
+  opacity: 1 !important;
+}
+
 /* ==================== 设计 Token ==================== */
 :root {
   --primary: #19c8b9;

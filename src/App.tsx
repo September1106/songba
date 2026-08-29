@@ -5,6 +5,7 @@ import './index.css';
 
 import HomePage from './pages/HomePage';
 import IslandPage from './pages/IslandPage';
+import DeskChairBatchPage from './pages/DeskChairBatchPage';
 
 function App() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/island" element={<IslandPage />} />
+        <Route path="/desk-chair-batch" element={<DeskChairBatchPage />} />
       </Routes>
 
       {location.pathname === '/island' && (
