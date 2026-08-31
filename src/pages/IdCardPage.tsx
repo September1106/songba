@@ -229,7 +229,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
           📋 <strong>使用说明：</strong>身份证号必须为 <strong>18位</strong>，前17位为数字，最后1位可为数字或 X。上传之前注意删除空格等不可见字符
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <Button type="primary" disabled={headers.length === 0} onClick={handleCheck}>🚀 开始校验</Button>
+          <Button type="primary" disabled={headers.length === 0} onClick={handleCheck}>🚀 开始审核</Button>
           <Button type="default" disabled={results.length === 0} onClick={handleDownload}>📥 导出结果</Button>
           <Button type="default" disabled={results.length === 0 && !fileName} onClick={handleClear}>🗑️ 清除结果</Button>
         </div>
