@@ -5,7 +5,32 @@ import 'animal-island-ui/dist/index.css';
 import * as XLSX from 'xlsx';
 
 // ============================================================
-// 核心算法
+// 身份证校验核心：ISO 7064:1983 MOD 11-2
+// ============================================================
+function checkIdCard(id: string): { ok: boolean; msg: string } {
+  id = id.trim().toUpperCase();
+  if (id.length !== 18) return { ok: false, msg: '长度错误' };
+  if (!/^\d{17}[\dX]$/.test(id)) return { ok: false, msg: '格式错误' };
+  const weight = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+  const code = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'];
+  let sum = 0;
+  for (let i = 0; i < 17; i++) sum += parseInt(id[i]) * weight[i];
+  const mod = sum % 11;
+  const correct = code[mod];
+  const last = id[17];
+  if (correct !== last) return { ok: false, msg: '校验位错误' };
+  return { ok: true, msg: '正确' };
+}
+
+function isIdCardFormat(str: string): boolean {
+  if (!str) return false;
+  str = String(str).trim().toUpperCase();
+  if (str.length !== 18) return false;
+  return /^\d{17}[\dX]$/.test(str);
+}
+
+// ============================================================
+// 出生日期解析 & 年龄计算
 // ============================================================
 function parseDate(val: unknown): Date | null {
   if (val instanceof Date) {
@@ -29,6 +54,13 @@ function parseDate(val: unknown): Date | null {
   d = new Date(str);
   if (!isNaN(d.getTime())) return d;
   return null;
+}
+
+function fmtDate(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
 }
 
 function calcAgeDetail(birth: unknown, measure: unknown) {
@@ -81,14 +113,20 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
   const [rows, setRows] = useState<Record<string, unknown>[]>(() => {
     try { const s = sessionStorage.getItem('agecheck_rows'); return s ? JSON.parse(s) : []; } catch { return []; }
   });
-  const [colIdx, setColIdx] = useState<number>(() => {
-    try { return Number(sessionStorage.getItem('agecheck_colidx') ?? -1); } catch { return -1; }
+  const [birthColIdx, setBirthColIdx] = useState<number>(() => {
+    try { return Number(sessionStorage.getItem('agecheck_birthcolidx') ?? -1); } catch { return -1; }
+  });
+  const [idColIdx, setIdColIdx] = useState<number>(() => {
+    try { return Number(sessionStorage.getItem('agecheck_idcolidx') ?? -1); } catch { return -1; }
   });
   const [measureDate, setMeasureDate] = useState(() => {
     try { return sessionStorage.getItem('agecheck_measure') || ''; } catch { return ''; }
   });
   const [results, setResults] = useState<Array<{
-    idCard: string; measure: string; age: string; months: number; valid: boolean; inRange: boolean | null;
+    _row: Record<string, unknown>; // 原始行数据
+    idCard: string; idCardResult: string; birthDate: string; measure: string;
+    age: string; months: number; valid: boolean; inRange: boolean | null;
+    noBirth: boolean;
   }>>(() => {
     try { const s = sessionStorage.getItem('agecheck_results'); return s ? JSON.parse(s) : []; } catch { return []; }
   });
@@ -96,7 +134,6 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
   const [fileLoading, setFileLoading] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
-  // 持久化到 sessionStorage
   const saveState = (field: string, val: unknown) => {
     try { sessionStorage.setItem('agecheck_' + field, JSON.stringify(val)); } catch {}
   };
@@ -132,13 +169,44 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
       setRows(json);
       saveState('rows', json);
 
-      // 自动识别日期列
+      // 自动识别出生日期列
       const dateKw = ['出生', '生日', 'birth', 'date', '日期', '年月日', 'DOB'];
-      const autoIdx = nonEmpty.findIndex(h => dateKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
-      const idx = autoIdx !== -1 ? autoIdx : 0;
-      setColIdx(idx);
-      saveState('colidx', idx);
-      setStatusMsg({ text: `已加载 ${nonEmpty.length} 列，${json.length} 行${autoIdx !== -1 ? '（已自动选择出生日期列）' : ''}`, type: 'success' });
+      const autoBirth = nonEmpty.findIndex(h => dateKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
+      // 自动识别身份证列
+      const idKw = ['身份证', '证件号', 'idcard', 'id', '证件', 'identity'];
+      const sampleSize = Math.min(20, json.length);
+      let bestIdIdx = -1;
+      let bestIdScore = 0;
+      nonEmpty.forEach((h, idx) => {
+        let idCount = 0;
+        let total = 0;
+        for (let i = 0; i < sampleSize; i++) {
+          const val = json[i][h];
+          if (val !== null && val !== undefined && val !== '' && val !== ' ') {
+            total++;
+            if (isIdCardFormat(String(val).trim())) idCount++;
+          }
+        }
+        if (total > 0 && idCount / total > bestIdScore) {
+          bestIdScore = idCount / total;
+          bestIdIdx = idx;
+        }
+      });
+
+      const bIdx = autoBirth !== -1 ? autoBirth : 0;
+      const iIdx = bestIdIdx !== -1 && bestIdScore >= 0.5 ? bestIdIdx : -1;
+
+      setBirthColIdx(bIdx);
+      saveState('birthcolidx', bIdx);
+      if (iIdx !== -1) {
+        setIdColIdx(iIdx);
+        saveState('idcolidx', iIdx);
+      }
+
+      let hint = `已加载 ${nonEmpty.length} 列，${json.length} 行`;
+      if (autoBirth !== -1) hint += '（已自动选择出生日期列）';
+      if (iIdx !== -1) hint += '（已自动选择身份证列）';
+      setStatusMsg({ text: hint, type: 'success' });
     } catch (err: unknown) {
       setStatusMsg({ text: '读取失败：' + (err instanceof Error ? err.message : String(err)), type: 'error' });
     } finally {
@@ -147,26 +215,54 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
   };
 
   const handleCalc = () => {
-    if (colIdx < 0 || !measureDate || rows.length === 0) return;
+    if (birthColIdx < 0 || !measureDate || rows.length === 0) return;
     saveState('measure', measureDate);
-    const hdr = headers[colIdx];
-    const mapped = rows.map((row, i) => {
-      let val = row[hdr];
-      let birthStr = '';
-      if (val instanceof Date) {
-        birthStr = (val as Date).toISOString().slice(0, 10);
-      } else if (val !== null && val !== undefined && val !== '') {
-        birthStr = String(val).trim();
+    const birthHdr = headers[birthColIdx];
+    const idHdr = headers[idColIdx];
+
+    const mapped = rows.map((row) => {
+      // 身份证号校验（先做，因为后面要用它提取出生日期）
+      let idCardStr = '';
+      let idCardResult = '';
+      const rawId = row[idHdr];
+      if (rawId !== null && rawId !== undefined && rawId !== '') {
+        idCardStr = String(rawId).trim().toUpperCase();
+        if (idCardStr) {
+          const ck = checkIdCard(idCardStr);
+          idCardResult = ck.ok ? '正确' : ck.msg;
+        }
       }
+
+      // 出生日期：优先用填写字段，为空则从身份证号提取
+      let birthStr = '';
+      const rawBirth = row[birthHdr];
+      if (rawBirth instanceof Date) {
+        birthStr = fmtDate(rawBirth as Date);
+      } else if (rawBirth !== null && rawBirth !== undefined && rawBirth !== '') {
+        birthStr = String(rawBirth).trim();
+      }
+      let noBirth = false;
+      if (!birthStr && idCardStr && checkIdCard(idCardStr).ok) {
+        const y = idCardStr.substring(6, 10);
+        const m = idCardStr.substring(10, 12);
+        const d = idCardStr.substring(12, 14);
+        birthStr = `${y}-${m}-${d}`;
+      }
+      if (!birthStr) noBirth = true;
+
       const detail = calcAgeDetail(birthStr, measureDate);
       const inRange = isInRange(birthStr, measureDate);
       return {
-        idCard: birthStr || '（空）',
+        _row: { ...row },
+        idCard: idCardStr || '（空）',
+        idCardResult: idCardResult || '（未检测）',
+        birthDate: birthStr,
         measure: measureDate,
         age: detail?.display || '（无法计算）',
         months: detail?.totalMonths ?? -1,
         valid: detail !== null,
         inRange,
+        noBirth,
       };
     });
     setResults(mapped);
@@ -179,42 +275,60 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
     setFileName('');
     setHeaders([]);
     setRows([]);
-    setColIdx(-1);
+    setBirthColIdx(-1);
+    setIdColIdx(-1);
     setMeasureDate('');
     try {
-      ['filename','headers','rows','colidx','measure','results'].forEach(k => sessionStorage.removeItem('agecheck_' + k));
+      ['filename','headers','rows','birthcolidx','idcolidx','measure','results'].forEach(k => sessionStorage.removeItem('agecheck_' + k));
     } catch {}
     if (fileRef.current) fileRef.current.value = '';
   };
 
   const handleDownload = () => {
+    if (results.length === 0) return;
+    // 原始列标题 + 新增列
+    const newCols = ['身份证校验', '计算年龄', '是否在5.5~6.5岁范围内'];
+    const origHeaders = Object.keys(results[0]._row);
     const wsData = [
-      ['出生日期', '体检日期', '计算年龄', '足月数', '是否在5.5~6.5岁范围内'],
-      ...results.map(r => [
-        r.idCard,
-        r.measure,
-        r.age,
-        r.months >= 0 ? r.months + '个月' : '日期无效',
-        r.inRange === true ? '是' : r.inRange === false ? '否' : '日期无效',
-      ]),
+      [...origHeaders, ...newCols],
+      ...results.map(r => {
+        const origVals = origHeaders.map(h => {
+          const v = r._row[h];
+          if (v instanceof Date) return fmtDate(v);
+          return v ?? '';
+        });
+        return [
+          ...origVals,
+          r.idCardResult === '校验位错误' ? '错误' : r.idCardResult,
+          r.noBirth ? '身份证号错误，无法计算' : r.age,
+          r.inRange === true ? '是' : r.inRange === false ? '否' : '日期无效',
+        ];
+      }),
     ];
     const ws = XLSX.utils.aoa_to_sheet(wsData);
-    ws['!cols'] = [{ wch: 15 }, { wch: 13 }, { wch: 18 }, { wch: 12 }, { wch: 22 }];
+    const origColCount = origHeaders.length;
+    const colWidths: Record<string, { wch: number; t?: string; z?: string }> = {};
+    origHeaders.forEach((_, i) => { colWidths[i] = { wch: 15 }; });
+    colWidths[origColCount] = { wch: 12 }; // 身份证校验
+    colWidths[origColCount + 1] = { wch: 22 }; // 计算年龄
+    colWidths[origColCount + 2] = { wch: 22 }; // 是否在范围
+    ws['!cols'] = Object.values(colWidths);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, '年龄筛选结果');
-    XLSX.writeFile(wb, `年龄筛选结果_${measureDate || '未知'}.xlsx`);
+    XLSX.utils.book_append_sheet(wb, ws, '审核结果');
+    XLSX.writeFile(wb, `审核结果_${measureDate || '未知'}.xlsx`);
   };
 
   const inside = results.filter(r => r.inRange === true).length;
   const outside = results.filter(r => r.inRange === false).length;
+  const idError = results.filter(r => r.idCardResult !== '' && r.idCardResult !== '正确' && r.idCardResult !== '（未检测）').length;
   const total = results.length;
 
   return (
     <div className="page" style={{ padding: '0 16px 32px' }}>
       {!embedded && (
         <div className="page-header">
-          <h2 className="page-title">🏫 幼儿园年龄判断</h2>
-          <div className="page-desc">批量判断是否在 5.5~6.5 岁范围内</div>
+          <h2 className="page-title">🏫 幼儿园信息上传前审核</h2>
+          <div className="page-desc">批量判断年龄范围并校验身份证号</div>
         </div>
       )}
 
@@ -240,7 +354,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 14 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, flex: 1, minWidth: 160 }}>
             <label style={{ fontSize: 13, fontWeight: 500, color: '#555' }}>出生日期所在列</label>
-            <select value={colIdx >= 0 ? colIdx : ''} onChange={e => { const v = Number(e.target.value); setColIdx(v); saveState('colidx', v); }} style={{ height: 38, border: '1.5px solid var(--border)', borderRadius: 8, padding: '0 10px', fontSize: 14, color: 'var(--text)', background: '#fff', outline: 'none' }}>
+            <select value={birthColIdx >= 0 ? birthColIdx : ''} onChange={e => { const v = Number(e.target.value); setBirthColIdx(v); saveState('birthcolidx', v); }} style={{ height: 38, border: '1.5px solid var(--border)', borderRadius: 8, padding: '0 10px', fontSize: 14, color: 'var(--text)', background: '#fff', outline: 'none' }}>
               {headers.length === 0 && <option value="">-- 请先上传文件 --</option>}
               {headers.map((h, i) => {
                 const dateKw = ['出生', '生日', 'birth', 'date', '日期', '年月日', 'DOB'];
@@ -250,15 +364,25 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
             </select>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6, flex: 1, minWidth: 160 }}>
+            <label style={{ fontSize: 13, fontWeight: 500, color: '#555' }}>身份证号所在列</label>
+            <select value={idColIdx >= 0 ? idColIdx : ''} onChange={e => { const v = Number(e.target.value); setIdColIdx(v); saveState('idcolidx', v); }} style={{ height: 38, border: '1.5px solid var(--border)', borderRadius: 8, padding: '0 10px', fontSize: 14, color: 'var(--text)', background: '#fff', outline: 'none' }}>
+              {headers.length === 0 && <option value="">-- 请先上传文件 --</option>}
+              {headers.length > 0 && headers.map((h, i) => {
+                const isRec = i === idColIdx;
+                return <option key={i} value={i}>{isRec ? '⭐ ' + h + ' (推荐)' : h}</option>;
+              })}
+            </select>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, flex: 1, minWidth: 160 }}>
             <label style={{ fontSize: 13, fontWeight: 500, color: '#555' }}>体检日期</label>
             <input type="date" value={measureDate} onChange={e => { setMeasureDate(e.target.value); saveState('measure', e.target.value); }} style={{ height: 38, border: '1.5px solid var(--border)', borderRadius: 8, padding: '0 10px', fontSize: 14, color: 'var(--text)', background: '#fff', outline: 'none' }} />
           </div>
         </div>
         <div style={{ background: '#f0f7ff', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#555', lineHeight: 1.6, marginBottom: 12 }}>
-          📋 <strong>日期格式说明：</strong>支持 YYYY-MM-DD、YYYY/MM/DD、YYYYMMDD、YYYY.MM.DD 等格式
+          📋 <strong>日期格式说明：</strong>支持 YYYY-MM-DD、YYYY/MM/DD、YYYYMMDD、YYYY.MM.DD 等格式 | 身份证号必须为 <strong>18位</strong>，遵循 ISO 7064:1983 MOD 11-2 标准
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-          <Button type="primary" disabled={headers.length === 0 || !measureDate} onClick={handleCalc}>🚀 开始计算</Button>
+          <Button type="primary" disabled={headers.length === 0 || !measureDate || birthColIdx < 0 || idColIdx < 0} onClick={handleCalc}>🚀 开始计算</Button>
           <Button type="default" disabled={results.length === 0} onClick={handleDownload}>📥 导出结果</Button>
           <Button type="default" disabled={results.length === 0 && !fileName} onClick={handleClear}>🗑️ 清除结果</Button>
         </div>
@@ -276,6 +400,10 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
             <div style={{ flex: 1, minWidth: 100, padding: 14, borderRadius: 10, textAlign: 'center', background: '#fff0f0', border: '1.5px solid #e84040' }}>
               <div style={{ fontSize: 28, fontWeight: 800, color: '#e84040' }}>{outside}</div>
               <div style={{ fontSize: 12, color: '#888', marginTop: 4 }}>不在范围内</div>
+            </div>
+            <div style={{ flex: 1, minWidth: 100, padding: 14, borderRadius: 10, textAlign: 'center', background: '#fff8f0', border: '1.5px solid #f5a623' }}>
+              <div style={{ fontSize: 28, fontWeight: 800, color: '#f5a623' }}>{idError}</div>
+              <div style={{ fontSize: 12, color: '#888', marginTop: 4 }}>身份证号错误</div>
             </div>
             <div style={{ flex: 1, minWidth: 100, padding: 14, borderRadius: 10, textAlign: 'center', background: '#f8f8f8', border: '1.5px solid #ccc' }}>
               <div style={{ fontSize: 28, fontWeight: 800, color: '#888' }}>{total}</div>

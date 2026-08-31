@@ -47,7 +47,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
   const [colIdx, setColIdx] = useState<number>(() => {
     try { return Number(sessionStorage.getItem('idcard_colidx') ?? -1); } catch { return -1; }
   });
-  const [results, setResults] = useState<Array<{ idCard: string; result: string }>>(() => {
+  const [results, setResults] = useState<Array<{ _row: Record<string, unknown>; idCard: string; result: string }>>(() => {
     try { const s = sessionStorage.getItem('idcard_results'); return s ? JSON.parse(s) : []; } catch { return []; }
   });
   const [statusMsg, setStatusMsg] = useState<{ text: string; type: 'success' | 'error' } | null>(null);
@@ -128,14 +128,14 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
   const handleCheck = () => {
     if (colIdx < 0 || rows.length === 0) return;
     const hdr = headers[colIdx];
-    const mapped: Array<{ idCard: string; result: string }> = [];
+    const mapped: Array<{ _row: Record<string, unknown>; idCard: string; result: string }> = [];
     rows.forEach(row => {
       const raw = row[hdr];
       if (raw == null || raw === '') return;
       const val = String(raw).trim();
       if (!val) return;
       const ck = checkIdCard(val);
-      mapped.push({ idCard: val, result: ck.ok ? '正确' : '错误' });
+      mapped.push({ _row: { ...row }, idCard: val, result: ck.ok ? '正确' : '错误' });
     });
     setResults(mapped);
     saveState('results', mapped);
@@ -155,15 +155,31 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
   };
 
   const handleDownload = () => {
+    if (results.length === 0) return;
+    const origHeaders = Object.keys(results[0]._row);
     const wsData = [
-      ['身份证号码', '校验结果'],
-      ...results.map(r => [r.idCard, r.result]),
+      [...origHeaders, '身份证校验'],
+      ...results.map(r => {
+        const origVals = origHeaders.map(h => {
+          const v = r._row[h];
+          if (v instanceof Date) {
+            const d = v as Date;
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+          }
+          return v ?? '';
+        });
+        return [...origVals, r.result];
+      }),
     ];
     const ws = XLSX.utils.aoa_to_sheet(wsData);
-    ws['!cols'] = [{ wch: 20 }, { wch: 12 }];
+    const origColCount = origHeaders.length;
+    const colWidths: Record<string, { wch: number }> = {};
+    origHeaders.forEach((_, i) => { colWidths[i] = { wch: 15 }; });
+    colWidths[origColCount] = { wch: 12 };
+    ws['!cols'] = Object.values(colWidths);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, '校验结果');
-    XLSX.writeFile(wb, '身份证校验结果.xlsx');
+    XLSX.utils.book_append_sheet(wb, ws, '审核结果');
+    XLSX.writeFile(wb, '审核结果.xlsx');
   };
 
   const okCount = results.filter(r => r.result === '正确').length;
@@ -173,8 +189,8 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
     <div className="page" style={{ padding: '0 16px 32px' }}>
       {!embedded && (
         <div className="page-header">
-          <h2 className="page-title">🪪 身份证号码校验</h2>
-          <div className="page-desc">ISO 7064:1983 MOD 11-2 · 本地计算，不上传任何数据</div>
+          <h2 className="page-title">🪪 其他学段信息上传前审核</h2>
+          <div className="page-desc">批量校验身份证号合法性（ISO 7064:1983 MOD 11-2）· 本地计算，不上传任何数据</div>
         </div>
       )}
 
@@ -214,7 +230,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <Button type="primary" disabled={headers.length === 0} onClick={handleCheck}>🚀 开始校验</Button>
-          <Button type="default" disabled={results.length === 0} onClick={handleDownload}>📥 下载校验结果</Button>
+          <Button type="default" disabled={results.length === 0} onClick={handleDownload}>📥 导出结果</Button>
           <Button type="default" disabled={results.length === 0 && !fileName} onClick={handleClear}>🗑️ 清除结果</Button>
         </div>
       </Card>

@@ -39,8 +39,8 @@ const toolGroups = [
   {
     group: '监测工具',
     items: [
-      { key: 'age-check',    label: '幼儿园年龄判断',         desc: '批量判断是否在5.5~6.5岁范围' },
-      { key: 'id-card',      label: '身份证号码校验',         desc: '批量校验身份证号合法性（MOD 11-2）' },
+      { key: 'age-check',    label: '幼儿园信息上传前审核',  desc: '批量判断年龄范围并校验身份证号' },
+      { key: 'id-card',      label: '其他学段信息上传前审核', desc: '批量校验身份证号合法性（MOD 11-2）' },
       { key: 'noise',         label: '教室噪声计算',           desc: '非周期非稳态噪声·连续12次测量值计算' },
       { key: 'desk-chair-batch',  label: '课桌椅分配符合率',   desc: '批量分析教室课桌分配符合率（10组）' },
     ],
