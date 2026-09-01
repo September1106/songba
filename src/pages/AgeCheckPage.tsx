@@ -358,7 +358,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
 
   const inside = results.filter(r => r.inRange === true).length;
   const outside = results.filter(r => r.inRange === false).length;
-  const idError = results.filter(r => r.idCardResult !== '' && r.idCardResult !== '正确' && r.idCardResult !== '（未检测）').length;
+  const idError = results.filter(r => r.idCardResult !== '' && r.idCardResult !== '正确' && r.idCardResult !== '（未检测）' && r.idCardResult !== '（非身份证，跳过校验）').length;
   const total = results.length;
 
   return (
