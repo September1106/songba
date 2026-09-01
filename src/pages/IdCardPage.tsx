@@ -47,6 +47,9 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
   const [colIdx, setColIdx] = useState<number>(() => {
     try { return Number(sessionStorage.getItem('idcard_colidx') ?? -1); } catch { return -1; }
   });
+  const [certTypeColIdx, setCertTypeColIdx] = useState<number>(() => {
+    try { return Number(sessionStorage.getItem('idcard_certtypecolidx') ?? -1); } catch { return -1; }
+  });
   const [results, setResults] = useState<Array<{ _row: Record<string, unknown>; idCard: string; result: string }>>(() => {
     try { const s = sessionStorage.getItem('idcard_results'); return s ? JSON.parse(s) : []; } catch { return []; }
   });
@@ -89,6 +92,9 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
       setRows(json);
       saveState('rows', json);
 
+      // 自动识别证件类型列（必定存在）
+      const certTypeKw = ['证件类型', 'certtype', 'certificate_type'];
+      const autoCertType = nonEmpty.findIndex(h => certTypeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
       // 自动识别身份证列（前20行匹配率最高的列）
       const sampleSize = Math.min(20, json.length);
       let bestIdx = -1;
@@ -112,12 +118,19 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
       if (bestIdx !== -1 && bestScore >= 0.5) {
         setColIdx(bestIdx);
         saveState('colidx', bestIdx);
-        setStatusMsg({ text: `已加载 ${nonEmpty.length} 列，${json.length} 行（已自动选择身份证列）`, type: 'success' });
       } else {
         setColIdx(0);
         saveState('colidx', 0);
-        setStatusMsg({ text: `已加载 ${nonEmpty.length} 列，${json.length} 行`, type: 'success' });
       }
+      if (autoCertType !== -1) {
+        setCertTypeColIdx(autoCertType);
+        saveState('certtypecolidx', autoCertType);
+      } else {
+        // 找不到证件类型列则不校验
+        setCertTypeColIdx(-1);
+        saveState('certtypecolidx', -1);
+      }
+      setStatusMsg({ text: `已加载 ${nonEmpty.length} 列，${json.length} 行（已自动选择身份证列）`, type: 'success' });
     } catch (err: unknown) {
       setStatusMsg({ text: '读取失败：' + (err instanceof Error ? err.message : String(err)), type: 'error' });
     } finally {
@@ -128,12 +141,35 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
   const handleCheck = () => {
     if (colIdx < 0 || rows.length === 0) return;
     const hdr = headers[colIdx];
+    const certTypeHdr = certTypeColIdx >= 0 ? headers[certTypeColIdx] : '';
+    const hasCertTypeCol = certTypeColIdx >= 0;
     const mapped: Array<{ _row: Record<string, unknown>; idCard: string; result: string }> = [];
     rows.forEach(row => {
       const raw = row[hdr];
       if (raw == null || raw === '') return;
       const val = String(raw).trim();
       if (!val) return;
+
+      // 判断是否需要校验身份证
+      // - 有证件类型列：只对"身份证"或空值校验，其他类型跳过
+      // - 无证件类型列：始终校验
+      let certType = '';
+      if (certTypeHdr) {
+        const rawCertType = row[certTypeHdr];
+        if (rawCertType !== null && rawCertType !== undefined && rawCertType !== '') {
+          certType = String(rawCertType).trim();
+        }
+      }
+      let needValidateId = true;
+      if (hasCertTypeCol) {
+        needValidateId = !certType || certType === '身份证';
+      }
+
+      if (!needValidateId) {
+        mapped.push({ _row: { ...row }, idCard: val, result: '（非身份证，跳过校验）' });
+        return;
+      }
+
       const ck = checkIdCard(val);
       mapped.push({ _row: { ...row }, idCard: val, result: ck.ok ? '正确' : '错误' });
     });

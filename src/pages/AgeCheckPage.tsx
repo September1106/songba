@@ -119,6 +119,9 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
   const [idColIdx, setIdColIdx] = useState<number>(() => {
     try { return Number(sessionStorage.getItem('agecheck_idcolidx') ?? -1); } catch { return -1; }
   });
+  const [certTypeColIdx, setCertTypeColIdx] = useState<number>(() => {
+    try { return Number(sessionStorage.getItem('agecheck_certtypecolidx') ?? -1); } catch { return -1; }
+  });
   const [measureDate, setMeasureDate] = useState(() => {
     try { return sessionStorage.getItem('agecheck_measure') || ''; } catch { return ''; }
   });
@@ -172,6 +175,9 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
       // 自动识别出生日期列
       const dateKw = ['出生', '生日', 'birth', 'date', '日期', '年月日', 'DOB'];
       const autoBirth = nonEmpty.findIndex(h => dateKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
+      // 自动识别证件类型列
+      const certTypeKw = ['证件类型', 'certtype', 'certificate_type'];
+      const autoCertType = nonEmpty.findIndex(h => certTypeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
       // 自动识别身份证列
       const idKw = ['身份证', '证件号', 'idcard', 'id', '证件', 'identity'];
       const sampleSize = Math.min(20, json.length);
@@ -195,6 +201,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
 
       const bIdx = autoBirth !== -1 ? autoBirth : 0;
       const iIdx = bestIdIdx !== -1 && bestIdScore >= 0.5 ? bestIdIdx : -1;
+      const ctIdx = autoCertType !== -1 ? autoCertType : -1;
 
       setBirthColIdx(bIdx);
       saveState('birthcolidx', bIdx);
@@ -202,9 +209,14 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
         setIdColIdx(iIdx);
         saveState('idcolidx', iIdx);
       }
+      if (ctIdx !== -1) {
+        setCertTypeColIdx(ctIdx);
+        saveState('certtypecolidx', ctIdx);
+      }
 
       let hint = `已加载 ${nonEmpty.length} 列，${json.length} 行`;
       if (autoBirth !== -1) hint += '（已自动选择出生日期列）';
+      if (ctIdx !== -1) hint += '（已自动选择证件类型列）';
       if (iIdx !== -1) hint += '（已自动选择身份证列）';
       setStatusMsg({ text: hint, type: 'success' });
     } catch (err: unknown) {
@@ -218,18 +230,44 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
     if (birthColIdx < 0 || !measureDate || rows.length === 0) return;
     saveState('measure', measureDate);
     const birthHdr = headers[birthColIdx];
-    const idHdr = headers[idColIdx];
+    const idHdr = idColIdx >= 0 ? headers[idColIdx] : '';
+    const certTypeHdr = certTypeColIdx >= 0 ? headers[certTypeColIdx] : '';
+    const hasCertTypeCol = certTypeColIdx >= 0;
 
     const mapped = rows.map((row) => {
+      // 证件类型
+      let certType = '';
+      if (certTypeHdr) {
+        const rawCertType = row[certTypeHdr];
+        if (rawCertType !== null && rawCertType !== undefined && rawCertType !== '') {
+          certType = String(rawCertType).trim();
+        }
+      }
+      // 判断是否需要校验身份证
+      // - 有证件类型列：只对"身份证"或空值校验，其他类型跳过
+      // - 无证件类型列：始终校验
+      let needValidateId = true;
+      if (hasCertTypeCol) {
+        needValidateId = !certType || certType === '身份证';
+      }
+
       // 身份证号校验（先做，因为后面要用它提取出生日期）
       let idCardStr = '';
       let idCardResult = '';
-      const rawId = row[idHdr];
-      if (rawId !== null && rawId !== undefined && rawId !== '') {
-        idCardStr = String(rawId).trim().toUpperCase();
-        if (idCardStr) {
-          const ck = checkIdCard(idCardStr);
-          idCardResult = ck.ok ? '正确' : ck.msg;
+      if (needValidateId) {
+        const rawId = row[idHdr];
+        if (rawId !== null && rawId !== undefined && rawId !== '') {
+          idCardStr = String(rawId).trim().toUpperCase();
+          if (idCardStr) {
+            const ck = checkIdCard(idCardStr);
+            idCardResult = ck.ok ? '正确' : ck.msg;
+          }
+        }
+      } else {
+        idCardResult = '（非身份证，跳过校验）';
+        const rawId = row[idHdr];
+        if (rawId !== null && rawId !== undefined && rawId !== '') {
+          idCardStr = String(rawId).trim().toUpperCase();
         }
       }
 
