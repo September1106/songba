@@ -552,7 +552,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
           )}
         </div>
         <div style={{ background: '#f0f7ff', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#555', lineHeight: 1.6, marginBottom: 12 }}>
-          📋 <strong>使用说明：</strong>支持 YYYY-MM-DD、YYYY/MM/DD、YYYYMMDD、YYYY.MM.DD 等格式 | 身份证号必须为 <strong>18位</strong>，遵循 ISO 7064:1983 MOD 11-2 标准
+          📋 <strong>使用说明：</strong>支持 YYYY-MM-DD、YYYY/MM/DD 格式 | 身份证号必须为 <strong>18位</strong>，遵循 ISO 7064:1983 MOD 11-2 标准
         </div>
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <Button type="primary" disabled={headers.length === 0 || idColIdx < 0 || (kindergartenMode === true && (!measureDate || birthColIdx < 0))} onClick={handleCalc}>🚀 开始审核</Button>
