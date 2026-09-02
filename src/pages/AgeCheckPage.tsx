@@ -437,7 +437,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
       [...origHeaders, ...newCols],
       ...results.map(r => {
         const origVals = origHeaders.map(h => {
-          const v = r._rawRow[h];
+          const v = (r._rawRow as Record<string, unknown>)[h];
           if (v instanceof Date) return fmtDate(v);
           if (typeof v === 'number' && v > 25000 && v < 60000) {
             const msUtc = (v - 25569) * 86400 * 1000;
