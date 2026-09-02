@@ -215,7 +215,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
     ws['!cols'] = Object.values(colWidths);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, '审核结果');
-    XLSX.writeFile(wb, '审核结果.xlsx');
+    XLSX.writeFile(wb, '其他学段信息核查结果.xlsx');
   };
 
   const okCount = results.filter(r => r.result === '正确').length;
