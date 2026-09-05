@@ -597,8 +597,12 @@ body {
 .island-sidebar {
   width: 100%;
   height: 100%;
+  background-image: url('https://guokaigdg.github.io/animal-island-vue/assets/menu_bg-BjaGz8mm.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
   background-color: #fffdf7;
-  background-image: linear-gradient(160deg, #fffdf7 0%, #f5edd8 100%);
   border: 1.5px solid #d4c4a8;
   box-shadow: 2px 4px 12px rgba(61, 52, 40, 0.12);
   display: flex;
@@ -625,8 +629,10 @@ body {
   left: 0;
   right: 0;
   height: 56px;
+  background-image: url('https://guokaigdg.github.io/animal-island-vue/assets/menu_bg-BjaGz8mm.svg');
+  background-position: center;
+  background-size: cover;
   background-color: #fffdf7;
-  background-image: linear-gradient(160deg, #fffdf7 0%, #f5edd8 100%);
   border-bottom: 1.5px solid #d4c4a8;
   z-index: 300;
   align-items: center;
