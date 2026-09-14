@@ -82,24 +82,23 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
         return;
       }
       const allHeaders = Object.keys(json[0]);
-      const nonEmpty = allHeaders.filter(h => json.some(r => r[h] !== null && r[h] !== undefined && r[h] !== ''));
-      if (nonEmpty.length === 0) {
+      if (allHeaders.length === 0) {
         setStatusMsg({ text: '未找到有效数据列', type: 'error' });
         return;
       }
-      setHeaders(nonEmpty);
-      saveState('headers', nonEmpty);
+      setHeaders(allHeaders);
+      saveState('headers', allHeaders);
       setRows(json);
       saveState('rows', json);
 
       // 自动识别证件类型列（必定存在）
       const certTypeKw = ['证件类型', 'certtype', 'certificate_type'];
-      const autoCertType = nonEmpty.findIndex(h => certTypeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
+      const autoCertType = allHeaders.findIndex(h => certTypeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
       // 自动识别身份证列（前20行匹配率最高的列）
       const sampleSize = Math.min(20, json.length);
       let bestIdx = -1;
       let bestScore = 0;
-      nonEmpty.forEach((h, idx) => {
+      allHeaders.forEach((h, idx) => {
         let idCount = 0;
         let total = 0;
         for (let i = 0; i < sampleSize; i++) {
@@ -130,7 +129,7 @@ export default function IdCardPage({ embedded = false }: IdCardPageProps) {
         setCertTypeColIdx(-1);
         saveState('certtypecolidx', -1);
       }
-      setStatusMsg({ text: `已加载 ${nonEmpty.length} 列，${json.length} 行（已自动选择身份证列）`, type: 'success' });
+      setStatusMsg({ text: `已加载 ${allHeaders.length} 列，${json.length} 行（已自动选择身份证列）`, type: 'success' });
     } catch (err: unknown) {
       setStatusMsg({ text: '读取失败：' + (err instanceof Error ? err.message : String(err)), type: 'error' });
     } finally {

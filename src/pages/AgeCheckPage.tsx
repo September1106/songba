@@ -201,31 +201,30 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
         return;
       }
       const allHeaders = Object.keys(json[0]);
-      const nonEmpty = allHeaders.filter(h => json.some(r => r[h] !== null && r[h] !== undefined && r[h] !== ''));
-      if (nonEmpty.length === 0) {
+      if (allHeaders.length === 0) {
         setStatusMsg({ text: '未找到有效数据列', type: 'error' });
         return;
       }
-      setHeaders(nonEmpty);
-      saveState('headers', nonEmpty);
+      setHeaders(allHeaders);
+      saveState('headers', allHeaders);
       setRows(json);
       saveState('rows', json);
 
       // 自动识别年级名称列
       const gradeKw = ['年级', 'grade', '学段', '班级', '年级名称', '学校'];
-      const autoGrade = nonEmpty.findIndex(h => gradeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
+      const autoGrade = allHeaders.findIndex(h => gradeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
       // 自动识别出生日期列
       const dateKw = ['出生', '生日', 'birth', 'date', '日期', '年月日', 'DOB'];
-      const autoBirth = nonEmpty.findIndex(h => dateKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
+      const autoBirth = allHeaders.findIndex(h => dateKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
       // 自动识别证件类型列
       const certTypeKw = ['证件类型', 'certtype', 'certificate_type'];
-      const autoCertType = nonEmpty.findIndex(h => certTypeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
+      const autoCertType = allHeaders.findIndex(h => certTypeKw.some(k => h.toLowerCase().includes(k.toLowerCase())));
       // 自动识别身份证列
       const idKw = ['身份证', '证件号', 'idcard', 'id', '证件', 'identity'];
       const sampleSize = Math.min(20, json.length);
       let bestIdIdx = -1;
       let bestIdScore = 0;
-      nonEmpty.forEach((h, idx) => {
+      allHeaders.forEach((h, idx) => {
         let idCount = 0;
         let total = 0;
         for (let i = 0; i < sampleSize; i++) {
@@ -263,7 +262,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
       let detectedKg = false;
       if (gIdx !== -1) {
         for (let i = 0; i < Math.min(50, json.length); i++) {
-          const rawGrade = jsonRaw[i]?.[nonEmpty[gIdx]];
+          const rawGrade = jsonRaw[i]?.[allHeaders[gIdx]];
           if (rawGrade && isKindergarten(rawGrade)) {
             detectedKg = true;
             break;
@@ -273,7 +272,7 @@ export default function AgeCheckPage({ embedded = false }: AgeCheckPageProps) {
       setKindergartenMode(detectedKg);
       saveState('kindergartenmode', detectedKg);
 
-      let hint = `已加载 ${nonEmpty.length} 列，${json.length} 行`;
+      let hint = `已加载 ${allHeaders.length} 列，${json.length} 行`;
       if (detectedKg) hint += '（检测为幼儿园数据，将审核年龄范围 + 身份证号）';
       else hint += '（检测为其他学段数据，将仅审核身份证号）';
       setStatusMsg({ text: hint, type: 'success' });
