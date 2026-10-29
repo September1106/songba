@@ -31,8 +31,9 @@ const toolGroups = [
     ],
   },
   {
-    group: '学习用品',
+    group: '儿童用品',
     items: [
+      { key: 'toy-guide',    label: '玩具选购参考',           desc: '选择孩子年龄，查看适合该年龄段的玩具及类别' },
       { key: 'desk-chair',   label: '课桌椅搭配',             desc: '根据身高选择合适的课桌椅型号' },
     ],
   },
@@ -58,6 +59,7 @@ import DeskChairBatchPage from './DeskChairBatchPage';
 import SciencePage from './SciencePage';
 import AgeCheckPage from './AgeCheckPage';
 import NoisePage from './NoisePage';
+import ToyGuidePage from './ToyGuidePage';
 
 const pageMap: Record<string, React.ReactNode> = {
   vaccine:          <VaccinePage embedded />,
@@ -70,6 +72,7 @@ const pageMap: Record<string, React.ReactNode> = {
   science:          <SciencePage embedded />,
   'age-check':      <AgeCheckPage embedded />,
   'noise':          <NoisePage embedded />,
+  'toy-guide':      <ToyGuidePage embedded />,
 };
 
 interface IslandPageProps {
