@@ -10,6 +10,14 @@ export interface Article {
 
 const articles: Article[] = [
   {
+    id: 'ccc-toy-safety',
+    title: '认准CCC认证，最省心的儿童玩具安全选购法',
+    summary: '给孩子买玩具，先看有没有CCC认证——这是最省心的安全底线。哪些玩具必须认证？认证标志怎么认？带电、带磁、带水的小玩具又该注意什么？一篇给你理清楚。',
+    url: 'https://mp.weixin.qq.com/s/Y8tG9uYvZJOPWwqbvcN7jw',
+    date: '2026-10-30',
+    tags: ['玩具', 'CCC认证', '儿童安全'],
+  },
+  {
     id: 'beads-craft',
     title: '拼豆能不能给孩子玩？这几件事，家长一定要先搞清楚',
     summary: '拼豆（像素珠手工）是近年来流行的亲子手工，但安全隐患常被忽视。ABS材质、烫拼风险、小零件误食……家长必须知道的几件事',
